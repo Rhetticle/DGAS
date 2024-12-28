@@ -1,0 +1,93 @@
+Added Component: Designator=U?(TSOPII_50L_400MIL_ISI)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "ISSI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin *-1
+Add Pin To Net: Unknown Pin: Pin *-2
+Add Pin To Net: Unknown Pin: Pin *-3
+Add Pin To Net: Unknown Pin: Pin *-4
+Add Pin To Net: Unknown Pin: Pin *-5
+Add Pin To Net: Unknown Pin: Pin *-6
+Add Pin To Net: Unknown Pin: Pin *-9
+Add Pin To Net: Unknown Pin: Pin *-10
+Add Pin To Net: Unknown Pin: Pin *-11
+Add Pin To Net: Unknown Pin: Pin *-12
+Add Pin To Net: Unknown Pin: Pin *-13
+Add Pin To Net: Unknown Pin: Pin *-14
+Add Pin To Net: Unknown Pin: Pin *-15
+Add Pin To Net: Unknown Pin: Pin *-16
+Add Pin To Net: Unknown Pin: Pin *-17
+Add Pin To Net: Unknown Pin: Pin *-18
+Add Pin To Net: Unknown Pin: Pin *-19
+Add Pin To Net: Unknown Pin: Pin *-20
+Add Pin To Net: Unknown Pin: Pin *-21
+Add Pin To Net: Unknown Pin: Pin *-22
+Add Pin To Net: Unknown Pin: Pin *-23
+Add Pin To Net: Unknown Pin: Pin *-24
+Add Pin To Net: Unknown Pin: Pin *-25
+Add Pin To Net: Unknown Pin: Pin *-26
+Add Pin To Net: Unknown Pin: Pin *-27
+Add Pin To Net: Unknown Pin: Pin *-28
+Add Pin To Net: Unknown Pin: Pin *-29
+Add Pin To Net: Unknown Pin: Pin *-30
+Add Pin To Net: Unknown Pin: Pin *-31
+Add Pin To Net: Unknown Pin: Pin *-32
+Add Pin To Net: Unknown Pin: Pin *-33
+Add Pin To Net: Unknown Pin: Pin *-34
+Add Pin To Net: Unknown Pin: Pin *-35
+Add Pin To Net: Unknown Pin: Pin *-36
+Add Pin To Net: Unknown Pin: Pin *-37
+Add Pin To Net: Unknown Pin: Pin *-38
+Add Pin To Net: Unknown Pin: Pin *-39
+Add Pin To Net: Unknown Pin: Pin *-40
+Added Pin To Net: NetName=3V3 Pin=U?-1
+Added Pin To Net: NetName=FMC_D0 Pin=U?-2
+Added Pin To Net: NetName=FMC_D1 Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=FMC_D2 Pin=U?-5
+Added Pin To Net: NetName=FMC_D3 Pin=U?-6
+Added Pin To Net: NetName=3V3 Pin=U?-7
+Added Pin To Net: NetName=FMC_D4 Pin=U?-8
+Added Pin To Net: NetName=FMC_D5 Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-10
+Added Pin To Net: NetName=FMC_D6 Pin=U?-11
+Added Pin To Net: NetName=FMC_D7 Pin=U?-12
+Added Pin To Net: NetName=3V3 Pin=U?-13
+Added Pin To Net: NetName=3V3 Pin=U?-25
+Added Pin To Net: NetName=GND Pin=U?-26
+Added Pin To Net: NetName=3V3 Pin=U?-38
+Added Pin To Net: NetName=GND Pin=U?-41
+Added Pin To Net: NetName=3V3 Pin=U?-44
+Added Pin To Net: NetName=GND Pin=U?-47
+Added Pin To Net: NetName=GND Pin=U?-50
+Added Pin To Net: NetName=400VDC Pin=U?-14
+Added Pin To Net: NetName=400VDC Pin=U?-15
+Added Pin To Net: NetName=400VDC Pin=U?-16
+Added Pin To Net: NetName=400VDC Pin=U?-17
+Added Pin To Net: NetName=400VDC Pin=U?-18
+Added Pin To Net: NetName=400VDC Pin=U?-19
+Added Pin To Net: NetName=400VDC Pin=U?-20
+Added Pin To Net: NetName=400VDC Pin=U?-21
+Added Pin To Net: NetName=400VDC Pin=U?-22
+Added Pin To Net: NetName=400VDC Pin=U?-23
+Added Pin To Net: NetName=400VDC Pin=U?-24
+Added Pin To Net: NetName=400VDC Pin=U?-27
+Added Pin To Net: NetName=400VDC Pin=U?-28
+Added Pin To Net: NetName=400VDC Pin=U?-29
+Added Pin To Net: NetName=400VDC Pin=U?-30
+Added Pin To Net: NetName=400VDC Pin=U?-31
+Added Pin To Net: NetName=400VDC Pin=U?-32
+Added Pin To Net: NetName=400VDC Pin=U?-34
+Added Pin To Net: NetName=400VDC Pin=U?-35
+Added Pin To Net: NetName=400VDC Pin=U?-36
+Added Pin To Net: NetName=400VDC Pin=U?-39
+Added Pin To Net: NetName=400VDC Pin=U?-40
+Added Pin To Net: NetName=400VDC Pin=U?-42
+Added Pin To Net: NetName=400VDC Pin=U?-43
+Added Pin To Net: NetName=400VDC Pin=U?-45
+Added Pin To Net: NetName=400VDC Pin=U?-46
+Added Pin To Net: NetName=400VDC Pin=U?-48
+Added Pin To Net: NetName=400VDC Pin=U?-49
+Added Net: Name=400VDC
+Added Class: Name=DRAM
+Add Class Member: Failed to add class member : Component * 40P FPC 0.5mm

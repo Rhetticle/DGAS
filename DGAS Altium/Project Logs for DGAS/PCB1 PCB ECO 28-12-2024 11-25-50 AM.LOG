@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=3V3 Pin=U8-7
+Added Pin To Net: NetName=ISO9141_LO Pin=U1-105
+Added Pin To Net: NetName=VBAT Pin=U8-7
+Added Net: Name=VBAT
+Added Rule: Name=Schematic Supply Nets_2

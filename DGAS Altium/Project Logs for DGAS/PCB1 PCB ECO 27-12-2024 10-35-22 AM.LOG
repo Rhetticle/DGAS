@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=FMC_A11 Pin=U1-57
+Added Pin To Net: NetName=FMC_SDNWE Pin=U2-15
+Added Pin To Net: NetName=FMC_SDNRAS Pin=U2-17
+Added Pin To Net: NetName=FMC_A10 Pin=U2-20
+Added Pin To Net: NetName=FMC_A0 Pin=U2-21
+Added Pin To Net: NetName=FMC_A2 Pin=U2-23
+Added Pin To Net: NetName=FMC_SDCKE0 Pin=U2-34

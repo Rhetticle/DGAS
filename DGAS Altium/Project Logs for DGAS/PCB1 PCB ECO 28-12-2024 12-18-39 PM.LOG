@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=GND Pin=J1-4
+Removed Pin From Net: NetName=GND Pin=J1-5
+Removed Pin From Net: NetName=ISO15765-4_CAN_P Pin=J1-6
+Removed Pin From Net: NetName=ISO15765-4_CAN_N Pin=J1-14
+Removed Pin From Net: NetName=ISO9141_LI Pin=J1-15
+Added Pin To Net: NetName=VBAT Pin=F1-1
+Added Pin To Net: NetName=ISO15765-4_CAN_P Pin=J1-4
+Added Pin To Net: NetName=ISO15765-4_CAN_N Pin=J1-6
+Added Pin To Net: NetName=ISO9141_LI Pin=J1-14
+Added Pin To Net: NetName=GND Pin=J1-15
+Change Net Name : Old Net Name=IGN_12V New Net Name=NetF1_2

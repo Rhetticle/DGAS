@@ -1,0 +1,78 @@
+Added Component: Designator=D2(BOUR-0603_V)
+Add component (AddParameter): Name = "Configuration"; Value = "Single"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "COO"; Value = "TW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://datasheet.ciiva.com/5831/714183-5831824.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "10/2009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dimension"; Value = "1.8(Max)x1(Max)mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ECCN"; Value = "EAR99"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Family"; Value = "CD0603B00340"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HTS"; Value = "8541100070"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.bourns.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Continuous Forward Current"; Value = "0.03A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40to125C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Surface Mount Device, Body 1.7 x 0.9 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No"; Value = "CD0603-B00340"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Forward Voltage"; Value = "0.37@0.001AV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Non-Repetitive Surge Current"; Value = "0.5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Current"; Value = "1@40VuA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Recovery Time"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Repetitive Voltage"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin_Count"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier_Package"; Value = "Case0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SmallSignalSchottkyDiode"; VariantName = "[No Variations]"
+Added Component: Designator=D3(BOUR-0603_V)
+Add component (AddParameter): Name = "Configuration"; Value = "Single"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "COO"; Value = "TW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://datasheet.ciiva.com/5831/714183-5831824.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "10/2009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dimension"; Value = "1.8(Max)x1(Max)mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ECCN"; Value = "EAR99"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Family"; Value = "CD0603B00340"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "HTS"; Value = "8541100070"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.bourns.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Continuous Forward Current"; Value = "0.03A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40to125C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Surface Mount Device, Body 1.7 x 0.9 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "TapeandReel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No"; Value = "CD0603-B00340"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Forward Voltage"; Value = "0.37@0.001AV"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Non-Repetitive Surge Current"; Value = "0.5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Current"; Value = "1@40VuA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Recovery Time"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Peak Reverse Repetitive Voltage"; Value = "45V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin_Count"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier_Package"; Value = "Case0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SmallSignalSchottkyDiode"; VariantName = "[No Variations]"
+Added Component: Designator=R12(RESC1608X55X30ML15T15)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "ERJ-3EKF1003V"; VariantName = "[No Variations]"
+Added Component: Designator=R13(RESC1608X55X30ML15T15)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "ERJ-3EKF1003V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VBAT Pin=D2-1
+Added Pin To Net: NetName=VBAT Pin=D3-1
+Added Pin To Net: NetName=ISO9141_K Pin=R12-1
+Added Pin To Net: NetName=ISO9141_LO Pin=R13-1
+Added Pin To Net: NetName=NetD2_2 Pin=D2-2
+Added Pin To Net: NetName=NetD2_2 Pin=R12-2
+Added Net: Name=NetD2_2
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_2 Pin=R13-2
+Added Net: Name=NetD3_2
+Added Member To Class: ClassName=OBD2 Member=Component D2 CD0603-B00340
+Added Member To Class: ClassName=OBD2 Member=Component D3 CD0603-B00340
+Added Member To Class: ClassName=OBD2 Member=Component R12 1k
+Added Member To Class: ClassName=OBD2 Member=Component R13 1k

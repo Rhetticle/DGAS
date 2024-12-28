@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=ISO9141_LI Pin=J1-14
+Removed Pin From Net: NetName=ISO9141_LO Pin=U1-105
+Removed Pin From Net: NetName=ISO9141_TX Pin=U8-1
+Removed Pin From Net: NetName=ISO9141_RX Pin=U8-4
+Added Pin To Net: NetName=ISO9141_LO Pin=J1-14
+Added Pin To Net: NetName=ISO9141_LI Pin=U1-105
+Added Pin To Net: NetName=ISO9141_RX Pin=U8-1
+Added Pin To Net: NetName=ISO9141_TX Pin=U8-4

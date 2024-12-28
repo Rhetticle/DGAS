@@ -1,0 +1,141 @@
+Added Component: Designator=C13(CAPC2013X135X45LL10T25)
+Add component (AddParameter): Name = "Capacitance"; Value = "4.7 uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "2012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case\/Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.murata.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61C475KA88-01.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "03/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.25 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "2-Pin Surface Mount Device, Body 2 x 1.25 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "GRM21BR61C475KA88L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHSCompliant"; Value = "true"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type (Capacitors)"; Value = "X5R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "16 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "16 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.25 mm"; VariantName = "[No Variations]"
+Added Component: Designator=C18(FP-GRM188-0_1-e0_2_0_55-IPC_A)
+Add component (AddParameter): Name = "Capacitance"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dielectric"; Value = "X5R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness"; Value = "0.035inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "6.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "6.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "6.3V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.031inch"; VariantName = "[No Variations]"
+Added Component: Designator=C24(CAPC2013X135X45LL10T25)
+Add component (AddParameter): Name = "Capacitance"; Value = "4.7 uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "2012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case\/Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.murata.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61C475KA88-01.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "03/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.25 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "2 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "2-Pin Surface Mount Device, Body 2 x 1.25 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "GRM21BR61C475KA88L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHSCompliant"; Value = "true"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type (Capacitors)"; Value = "X5R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "16 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "16 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "1.25 mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=NetC13_2 Pin=C13-2
+Added Pin To Net: NetName=3V3 Pin=C18-1
+Added Pin To Net: NetName=GND Pin=C18-2
+Added Pin To Net: NetName=GND Pin=C24-1
+Added Pin To Net: NetName=3V3 Pin=C24-2
+Added Member To Class: ClassName=Digital - STM32 Member=Component C1 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C2 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C3 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C4 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C5 1u
+Added Member To Class: ClassName=Digital - STM32 Member=Component C6 1u
+Added Member To Class: ClassName=Digital - STM32 Member=Component C7 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C8 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C9 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C10 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C11 1u
+Added Member To Class: ClassName=Digital - STM32 Member=Component C12 1u
+Added Member To Class: ClassName=Digital - STM32 Member=Component C13 2u2
+Added Member To Class: ClassName=Digital - STM32 Member=Component C14 2u2
+Added Member To Class: ClassName=Digital - STM32 Member=Component C15 100n
+Added Member To Class: ClassName=Digital - STM32 Member=Component C16 16p
+Added Member To Class: ClassName=Digital - STM32 Member=Component C17 16p
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C18 100n
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C19 100n
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C20 100n
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C21 100n
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C22 100n
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C23 100n
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C24 1u
+Added Member To Class: ClassName=LCD Member=Component C25 100n
+Added Member To Class: ClassName=LCD Member=Component C26 100n
+Added Member To Class: ClassName=LCD Member=Component C27 100n
+Added Member To Class: ClassName=LCD Member=Component C28 1u
+Added Member To Class: ClassName=LCD Member=Component C29 100n
+Added Member To Class: ClassName=Audio Member=Component C30 100n
+Added Member To Class: ClassName=Audio Member=Component C31 100n
+Added Member To Class: ClassName=Audio Member=Component C32 100n
+Added Member To Class: ClassName=Audio Member=Component C33 100n
+Added Member To Class: ClassName=Audio Member=Component C34 1u
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C35 100n
+Added Member To Class: ClassName=DRAM and QSPI Member=Component C36 1u
+Added Member To Class: ClassName=Digital - STM32 Member=Component D1 LTST-C191TBKT
+Added Member To Class: ClassName=Digital - STM32 Member=Component R1 10k
+Added Member To Class: ClassName=Digital - STM32 Member=Component R2 10k
+Added Member To Class: ClassName=Digital - STM32 Member=Component R3 100
+Added Member To Class: ClassName=LCD Member=Component R4 10k
+Added Member To Class: ClassName=Digital - STM32 Member=Component R5 4k7
+Added Member To Class: ClassName=Digital - STM32 Member=Component R6 4k7
+Added Member To Class: ClassName=Digital - STM32 Member=Component R7 4k7
+Added Member To Class: ClassName=Digital - STM32 Member=Component R8 4k7
+Added Member To Class: ClassName=Digital - STM32 Member=Component R9 120
+Added Member To Class: ClassName=DRAM and QSPI Member=Component R10 4k7
+Added Member To Class: ClassName=Audio Member=Component U3 MCP4018T-503E/LT
+Added Member To Class: ClassName=Audio Member=Component U4 TPA2006D1DRBR
+Added Member To Class: ClassName=Audio Member=Component U5 MCP47A1T-A0E/LT

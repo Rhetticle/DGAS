@@ -1,0 +1,103 @@
+Removed Pin From Net: NetName=400VDC Pin=U?-14
+Removed Pin From Net: NetName=400VDC Pin=U?-16
+Removed Pin From Net: NetName=400VDC Pin=U?-17
+Removed Pin From Net: NetName=400VDC Pin=U?-18
+Removed Pin From Net: NetName=400VDC Pin=U?-19
+Removed Pin From Net: NetName=400VDC Pin=U?-20
+Removed Pin From Net: NetName=400VDC Pin=U?-21
+Removed Pin From Net: NetName=400VDC Pin=U?-22
+Removed Pin From Net: NetName=400VDC Pin=U?-23
+Removed Pin From Net: NetName=400VDC Pin=U?-24
+Removed Pin From Net: NetName=400VDC Pin=U?-27
+Removed Pin From Net: NetName=400VDC Pin=U?-28
+Removed Pin From Net: NetName=400VDC Pin=U?-29
+Removed Pin From Net: NetName=400VDC Pin=U?-30
+Removed Pin From Net: NetName=400VDC Pin=U?-31
+Removed Pin From Net: NetName=400VDC Pin=U?-32
+Removed Pin From Net: NetName=400VDC Pin=U?-34
+Removed Pin From Net: NetName=400VDC Pin=U?-35
+Removed Pin From Net: NetName=400VDC Pin=U?-36
+Removed Pin From Net: NetName=400VDC Pin=U?-39
+Removed Pin From Net: NetName=400VDC Pin=U?-40
+Removed Pin From Net: NetName=400VDC Pin=U?-42
+Removed Pin From Net: NetName=400VDC Pin=U?-43
+Removed Pin From Net: NetName=400VDC Pin=U?-45
+Removed Pin From Net: NetName=400VDC Pin=U?-46
+Removed Pin From Net: NetName=400VDC Pin=U?-48
+Removed Pin From Net: NetName=400VDC Pin=U?-49
+Add Pin To Net: Unknown Pin: Pin *-1
+Add Pin To Net: Unknown Pin: Pin *-2
+Add Pin To Net: Unknown Pin: Pin *-3
+Add Pin To Net: Unknown Pin: Pin *-4
+Add Pin To Net: Unknown Pin: Pin *-5
+Add Pin To Net: Unknown Pin: Pin *-6
+Add Pin To Net: Unknown Pin: Pin *-9
+Add Pin To Net: Unknown Pin: Pin *-10
+Add Pin To Net: Unknown Pin: Pin *-11
+Add Pin To Net: Unknown Pin: Pin *-12
+Add Pin To Net: Unknown Pin: Pin *-13
+Add Pin To Net: Unknown Pin: Pin *-14
+Add Pin To Net: Unknown Pin: Pin *-15
+Add Pin To Net: Unknown Pin: Pin *-16
+Add Pin To Net: Unknown Pin: Pin *-17
+Add Pin To Net: Unknown Pin: Pin *-18
+Add Pin To Net: Unknown Pin: Pin *-19
+Add Pin To Net: Unknown Pin: Pin *-20
+Add Pin To Net: Unknown Pin: Pin *-21
+Add Pin To Net: Unknown Pin: Pin *-22
+Add Pin To Net: Unknown Pin: Pin *-23
+Add Pin To Net: Unknown Pin: Pin *-24
+Add Pin To Net: Unknown Pin: Pin *-25
+Add Pin To Net: Unknown Pin: Pin *-26
+Add Pin To Net: Unknown Pin: Pin *-27
+Add Pin To Net: Unknown Pin: Pin *-28
+Add Pin To Net: Unknown Pin: Pin *-29
+Add Pin To Net: Unknown Pin: Pin *-30
+Add Pin To Net: Unknown Pin: Pin *-31
+Add Pin To Net: Unknown Pin: Pin *-32
+Add Pin To Net: Unknown Pin: Pin *-33
+Add Pin To Net: Unknown Pin: Pin *-34
+Add Pin To Net: Unknown Pin: Pin *-35
+Add Pin To Net: Unknown Pin: Pin *-36
+Add Pin To Net: Unknown Pin: Pin *-37
+Add Pin To Net: Unknown Pin: Pin *-38
+Add Pin To Net: Unknown Pin: Pin *-39
+Add Pin To Net: Unknown Pin: Pin *-40
+Added Pin To Net: NetName=FMC_SDNCAS Pin=U?-16
+Added Pin To Net: NetName=FMC_SDNE0 Pin=U?-18
+Added Pin To Net: NetName=FMC_A1 Pin=U?-22
+Added Pin To Net: NetName=FMC_A3 Pin=U?-24
+Added Pin To Net: NetName=FMC_A4 Pin=U?-27
+Added Pin To Net: NetName=FMC_A5 Pin=U?-28
+Added Pin To Net: NetName=FMC_A6 Pin=U?-29
+Added Pin To Net: NetName=FMC_A7 Pin=U?-30
+Added Pin To Net: NetName=FMC_A8 Pin=U?-31
+Added Pin To Net: NetName=FMC_A9 Pin=U?-32
+Added Pin To Net: NetName=FMC_SDCLK Pin=U?-35
+Added Pin To Net: NetName=FMC_D8 Pin=U?-39
+Added Pin To Net: NetName=FMC_D9 Pin=U?-40
+Added Pin To Net: NetName=FMC_D10 Pin=U?-42
+Added Pin To Net: NetName=FMC_D11 Pin=U?-43
+Added Pin To Net: NetName=FMC_D12 Pin=U?-45
+Added Pin To Net: NetName=FMC_D13 Pin=U?-46
+Added Pin To Net: NetName=FMC_D14 Pin=U?-48
+Added Pin To Net: NetName=FMC_D15 Pin=U?-49
+Added Pin To Net: NetName=FMC_A11 Pin=U?-19
+Added Net: Name=FMC_A11
+Added Pin To Net: NetName=FMC_NBL0 Pin=U1-141
+Added Pin To Net: NetName=FMC_NBL0 Pin=U?-14
+Added Net: Name=FMC_NBL0
+Added Pin To Net: NetName=FMC_NBL1 Pin=U1-142
+Added Pin To Net: NetName=FMC_NBL1 Pin=U?-36
+Added Net: Name=FMC_NBL1
+Added Pin To Net: NetName=FMC_SDNCKE0 Pin=U?-34
+Added Net: Name=FMC_SDNCKE0
+Added Pin To Net: NetName=FMD_A0 Pin=U?-21
+Added Net: Name=FMD_A0
+Added Pin To Net: NetName=FMD_A2 Pin=U?-23
+Added Net: Name=FMD_A2
+Added Pin To Net: NetName=FMD_A10 Pin=U?-20
+Added Net: Name=FMD_A10
+Added Pin To Net: NetName=FMD_SDNRAS Pin=U?-17
+Added Net: Name=FMD_SDNRAS
+Add Class Member: Failed to add class member : Component * 40P FPC 0.5mm
