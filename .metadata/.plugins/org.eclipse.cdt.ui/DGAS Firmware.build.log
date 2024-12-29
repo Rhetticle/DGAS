@@ -1,0 +1,6 @@
+13:43:35 **** Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+Command canceled
+
+13:43:36 Build Cancelled. (took 605ms)
+

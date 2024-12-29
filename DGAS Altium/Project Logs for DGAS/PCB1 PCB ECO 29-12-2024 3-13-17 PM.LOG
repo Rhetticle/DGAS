@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=ISO15765-4_CAN_P Pin=J2-4
+Removed Pin From Net: NetName=ISO15765-4_CAN_N Pin=J2-5
+Added Pin To Net: NetName=ISO15765-4_CAN_N Pin=J2-4
+Added Pin To Net: NetName=ISO15765-4_CAN_P Pin=J2-5

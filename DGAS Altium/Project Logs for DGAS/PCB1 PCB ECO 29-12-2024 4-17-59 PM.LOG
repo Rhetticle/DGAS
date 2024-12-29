@@ -1,0 +1,10 @@
+Removed Member From Class: ClassName=Misc Member=J5
+Added Component: Designator=J?(CONN4_M20-8900_HRW)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Headers, Male Pins"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=J?-1
+Added Pin To Net: NetName=SWCLK Pin=J?-2
+Added Pin To Net: NetName=GND Pin=J?-3
+Added Pin To Net: NetName=SWCLK Pin=J?-4
+Added Member To Class: ClassName=Misc Member=Component J? M20-8900405

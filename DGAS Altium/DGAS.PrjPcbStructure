@@ -3,5 +3,6 @@ Record=NoMainPathDocument|SourceDocument=Accelerometer.SchDoc|FileName=Audio.Sch
 Record=NoMainPathDocument|SourceDocument=Accelerometer.SchDoc|FileName=Digital - STM32.SchDoc|SheetNumber=1
 Record=NoMainPathDocument|SourceDocument=Accelerometer.SchDoc|FileName=DRAM and QSPI.SchDoc|SheetNumber=3
 Record=NoMainPathDocument|SourceDocument=Accelerometer.SchDoc|FileName=LCD.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=Accelerometer.SchDoc|FileName=Misc.SchDoc|SheetNumber=8
 Record=NoMainPathDocument|SourceDocument=Accelerometer.SchDoc|FileName=OBD2.SchDoc|SheetNumber=6
 Record=NoMainPathDocument|SourceDocument=Accelerometer.SchDoc|FileName=Power.SchDoc|SheetNumber=4
