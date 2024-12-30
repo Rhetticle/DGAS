@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Altium\PCB1.PcbDoc
 Date     : 30/12/2024
-Time     : 6:05:21 PM
+Time     : 7:26:49 PM
 
 Processing Rule : Clearance Constraint (Gap=0.15mm) (All),(All)
 Rule Violations :0
@@ -10,9 +10,7 @@ Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Via (163.703mm,66.929mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
-   Violation between Un-Routed Net Constraint: Via (163.83mm,124.206mm) from Top Layer to Bottom Layer Dead Copper - Net Not Assigned.
-Rule Violations :2
+Rule Violations :0
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
@@ -48,6 +46,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 2
+Violations Detected : 0
 Waived Violations : 0
 Time Elapsed        : 00:00:00
