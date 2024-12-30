@@ -1,0 +1,19 @@
+/*
+ * LIS3DH.c
+ *
+ *  Created on: 30 Dec. 2024
+ *      Author: rhett
+ */
+
+
+/* Low level driver for STMicroelectronics LIS3DH accelerometers */
+
+#include "LIS3DH.h"
+
+extern I2C_HandleTypeDef i2c4;
+
+HAL_StatusTypeDef accel_init(void) {
+		uint8_t ctr1Data = 1 << ODR1 | 1 << ODR2 | 1 << ODR3;
+
+		HAL_I2C_Master_Transmit(hi2c, DevAddress, pData, Size, Timeout)
+}

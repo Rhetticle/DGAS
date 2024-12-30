@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define HOST_SENSE_Pin GPIO_PIN_11
+#define HOST_SENSE_GPIO_Port GPIOD
 #define BL_PWM_Pin GPIO_PIN_15
 #define BL_PWM_GPIO_Port GPIOA
 #define LCD_CS_Pin GPIO_PIN_4
