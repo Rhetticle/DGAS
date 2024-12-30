@@ -853,3 +853,4 @@
 2024-12-30 11:31:04,579 [INFO] ADCParametersView:116 -                Rank 1 : false
 2024-12-30 11:31:04,663 [INFO] ADCParametersView:116 -                Rank 1 : false
 2024-12-30 13:42:05,032 [WARN] IpParametersView:150 - Warning: This peripheral hasn't parameters
+2024-12-30 18:34:48,427 [INFO] I2cTimingTraitement:330 - 0x20404768
