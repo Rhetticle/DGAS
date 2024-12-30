@@ -1,0 +1,6 @@
+Added Component: Designator=R9(RESC1608X55X30ML15T15)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "ERJ-3EKF1003V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=LCD_CS Pin=R9-1
+Added Pin To Net: NetName=3V3 Pin=R9-2
+Added Member To Class: ClassName=LCD Member=Component R9 10k
