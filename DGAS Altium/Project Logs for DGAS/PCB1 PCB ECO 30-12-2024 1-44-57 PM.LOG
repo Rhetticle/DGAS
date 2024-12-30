@@ -1,0 +1,2 @@
+Added Pin To Net: NetName=FMC_BA0 Pin=U2-19
+Added Member To Class: ClassName=OBD2 Member=Component U7 MCP2551-I/SN

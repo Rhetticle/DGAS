@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=ISO9141_TX Pin=U1-34
+Added Pin To Net: NetName=ISO9141_TX Pin=U1-111

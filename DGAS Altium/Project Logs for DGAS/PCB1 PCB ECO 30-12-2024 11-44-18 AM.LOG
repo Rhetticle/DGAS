@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=VBAT Pin=D2-1
+Removed Pin From Net: NetName=VBAT Pin=D3-1
+Removed Pin From Net: NetName=VBAT Pin=U8-7
+Added Pin To Net: NetName=V_IGN Pin=D2-1
+Added Pin To Net: NetName=V_IGN Pin=D3-1
+Added Pin To Net: NetName=V_IGN Pin=U8-7
+Added Member To Class: ClassName=Misc Member=Component J4 B2P-VH-B(LF)(SN)
