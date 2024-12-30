@@ -1,0 +1,46 @@
+Removed Pin From Net: NetName=GND Pin=C46-2
+Removed Pin From Net: NetName=DGAS_CAN_P Pin=R24-1
+Removed Pin From Net: NetName=DGAS_CAN_N Pin=R24-2
+Removed Pin From Net: NetName=GND Pin=R25-1
+Removed Pin From Net: NetName=GND Pin=U11-2
+Removed Member From Class: ClassName=Misc Member=R24
+Removed Member From Class: ClassName=Misc Member=R25
+Change Component Footprint: Designator=U11 Old Footprint=MCHP-SN8_V New Footprint=FP-D0008A-MFG
+Change Component Comment : Designator=U11 Old Comment=MCP2551-I/SN New Comment=SN65HVD232QDRQ1
+Change Managed Component Library Link : Designator=U11 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=4AD9132A-28FC-4425-960C-174F582DD978 New ItemGUID=9F028415-64F1-42C3-8208-69A4BEEF638F Old RevisionGUID=02B3AEAD-95B4-4899-96D7-7D9E5E49F5AF New RevisionGUID=BDFA9CCF-2108-4A06-8710-B6E18A4437B3
+Change component parameters: Designator = "U11" ("U11"); Footprint = "MCHP-SN8_V"; UniqueID = "\HETEMJVV" ("\HETEMJVV")
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "SOIC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Data Rate"; Value = "1Mbps"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Interface"; Value = "CAN"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Supply Current"; Value = "17mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Supply Voltage"; Value = "3.6V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Supply Voltage"; Value = "3V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Nominal Supply Current"; Value = "17mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Drivers"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Pins"; Value = "8"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Receive Buffers"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Transceivers"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Transmit Buffers"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Supply Voltage"; Value = "3.3V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "2500"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "-"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supply Current"; Value = "17mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Weight"; Value = "0.002822oz"; VariantName = "[No Variations]"
+Added Component: Designator=R8(RESC1608X55X30ML15T15)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "ERJ-3EKF1003V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DGAS_CAN_P Pin=R8-1
+Added Pin To Net: NetName=DGAS_CAN_N Pin=R8-2
+Added Pin To Net: NetName=NetC46_2 Pin=C46-2
+Added Pin To Net: NetName=NetC46_2 Pin=U11-2
+Added Net: Name=NetC46_2
+Added Member To Class: ClassName=Misc Member=Component R8 120
