@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=Net*1_35 Pin=U1-137
+Change Net Name : Old Net Name=Net*1_35 New Net Name=LCD_NRST
+Added Member To Class: ClassName=LCD Member=Component *1 40P FPC 0.5mm

@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=3V3 Pin=*1-2
+Removed Pin From Net: NetName=3V3 Pin=*1-36
+Added Member To Class: ClassName=LCD Member=Component *1 40P FPC 0.5mm
+Added Member To Class: ClassName=Digital - STM32 Member=Component U1 STM32F750Z8T6
