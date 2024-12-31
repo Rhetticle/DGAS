@@ -1,0 +1,11 @@
+Added Component: Designator=J1(CONN9_LD15P_1556x500_AMP)
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Amphenol ICC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetF1_2 Pin=J1-1
+Added Pin To Net: NetName=ISO15765-4_CAN_P Pin=J1-4
+Added Pin To Net: NetName=ISO15765-4_CAN_N Pin=J1-6
+Added Pin To Net: NetName=ISO9141_K Pin=J1-7
+Added Pin To Net: NetName=ISO9141_LO Pin=J1-14
+Added Pin To Net: NetName=GND Pin=J1-15
+Added Member To Class: ClassName=OBD2 Member=Component J1 D15P33E4PA00LF

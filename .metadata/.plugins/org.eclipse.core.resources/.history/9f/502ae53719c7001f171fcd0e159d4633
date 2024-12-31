@@ -1,0 +1,20 @@
+/*
+ * W25N512GVEIG.c
+ *
+ *  Created on: 30 Dec. 2024
+ *      Author: rhett
+ */
+
+#include "stm32f7xx.h"
+#include "W25N512GVEIG.h"
+
+extern QSPI_HandleTypeDef hqspi;
+
+HAL_StatusTypeDef flash_get_id(void) {
+	uint8_t id; // we will just get the manufacturer ID not device
+
+	if (HAL_QSPI_Transmit(&hqspi, &id, 100) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+}

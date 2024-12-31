@@ -1,0 +1,32 @@
+/*
+ * W25N512GVEIG.c
+ *
+ *  Created on: 30 Dec. 2024
+ *      Author: rhett
+ */
+
+#include "stm32f7xx.h"
+#include "W25N512GVEIG.h"
+#include <string.h>
+
+extern QSPI_HandleTypeDef hqspi;
+
+HAL_StatusTypeDef flash_get_id(uint8_t* devId) {
+
+	QSPI_CommandTypeDef com;
+
+	memset(&com, 0, sizeof(QSPI_CommandTypeDef));
+
+	com.Instruction = GET_ID;
+	com.InstructionMode = QSPI_INSTRUCTION_1_LINE;
+	com.DummyCycles = 8;
+
+	if (HAL_QSPI_Command(&hqspi, &com, 100) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	if (HAL_QSPI_Receive(&hqspi, &devId, 100) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+}

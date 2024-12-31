@@ -1,0 +1,5 @@
+W25N512GVEIG.c:14:19:flash_get_id	3
+W25N512GVEIG.c:35:19:flash_read_reg	1
+W25N512GVEIG.c:39:19:flash_write_reg	1
+W25N512GVEIG.c:43:19:flash_write	1
+W25N512GVEIG.c:47:19:flash_read	1
