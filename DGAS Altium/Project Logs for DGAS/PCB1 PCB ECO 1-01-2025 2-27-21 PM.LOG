@@ -1,0 +1,35 @@
+Added Component: Designator=*(CONN_62684-402100ALF_AMP)
+Added Pin To Net: NetName=GND Pin=*-1
+Added Pin To Net: NetName=GND Pin=*-7
+Added Pin To Net: NetName=LTDC_R7 Pin=*-8
+Added Pin To Net: NetName=LTDC_R6 Pin=*-9
+Added Pin To Net: NetName=LTDC_R5 Pin=*-10
+Added Pin To Net: NetName=LTDC_R4 Pin=*-11
+Added Pin To Net: NetName=LTDC_R3 Pin=*-12
+Added Pin To Net: NetName=LTDC_R2 Pin=*-13
+Added Pin To Net: NetName=LTDC_G7 Pin=*-14
+Added Pin To Net: NetName=LTDC_G6 Pin=*-15
+Added Pin To Net: NetName=LTDC_G5 Pin=*-16
+Added Pin To Net: NetName=LTDC_G4 Pin=*-17
+Added Pin To Net: NetName=LTDC_G3 Pin=*-18
+Added Pin To Net: NetName=LTDC_G2 Pin=*-19
+Added Pin To Net: NetName=LTDC_B7 Pin=*-20
+Added Pin To Net: NetName=LTDC_B6 Pin=*-21
+Added Pin To Net: NetName=LTDC_B5 Pin=*-22
+Added Pin To Net: NetName=LTDC_B4 Pin=*-23
+Added Pin To Net: NetName=LTDC_B3 Pin=*-24
+Added Pin To Net: NetName=LTDC_B2 Pin=*-25
+Added Pin To Net: NetName=LTDC_HSYNC Pin=*-26
+Added Pin To Net: NetName=LTDC_VSYNC Pin=*-27
+Added Pin To Net: NetName=LTDC_DE Pin=*-28
+Added Pin To Net: NetName=LTDC_CLK Pin=*-29
+Added Pin To Net: NetName=LCD_CS Pin=*-30
+Added Pin To Net: NetName=LCD_SPI_CLK Pin=*-31
+Added Pin To Net: NetName=LCD_MOSI Pin=*-32
+Added Pin To Net: NetName=LCD_NRST Pin=*-35
+Added Pin To Net: NetName=3V3 Pin=*-36
+Added Pin To Net: NetName=GND Pin=*-37
+Added Pin To Net: NetName=LED_K Pin=*-38
+Added Pin To Net: NetName=LED_K Pin=*-39
+Added Pin To Net: NetName=LED_A Pin=*-40
+Added Member To Class: ClassName=LCD Member=Component * 40P FPC 0.5mm
