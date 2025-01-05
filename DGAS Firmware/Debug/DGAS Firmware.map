@@ -162,6 +162,135 @@ Discarded input sections
  .debug_frame   0x0000000000000000       0x80 ./Core/Src/LIS3DH.o
  .ARM.attributes
                 0x0000000000000000       0x34 ./Core/Src/LIS3DH.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .group         0x0000000000000000        0xc ./Core/Src/ST7701.o
+ .text          0x0000000000000000        0x0 ./Core/Src/ST7701.o
+ .data          0x0000000000000000        0x0 ./Core/Src/ST7701.o
+ .bss           0x0000000000000000        0x0 ./Core/Src/ST7701.o
+ .text.lcd_command
+                0x0000000000000000       0x34 ./Core/Src/ST7701.o
+ .text.lcd_init
+                0x0000000000000000       0x10 ./Core/Src/ST7701.o
+ .debug_info    0x0000000000000000      0x6ac ./Core/Src/ST7701.o
+ .debug_abbrev  0x0000000000000000      0x174 ./Core/Src/ST7701.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./Core/Src/ST7701.o
+ .debug_ranges  0x0000000000000000       0x18 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x263 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0xa78 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x2e ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x3b ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x8e ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x51 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x103 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x6a ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x1df ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x1c ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x22 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0xd9 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000     0x12cd ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x11f ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x19 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000    0x1987c ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x6d ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x2b7 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000     0x3765 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x174 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x63 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000     0x1939 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x6c4 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x185 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x115 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x1fd ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0xa5 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x24f ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x41 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x58 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x236 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x416 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x153 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x107 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x40f ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x124 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x230 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x12 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x504 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x22c ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x61 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0xa5 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x198 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0xd6 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x12e ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x108 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x35 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x2d4 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x2fe ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0xa83 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x59 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x56d ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x44 ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000      0x14d ./Core/Src/ST7701.o
+ .debug_macro   0x0000000000000000       0x58 ./Core/Src/ST7701.o
+ .debug_line    0x0000000000000000      0x7f7 ./Core/Src/ST7701.o
+ .debug_str     0x0000000000000000    0xf9f2a ./Core/Src/ST7701.o
+ .comment       0x0000000000000000       0x51 ./Core/Src/ST7701.o
+ .debug_frame   0x0000000000000000       0x54 ./Core/Src/ST7701.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./Core/Src/ST7701.o
  .group         0x0000000000000000        0xc ./Core/Src/W25N512GVEIG.o
  .group         0x0000000000000000        0xc ./Core/Src/W25N512GVEIG.o
  .group         0x0000000000000000        0xc ./Core/Src/W25N512GVEIG.o
@@ -5841,6 +5970,7 @@ LOAD c:/st/stm32cubeide_1.12.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD c:/st/stm32cubeide_1.12.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD c:/st/stm32cubeide_1.12.1/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 LOAD ./Core/Src/LIS3DH.o
+LOAD ./Core/Src/ST7701.o
 LOAD ./Core/Src/W25N512GVEIG.o
 LOAD ./Core/Src/main.o
 LOAD ./Core/Src/stm32f7xx_hal_msp.o

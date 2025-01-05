@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;DGAS Firmware/Core/Src/lvgl&apos;" deleteContents="false" description="Delete resource &apos;DGAS Firmware/Core/Src/lvgl&apos;" element1="/DGAS Firmware/Core/Src/lvgl" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1735870418642"/>
+</session>

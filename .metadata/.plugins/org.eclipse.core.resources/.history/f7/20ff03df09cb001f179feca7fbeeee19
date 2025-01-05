@@ -1,0 +1,22 @@
+/*
+ * ST7701.c
+ *
+ *  Created on: Jan 4, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include "ST7701.h"
+
+extern SPI_HandleTypeDef hspi1;
+
+HAL_StatusTypeDef lcd_command(uint8_t cmd, uint8_t arg) {
+	if (HAL_SPI_Transmit(&hspi, &arg, sizeof(uint8_t), 100) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef lcd_init(void) {
+	return HAL_OK;
+}

@@ -400,7 +400,7 @@ int main(void)
  800053c:	f000 f8f8 	bl	8000730 <MX_CAN2_Init>
   MX_ADC1_Init();
  8000540:	f000 f86e 	bl	8000620 <MX_ADC1_Init>
-
+  /* USER CODE BEGIN 2 */
   /* USER CODE END 2 */
 
   /* Infinite loop */

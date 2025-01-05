@@ -124,7 +124,6 @@ int main(void)
   MX_CAN2_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

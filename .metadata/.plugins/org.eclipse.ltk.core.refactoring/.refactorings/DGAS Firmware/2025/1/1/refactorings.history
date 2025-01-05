@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DGAS Firmware/Core/Src/lvgl-master&apos; to &apos;lvgl&apos;" description="Rename resource &apos;lvgl-master&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/lvgl-master" name="lvgl" stamp="1735869437501" updateReferences="true"/>
+</session>
