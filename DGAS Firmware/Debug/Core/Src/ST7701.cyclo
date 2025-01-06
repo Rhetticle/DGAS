@@ -1,2 +1,2 @@
 ST7701.c:13:19:lcd_command	2
-ST7701.c:20:19:lcd_init	1
+ST7701.c:22:19:lcd_init	1

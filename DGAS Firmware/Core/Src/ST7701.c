@@ -11,7 +11,9 @@
 extern SPI_HandleTypeDef hspi1;
 
 HAL_StatusTypeDef lcd_command(uint8_t cmd, uint16_t arg) {
-	if (HAL_SPI_Transmit(&hspi1, &arg, sizeof(uint16_t), 100) != HAL_OK) {
+	uint8_t args[] = {arg << 8, arg};
+
+	if (HAL_SPI_Transmit(&hspi1, args, sizeof(uint16_t), 100) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	return HAL_OK;
