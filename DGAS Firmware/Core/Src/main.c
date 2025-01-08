@@ -188,7 +188,7 @@ int main(void)
 
   status = CSP_QUADSPI_Init();
   status = CSP_QSPI_Erase_Chip();
-  status = CSP_QSPI_WriteMemory(test, 0x00000, strlen(test));
+  status = CSP_QSPI_WriteMemory((uint8_t*) test, 0x00130, strlen(test));
   status = CSP_QSPI_EnableMemoryMappedMode();
   /* USER CODE END 2 */
 
@@ -510,7 +510,7 @@ static void MX_QUADSPI_Init(void)
   /* USER CODE END QUADSPI_Init 1 */
   /* QUADSPI parameter configuration*/
   hqspi.Instance = QUADSPI;
-  hqspi.Init.ClockPrescaler = 4-1;
+  hqspi.Init.ClockPrescaler = 16-1;
   hqspi.Init.FifoThreshold = 4;
   hqspi.Init.SampleShifting = QSPI_SAMPLE_SHIFTING_NONE;
   hqspi.Init.FlashSize = 25;

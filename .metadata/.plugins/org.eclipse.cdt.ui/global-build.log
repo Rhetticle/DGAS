@@ -1,15 +1,4 @@
-15:06:36 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/quadspi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/quadspi.d" -MT"Core/Src/quadspi.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/quadspi.o"
-../Core/Src/quadspi.c: In function 'CSP_QSPI_WriteMemory':
-../Core/Src/quadspi.c:342:25: error: 'QSPI_ADDRESS_1_LINES' undeclared (first use in this function); did you mean 'QSPI_ADDRESS_1_LINE'?
-  342 |  sCommand.AddressMode = QSPI_ADDRESS_1_LINES;
-      |                         ^~~~~~~~~~~~~~~~~~~~
-      |                         QSPI_ADDRESS_1_LINE
-../Core/Src/quadspi.c:342:25: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:46: Core/Src/quadspi.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-15:06:57 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+16:22:48 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/quadspi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/quadspi.d" -MT"Core/Src/quadspi.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/quadspi.o"
 arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -18,107 +7,22 @@ Finished building target: DGAS Firmware.elf
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
-  28476	     20	   2348	  30844	   787c	DGAS Firmware.elf
+  28700	     20	   2348	  31068	   795c	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
-15:09:35 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:89:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   89 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:187:21: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  187 |   HAL_StatusTypeDef status;
-      |                     ^~~~~~
-At top level:
-../Core/Src/main.c:501:13: warning: 'MX_QUADSPI_Init' defined but not used [-Wunused-function]
-  501 | static void MX_QUADSPI_Init(void)
-      |             ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
-  28448	     20	   2348	  30816	   7860	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-15:12:38 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+16:22:51 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-size   DGAS\ Firmware.elf 
    text	   data	    bss	    dec	    hex	filename
-  28448	     20	   2348	  30816	   7860	DGAS Firmware.elf
+  28700	     20	   2348	  31068	   795c	DGAS Firmware.elf
 Finished building: default.size.stdout
  
-15:13:43 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+16:23:28 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:89:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   89 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:191:33: warning: pointer targets in passing argument 1 of 'CSP_QSPI_WriteMemory' differ in signedness [-Wpointer-sign]
-  191 |   status = CSP_QSPI_WriteMemory(test, 0x00000, strlen(test));
-      |                                 ^~~~
-      |                                 |
-      |                                 char *
-In file included from ../Core/Src/main.c:25:
-../Core/Inc/quadspi.h:5:39: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-    5 | uint8_t CSP_QSPI_WriteMemory(uint8_t* buffer, uint32_t address, uint32_t buffer_size);
-      |                              ~~~~~~~~~^~~~~~
-../Core/Src/main.c:187:21: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  187 |   HAL_StatusTypeDef status;
-      |                     ^~~~~~
-At top level:
-../Core/Src/main.c:501:13: warning: 'MX_QUADSPI_Init' defined but not used [-Wunused-function]
-  501 | static void MX_QUADSPI_Init(void)
-      |             ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
 arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
-  28480	     20	   2348	  30848	   7880	DGAS Firmware.elf
+  28700	     20	   2348	  31068	   795c	DGAS Firmware.elf
 Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-15:15:31 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:89:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   89 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:191:33: warning: pointer targets in passing argument 1 of 'CSP_QSPI_WriteMemory' differ in signedness [-Wpointer-sign]
-  191 |   status = CSP_QSPI_WriteMemory(test, 0x00000, strlen(test));
-      |                                 ^~~~
-      |                                 |
-      |                                 char *
-In file included from ../Core/Src/main.c:25:
-../Core/Inc/quadspi.h:5:39: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
-    5 | uint8_t CSP_QSPI_WriteMemory(uint8_t* buffer, uint32_t address, uint32_t buffer_size);
-      |                              ~~~~~~~~~^~~~~~
-../Core/Src/main.c:187:21: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  187 |   HAL_StatusTypeDef status;
-      |                     ^~~~~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
-  28572	     20	   2348	  30940	   78dc	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
  

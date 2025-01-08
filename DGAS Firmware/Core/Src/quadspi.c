@@ -200,6 +200,7 @@ uint8_t QSPI_Configuration(void) {
 	sCommand.Instruction = READ_STATUS_REG_CMD;
 	sCommand.AddressMode = QSPI_ADDRESS_1_LINE;
 	sCommand.Address = 0xC0;
+	sCommand.AddressSize = 1;
 	sCommand.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;
 	sCommand.DataMode = QSPI_DATA_1_LINE;
 	sCommand.DummyCycles = 0;
@@ -308,6 +309,29 @@ uint8_t CSP_QSPI_EraseSector(uint32_t EraseStartAddress, uint32_t EraseEndAddres
 	return HAL_OK;
 }
 
+static uint8_t CSP_QSPI_EmptyBuf(uint32_t page) {
+	QSPI_CommandTypeDef sCommand;
+
+	sCommand.InstructionMode = QSPI_INSTRUCTION_1_LINE;
+	sCommand.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;
+	sCommand.DdrMode = QSPI_DDR_MODE_DISABLE;
+	sCommand.DdrHoldHalfCycle = QSPI_DDR_HHC_ANALOG_DELAY;
+	sCommand.SIOOMode = QSPI_SIOO_INST_EVERY_CMD;
+	sCommand.Instruction = PROG_EXEC;
+	sCommand.AddressMode = QSPI_ADDRESS_1_LINE;
+	sCommand.AddressSize = QSPI_ADDRESS_16_BITS;
+	sCommand.Address = page;
+	sCommand.DataMode = QSPI_DATA_NONE;
+	sCommand.NbData = 0;
+	sCommand.DummyCycles = 8;
+
+	if (HAL_QSPI_Command(&hqspi, &sCommand, HAL_QPSI_TIMEOUT_DEFAULT_VALUE)
+				!= HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
 uint8_t CSP_QSPI_WriteMemory(uint8_t* buffer, uint32_t address,uint32_t buffer_size) {
 
 	QSPI_CommandTypeDef sCommand;
@@ -372,6 +396,9 @@ uint8_t CSP_QSPI_WriteMemory(uint8_t* buffer, uint32_t address,uint32_t buffer_s
 			return HAL_ERROR;
 		}
 
+		if (CSP_QSPI_EmptyBuf(current_addr) != HAL_OK) {
+			return HAL_ERROR;
+		}
 		/* Configure automatic polling mode to wait for end of program */
 		if (QSPI_AutoPollingMemReady() != HAL_OK) {
 			return HAL_ERROR;
@@ -398,7 +425,7 @@ uint8_t CSP_QSPI_EnableMemoryMappedMode(void) {
 	/* Enable Memory-Mapped mode-------------------------------------------------- */
 
 	sCommand.InstructionMode = QSPI_INSTRUCTION_1_LINE;
-	sCommand.AddressSize = QSPI_ADDRESS_24_BITS;
+	sCommand.AddressSize = QSPI_ADDRESS_16_BITS;
 	sCommand.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;
 	sCommand.DdrMode = QSPI_DDR_MODE_DISABLE;
 	sCommand.DdrHoldHalfCycle = QSPI_DDR_HHC_ANALOG_DELAY;
