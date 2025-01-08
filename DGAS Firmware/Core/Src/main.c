@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ST7701.h"
+#include "quadspi.h"
 #include <string.h>
 /* USER CODE END Includes */
 
@@ -182,13 +183,20 @@ int main(void)
   fmc_init();
   HAL_Delay(10);
   fmc_test();
+  char* test = "Test to mem";
+  HAL_StatusTypeDef status;
+
+  status = CSP_QUADSPI_Init();
+  status = CSP_QSPI_Erase_Chip();
+  status = CSP_QSPI_WriteMemory(test, 0x00000, strlen(test));
+  status = CSP_QSPI_EnableMemoryMappedMode();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  lcd_test();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -502,11 +510,11 @@ static void MX_QUADSPI_Init(void)
   /* USER CODE END QUADSPI_Init 1 */
   /* QUADSPI parameter configuration*/
   hqspi.Instance = QUADSPI;
-  hqspi.Init.ClockPrescaler = 255;
-  hqspi.Init.FifoThreshold = 1;
+  hqspi.Init.ClockPrescaler = 4-1;
+  hqspi.Init.FifoThreshold = 4;
   hqspi.Init.SampleShifting = QSPI_SAMPLE_SHIFTING_NONE;
-  hqspi.Init.FlashSize = 1;
-  hqspi.Init.ChipSelectHighTime = QSPI_CS_HIGH_TIME_1_CYCLE;
+  hqspi.Init.FlashSize = 25;
+  hqspi.Init.ChipSelectHighTime = QSPI_CS_HIGH_TIME_6_CYCLE;
   hqspi.Init.ClockMode = QSPI_CLOCK_MODE_0;
   hqspi.Init.FlashID = QSPI_FLASH_ID_1;
   hqspi.Init.DualFlash = QSPI_DUALFLASH_DISABLE;
