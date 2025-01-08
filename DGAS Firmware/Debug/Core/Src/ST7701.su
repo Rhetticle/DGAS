@@ -1,2 +1,5 @@
 ../Core/Src/ST7701.c:13:19:lcd_command	24	static
-../Core/Src/ST7701.c:22:19:lcd_init	4	static
+../Core/Src/ST7701.c:25:6:lcd_reset	8	static
+../Core/Src/ST7701.c:32:6:sendCommand	24	static
+../Core/Src/ST7701.c:41:6:sendData	24	static
+../Core/Src/ST7701.c:50:19:lcd_init	8	static

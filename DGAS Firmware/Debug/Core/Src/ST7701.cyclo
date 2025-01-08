@@ -1,2 +1,5 @@
 ST7701.c:13:19:lcd_command	2
-ST7701.c:22:19:lcd_init	1
+ST7701.c:25:6:lcd_reset	1
+ST7701.c:32:6:sendCommand	1
+ST7701.c:41:6:sendData	1
+ST7701.c:50:19:lcd_init	1
