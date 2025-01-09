@@ -35,6 +35,8 @@ Core/Src/W25N512GVEIG.o: ../Core/Src/W25N512GVEIG.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  ../Core/Inc/W25N512GVEIG.h
@@ -74,6 +76,8 @@ Core/Src/W25N512GVEIG.o: ../Core/Src/W25N512GVEIG.c \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 ../Core/Inc/W25N512GVEIG.h:

@@ -613,3 +613,255 @@
 2025-01-09 11:50:42,161 [INFO] CADModel:114 - Register for checkConnection events
 2025-01-09 11:50:42,260 [INFO] OpenFileManager:328 - Restore cursor
 2025-01-09 11:50:42,421 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-09 15:03:20,241 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 859687872 Bytes (1027604480)
+2025-01-09 15:03:21,381 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 885902272 Bytes (1027604480)
+2025-01-09 15:03:23,630 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 808631648 Bytes (1027604480)
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LTDC
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FMC
+2025-01-09 15:03:24,682 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: UART
+2025-01-09 15:03:24,684 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2025-01-09 15:03:24,685 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: QUADSPI
+2025-01-09 15:03:24,687 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2025-01-09 15:03:24,735 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-09 15:03:25,517 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp_save
+2025-01-09 15:03:26,303 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp
+2025-01-09 15:03:26,601 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp_save
+2025-01-09 15:03:26,820 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp
+2025-01-09 15:03:29,287 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp_save
+2025-01-09 15:03:29,419 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp
+2025-01-09 15:03:29,461 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:03:29,620 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:03:29,637 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:03:29,748 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:03:29,776 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:03:29,939 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:03:30,011 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c_save
+2025-01-09 15:03:30,196 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c
+2025-01-09 15:03:30,230 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h_save
+2025-01-09 15:03:30,387 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h
+2025-01-09 15:03:30,441 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:03:30,668 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:03:30,683 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:03:30,846 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:03:30,888 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:03:31,059 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:03:31,128 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c_save
+2025-01-09 15:03:31,531 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c
+2025-01-09 15:03:31,557 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp_save
+2025-01-09 15:03:31,778 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp
+2025-01-09 15:03:31,831 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h_save
+2025-01-09 15:03:32,037 [INFO] CodeEngine:335 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h
+2025-01-09 15:03:32,150 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h_save
+2025-01-09 15:03:32,321 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h
+2025-01-09 15:03:32,366 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c_save
+2025-01-09 15:03:32,662 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c
+2025-01-09 15:03:34,111 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 433mS.
+2025-01-09 15:03:34,134 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2025-01-09 15:03:34,644 [INFO] ConfigFileManager:1483 - The Die is : DIE449
+2025-01-09 15:03:34,663 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2025-01-09 15:03:34,679 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2025-01-09 15:03:34,691 [INFO] ApiDbMcu:507 - Load IP Config File for LIBJPEG
+2025-01-09 15:03:34,708 [INFO] ApiDbMcu:507 - Load IP Config File for LWIP
+2025-01-09 15:03:34,724 [INFO] ApiDbMcu:507 - Load IP Config File for MBEDTLS
+2025-01-09 15:03:34,745 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2025-01-09 15:03:34,761 [INFO] ApiDbMcu:507 - Load IP Config File for USB_HOST
+2025-01-09 15:03:37,390 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-01-09 15:03:45,070 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 10935mS.
+2025-01-09 15:03:45,078 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 8mS.
+2025-01-09 15:03:45,462 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 1mS.
+2025-01-09 15:10:16,674 [INFO] I2cTimingTraitement:330 - 0x20404768
+2025-01-09 15:10:16,695 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-09 15:10:31,489 [INFO] I2cTimingTraitement:330 - 0x20404768
+2025-01-09 15:10:31,503 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-09 15:10:36,305 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-01-09 15:11:09,673 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-01-09 15:11:19,022 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-01-09 15:11:34,112 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 798714120 Bytes (1073741824)
+2025-01-09 15:11:34,997 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 824402184 Bytes (1073741824)
+2025-01-09 15:11:37,446 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 797383584 Bytes (1073741824)
+2025-01-09 15:11:38,022 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2025-01-09 15:11:38,022 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:11:38,022 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:11:38,022 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F7
+2025-01-09 15:11:38,022 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LTDC
+2025-01-09 15:11:38,022 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2025-01-09 15:11:38,023 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2025-01-09 15:11:38,023 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2025-01-09 15:11:38,023 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2025-01-09 15:11:38,023 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2025-01-09 15:11:38,023 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FMC
+2025-01-09 15:11:38,023 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: UART
+2025-01-09 15:11:38,024 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2025-01-09 15:11:38,024 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: QUADSPI
+2025-01-09 15:11:38,025 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2025-01-09 15:11:38,042 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-09 15:11:38,336 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp_save
+2025-01-09 15:11:38,774 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp
+2025-01-09 15:11:39,455 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp_save
+2025-01-09 15:11:39,713 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp
+2025-01-09 15:11:41,662 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp_save
+2025-01-09 15:11:41,847 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp
+2025-01-09 15:11:41,864 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:11:42,037 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:11:42,045 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:11:42,212 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:11:42,219 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:11:42,356 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:11:42,420 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c_save
+2025-01-09 15:11:42,864 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c
+2025-01-09 15:11:42,877 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h_save
+2025-01-09 15:11:43,082 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h
+2025-01-09 15:11:43,140 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:11:43,344 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:11:43,358 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:11:43,517 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:11:43,569 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:11:43,742 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:11:43,786 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c_save
+2025-01-09 15:11:44,248 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c
+2025-01-09 15:11:44,272 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp_save
+2025-01-09 15:11:44,399 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp
+2025-01-09 15:11:44,441 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h_save
+2025-01-09 15:11:44,592 [INFO] CodeEngine:335 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h
+2025-01-09 15:11:44,669 [WARN] IPConfigManager:3431 - IP not found : TIM
+2025-01-09 15:11:44,672 [WARN] CodeGenerator:3754 - IP not found : null
+2025-01-09 15:11:44,723 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h_save
+2025-01-09 15:11:44,928 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h
+2025-01-09 15:11:44,959 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c_save
+2025-01-09 15:11:45,457 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c
+2025-01-09 15:11:47,016 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 287mS.
+2025-01-09 15:11:47,021 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2025-01-09 15:11:47,485 [INFO] ConfigFileManager:1483 - The Die is : DIE449
+2025-01-09 15:11:57,354 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 10333mS.
+2025-01-09 15:11:57,355 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 1mS.
+2025-01-09 15:11:57,936 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2025-01-09 15:18:08,812 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,471x210,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-01-09 15:18:23,741 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 823095664 Bytes (1073741824)
+2025-01-09 15:18:24,513 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 848787824 Bytes (1073741824)
+2025-01-09 15:18:26,829 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 807378112 Bytes (1073741824)
+2025-01-09 15:18:27,371 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2025-01-09 15:18:27,371 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F7
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LTDC
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FMC
+2025-01-09 15:18:27,373 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: UART
+2025-01-09 15:18:27,375 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2025-01-09 15:18:27,375 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: QUADSPI
+2025-01-09 15:18:27,377 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2025-01-09 15:18:27,399 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-09 15:18:27,707 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp_save
+2025-01-09 15:18:27,832 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp
+2025-01-09 15:18:27,984 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp_save
+2025-01-09 15:18:28,103 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp
+2025-01-09 15:18:29,353 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp_save
+2025-01-09 15:18:29,467 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp
+2025-01-09 15:18:29,480 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:18:29,590 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:18:29,596 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:18:29,656 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:18:29,661 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:18:29,796 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:18:29,837 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c_save
+2025-01-09 15:18:30,050 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c
+2025-01-09 15:18:30,058 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h_save
+2025-01-09 15:18:30,125 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h
+2025-01-09 15:18:30,166 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:18:30,262 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:18:30,268 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:18:30,322 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:18:30,347 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:18:30,429 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:18:30,453 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c_save
+2025-01-09 15:18:30,688 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c
+2025-01-09 15:18:30,704 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp_save
+2025-01-09 15:18:30,765 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp
+2025-01-09 15:18:30,799 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h_save
+2025-01-09 15:18:30,987 [INFO] CodeEngine:335 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h
+2025-01-09 15:18:31,036 [WARN] IPConfigManager:3431 - IP not found : TIM
+2025-01-09 15:18:31,037 [WARN] CodeGenerator:3754 - IP not found : null
+2025-01-09 15:18:31,068 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h_save
+2025-01-09 15:18:31,173 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h
+2025-01-09 15:18:31,191 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c_save
+2025-01-09 15:18:31,419 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c
+2025-01-09 15:18:32,554 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 286mS.
+2025-01-09 15:18:32,560 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2025-01-09 15:18:33,140 [INFO] ConfigFileManager:1483 - The Die is : DIE449
+2025-01-09 15:18:42,741 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 10180mS.
+2025-01-09 15:18:42,742 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 1mS.
+2025-01-09 15:18:43,091 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2025-01-09 15:21:55,901 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-01-09 15:21:56,006 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-01-09 15:22:34,822 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 927667600 Bytes (1073741824)
+2025-01-09 15:22:35,852 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 786715352 Bytes (1073741824)
+2025-01-09 15:22:38,240 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 797116368 Bytes (1073741824)
+2025-01-09 15:22:38,761 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2025-01-09 15:22:38,762 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:22:38,762 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CAN
+2025-01-09 15:22:38,762 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F7
+2025-01-09 15:22:38,762 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LTDC
+2025-01-09 15:22:38,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2025-01-09 15:22:38,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2025-01-09 15:22:38,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2025-01-09 15:22:38,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2025-01-09 15:22:38,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2025-01-09 15:22:38,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FMC
+2025-01-09 15:22:38,763 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: UART
+2025-01-09 15:22:38,765 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2025-01-09 15:22:38,765 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: QUADSPI
+2025-01-09 15:22:38,766 [INFO] CodeGenerator:793 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.8.1.202304191431\\db\
+2025-01-09 15:22:38,787 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-09 15:22:39,083 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp_save
+2025-01-09 15:22:39,200 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\license.tmp
+2025-01-09 15:22:39,364 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp_save
+2025-01-09 15:22:39,517 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\gpio.tmp
+2025-01-09 15:22:40,655 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp_save
+2025-01-09 15:22:40,760 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\cortex.tmp
+2025-01-09 15:22:40,772 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:22:40,897 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:22:40,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:22:41,041 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:22:41,053 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:22:41,145 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:22:41,193 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c_save
+2025-01-09 15:22:41,406 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_it.c
+2025-01-09 15:22:41,415 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h_save
+2025-01-09 15:22:41,480 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_it.h
+2025-01-09 15:22:41,518 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp_save
+2025-01-09 15:22:41,609 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_HC.tmp
+2025-01-09 15:22:41,617 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp_save
+2025-01-09 15:22:41,669 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_GV.tmp
+2025-01-09 15:22:41,696 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp_save
+2025-01-09 15:22:41,764 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\mx_fmc_MSP.tmp
+2025-01-09 15:22:41,794 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c_save
+2025-01-09 15:22:41,954 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\stm32f7xx_hal_msp.c
+2025-01-09 15:22:41,961 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp_save
+2025-01-09 15:22:42,015 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\MXTmpFiles\system.tmp
+2025-01-09 15:22:42,043 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h_save
+2025-01-09 15:22:42,181 [INFO] CodeEngine:335 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\stm32f7xx_hal_conf.h
+2025-01-09 15:22:42,215 [WARN] IPConfigManager:3431 - IP not found : TIM
+2025-01-09 15:22:42,217 [WARN] CodeGenerator:3754 - IP not found : null
+2025-01-09 15:22:42,247 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h_save
+2025-01-09 15:22:42,350 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Inc\main.h
+2025-01-09 15:22:42,368 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c_save
+2025-01-09 15:22:42,562 [INFO] CodeEngine:279 - Generated code: C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\Core\Src\main.c
+2025-01-09 15:22:43,585 [INFO] ProjectBuilder:2996 - Time for Copy HAL[1] : 286mS.
+2025-01-09 15:22:43,594 [INFO] ProjectBuilder:4304 - Project Generator version: 3.19.2
+2025-01-09 15:22:44,140 [INFO] ConfigFileManager:1483 - The Die is : DIE449
+2025-01-09 15:22:51,946 [INFO] ProjectBuilder:4505 - Time for Generating toolchain IDE Files: 8351mS.
+2025-01-09 15:22:51,947 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2025-01-09 15:22:52,273 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
+2025-01-09 15:24:36,481 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,471x210,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]

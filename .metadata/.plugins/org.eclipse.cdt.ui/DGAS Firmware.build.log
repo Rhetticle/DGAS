@@ -1,9 +1,9 @@
-13:38:34 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+16:25:11 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:93:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   93 |    HAL_StatusTypeDef status;
+../Core/Src/main.c:96:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+   96 |    HAL_StatusTypeDef status;
       |                      ^~~~~~
 arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: DGAS Firmware.elf
@@ -11,11 +11,11 @@ Finished building target: DGAS Firmware.elf
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 398316	    224	  68424	 466964	  72014	DGAS Firmware.elf
+ 402952	    224	  68504	 471680	  73280	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
 
-13:39:16 Build Finished. 0 errors, 1 warnings. (took 41s.792ms)
+16:25:57 Build Finished. 0 errors, 1 warnings. (took 45s.821ms)
 
