@@ -1,0 +1,17 @@
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:129:6:lv_draw_sw_i1_to_argb8888	56	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:149:6:lv_draw_sw_rgb565_swap	32	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:183:6:lv_draw_sw_i1_invert	32	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:214:6:lv_draw_sw_i1_convert_to_vtiled	56	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:243:6:lv_draw_sw_rotate	32	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:343:13:rotate270_argb8888	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:364:13:rotate180_argb8888	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:384:13:rotate90_argb8888	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:408:13:rotate90_rgb888	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:427:13:rotate180_rgb888	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:445:13:rotate270_rgb888	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:467:13:rotate270_rgb565	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:488:13:rotate180_rgb565	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:507:13:rotate90_rgb565	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:533:13:rotate90_l8	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:551:13:rotate180_l8	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_utils.c:567:13:rotate270_l8	40	static

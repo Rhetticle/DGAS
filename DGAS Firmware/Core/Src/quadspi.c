@@ -340,8 +340,6 @@ uint8_t CSP_QSPI_WriteMemory(uint8_t* buffer, uint32_t address,uint32_t buffer_s
 	/* Calculation of the size between the write address and the end of the page */
 	current_addr = 0;
 
-
-	//
 	while (current_addr <= address) {
 		current_addr += MEMORY_PAGE_SIZE;
 	}
@@ -393,10 +391,6 @@ uint8_t CSP_QSPI_WriteMemory(uint8_t* buffer, uint32_t address,uint32_t buffer_s
 		/* Transmission of the data */
 		if (HAL_QSPI_Transmit(&hqspi, buffer, HAL_QPSI_TIMEOUT_DEFAULT_VALUE) != HAL_OK) {
 
-			return HAL_ERROR;
-		}
-
-		if (CSP_QSPI_EmptyBuf(current_addr) != HAL_OK) {
 			return HAL_ERROR;
 		}
 		/* Configure automatic polling mode to wait for end of program */

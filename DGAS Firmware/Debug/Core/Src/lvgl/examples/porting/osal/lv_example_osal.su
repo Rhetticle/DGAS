@@ -1,0 +1,9 @@
+../Core/Src/lvgl/examples/porting/osal/../../../src/core/../draw/sw/../../osal/lv_os.h:190:27:lv_thread_init	24	static
+../Core/Src/lvgl/examples/porting/osal/../../../src/core/../draw/sw/../../osal/lv_os.h:238:27:lv_thread_sync_init	16	static
+../Core/Src/lvgl/examples/porting/osal/../../../src/core/../draw/sw/../../osal/lv_os.h:244:27:lv_thread_sync_wait	16	static
+../Core/Src/lvgl/examples/porting/osal/../../../src/core/../draw/sw/../../osal/lv_os.h:250:27:lv_thread_sync_signal	16	static
+../Core/Src/lvgl/examples/porting/osal/../../../src/core/../draw/sw/../../osal/lv_os.h:268:20:lv_lock	4	static
+../Core/Src/lvgl/examples/porting/osal/../../../src/core/../draw/sw/../../osal/lv_os.h:278:20:lv_unlock	4	static
+../Core/Src/lvgl/examples/porting/osal/lv_example_osal.c:42:6:lv_example_osal	24	static
+../Core/Src/lvgl/examples/porting/osal/lv_example_osal.c:63:13:counter_button_event_cb	16	static
+../Core/Src/lvgl/examples/porting/osal/lv_example_osal.c:71:13:increment_thread_entry	24	static

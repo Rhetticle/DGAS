@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Program"/>
+		<item key="selection" value="Read"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Read"/>
+			<item value="READ"/>
+			<item value="AddressMode"/>
+			<item value="QSPI_AddressMode"/>
+			<item value="READ_STATUS_REG_CMD"/>
+			<item value="STAT_READ"/>
 			<item value="Program"/>
 			<item value="Callback"/>
 			<item value="callback"/>

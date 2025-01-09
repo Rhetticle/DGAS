@@ -6,6 +6,6 @@ quadspi.c:152:16:QSPI_WriteEnable	3
 quadspi.c:194:9:QSPI_Configuration	7
 quadspi.c:271:9:CSP_QSPI_EraseSector	5
 quadspi.c:312:16:CSP_QSPI_EmptyBuf	2
-quadspi.c:335:9:CSP_QSPI_WriteMemory	11
-quadspi.c:420:9:CSP_QSPI_EnableMemoryMappedMode	2
-quadspi.c:448:9:QSPI_ResetChip	10
+quadspi.c:335:9:CSP_QSPI_WriteMemory	10
+quadspi.c:414:9:CSP_QSPI_EnableMemoryMappedMode	2
+quadspi.c:442:9:QSPI_ResetChip	10

@@ -7,5 +7,5 @@
 ../Core/Src/quadspi.c:271:9:CSP_QSPI_EraseSector	72	static
 ../Core/Src/quadspi.c:312:16:CSP_QSPI_EmptyBuf	72	static
 ../Core/Src/quadspi.c:335:9:CSP_QSPI_WriteMemory	96	static
-../Core/Src/quadspi.c:420:9:CSP_QSPI_EnableMemoryMappedMode	72	static
-../Core/Src/quadspi.c:448:9:QSPI_ResetChip	72	static,ignoring_inline_asm
+../Core/Src/quadspi.c:414:9:CSP_QSPI_EnableMemoryMappedMode	72	static
+../Core/Src/quadspi.c:442:9:QSPI_ResetChip	72	static,ignoring_inline_asm

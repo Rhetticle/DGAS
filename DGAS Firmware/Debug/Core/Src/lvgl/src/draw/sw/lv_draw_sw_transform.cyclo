@@ -1,0 +1,7 @@
+lv_draw_sw_transform.c:98:6:lv_draw_sw_transform	20
+lv_draw_sw_transform.c:291:13:transform_rgb888	23
+lv_draw_sw_transform.c:391:13:transform_argb8888	27
+lv_draw_sw_transform.c:484:13:transform_rgb565a8	29
+lv_draw_sw_transform.c:599:13:transform_a8	23
+lv_draw_sw_transform.c:677:13:transform_l8_to_al88	23
+lv_draw_sw_transform.c:755:13:transform_point_upscaled	7

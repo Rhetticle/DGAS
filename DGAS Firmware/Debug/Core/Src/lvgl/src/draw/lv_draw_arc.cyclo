@@ -1,0 +1,5 @@
+lv_string.h:73:20:lv_memzero	1
+lv_draw_arc.c:39:6:lv_draw_arc_dsc_init	1
+lv_draw_arc.c:48:21:lv_draw_task_get_arc_dsc	2
+lv_draw_arc.c:53:6:lv_draw_arc	5
+lv_draw_arc.c:77:6:lv_draw_arc_get_area	26

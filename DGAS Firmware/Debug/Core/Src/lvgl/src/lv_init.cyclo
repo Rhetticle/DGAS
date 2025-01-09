@@ -1,0 +1,6 @@
+lv_string.h:73:20:lv_memzero	1
+lv_init.c:106:20:lv_global_init	3
+lv_init.c:138:20:lv_cleanup_devices	3
+lv_init.c:149:6:lv_is_initialized	1
+lv_init.c:159:6:lv_init	4
+lv_init.c:370:6:lv_deinit	3

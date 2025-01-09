@@ -1,0 +1,10 @@
+../Core/Src/lvgl/src/draw/sw/../../misc/lv_area.h:107:20:lv_area_copy	16	static
+../Core/Src/lvgl/src/draw/sw/blend/../../../misc/../stdlib/lv_string.h:73:20:lv_memzero	16	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:94:6:lv_draw_sw_layer	144	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:191:6:lv_draw_sw_image	24	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:206:13:img_draw_core	128	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:296:13:radius_only	200	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:375:13:recolor_only	176	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:438:13:transform_and_recolor	208	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:545:13:recolor	104	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_img.c:606:13:apply_mask	216	static
