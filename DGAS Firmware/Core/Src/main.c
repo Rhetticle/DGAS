@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ST7701.h"
+#include "LIS3DH.h"
 #include "quadspi.h"
 #include <string.h>
 #include "lvgl.h"
@@ -156,46 +157,12 @@ void lcd_test(void) {
 uint8_t flushed = 0;
 void my_flush_cb(lv_display_t* display, const lv_area_t* area, uint8_t* map) {
 	uint16_t* buf = (uint16_t*) map;
-	int16_t x1,y1,x2,y2;
 
-	x1 = area->x1;
-	y1 = area->y1;
-	x2 = area->x2;
-	y2 = area->y2;
-/*
-	if (x1 < 0) {
-		x1 = 0;
-	}
-	if (x1 > 479) {
-		x1 = 479;
-	}
-	if (y1 < 0) {
-		y1 = 0;
-	}
-	if (y1 > 479) {
-		y1 = 0;
-	}
-	if (x2 < 0) {
-		x2 = 0;
-	}
-	if (x2 > 479) {
-		x2 = 479;
-	}
-	if (y2 < 0) {
-		y2 = 0;
-	}
-	if (y2 > 479) {
-		y2 = 479;
-	}
-*/
-
-
-	for (uint32_t i = x1; i <= x2; i++) {
-		for (uint32_t j = y1; j <= y2; j++) {
+	for (int32_t i = area->y1; i <= area->y2; i++) {
+		for (int32_t j = area->x1; j <= area->x2; j++) {
 			*(ltdc + (i * 480) + j) = *(buf + (i * 480) + j);
 		}
 	}
-	flushed = 1;
 	lv_display_flush_ready(display);
 }
 /* USER CODE END 0 */
@@ -248,27 +215,43 @@ int main(void)
   lv_display_set_flush_cb(display, my_flush_cb);
 
   ui_init();
+  accel_init();
   uint32_t x = 70;
-  uint32_t y = 70;
+  uint32_t y = 240;
+
+  uint32_t tick = 0;
+  float acc[3];
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  lv_timer_handler_run_in_period(1);
-	  if (flushed == 1) {
+
+	  accel_read_data(acc);
+	  if (HAL_GetTick() > tick + 50) {
+	  	  x = 240 + acc[1] * 100;
+		  y = 240 + acc[2] * 100;
+
 		  if (x > 400) {
 			  x = 70;
 		  }
 		  if (y > 400) {
+			  y = 240;
+		  }
+		  if (x < 0) {
+			  x = 70;
+		  }
+		  if (y < 0) {
 			  y = 70;
 		  }
 		  lv_obj_set_pos(objects.obj8, x, y);
-		  x += 10;
-		  y += 10;
-		  flushed = 0;
+		  tick = HAL_GetTick();
+		  //x += 10;
+		  //y += 1;
 	  }
+	  lv_timer_handler();
+	  HAL_Delay(5);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

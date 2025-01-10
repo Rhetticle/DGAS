@@ -8,7 +8,7 @@
 #ifndef INC_LIS3DH_H_
 #define INC_LIS3DH_H_
 
-#define ACC_I2C_ADDR 0x18 // (0b0011000) since SA0 connected to GND
+#define ACC_I2C_ADDR 0b0011000 // (0b0011000) since SA0 connected to GND
 
 #define ACC_BYTES_NO 6 // number of acceleration data bytes (2 for each of the 3 axes)
 #define WHO_AM_I 0x33 // constant value stored in the WHO_AM_I register
@@ -44,6 +44,10 @@
 #define ODR1 5
 #define ODR2 6
 #define ODR3 7
+#define ZEN 2
+#define YEN 1
+#define XEN 0
+
 
 // CTRL_REG_4 bit positions
 
@@ -52,6 +56,6 @@
 
 HAL_StatusTypeDef accel_init(void);
 HAL_StatusTypeDef accel_read_reg(uint8_t* data, uint16_t regAddr);
-HAL_StatusTypeDef accel_read_data(uint8_t* data);
+HAL_StatusTypeDef accel_read_data(float* data);
 
 #endif /* INC_LIS3DH_H_ */
