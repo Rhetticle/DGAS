@@ -9,6 +9,8 @@
 /* Low level driver for STMicroelectronics LIS3DH accelerometers */
 #include "stm32f7xx.h"
 #include "LIS3DH.h"
+#include "math.h"
+#include <stdio.h>
 
 extern I2C_HandleTypeDef hi2c4;
 
@@ -63,5 +65,32 @@ HAL_StatusTypeDef accel_read_data(float* data) {
 	data[1] = (float)yAcc * 0.048;
 	data[2] = (float)zAcc * 0.048;
 
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef accel_get_update(AccelData* update) {
+	float accData[3];
+
+	if (accel_read_data(accData) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	float accVecMag = sqrt(pow(accData[1], 2) + pow(accData[2], 2));
+
+	if (accVecMag > update->max) {
+		update->max = accVecMag;
+		sprintf(update->maxStr, "%.2f G", update->max);
+	}
+
+	update->xRaw = accData[1];
+	update->yRaw = accData[2];
+	update->now = accVecMag;
+	update->total += accVecMag;
+	update->ave = update->total/update->count;
+	update->count++;
+
+	sprintf(update->nowStr, "%.2f G", accVecMag);
+	sprintf(update->aveStr, "%.2f G", update->ave);
+	sprintf(update->xStr, "%.2f G", accData[1]);
+	sprintf(update->yStr, "%.2f G", -accData[2]); // negative to account for screen orientation
 	return HAL_OK;
 }

@@ -1,4 +1,4 @@
-../Core/Src/ui/screens.c:16:6:create_screen_main	136	static
-../Core/Src/ui/screens.c:191:6:tick_screen_main	4	static
-../Core/Src/ui/screens.c:195:6:create_screens	32	static
-../Core/Src/ui/screens.c:209:6:tick_screen	16	static
+../Core/Src/ui/screens.c:16:6:create_screen_main	168	static
+../Core/Src/ui/screens.c:227:6:tick_screen_main	4	static
+../Core/Src/ui/screens.c:231:6:create_screens	32	static
+../Core/Src/ui/screens.c:245:6:tick_screen	16	static

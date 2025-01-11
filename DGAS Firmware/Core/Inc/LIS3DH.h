@@ -54,8 +54,30 @@
 #define FS1 5
 #define FS0 4
 
+#define ACC_AXIS_COUNT 3
+#define ACC_SIGFIG 3
+#define ACC_STR_LEN 6 // string is of form X.XX G or X.XX G
+#define ACC_AXES_STR_LEN 7 // string is of form +X.XX G or -X.XX G
+
+typedef struct {
+	float xRaw;
+	float yRaw;
+	float now;
+	float max;
+	float total;
+	float ave;
+	uint32_t count;
+	char maxStr[ACC_STR_LEN + 1];
+	char nowStr[ACC_STR_LEN + 1];
+	char aveStr[ACC_STR_LEN + 1];
+	char xStr[ACC_AXES_STR_LEN + 1];
+	char yStr[ACC_AXES_STR_LEN + 1];
+} AccelData;
+
 HAL_StatusTypeDef accel_init(void);
 HAL_StatusTypeDef accel_read_reg(uint8_t* data, uint16_t regAddr);
 HAL_StatusTypeDef accel_read_data(float* data);
+HAL_StatusTypeDef accel_get_update(AccelData* update);
+
 
 #endif /* INC_LIS3DH_H_ */

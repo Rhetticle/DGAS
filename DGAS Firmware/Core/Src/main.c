@@ -25,6 +25,8 @@
 #include "LIS3DH.h"
 #include "quadspi.h"
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "lvgl.h"
 #include "ui.h"
 /* USER CODE END Includes */
@@ -216,11 +218,10 @@ int main(void)
 
   ui_init();
   accel_init();
-  uint32_t x = 228;
-  uint32_t y = 196;
 
   uint32_t tick = 0;
-  float acc[3];
+  AccelData data;
+  memset(&data, 0, sizeof(AccelData));
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -228,27 +229,16 @@ int main(void)
   while (1)
   {
 
-	  if (HAL_GetTick() > tick + 50) {
-		  accel_read_data(acc);
-		  /*
-		  if (acc[1] > 0.2 || acc[1] < -0.2) {
-			  x = 228 + acc[1] * 100;
-		  } else {
-			  x = 228;
-		  }
-		  if (acc[2] > 0.2 || acc[2] < -0.2) {
-			  y = 196 + acc[2] * 100;
-		  } else {
-			  y = 196;
-		  }
-		  */
-		  x = 228 + acc[1] * 100;
-		  y = 196 + acc[2] * 100;
+	  if (HAL_GetTick() > tick + 20) {
+		  accel_get_update(&data);
 
-		  lv_obj_set_pos(objects.obj8, x, y);
+		  lv_obj_set_pos(objects.obj8, 228 + data.xRaw * 130, 196 + data.yRaw * 130);
+		  lv_label_set_text(objects.obj12, data.maxStr);
+		  lv_label_set_text(objects.obj11, data.nowStr);
+		  lv_label_set_text(objects.obj10, data.aveStr);
+		  lv_label_set_text(objects.obj14, data.xStr);
+		  lv_label_set_text(objects.obj16, data.yStr);
 		  tick = HAL_GetTick();
-		  //x += 10;
-		  //y += 1;
 	  }
 	  lv_timer_handler();
 	  HAL_Delay(5);
