@@ -13,7 +13,7 @@
 extern I2C_HandleTypeDef hi2c4;
 
 HAL_StatusTypeDef accel_init(void) {
-		uint8_t ctr1Data = 1 << ODR1 | 1 << ODR2 | 1 << ODR3 | 1 << ZEN | 1 << YEN | 1 << XEN; // all axes enabled, 400Hz sample rate
+		uint8_t ctr1Data = 1 << ODR2 | 1 << ODR1 | 1 << ODR0 | 1 << ZEN | 1 << YEN | 1 << XEN; // all axes enabled, 400Hz sample rate
 		uint8_t whoAmI;
 
 		// we will check the whoami register first just to verify the connection is working
@@ -41,13 +41,12 @@ HAL_StatusTypeDef accel_read_reg(uint8_t* data, uint16_t regAddr) {
 }
 
 HAL_StatusTypeDef accel_read_data(float* data) {
-	int8_t accBytes[ACC_BYTES_NO];
+	uint8_t accBytes[ACC_BYTES_NO];
 	int16_t xAcc, yAcc, zAcc;
 
 	// loop through and read all 6 bytes of acceleration data
 	for (int i = 0; i < ACC_BYTES_NO; i++) {
-		uint8_t addr = ACC_DATA_START_ADDR + i;
-		if (HAL_I2C_Mem_Read(&hi2c4, ACC_I2C_ADDR << 1, ACC_DATA_START_ADDR + i, sizeof(uint8_t), (uint8_t*) &accBytes[i], sizeof(int8_t), 100) != HAL_OK) {
+		if (HAL_I2C_Mem_Read(&hi2c4, ACC_I2C_ADDR << 1, ACC_DATA_START_ADDR + i, sizeof(uint8_t), (uint8_t*) &accBytes[i], sizeof(uint8_t), 100) != HAL_OK) {
 			return HAL_ERROR;
 		}
 	}

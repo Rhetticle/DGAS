@@ -1,4 +1,4 @@
 screens.c:16:6:create_screen_main	1
-screens.c:127:6:tick_screen_main	1
-screens.c:131:6:create_screens	1
-screens.c:145:6:tick_screen	1
+screens.c:191:6:tick_screen_main	1
+screens.c:195:6:create_screens	1
+screens.c:209:6:tick_screen	1
