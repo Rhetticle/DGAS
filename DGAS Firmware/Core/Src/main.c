@@ -29,6 +29,7 @@
 #include <stdio.h>
 #include "lvgl.h"
 #include "ui.h"
+#include "OBD2.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -202,13 +203,17 @@ int main(void)
   MX_I2C4_Init();
   MX_QUADSPI_Init();
   MX_SPI1_Init();
-  MX_UART4_Init();
+  //MX_UART4_Init();
   MX_LTDC_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+  iso9141_init();
+  MX_UART4_Init();
+  HAL_Delay(10);
+  iso9141_listen();
   lcd_init();
   fmc_init();
-  fill_mem(0xFFFF);
+  fill_mem(0x0000);
   HAL_Delay(10);
   lv_init();
   lv_tick_set_cb(HAL_GetTick);
@@ -711,7 +716,7 @@ static void MX_UART4_Init(void)
   huart4.Init.BaudRate = 10400;
   huart4.Init.WordLength = UART_WORDLENGTH_8B;
   huart4.Init.StopBits = UART_STOPBITS_1;
-  huart4.Init.Parity = UART_PARITY_NONE;
+  huart4.Init.Parity = UART_PARITY_ODD;
   huart4.Init.Mode = UART_MODE_TX_RX;
   huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   huart4.Init.OverSampling = UART_OVERSAMPLING_16;
@@ -812,6 +817,11 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 /* USER CODE END MX_GPIO_Init_2 */
 }
 

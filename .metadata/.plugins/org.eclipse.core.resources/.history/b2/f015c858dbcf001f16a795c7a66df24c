@@ -1,0 +1,20 @@
+/*
+ * OBD2.c
+ *
+ *  Created on: Jan 11, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include "OBD2.h"
+
+extern UART_HandleTypeDef huart4;
+
+HAL_StatusTypeDef iso9141_init(void) {
+	while(1) {
+		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, 1);
+		HAL_Delay(10);
+		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, 0);
+		HAL_Delay(10);
+	}
+}

@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/LIS3DH.c \
+../Core/Src/OBD2.c \
 ../Core/Src/ST7701.c \
 ../Core/Src/W25N512GVEIG.c \
 ../Core/Src/main.c \
@@ -18,6 +19,7 @@ C_SRCS += \
 
 OBJS += \
 ./Core/Src/LIS3DH.o \
+./Core/Src/OBD2.o \
 ./Core/Src/ST7701.o \
 ./Core/Src/W25N512GVEIG.o \
 ./Core/Src/main.o \
@@ -30,6 +32,7 @@ OBJS += \
 
 C_DEPS += \
 ./Core/Src/LIS3DH.d \
+./Core/Src/OBD2.d \
 ./Core/Src/ST7701.d \
 ./Core/Src/W25N512GVEIG.d \
 ./Core/Src/main.d \
@@ -48,7 +51,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/LIS3DH.cyclo ./Core/Src/LIS3DH.d ./Core/Src/LIS3DH.o ./Core/Src/LIS3DH.su ./Core/Src/ST7701.cyclo ./Core/Src/ST7701.d ./Core/Src/ST7701.o ./Core/Src/ST7701.su ./Core/Src/W25N512GVEIG.cyclo ./Core/Src/W25N512GVEIG.d ./Core/Src/W25N512GVEIG.o ./Core/Src/W25N512GVEIG.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/quadspi.cyclo ./Core/Src/quadspi.d ./Core/Src/quadspi.o ./Core/Src/quadspi.su ./Core/Src/stm32f7xx_hal_msp.cyclo ./Core/Src/stm32f7xx_hal_msp.d ./Core/Src/stm32f7xx_hal_msp.o ./Core/Src/stm32f7xx_hal_msp.su ./Core/Src/stm32f7xx_it.cyclo ./Core/Src/stm32f7xx_it.d ./Core/Src/stm32f7xx_it.o ./Core/Src/stm32f7xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f7xx.cyclo ./Core/Src/system_stm32f7xx.d ./Core/Src/system_stm32f7xx.o ./Core/Src/system_stm32f7xx.su
+	-$(RM) ./Core/Src/LIS3DH.cyclo ./Core/Src/LIS3DH.d ./Core/Src/LIS3DH.o ./Core/Src/LIS3DH.su ./Core/Src/OBD2.cyclo ./Core/Src/OBD2.d ./Core/Src/OBD2.o ./Core/Src/OBD2.su ./Core/Src/ST7701.cyclo ./Core/Src/ST7701.d ./Core/Src/ST7701.o ./Core/Src/ST7701.su ./Core/Src/W25N512GVEIG.cyclo ./Core/Src/W25N512GVEIG.d ./Core/Src/W25N512GVEIG.o ./Core/Src/W25N512GVEIG.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/quadspi.cyclo ./Core/Src/quadspi.d ./Core/Src/quadspi.o ./Core/Src/quadspi.su ./Core/Src/stm32f7xx_hal_msp.cyclo ./Core/Src/stm32f7xx_hal_msp.d ./Core/Src/stm32f7xx_hal_msp.o ./Core/Src/stm32f7xx_hal_msp.su ./Core/Src/stm32f7xx_it.cyclo ./Core/Src/stm32f7xx_it.d ./Core/Src/stm32f7xx_it.o ./Core/Src/stm32f7xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f7xx.cyclo ./Core/Src/system_stm32f7xx.d ./Core/Src/system_stm32f7xx.o ./Core/Src/system_stm32f7xx.su
 
 .PHONY: clean-Core-2f-Src
 

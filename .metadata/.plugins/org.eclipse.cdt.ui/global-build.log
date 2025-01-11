@@ -1,133 +1,23 @@
-12:37:29 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+18:06:59 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/LIS3DH.c: In function 'accel_get_update':
-../Core/Src/LIS3DH.c:85:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   85 |  sprintf(update->maxStr, "%.2f G", update->max);
-      |  ^~~~~~~
-../Core/Src/LIS3DH.c:85:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-../Core/Src/LIS3DH.c:13:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   12 | #include "math.h"
-  +++ |+#include <stdio.h>
-   13 | 
+../Core/Src/OBD2.c: In function 'iso9141_send':
+../Core/Src/OBD2.c:78:2: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+   78 |  memcpy(message, data, size);
+      |  ^~~~~~
+../Core/Src/OBD2.c:78:2: warning: incompatible implicit declaration of built-in function 'memcpy'
+../Core/Src/OBD2.c:11:1: note: include '<string.h>' or provide a declaration of 'memcpy'
+   10 | #include <stdlib.h>
+  +++ |+#include <string.h>
+   11 | 
+../Core/Src/OBD2.c: In function 'obd2_get_parameter':
+../Core/Src/OBD2.c:97:20: warning: unused variable 'status' [-Wunused-variable]
+   97 |  HAL_StatusTypeDef status = iso9141_send(message, sizeof(message));
+      |                    ^~~~~~
 ../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:238:42: error: incompatible type for argument 2 of 'lv_label_set_text'
-  238 |     lv_label_set_text(objects.obj10, data.max);
-      |                                      ~~~~^~~~
-      |                                          |
-      |                                          float
-In file included from ../Core/Src/lvgl/src/widgets/bar/lv_bar.h:22,
-                 from ../Core/Src/lvgl/lvgl.h:56,
-                 from ../Core/Src/main.c:30:
-../Core/Src/lvgl/src/widgets/bar/../label/lv_label.h:88:53: note: expected 'const char *' but argument is of type 'float'
-   88 | void lv_label_set_text(lv_obj_t * obj, const char * text);
-      |                                        ~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:239:42: error: incompatible type for argument 2 of 'lv_label_set_text'
-  239 |     lv_label_set_text(objects.obj11, data.now);
-      |                                      ~~~~^~~~
-      |                                          |
-      |                                          float
-In file included from ../Core/Src/lvgl/src/widgets/bar/lv_bar.h:22,
-                 from ../Core/Src/lvgl/lvgl.h:56,
-                 from ../Core/Src/main.c:30:
-../Core/Src/lvgl/src/widgets/bar/../label/lv_label.h:88:53: note: expected 'const char *' but argument is of type 'float'
-   88 | void lv_label_set_text(lv_obj_t * obj, const char * text);
-      |                                        ~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:240:42: error: incompatible type for argument 2 of 'lv_label_set_text'
-  240 |     lv_label_set_text(objects.obj12, data.ave);
-      |                                      ~~~~^~~~
-      |                                          |
-      |                                          float
-In file included from ../Core/Src/lvgl/src/widgets/bar/lv_bar.h:22,
-                 from ../Core/Src/lvgl/lvgl.h:56,
-                 from ../Core/Src/main.c:30:
-../Core/Src/lvgl/src/widgets/bar/../label/lv_label.h:88:53: note: expected 'const char *' but argument is of type 'float'
-   88 | void lv_label_set_text(lv_obj_t * obj, const char * text);
-      |                                        ~~~~~~~~~~~~~^~~~
-../Core/Src/main.c:226:9: warning: unused variable 'acc' [-Wunused-variable]
-  226 |   float acc[3];
-      |         ^~~
-make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-12:39:34 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:226:9: warning: unused variable 'acc' [-Wunused-variable]
-  226 |   float acc[3];
-      |         ^~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480644	    688	  68528	 549860	  863e4	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-12:41:59 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:226:10: error: incompatible type for argument 1 of 'memset'
-  226 |   memset(data, 0, sizeof(AccelData));
-      |          ^~~~
-      |          |
-      |          AccelData
-In file included from ../Core/Src/main.c:27:
-c:\st\stm32cubeide_1.12.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\include\string.h:33:17: note: expected 'void *' but argument is of type 'AccelData'
-   33 | void *  memset (void *, int, size_t);
-      |                 ^~~~~~
-../Core/Src/main.c:227:9: warning: unused variable 'acc' [-Wunused-variable]
-  227 |   float acc[3];
-      |         ^~~
-make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-12:43:04 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:227:9: warning: unused variable 'acc' [-Wunused-variable]
-  227 |   float acc[3];
-      |         ^~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480660	    688	  68528	 549876	  863f4	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-12:47:51 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
+../Core/Src/main.c:100:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  100 |    HAL_StatusTypeDef status;
       |                      ^~~~~~
 arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: DGAS Firmware.elf
@@ -135,201 +25,15 @@ Finished building target: DGAS Firmware.elf
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 480628	    688	  68528	 549844	  863d4	DGAS Firmware.elf
+ 482468	    688	  68544	 551700	  86b14	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
-12:49:26 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480652	    688	  68528	 549868	  863ec	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-12:52:53 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:222:12: warning: unused variable 'y' [-Wunused-variable]
-  222 |   uint32_t y = 196;
-      |            ^
-../Core/Src/main.c:221:12: warning: unused variable 'x' [-Wunused-variable]
-  221 |   uint32_t x = 228;
-      |            ^
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480724	    688	  68528	 549940	  86434	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-12:58:35 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/ui/images.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/images.d" -MT"Core/Src/ui/images.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/images.o"
-arm-none-eabi-gcc "../Core/Src/ui/screens.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/screens.d" -MT"Core/Src/ui/screens.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/screens.o"
-arm-none-eabi-gcc "../Core/Src/ui/styles.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/styles.d" -MT"Core/Src/ui/styles.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/styles.o"
-arm-none-eabi-gcc "../Core/Src/ui/ui.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/ui.d" -MT"Core/Src/ui/ui.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/ui.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:222:12: warning: unused variable 'y' [-Wunused-variable]
-  222 |   uint32_t y = 196;
-      |            ^
-../Core/Src/main.c:221:12: warning: unused variable 'x' [-Wunused-variable]
-  221 |   uint32_t x = 228;
-      |            ^
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480716	    688	  68528	 549932	  8642c	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-13:06:18 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480812	    688	  68528	 550028	  8648c	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-13:34:07 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480828	    688	  68528	 550044	  8649c	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-13:35:10 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+18:07:47 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-size   DGAS\ Firmware.elf 
    text	   data	    bss	    dec	    hex	filename
- 480828	    688	  68528	 550044	  8649c	DGAS Firmware.elf
+ 482468	    688	  68544	 551700	  86b14	DGAS Firmware.elf
 Finished building: default.size.stdout
- 
-13:38:26 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 480844	    688	  68528	 550060	  864ac	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-13:48:49 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/ui/images.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/images.d" -MT"Core/Src/ui/images.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/images.o"
-arm-none-eabi-gcc "../Core/Src/ui/screens.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/screens.d" -MT"Core/Src/ui/screens.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/screens.o"
-arm-none-eabi-gcc "../Core/Src/ui/styles.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/styles.d" -MT"Core/Src/ui/styles.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/styles.o"
-arm-none-eabi-gcc "../Core/Src/ui/ui.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/ui.d" -MT"Core/Src/ui/ui.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/ui.o"
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 481396	    688	  68544	 550628	  866e4	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-13:58:52 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:99:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-   99 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 481428	    688	  68544	 550660	  86704	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-14:00:44 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 481364	    688	  68544	 550596	  866c4	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
- 
-14:02:53 **** Incremental Build of configuration Debug for project DGAS Firmware ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/LIS3DH.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/LIS3DH.d" -MT"Core/Src/LIS3DH.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LIS3DH.o"
-arm-none-eabi-gcc -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
-arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
-   text	   data	    bss	    dec	    hex	filename
- 481396	    688	  68544	 550628	  866e4	DGAS Firmware.elf
-Finished building: default.size.stdout
- 
-Finished building: DGAS Firmware.list
  
