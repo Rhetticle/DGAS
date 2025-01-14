@@ -13,24 +13,31 @@ extern UART_HandleTypeDef huart4;
 
 HAL_StatusTypeDef iso9141_init(void) {
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
+	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
 	HAL_Delay(3000); //must be no traffic on bus for 3 seconds after K goes high
-	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 0); // start bit
+	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 0); // start b
+	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
 	HAL_Delay(200);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
+	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
 	HAL_Delay(400);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 0);
+	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
 	HAL_Delay(400);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
+	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
 	HAL_Delay(400);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 0);
+	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
 	HAL_Delay(400);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
-	HAL_Delay(100);
+	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
+	HAL_Delay(200);
 	return HAL_OK;
 }
 
 HAL_StatusTypeDef iso9141_get_init_response(InitResponse* response) {
-	if (HAL_UART_Receive(&huart4, &response->synchro, sizeof(uint8_t), W1_TIMEOUT_MAX) != HAL_OK) {
+	if (HAL_UART_Receive(&huart4, &response->synchro, sizeof(uint8_t), 2000) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	if (HAL_UART_Receive(&huart4, &response->keyWord1, sizeof(uint8_t), W2_TIMEOUT_MAX) != HAL_OK) {

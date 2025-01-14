@@ -203,14 +203,15 @@ int main(void)
   MX_I2C4_Init();
   MX_QUADSPI_Init();
   MX_SPI1_Init();
-  //MX_UART4_Init();
+  MX_UART4_Init();
   MX_LTDC_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-  iso9141_init();
-  MX_UART4_Init();
-  HAL_Delay(10);
-  iso9141_listen();
+  HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
+  //iso9141_init();
+  //MX_UART4_Init();
+  //HAL_Delay(10);
+  //iso9141_listen();
   lcd_init();
   fmc_init();
   fill_mem(0x0000);
@@ -801,7 +802,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_1, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LCD_CS_Pin|LCD_NRST_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : PG1 */
+  GPIO_InitStruct.Pin = GPIO_PIN_1;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
   /*Configure GPIO pin : HOST_SENSE_Pin */
   GPIO_InitStruct.Pin = HOST_SENSE_Pin;

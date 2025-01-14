@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VBAT Pin=Q3-1
+Removed Pin From Net: NetName=GND Pin=Q3-2
+Removed Pin From Net: NetName=NetQ2_1 Pin=Q3-3
+Removed Pin From Net: NetName=V_IGN Pin=R27-2
+Removed Pin From Net: NetName=GND Pin=R28-1
+Removed Pin From Net: NetName=VBAT Pin=R28-2
+Removed Member From Class: ClassName=OBD2 Member=Q3
+Removed Member From Class: ClassName=OBD2 Member=R28
+Added Pin To Net: NetName=VBAT Pin=R27-2

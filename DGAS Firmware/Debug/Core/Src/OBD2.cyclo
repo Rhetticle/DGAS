@@ -1,6 +1,6 @@
 OBD2.c:14:19:iso9141_init	1
-OBD2.c:32:19:iso9141_get_init_response	4
-OBD2.c:45:19:iso9141_listen	5
-OBD2.c:75:19:iso9141_send	1
-OBD2.c:84:9:iso9141_checksum	2
-OBD2.c:93:19:obd2_get_parameter	1
+OBD2.c:39:19:iso9141_get_init_response	4
+OBD2.c:52:19:iso9141_listen	5
+OBD2.c:82:19:iso9141_send	1
+OBD2.c:91:9:iso9141_checksum	2
+OBD2.c:100:19:obd2_get_parameter	1

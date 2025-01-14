@@ -28,6 +28,7 @@ typedef struct {
 #define ISO9141_HEADER_3 0xF1
 
 #define ISO9141_K GPIO_PIN_10 // port C. This is also UART4_TX
+#define ISO9141_L GPIO_PIN_1 // port G
 
 // initialisation timing parameters (ms)
 #define W1_TIMEOUT_MAX 300

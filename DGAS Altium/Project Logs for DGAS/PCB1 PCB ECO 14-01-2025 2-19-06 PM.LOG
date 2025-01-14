@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=ISO9141_L_CTRL Pin=U1-57
+Added Pin To Net: NetName=ISO9141_L_CTRL Pin=U1-102
