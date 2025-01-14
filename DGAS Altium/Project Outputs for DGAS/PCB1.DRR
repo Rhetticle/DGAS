@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: PCB1.PcbDoc   31/12/2024  11:16:15 AM
+NCDrill File Report For: PCB1.PcbDoc   14/01/2025  3:16:53 PM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -8,9 +8,9 @@ EIA File   : PCB1.DRL
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      16mil (0.399mm)                                           Round             199       PTH        23.68inch (601.60mm)
-T2      20mil (0.5mm)                                             Round             28        PTH        7.52inch (191.06mm)
-T3      28mil (0.711mm)                                           Round             72        PTH        19.45inch (494.11mm)
+T1      16mil (0.399mm)                                           Round             197       PTH        22.71inch (576.82mm)
+T2      20mil (0.5mm)                                             Round             31        PTH        8.75inch (222.21mm)
+T3      28mil (0.711mm)                                           Round             71        PTH        19.42inch (493.22mm)
 T4      35mil (0.889mm)                                           Round             15        PTH        1.53inch (38.77mm)
 T5      35mil (0.899mm)                                           Round             12        PTH        3.03inch (76.86mm)
 T6      40mil (1.021mm)                                           Round             4         PTH        0.30inch (7.62mm)
@@ -21,4 +21,4 @@ T10     126mil (3.2mm)                                            Round         
 ----------------------------------------------------------------------------------------------------------------------------------
 Totals                                                                              342
 
-Total Processing Time (hh:mm:ss) : 00:00:01
+Total Processing Time (hh:mm:ss) : 00:00:00

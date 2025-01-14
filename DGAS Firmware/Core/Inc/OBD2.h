@@ -44,5 +44,6 @@ HAL_StatusTypeDef iso9141_get_init_response(InitResponse* response);
 HAL_StatusTypeDef iso9141_listen(void);
 HAL_StatusTypeDef iso9141_send(uint8_t* data, uint32_t size);
 uint8_t iso9141_checksum(uint8_t* data, uint32_t size);
-HAL_StatusTypeDef obd2_get_parameter(uint8_t parameter);
+HAL_StatusTypeDef kwp_send_data(uint8_t* data, uint32_t size);
+HAL_StatusTypeDef obd2_get_parameter(uint8_t parameter, uint32_t* a, uint32_t* b);
 #endif /* INC_OBD2_H_ */
