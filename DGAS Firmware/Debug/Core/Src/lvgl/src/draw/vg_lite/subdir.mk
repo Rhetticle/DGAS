@@ -26,28 +26,6 @@ C_SRCS += \
 ../Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_stroke.c \
 ../Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_utils.c 
 
-OBJS += \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_buf_vg_lite.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_arc.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_border.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_box_shadow.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_fill.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_img.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_layer.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_line.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_mask_rect.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_triangle.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_vector.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_decoder.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_grad.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_math.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_path.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_stroke.o \
-./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_utils.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/src/draw/vg_lite/lv_draw_buf_vg_lite.d \
 ./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite.d \
@@ -70,10 +48,32 @@ C_DEPS += \
 ./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_stroke.d \
 ./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_utils.d 
 
+OBJS += \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_buf_vg_lite.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_arc.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_border.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_box_shadow.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_fill.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_img.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_layer.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_line.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_mask_rect.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_triangle.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_vector.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_decoder.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_grad.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_math.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_path.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_stroke.o \
+./Core/Src/lvgl/src/draw/vg_lite/lv_vg_lite_utils.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/src/draw/vg_lite/%.o Core/Src/lvgl/src/draw/vg_lite/%.su Core/Src/lvgl/src/draw/vg_lite/%.cyclo: ../Core/Src/lvgl/src/draw/vg_lite/%.c Core/Src/lvgl/src/draw/vg_lite/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-src-2f-draw-2f-vg_lite
 

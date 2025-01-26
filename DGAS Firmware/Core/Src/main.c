@@ -23,13 +23,16 @@
 /* USER CODE BEGIN Includes */
 #include "ST7701.h"
 #include "LIS3DH.h"
-#include "quadspi.h"
 #include <string.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "lvgl.h"
 #include "ui.h"
 #include "OBD2.h"
+#include "ISO9141_KWP.h"
+#include "quadspi.h"
+#include "lvgl/demos/lv_demos.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,6 +56,8 @@ ADC_HandleTypeDef hadc1;
 CAN_HandleTypeDef hcan1;
 CAN_HandleTypeDef hcan2;
 
+DMA2D_HandleTypeDef hdma2d;
+
 I2C_HandleTypeDef hi2c4;
 
 LTDC_HandleTypeDef hltdc;
@@ -73,8 +78,8 @@ SDRAM_HandleTypeDef hsdram1;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MPU_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_ADC1_Init(void);
 static void MX_CAN1_Init(void);
 static void MX_CAN2_Init(void);
 static void MX_FMC_Init(void);
@@ -84,6 +89,8 @@ static void MX_SPI1_Init(void);
 static void MX_UART4_Init(void);
 static void MX_LTDC_Init(void);
 static void MX_TIM1_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_DMA2D_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -91,9 +98,10 @@ static void MX_TIM1_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 #define SDRAM_START_ADDR 0xC0000000
+#define LVGL_GRAM_ADDR 0xC007A120
 #define SDRAM_SIZE 0x200000
 
-uint16_t* ltdc = (uint16_t*) SDRAM_START_ADDR;
+uint8_t* ltdc = (uint8_t*) SDRAM_START_ADDR;
 
 void fmc_init(void) {
 	  FMC_SDRAM_CommandTypeDef Command;
@@ -124,50 +132,26 @@ void fmc_init(void) {
 	   HAL_SDRAM_ProgramRefreshRate(&hsdram1, 1105);
 }
 
-void fmc_test(void) {
-	for (int i = 0; i < 100000; i++) {
-		ltdc[i] = 0xAAAA;
-	}
-
-	for (int j = 100000; j < SDRAM_SIZE/4; j++) {
-		ltdc[j] = 0xFFFF;
-	}
-
-	return;
-
-}
-
 void fill_mem(uint16_t value) {
-	for (int i = 0; i < SDRAM_SIZE; i++) {
+	for (int i = 0; i < 480*480*2; i++) {
 			ltdc[i] = value;
 	}
 }
 
-void lcd_test(void) {
-	fill_mem(0x00);
-	HAL_Delay(100);
-	fill_mem(0x10);
-	HAL_Delay(100);
-	fill_mem(0xAA);
-	HAL_Delay(100);
-	fill_mem(0xDD);
-	HAL_Delay(100);
-	fill_mem(0xE1);
-	HAL_Delay(100);
-	fill_mem(0x0F);
-	HAL_Delay(100);
-}
-uint8_t flushed = 0;
-void my_flush_cb(lv_display_t* display, const lv_area_t* area, uint8_t* map) {
-	uint16_t* buf = (uint16_t*) map;
+void my_flush_cb(lv_display_t* disp, const lv_area_t* area, uint8_t* map) {
+	 if(lv_display_is_double_buffered(disp) && lv_display_flush_is_last(disp)) {
+	            HAL_LTDC_SetAddress_NoReload(&hltdc, (uint32_t)map, 0);
+	            HAL_LTDC_Reload(&hltdc, LTDC_RELOAD_VERTICAL_BLANKING);
+	        }
 
-	for (int32_t i = area->y1; i <= area->y2; i++) {
-		for (int32_t j = area->x1; j <= area->x2; j++) {
-			*(ltdc + (i * 480) + j) = *(buf + (i * 480) + j);
-		}
-	}
-	lv_display_flush_ready(display);
+	lv_display_flush_ready(disp);
 }
+
+void dgas_init(void) {
+
+}
+
+uint16_t rpmlive = 0;
 /* USER CODE END 0 */
 
 /**
@@ -178,6 +162,15 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
+
+  /* MPU Configuration--------------------------------------------------------*/
+  MPU_Config();
+
+  /* Enable I-Cache---------------------------------------------------------*/
+  SCB_EnableICache();
+
+  /* Enable D-Cache---------------------------------------------------------*/
+  SCB_EnableDCache();
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -196,38 +189,47 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ADC1_Init();
   MX_CAN1_Init();
   MX_CAN2_Init();
   MX_FMC_Init();
   MX_I2C4_Init();
   MX_QUADSPI_Init();
   MX_SPI1_Init();
-  MX_UART4_Init();
   MX_LTDC_Init();
   MX_TIM1_Init();
+  MX_ADC1_Init();
+  MX_DMA2D_Init();
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
-  //iso9141_init();
-  //MX_UART4_Init();
-  //HAL_Delay(10);
-  //iso9141_listen();
+
   lcd_init();
   fmc_init();
+  uint32_t fmctime = HAL_GetTick();
   fill_mem(0x0000);
+  fmctime = HAL_GetTick() - fmctime;
   HAL_Delay(10);
+
   lv_init();
   lv_tick_set_cb(HAL_GetTick);
   lv_display_t* display = lv_display_create(480, 480);
-  lv_display_set_buffers(display, (void*) 0xC007A120, NULL, 480*480*2, LV_DISP_RENDER_MODE_DIRECT);
+  lv_display_set_buffers(display, (void*) SDRAM_START_ADDR + SDRAM_SIZE - 480*480*2*2, (void*) SDRAM_START_ADDR, 480*480*2, LV_DISP_RENDER_MODE_DIRECT);
   lv_display_set_flush_cb(display, my_flush_cb);
+  CSP_QSPI_EnableMemoryMappedMode();
 
   ui_init();
   accel_init();
 
+  uint32_t time = 0;
+  uint32_t scale = 0;
   uint32_t tick = 0;
-  AccelData data;
-  memset(&data, 0, sizeof(AccelData));
+
+  iso9141_kwp_init();
+  HAL_GPIO_DeInit(GPIOC, GPIO_PIN_10);
+  MX_UART4_Init();
+  iso9141_kwp_listen(false);
+  OBDBus kwp;
+  kwp.get_pid = kwp_get_pid;
+  kwp.status = OBD_LIVE;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -235,19 +237,29 @@ int main(void)
   while (1)
   {
 
-	  if (HAL_GetTick() > tick + 20) {
-		  accel_get_update(&data);
 
-		  lv_obj_set_pos(objects.obj8, 228 + data.xRaw * 130, 196 + data.yRaw * 130);
-		  lv_label_set_text(objects.obj12, data.maxStr);
-		  lv_label_set_text(objects.obj11, data.nowStr);
-		  lv_label_set_text(objects.obj10, data.aveStr);
-		  lv_label_set_text(objects.obj14, data.xStr);
-		  lv_label_set_text(objects.obj16, data.yStr);
-		  tick = HAL_GetTick();
-	  }
-	  lv_timer_handler();
-	  HAL_Delay(5);
+	 if (HAL_GetTick() > tick + 10) {
+		 //obd2_get_rpm(&kwp, &rpmlive);
+		 if (scale > 4200) {
+			 scale = 0;
+		 }
+
+		 char num[4];
+		 sprintf(num, "%d", scale);
+		 lv_arc_set_value(objects.obj0, scale);
+		 lv_label_set_text(objects.obj2, num);
+		 tick = HAL_GetTick();
+		 scale += 200;
+	 }
+
+	 time = HAL_GetTick();
+	 lv_timer_handler();
+	 time = HAL_GetTick() - time;
+
+	 HAL_Delay(5);
+
+	  //fill_mem(color);
+	  //color += 0xFF;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -435,6 +447,43 @@ static void MX_CAN2_Init(void)
 }
 
 /**
+  * @brief DMA2D Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_DMA2D_Init(void)
+{
+
+  /* USER CODE BEGIN DMA2D_Init 0 */
+
+  /* USER CODE END DMA2D_Init 0 */
+
+  /* USER CODE BEGIN DMA2D_Init 1 */
+
+  /* USER CODE END DMA2D_Init 1 */
+  hdma2d.Instance = DMA2D;
+  hdma2d.Init.Mode = DMA2D_M2M;
+  hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB565;
+  hdma2d.Init.OutputOffset = 0;
+  hdma2d.LayerCfg[1].InputOffset = 0;
+  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB565;
+  hdma2d.LayerCfg[1].AlphaMode = DMA2D_NO_MODIF_ALPHA;
+  hdma2d.LayerCfg[1].InputAlpha = 0;
+  if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_DMA2D_ConfigLayer(&hdma2d, 1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN DMA2D_Init 2 */
+
+  /* USER CODE END DMA2D_Init 2 */
+
+}
+
+/**
   * @brief I2C4 Initialization Function
   * @param None
   * @retval None
@@ -561,7 +610,7 @@ static void MX_QUADSPI_Init(void)
   /* USER CODE END QUADSPI_Init 1 */
   /* QUADSPI parameter configuration*/
   hqspi.Instance = QUADSPI;
-  hqspi.Init.ClockPrescaler = 16-1;
+  hqspi.Init.ClockPrescaler = 3-1;
   hqspi.Init.FifoThreshold = 4;
   hqspi.Init.SampleShifting = QSPI_SAMPLE_SHIFTING_NONE;
   hqspi.Init.FlashSize = 25;
@@ -717,7 +766,7 @@ static void MX_UART4_Init(void)
   huart4.Init.BaudRate = 10400;
   huart4.Init.WordLength = UART_WORDLENGTH_8B;
   huart4.Init.StopBits = UART_STOPBITS_1;
-  huart4.Init.Parity = UART_PARITY_ODD;
+  huart4.Init.Parity = UART_PARITY_NONE;
   huart4.Init.Mode = UART_MODE_TX_RX;
   huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   huart4.Init.OverSampling = UART_OVERSAMPLING_16;
@@ -758,7 +807,7 @@ static void MX_FMC_Init(void)
   hsdram1.Init.InternalBankNumber = FMC_SDRAM_INTERN_BANKS_NUM_2;
   hsdram1.Init.CASLatency = FMC_SDRAM_CAS_LATENCY_2;
   hsdram1.Init.WriteProtection = FMC_SDRAM_WRITE_PROTECTION_DISABLE;
-  hsdram1.Init.SDClockPeriod = FMC_SDRAM_CLOCK_PERIOD_3;
+  hsdram1.Init.SDClockPeriod = FMC_SDRAM_CLOCK_PERIOD_2;
   hsdram1.Init.ReadBurst = FMC_SDRAM_RBURST_ENABLE;
   hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_2;
   /* SdramTiming */
@@ -829,9 +878,6 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
   GPIO_InitStruct.Pin = GPIO_PIN_10;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 /* USER CODE END MX_GPIO_Init_2 */
 }
@@ -839,6 +885,35 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* MPU Configuration */
+
+void MPU_Config(void)
+{
+  MPU_Region_InitTypeDef MPU_InitStruct = {0};
+
+  /* Disables the MPU */
+  HAL_MPU_Disable();
+
+  /** Initializes and configures the Region and the memory to be protected
+  */
+  MPU_InitStruct.Enable = MPU_REGION_ENABLE;
+  MPU_InitStruct.Number = MPU_REGION_NUMBER0;
+  MPU_InitStruct.BaseAddress = 0x90000000;
+  MPU_InitStruct.Size = MPU_REGION_SIZE_32MB;
+  MPU_InitStruct.SubRegionDisable = 0;
+  MPU_InitStruct.TypeExtField = MPU_TEX_LEVEL0;
+  MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
+  MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
+  MPU_InitStruct.IsShareable = MPU_ACCESS_NOT_SHAREABLE;
+  MPU_InitStruct.IsCacheable = MPU_ACCESS_CACHEABLE;
+  MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
+
+  HAL_MPU_ConfigRegion(&MPU_InitStruct);
+  /* Enables the MPU */
+  HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
+
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

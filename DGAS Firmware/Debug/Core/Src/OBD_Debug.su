@@ -1,0 +1,2 @@
+../Core/Src/OBD_Debug.c:14:6:debug_send_data	296	static
+../Core/Src/OBD_Debug.c:32:6:send_debug_header	264	static

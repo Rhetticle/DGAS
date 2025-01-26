@@ -1,5 +1,3 @@
-../Core/Src/lvgl/src/draw/sw/../../misc/lv_area.h:107:20:lv_area_copy	16	static
-../Core/Src/lvgl/src/draw/sw/../../misc/../stdlib/lv_string.h:73:20:lv_memzero	16	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_arc.c:53:6:lv_draw_sw_arc	632	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_arc.c:250:13:add_circle	64	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_arc.c:270:13:get_rounded_area	48	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_arc.c:250:13:add_circle	40	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_arc.c:270:13:get_rounded_area	32	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_arc.c:53:6:lv_draw_sw_arc	600	static

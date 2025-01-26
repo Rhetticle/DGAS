@@ -8,42 +8,29 @@
 #ifndef INC_OBD2_H_
 #define INC_OBD2_H_
 
-typedef struct {
-	uint8_t synchro;
-	uint8_t keyWord1;
-	uint8_t keyWord2;
-}InitResponse;
+#include <stdbool.h>
+
+typedef enum {
+	OBD_INIT,
+	OBD_LIVE,
+	OBD_TIMEOUT,
+} OBDBus_StatusTypeDef;
 
 typedef struct {
-	HAL_StatusTypeDef (*send) (uint8_t* data, uint32_t size);
-	HAL_StatusTypeDef (*receive) (uint8_t* rec, uint32_t size);
+	OBDBus_StatusTypeDef status;
+	HAL_StatusTypeDef (*init_bus)(void);
+	HAL_StatusTypeDef (*get_pid)(uint8_t, uint8_t*);
 }OBDBus;
 
-// ISO9141 initialisation values
-#define ISO9141_ADDRESS 0x33
-#define ISO9141_KW1 0x08
-#define ISO9141_KW2 0x08
-#define ISO9141_HEADER_1 0x68
-#define ISO9141_HEADER_2 0x6A
-#define ISO9141_HEADER_3 0xF1
+#define DBG_MSG_MAX_SIZE 256
 
-#define ISO9141_K GPIO_PIN_10 // port C. This is also UART4_TX
-#define ISO9141_L GPIO_PIN_1 // port G
+#define OBD2_DATA_MAX 4 // maximum of four bytes sent in OBD2 response
 
-// initialisation timing parameters (ms)
-#define W1_TIMEOUT_MAX 300
-#define W2_TIMEOUT_MAX 20
-#define W3_TIMEOUT_MAX 20
-#define W4_TIMEOUT_MAX 50
+#define OBD2_MODE_LIVE 0x01
 
-/////////////////////////// OBD2 Related constants //////////////////////////////////////////////
-#define OBD2_LIVE_MODE 0x01
+#define OBD2_PID_SUPPORTED_PIDS 0x00
+#define OBD2_PID_RPM 0x0C
+#define OBD2_PID_SPEED 0x0D
 
-HAL_StatusTypeDef iso9141_init(void);
-HAL_StatusTypeDef iso9141_get_init_response(InitResponse* response);
-HAL_StatusTypeDef iso9141_listen(void);
-HAL_StatusTypeDef iso9141_send(uint8_t* data, uint32_t size);
-uint8_t iso9141_checksum(uint8_t* data, uint32_t size);
-HAL_StatusTypeDef kwp_send_data(uint8_t* data, uint32_t size);
-HAL_StatusTypeDef obd2_get_parameter(uint8_t parameter, uint32_t* a, uint32_t* b);
+HAL_StatusTypeDef obd2_get_rpm(OBDBus* bus, uint16_t* rpm);
 #endif /* INC_OBD2_H_ */

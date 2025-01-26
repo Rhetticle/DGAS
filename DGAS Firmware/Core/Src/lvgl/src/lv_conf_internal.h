@@ -56,14 +56,19 @@
         #include LV_CONF_PATH                     /* Note: Make sure to define custom CONF_PATH as a string */
     #elif defined(LV_CONF_INCLUDE_SIMPLE)         /* Or simply include lv_conf.h is enabled. */
         #include "lv_conf.h"
-    //#else
-        //#include "../../lv_conf.h"                /* Else assume lv_conf.h is next to the lvgl folder. */
+    #else
+        #include "../lv_conf.h"                /* Else assume lv_conf.h is next to the lvgl folder. */
     #endif
     #if !defined(LV_CONF_H) && !defined(LV_CONF_SUPPRESS_DEFINE_CHECK)
         /* #include will sometimes silently fail when __has_include is used */
         /* https://gcc.gnu.org/bugzilla/show_bug.cgi?id=80753 */
         #pragma message("Possible failure to include lv_conf.h, please read the comment in this file if you get errors")
     #endif
+#endif
+
+/* Renamed config backwards-compatibility */
+#if !defined(LV_FS_DEFAULT_DRIVER_LETTER) && defined(LV_FS_DEFAULT_DRIVE_LETTER)
+    #define LV_FS_DEFAULT_DRIVER_LETTER LV_FS_DEFAULT_DRIVE_LETTER
 #endif
 
 #ifdef CONFIG_LV_COLOR_DEPTH
@@ -2520,11 +2525,11 @@
 /* File system interfaces for common APIs */
 
 /** Setting a default driver letter allows skipping the driver prefix in filepaths. */
-#ifndef LV_FS_DEFAULT_DRIVE_LETTER
-    #ifdef CONFIG_LV_FS_DEFAULT_DRIVE_LETTER
-        #define LV_FS_DEFAULT_DRIVE_LETTER CONFIG_LV_FS_DEFAULT_DRIVE_LETTER
+#ifndef LV_FS_DEFAULT_DRIVER_LETTER
+    #ifdef CONFIG_LV_FS_DEFAULT_DRIVER_LETTER
+        #define LV_FS_DEFAULT_DRIVER_LETTER CONFIG_LV_FS_DEFAULT_DRIVER_LETTER
     #else
-        #define LV_FS_DEFAULT_DRIVE_LETTER '\0'
+        #define LV_FS_DEFAULT_DRIVER_LETTER '\0'
     #endif
 #endif
 
@@ -2745,6 +2750,24 @@
             #define LV_FS_ARDUINO_SD_PATH CONFIG_LV_FS_ARDUINO_SD_PATH
         #else
             #define LV_FS_ARDUINO_SD_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
+        #endif
+    #endif
+#endif
+
+/** API for UEFI */
+#ifndef LV_USE_FS_UEFI
+    #ifdef CONFIG_LV_USE_FS_UEFI
+        #define LV_USE_FS_UEFI CONFIG_LV_USE_FS_UEFI
+    #else
+        #define LV_USE_FS_UEFI 0
+    #endif
+#endif
+#if LV_USE_FS_UEFI
+    #ifndef LV_FS_UEFI_LETTER
+        #ifdef CONFIG_LV_FS_UEFI_LETTER
+            #define LV_FS_UEFI_LETTER CONFIG_LV_FS_UEFI_LETTER
+        #else
+            #define LV_FS_UEFI_LETTER '\0'          /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
         #endif
     #endif
 #endif
@@ -3004,7 +3027,7 @@
             #define LV_FFMPEG_DUMP_FORMAT 0
         #endif
     #endif
-    /** Use lvgl file path in FFmpeg Player widget 
+    /** Use lvgl file path in FFmpeg Player widget
      *  You won't be able to open URLs after enabling this feature.
      *  Note that FFmpeg image decoder will always use lvgl file system. */
     #ifndef LV_FFMPEG_PLAYER_USE_LV_FS
@@ -3898,6 +3921,31 @@
         #define LV_USE_WINDOWS CONFIG_LV_USE_WINDOWS
     #else
         #define LV_USE_WINDOWS    0
+    #endif
+#endif
+
+/** LVGL UEFI backend */
+#ifndef LV_USE_UEFI
+    #ifdef CONFIG_LV_USE_UEFI
+        #define LV_USE_UEFI CONFIG_LV_USE_UEFI
+    #else
+        #define LV_USE_UEFI 0
+    #endif
+#endif
+#if LV_USE_UEFI
+    #ifndef LV_USE_UEFI_INCLUDE
+        #ifdef CONFIG_LV_USE_UEFI_INCLUDE
+            #define LV_USE_UEFI_INCLUDE CONFIG_LV_USE_UEFI_INCLUDE
+        #else
+            #define LV_USE_UEFI_INCLUDE "myefi.h"   /**< Header that hides the actual framework (EDK2, gnu-efi, ...) */
+        #endif
+    #endif
+    #ifndef LV_UEFI_USE_MEMORY_SERVICES
+        #ifdef CONFIG_LV_UEFI_USE_MEMORY_SERVICES
+            #define LV_UEFI_USE_MEMORY_SERVICES CONFIG_LV_UEFI_USE_MEMORY_SERVICES
+        #else
+            #define LV_UEFI_USE_MEMORY_SERVICES 0   /**< Use the memory functions from the boot services table */
+        #endif
     #endif
 #endif
 

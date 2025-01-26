@@ -1,7 +1,4 @@
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:98:6:lv_draw_sw_transform	280	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:291:13:transform_rgb888	96	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:391:13:transform_argb8888	88	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:484:13:transform_rgb565a8	104	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:599:13:transform_a8	72	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:677:13:transform_l8_to_al88	72	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:755:13:transform_point_upscaled	24	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:755:13:transform_point_upscaled	8	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:291:13:transform_rgb888	72	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:484:13:transform_rgb565a8	88	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw_transform.c:98:6:lv_draw_sw_transform	248	static

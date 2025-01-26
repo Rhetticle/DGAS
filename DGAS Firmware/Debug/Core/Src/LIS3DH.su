@@ -1,4 +1,4 @@
-../Core/Src/LIS3DH.c:17:19:accel_init	32	static
-../Core/Src/LIS3DH.c:38:19:accel_read_reg	32	static
+../Core/Src/LIS3DH.c:17:19:accel_init	40	static
+../Core/Src/LIS3DH.c:38:19:accel_read_reg	24	static
 ../Core/Src/LIS3DH.c:45:19:accel_read_data	56	static
-../Core/Src/LIS3DH.c:71:19:accel_get_update	40	static
+../Core/Src/LIS3DH.c:71:19:accel_get_update	56	static

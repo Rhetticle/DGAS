@@ -315,8 +315,6 @@ Core/Src/lvgl/demos/benchmark/lv_demo_benchmark.o: \
  ../Core/Src/lvgl/demos/benchmark/../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/../../misc/lv_event.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/lv_rlottie.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/../../lv_conf_internal.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/libs/ffmpeg/lv_ffmpeg.h \
@@ -405,9 +403,300 @@ Core/Src/lvgl/demos/benchmark/lv_demo_benchmark.o: \
  ../Core/Src/lvgl/demos/benchmark/../../src/drivers/wayland/../../display/lv_display.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/drivers/wayland/../../indev/lv_indev.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/drivers/wayland/../../indev/lv_indev_gesture.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/lv_uefi_context.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../lvgl.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../../lvgl.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/lv_uefi_indev.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../indev/lv_indev.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/lv_uefi_display.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/lv_api_map_v8.h \
  ../Core/Src/lvgl/demos/benchmark/../../src/lv_api_map_v9_0.h \
- ../Core/Src/lvgl/demos/benchmark/../../src/lv_api_map_v9_1.h
+ ../Core/Src/lvgl/demos/benchmark/../../src/lv_api_map_v9_1.h \
+ ../Core/Src/lvgl/demos/benchmark/../benchmark/lv_demo_benchmark.h \
+ ../Core/Src/lvgl/demos/benchmark/../stress/lv_demo_stress.h \
+ ../Core/Src/lvgl/demos/benchmark/../stress/../lv_demos.h \
+ ../Core/Src/lvgl/demos/benchmark/../widgets/lv_demo_widgets.h \
+ ../Core/Src/lvgl/demos/benchmark/../widgets/../lv_demos.h \
+ ../Core/Src/lvgl/demos/benchmark/../widgets/../../src/draw/lv_draw.h \
+ ../Core/Src/lvgl/demos/benchmark/../widgets/../../src/draw/lv_draw_triangle.h \
+ ../Core/Src/lvgl/demos/benchmark/../widgets/../../src/draw/lv_draw_rect.h \
+ ../Core/Src/lvgl/demos/benchmark/../transform/lv_demo_transform.h \
+ ../Core/Src/lvgl/demos/benchmark/../transform/../lv_demos.h \
+ ../Core/Src/lvgl/demos/benchmark/../scroll/lv_demo_scroll.h \
+ ../Core/Src/lvgl/demos/benchmark/../scroll/../lv_demos.h \
+ ../Core/Src/lvgl/demos/benchmark/../../lvgl_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_global.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/lv_draw.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../misc/lv_area.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../display/lv_display.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/lv_os.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/../misc/lv_types.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/lv_os_none.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_vector.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_triangle.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_label.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_image.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_line.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_arc.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_utils.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/lv_draw_sw_blend.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../lv_draw_sw_mask.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_area.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_color.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_math.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_types.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_color.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_area.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_style.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_color_op.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_ll.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_log.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_timer.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../osal/lv_os.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../others/sysmon/lv_sysmon.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/lv_tlsf.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../misc/lv_ll.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../misc/lv_types.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../tick/lv_tick.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../layouts/lv_layout.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_timer_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_timer.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_anim_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../tick/lv_tick_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../tick/lv_tick.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/lv_draw_buf_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/lv_draw_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../osal/lv_os.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache_entry.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/../lv_types.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache_lru_rb.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/../../osal/lv_os.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_image_cache.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_image_header_cache.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_mask_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_mask.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/lv_tlsf_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/lv_tlsf.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../osal/lv_os.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../others/sysmon/lv_sysmon_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../others/sysmon/lv_sysmon.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../layouts/lv_layout_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/../layouts/lv_layout.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/display/lv_display_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/display/../misc/lv_types.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/display/../core/lv_obj.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/display/../draw/lv_draw.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/display/lv_display.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/display/../others/sysmon/lv_sysmon_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/indev/lv_indev_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/indev/lv_indev.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/indev/../misc/lv_anim.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/indev/lv_indev_scroll.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_text_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_text.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/lv_cache_entry_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/../../osal/lv_os.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/../lv_profiler.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/lv_cache_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/layouts/lv_layout_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/stdlib/lv_mem_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/stdlib/lv_mem.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/lv_file_explorer_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/../../core/lv_obj.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/lv_file_explorer.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/sysmon/lv_sysmon_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/monkey/lv_monkey_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/monkey/lv_monkey.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/ime/lv_ime_pinyin_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/ime/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/ime/lv_ime_pinyin.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/fragment/lv_fragment_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/fragment/lv_fragment.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/observer/lv_observer_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/observer/lv_observer.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/xml/lv_xml_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/others/xml/lv_xml.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/lv_qrcode_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/lv_canvas_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/../image/lv_image_private.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\core\lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/../image/lv_image.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/lv_canvas.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/lv_qrcode.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/barcode/lv_barcode_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/barcode/../../widgets/canvas/lv_canvas_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/barcode/lv_barcode.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/gif/lv_gif_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/gif/../../widgets/image/lv_image_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/gif/lv_gif.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_triangle_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_triangle.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_rect_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_rect.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_image_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_image_decoder_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_image_decoder.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/cache/lv_cache.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_label_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_label.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_vector_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_vector.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_buf_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_mask_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_mask.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/lv_color.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/lv_area.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/lv_style.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_gradient_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_gradient.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_mask_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/blend/lv_draw_sw_blend_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/blend/lv_draw_sw_blend.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_xkb_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_xkb.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_libinput_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_libinput.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/font/lv_font_fmt_txt_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/font/lv_font_fmt_txt.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/themes/lv_theme_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/themes/lv_theme.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_refr_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_refr.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_style_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_scroll_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_draw_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_class_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_group_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_event_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_timer_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_area_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_area.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_fs_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_fs.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_profiler_builtin_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_profiler_builtin.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_event_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_event.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_bidi_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_bidi.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_rb_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_rb.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_style_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_style.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_color_op_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_color_op.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_anim_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/msgbox/lv_msgbox_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/msgbox/lv_msgbox.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/msgbox/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/buttonmatrix/lv_buttonmatrix_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/buttonmatrix/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/buttonmatrix/lv_buttonmatrix.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/lv_slider_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/../bar/lv_bar_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/../bar/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/../bar/lv_bar.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/lv_slider.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/switch/lv_switch_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/switch/lv_switch.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/switch/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/calendar/lv_calendar_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/calendar/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/imagebutton/lv_imagebutton_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/imagebutton/lv_imagebutton.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/imagebutton/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/bar/lv_bar_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/image/lv_image_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/textarea/lv_textarea_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/textarea/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/textarea/lv_textarea.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/table/lv_table_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/table/lv_table.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/table/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/checkbox/lv_checkbox_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/checkbox/lv_checkbox.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/checkbox/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/roller/lv_roller_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/roller/lv_roller.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/roller/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/win/lv_win_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/win/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/win/lv_win.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/keyboard/lv_keyboard_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/keyboard/lv_keyboard.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/line/lv_line_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/line/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/line/lv_line.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/lv_animimage_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/../image/lv_image_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/../../misc/lv_anim_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/lv_animimage.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/dropdown/lv_dropdown_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/dropdown/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/dropdown/lv_dropdown.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/menu/lv_menu_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/menu/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/menu/lv_menu.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/chart/lv_chart_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/chart/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/chart/lv_chart.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/button/lv_button_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/button/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/button/lv_button.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/scale/lv_scale_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/scale/lv_scale.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/scale/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/led/lv_led_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/led/lv_led.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/led/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/arc/lv_arc_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/arc/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/arc/lv_arc.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/tileview/lv_tileview_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/tileview/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/tileview/lv_tileview.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/spinbox/lv_spinbox_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/spinbox/../textarea/lv_textarea_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/spinbox/lv_spinbox.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/span/lv_span_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/span/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/span/lv_span.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/lv_label_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/../../draw/lv_draw_label_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/lv_label.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/canvas/lv_canvas_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/tabview/lv_tabview_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/tabview/../../core/lv_obj_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/tabview/lv_tabview.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/tick/lv_tick_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/stdlib/builtin/lv_tlsf_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/lv_rlottie_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/lv_rlottie.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/ffmpeg/lv_ffmpeg_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/libs/ffmpeg/lv_ffmpeg.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/lottie/lv_lottie_private.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/widgets/lottie/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/benchmark/../../src/osal/lv_os_private.h
 ../Core/Src/lvgl/demos/benchmark/lv_demo_benchmark.h:
 ../Core/Src/lvgl/demos/benchmark/../lv_demos.h:
 ../Core/Src/lvgl/demos/benchmark/../../lvgl.h:
@@ -723,8 +1012,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/benchmark/../../src/libs/libjpeg_turbo/../../lv_conf_internal.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/demos/benchmark/../../src/libs/freetype/../../misc/lv_event.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/lv_rlottie.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/../../lv_conf_internal.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/libs/ffmpeg/lv_ffmpeg.h:
@@ -813,6 +1100,297 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/benchmark/../../src/drivers/wayland/../../display/lv_display.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/drivers/wayland/../../indev/lv_indev.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/drivers/wayland/../../indev/lv_indev_gesture.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/lv_uefi_context.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../lvgl.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../../lvgl.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../lv_conf_internal.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/lv_uefi_indev.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../indev/lv_indev.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/lv_uefi_display.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/uefi/../../display/lv_display.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/lv_api_map_v8.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/demos/benchmark/../../src/lv_api_map_v9_1.h:
+../Core/Src/lvgl/demos/benchmark/../benchmark/lv_demo_benchmark.h:
+../Core/Src/lvgl/demos/benchmark/../stress/lv_demo_stress.h:
+../Core/Src/lvgl/demos/benchmark/../stress/../lv_demos.h:
+../Core/Src/lvgl/demos/benchmark/../widgets/lv_demo_widgets.h:
+../Core/Src/lvgl/demos/benchmark/../widgets/../lv_demos.h:
+../Core/Src/lvgl/demos/benchmark/../widgets/../../src/draw/lv_draw.h:
+../Core/Src/lvgl/demos/benchmark/../widgets/../../src/draw/lv_draw_triangle.h:
+../Core/Src/lvgl/demos/benchmark/../widgets/../../src/draw/lv_draw_rect.h:
+../Core/Src/lvgl/demos/benchmark/../transform/lv_demo_transform.h:
+../Core/Src/lvgl/demos/benchmark/../transform/../lv_demos.h:
+../Core/Src/lvgl/demos/benchmark/../scroll/lv_demo_scroll.h:
+../Core/Src/lvgl/demos/benchmark/../scroll/../lv_demos.h:
+../Core/Src/lvgl/demos/benchmark/../../lvgl_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_global.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/lv_draw.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../misc/lv_area.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../display/lv_display.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/lv_os.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/../lv_conf_internal.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/../misc/lv_types.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../../osal/lv_os_none.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_vector.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_triangle.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_label.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_image.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_line.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_arc.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_utils.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/lv_draw_sw_blend.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../lv_draw_sw_mask.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_area.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_color.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_math.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_types.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_color.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_area.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/blend/../../../misc/lv_style.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_color_op.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_ll.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_log.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_timer.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../osal/lv_os.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../others/sysmon/lv_sysmon.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/lv_tlsf.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../lv_conf_internal.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../misc/lv_ll.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../misc/lv_types.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../tick/lv_tick.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../layouts/lv_layout.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_timer_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_timer.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../misc/lv_anim_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../tick/lv_tick_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../tick/lv_tick.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/lv_draw_buf_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/lv_draw_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../osal/lv_os.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache_entry.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/../lv_types.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache_lru_rb.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_cache_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/../../osal/lv_os.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_image_cache.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/lv_image_header_cache.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/../misc/cache/../../lv_conf_internal.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/../lv_draw_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_mask_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../draw/sw/lv_draw_sw_mask.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/lv_tlsf_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/lv_tlsf.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../stdlib/builtin/../../osal/lv_os.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../others/sysmon/lv_sysmon_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../others/sysmon/lv_sysmon.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../layouts/lv_layout_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/../layouts/lv_layout.h:
+../Core/Src/lvgl/demos/benchmark/../../src/display/lv_display_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/display/../misc/lv_types.h:
+../Core/Src/lvgl/demos/benchmark/../../src/display/../core/lv_obj.h:
+../Core/Src/lvgl/demos/benchmark/../../src/display/../draw/lv_draw.h:
+../Core/Src/lvgl/demos/benchmark/../../src/display/lv_display.h:
+../Core/Src/lvgl/demos/benchmark/../../src/display/../others/sysmon/lv_sysmon_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/indev/lv_indev_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/indev/lv_indev.h:
+../Core/Src/lvgl/demos/benchmark/../../src/indev/../misc/lv_anim.h:
+../Core/Src/lvgl/demos/benchmark/../../src/indev/lv_indev_scroll.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_text_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_text.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/lv_cache_entry_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/../../osal/lv_os.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/../lv_profiler.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/cache/lv_cache_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/layouts/lv_layout_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/stdlib/lv_mem_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/stdlib/lv_mem.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/lv_file_explorer_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/../../core/lv_obj.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/file_explorer/lv_file_explorer.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/sysmon/lv_sysmon_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/monkey/lv_monkey_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/monkey/lv_monkey.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/ime/lv_ime_pinyin_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/ime/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/ime/lv_ime_pinyin.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/fragment/lv_fragment_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/fragment/lv_fragment.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/observer/lv_observer_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/observer/lv_observer.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/xml/lv_xml_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/others/xml/lv_xml.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/lv_qrcode_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/lv_canvas_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/../image/lv_image_private.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\core\lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/../image/lv_image.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/../../widgets/canvas/lv_canvas.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/qrcode/lv_qrcode.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/barcode/lv_barcode_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/barcode/../../widgets/canvas/lv_canvas_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/barcode/lv_barcode.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/gif/lv_gif_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/gif/../../widgets/image/lv_image_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/gif/lv_gif.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_triangle_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_triangle.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_rect_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_rect.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_image_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_image_decoder_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_image_decoder.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/cache/lv_cache.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_label_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_label.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_vector_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_vector.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_buf_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_mask_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw_mask.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/lv_color.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/lv_area.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/../misc/lv_style.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/lv_draw.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_gradient_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_gradient.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/lv_draw_sw_mask_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/blend/lv_draw_sw_blend_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/draw/sw/blend/lv_draw_sw_blend.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_xkb_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_xkb.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/../../lv_conf_internal.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_libinput_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/drivers/libinput/lv_libinput.h:
+../Core/Src/lvgl/demos/benchmark/../../src/font/lv_font_fmt_txt_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/font/lv_font_fmt_txt.h:
+../Core/Src/lvgl/demos/benchmark/../../src/themes/lv_theme_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/themes/lv_theme.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_refr_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_refr.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_style_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_scroll_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_draw_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_class_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_group_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/core/lv_obj_event_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_timer_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_area_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_area.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_fs_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_fs.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_profiler_builtin_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_profiler_builtin.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_event_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_event.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_bidi_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_bidi.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_rb_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_rb.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_style_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_style.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_color_op_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_color_op.h:
+../Core/Src/lvgl/demos/benchmark/../../src/misc/lv_anim_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/msgbox/lv_msgbox_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/msgbox/lv_msgbox.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/msgbox/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/buttonmatrix/lv_buttonmatrix_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/buttonmatrix/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/buttonmatrix/lv_buttonmatrix.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/lv_slider_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/../bar/lv_bar_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/../bar/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/../bar/lv_bar.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/slider/lv_slider.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/switch/lv_switch_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/switch/lv_switch.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/switch/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/calendar/lv_calendar_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/calendar/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/imagebutton/lv_imagebutton_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/imagebutton/lv_imagebutton.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/imagebutton/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/bar/lv_bar_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/image/lv_image_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/textarea/lv_textarea_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/textarea/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/textarea/lv_textarea.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/table/lv_table_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/table/lv_table.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/table/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/checkbox/lv_checkbox_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/checkbox/lv_checkbox.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/checkbox/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/roller/lv_roller_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/roller/lv_roller.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/roller/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/win/lv_win_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/win/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/win/lv_win.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/keyboard/lv_keyboard_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/keyboard/lv_keyboard.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/line/lv_line_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/line/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/line/lv_line.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/lv_animimage_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/../image/lv_image_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/../../misc/lv_anim_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/animimage/lv_animimage.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/dropdown/lv_dropdown_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/dropdown/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/dropdown/lv_dropdown.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/menu/lv_menu_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/menu/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/menu/lv_menu.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/chart/lv_chart_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/chart/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/chart/lv_chart.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/button/lv_button_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/button/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/button/lv_button.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/scale/lv_scale_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/scale/lv_scale.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/scale/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/led/lv_led_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/led/lv_led.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/led/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/arc/lv_arc_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/arc/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/arc/lv_arc.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/tileview/lv_tileview_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/tileview/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/tileview/lv_tileview.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/spinbox/lv_spinbox_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/spinbox/../textarea/lv_textarea_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/spinbox/lv_spinbox.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/span/lv_span_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/span/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/span/lv_span.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/lv_label_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/../../draw/lv_draw_label_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/label/lv_label.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/canvas/lv_canvas_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/tabview/lv_tabview_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/tabview/../../core/lv_obj_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/tabview/lv_tabview.h:
+../Core/Src/lvgl/demos/benchmark/../../src/tick/lv_tick_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/stdlib/builtin/lv_tlsf_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/lv_rlottie_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/rlottie/lv_rlottie.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/ffmpeg/lv_ffmpeg_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/libs/ffmpeg/lv_ffmpeg.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/lottie/lv_lottie_private.h:
+../Core/Src/lvgl/demos/benchmark/../../src/widgets/lottie/../../lv_conf_internal.h:
+../Core/Src/lvgl/demos/benchmark/../../src/osal/lv_os_private.h:

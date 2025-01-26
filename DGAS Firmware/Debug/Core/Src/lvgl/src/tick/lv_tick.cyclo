@@ -1,6 +1,6 @@
 lv_tick.c:38:28:lv_tick_inc	1
 lv_tick.c:46:10:lv_tick_get	3
-lv_tick.c:67:10:lv_tick_elaps	2
-lv_tick.c:83:6:lv_delay_ms	4
+lv_tick.c:67:10:lv_tick_elaps	3
+lv_tick.c:83:6:lv_delay_ms	9
 lv_tick.c:101:6:lv_tick_set_cb	1
 lv_tick.c:106:6:lv_delay_set_cb	1

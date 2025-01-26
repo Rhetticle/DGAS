@@ -1,0 +1,8 @@
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:185:13:perf_monitor_disp_event_cb	16	static
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:236:13:perf_update_timer_cb	24	static
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:282:13:perf_observer_cb	32	static
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:63:6:lv_sysmon_builtin_init	0	static
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:73:6:lv_sysmon_builtin_deinit	0	static
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:80:12:lv_sysmon_create	16	static
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:100:6:lv_sysmon_show_performance	16	static
+../Core/Src/lvgl/src/others/sysmon/lv_sysmon.c:129:6:lv_sysmon_hide_performance	8	static

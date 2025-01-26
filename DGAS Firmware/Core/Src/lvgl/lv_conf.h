@@ -69,7 +69,7 @@
 
 #if LV_USE_STDLIB_MALLOC == LV_STDLIB_BUILTIN
     /** Size of memory available for `lv_malloc()` in bytes (>= 2kB) */
-    #define LV_MEM_SIZE (64 * 1024U)          /**< [bytes] */
+    #define LV_MEM_SIZE (128 * 1024U)          /**< [bytes] */
 
     /** Size of the memory expand for `lv_malloc()` in bytes */
     #define LV_MEM_POOL_EXPAND_SIZE 0
@@ -88,7 +88,7 @@
  *====================*/
 
 /** Default display refresh, input device read and animation step period. */
-#define LV_DEF_REFR_PERIOD  20      /**< [ms] */
+#define LV_DEF_REFR_PERIOD  16      /**< [ms] */
 
 /** Default Dots Per Inch. Used to initialize default sizes such as widgets sized, style paddings.
  * (Not so important, you can adjust it to modify default sizes and spaces.) */
@@ -307,10 +307,10 @@
 #endif
 
 /** Accelerate blends, fills, etc. with STM32 DMA2D */
-#define LV_USE_DRAW_DMA2D 0
+#define LV_USE_DRAW_DMA2D 1
 
 #if LV_USE_DRAW_DMA2D
-    #define LV_DRAW_DMA2D_HAL_INCLUDE "stm32h7xx_hal.h"
+    #define LV_DRAW_DMA2D_HAL_INCLUDE "stm32f7xx_hal.h"
 
     /* if enabled, the user is required to call `lv_draw_dma2d_transfer_complete_interrupt_handler`
      * upon receiving the DMA2D global interrupt
@@ -542,27 +542,27 @@
 
 /* Montserrat fonts with ASCII range and some symbols using bpp = 4
  * https://fonts.google.com/specimen/Montserrat */
-#define LV_FONT_MONTSERRAT_8  0
-#define LV_FONT_MONTSERRAT_10 0
-#define LV_FONT_MONTSERRAT_12 0
+#define LV_FONT_MONTSERRAT_8  1
+#define LV_FONT_MONTSERRAT_10 1
+#define LV_FONT_MONTSERRAT_12 1
 #define LV_FONT_MONTSERRAT_14 1
-#define LV_FONT_MONTSERRAT_16 0
+#define LV_FONT_MONTSERRAT_16 1
 #define LV_FONT_MONTSERRAT_18 1
-#define LV_FONT_MONTSERRAT_20 0
+#define LV_FONT_MONTSERRAT_20 1
 #define LV_FONT_MONTSERRAT_22 1
 #define LV_FONT_MONTSERRAT_24 1
-#define LV_FONT_MONTSERRAT_26 0
-#define LV_FONT_MONTSERRAT_28 0
-#define LV_FONT_MONTSERRAT_30 0
-#define LV_FONT_MONTSERRAT_32 0
-#define LV_FONT_MONTSERRAT_34 0
-#define LV_FONT_MONTSERRAT_36 0
-#define LV_FONT_MONTSERRAT_38 0
-#define LV_FONT_MONTSERRAT_40 0
-#define LV_FONT_MONTSERRAT_42 0
-#define LV_FONT_MONTSERRAT_44 0
-#define LV_FONT_MONTSERRAT_46 0
-#define LV_FONT_MONTSERRAT_48 0
+#define LV_FONT_MONTSERRAT_26 1
+#define LV_FONT_MONTSERRAT_28 1
+#define LV_FONT_MONTSERRAT_30 1
+#define LV_FONT_MONTSERRAT_32 1
+#define LV_FONT_MONTSERRAT_34 1
+#define LV_FONT_MONTSERRAT_36 1
+#define LV_FONT_MONTSERRAT_38 1
+#define LV_FONT_MONTSERRAT_40 1
+#define LV_FONT_MONTSERRAT_42 1
+#define LV_FONT_MONTSERRAT_44 1
+#define LV_FONT_MONTSERRAT_46 1
+#define LV_FONT_MONTSERRAT_48 1
 
 /* Demonstrate special features */
 #define LV_FONT_MONTSERRAT_28_COMPRESSED 0  /**< bpp = 3 */
@@ -791,7 +791,7 @@
 /* File system interfaces for common APIs */
 
 /** Setting a default driver letter allows skipping the driver prefix in filepaths. */
-#define LV_FS_DEFAULT_DRIVE_LETTER '\0'
+#define LV_FS_DEFAULT_DRIVER_LETTER '\0'
 
 /** API for fopen, fread, etc. */
 #define LV_USE_FS_STDIO 0
@@ -850,6 +850,12 @@
 #if LV_USE_FS_ARDUINO_SD
     #define LV_FS_ARDUINO_SD_LETTER '\0'          /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
     #define LV_FS_ARDUINO_SD_PATH ""         /**< Set the working directory. File/directory paths will be appended to it. */
+#endif
+
+/** API for UEFI */
+#define LV_USE_FS_UEFI 0
+#if LV_USE_FS_UEFI
+    #define LV_FS_UEFI_LETTER '\0'          /**< Set an upper cased letter on which the drive will accessible (e.g. 'A') */
 #endif
 
 /** LODEPNG decoder library */
@@ -939,7 +945,7 @@
 #if LV_USE_FFMPEG
     /** Dump input information to stderr */
     #define LV_FFMPEG_DUMP_FORMAT 0
-    /** Use lvgl file path in FFmpeg Player widget 
+    /** Use lvgl file path in FFmpeg Player widget
      *  You won't be able to open URLs after enabling this feature.
      *  Note that FFmpeg image decoder will always use lvgl file system. */
     #define LV_FFMPEG_PLAYER_USE_LV_FS 0
@@ -954,14 +960,14 @@
 #define LV_USE_SNAPSHOT 0
 
 /** 1: Enable system monitor component */
-#define LV_USE_SYSMON   0
+#define LV_USE_SYSMON   1
 #if LV_USE_SYSMON
     /** Get the idle percentage. E.g. uint32_t my_get_idle(void); */
     #define LV_SYSMON_GET_IDLE lv_timer_get_idle
 
     /** 1: Show CPU usage and FPS count.
      *  - Requires `LV_USE_SYSMON = 1` */
-    #define LV_USE_PERF_MONITOR 0
+    #define LV_USE_PERF_MONITOR 1
     #if LV_USE_PERF_MONITOR
         #define LV_USE_PERF_MONITOR_POS LV_ALIGN_BOTTOM_RIGHT
 
@@ -1206,6 +1212,13 @@
 /** LVGL Windows backend */
 #define LV_USE_WINDOWS    0
 
+/** LVGL UEFI backend */
+#define LV_USE_UEFI 0
+#if LV_USE_UEFI
+    #define LV_USE_UEFI_INCLUDE "myefi.h"   /**< Header that hides the actual framework (EDK2, gnu-efi, ...) */
+    #define LV_UEFI_USE_MEMORY_SERVICES 0   /**< Use the memory functions from the boot services table */
+#endif
+
 /** Use OpenGL to open window on PC and handle mouse and keyboard */
 #define LV_USE_OPENGLES   0
 #if LV_USE_OPENGLES
@@ -1230,20 +1243,20 @@
  ====================*/
 
 /** Show some widgets. This might be required to increase `LV_MEM_SIZE`. */
-#define LV_USE_DEMO_WIDGETS 0
+#define LV_USE_DEMO_WIDGETS 1
 
 /** Demonstrate usage of encoder and keyboard. */
 #define LV_USE_DEMO_KEYPAD_AND_ENCODER 0
 
 /** Benchmark your system */
-#define LV_USE_DEMO_BENCHMARK 0
+#define LV_USE_DEMO_BENCHMARK 1
 
 /** Render test for each primitive.
  *  - Requires at least 480x272 display. */
 #define LV_USE_DEMO_RENDER 0
 
 /** Stress test for LVGL */
-#define LV_USE_DEMO_STRESS 0
+#define LV_USE_DEMO_STRESS 1
 
 /** Music player demo */
 #define LV_USE_DEMO_MUSIC 0
@@ -1262,10 +1275,10 @@
 #define LV_USE_DEMO_MULTILANG       0
 
 /** Widget transformation demo */
-#define LV_USE_DEMO_TRANSFORM       0
+#define LV_USE_DEMO_TRANSFORM       1
 
 /** Demonstrate scroll settings */
-#define LV_USE_DEMO_SCROLL          0
+#define LV_USE_DEMO_SCROLL          1
 
 /** Vector graphic demo */
 #define LV_USE_DEMO_VECTOR_GRAPHIC  0

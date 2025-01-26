@@ -1,0 +1,2 @@
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d_img.c:37:6:lv_draw_dma2d_opaque_image	184	static
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d_img.c:123:6:lv_draw_dma2d_image	184	static

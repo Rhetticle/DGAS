@@ -11,13 +11,6 @@ C_SRCS += \
 ../Core/Src/lvgl/src/misc/cache/lv_image_cache.c \
 ../Core/Src/lvgl/src/misc/cache/lv_image_header_cache.c 
 
-OBJS += \
-./Core/Src/lvgl/src/misc/cache/lv_cache.o \
-./Core/Src/lvgl/src/misc/cache/lv_cache_entry.o \
-./Core/Src/lvgl/src/misc/cache/lv_cache_lru_rb.o \
-./Core/Src/lvgl/src/misc/cache/lv_image_cache.o \
-./Core/Src/lvgl/src/misc/cache/lv_image_header_cache.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/src/misc/cache/lv_cache.d \
 ./Core/Src/lvgl/src/misc/cache/lv_cache_entry.d \
@@ -25,10 +18,17 @@ C_DEPS += \
 ./Core/Src/lvgl/src/misc/cache/lv_image_cache.d \
 ./Core/Src/lvgl/src/misc/cache/lv_image_header_cache.d 
 
+OBJS += \
+./Core/Src/lvgl/src/misc/cache/lv_cache.o \
+./Core/Src/lvgl/src/misc/cache/lv_cache_entry.o \
+./Core/Src/lvgl/src/misc/cache/lv_cache_lru_rb.o \
+./Core/Src/lvgl/src/misc/cache/lv_image_cache.o \
+./Core/Src/lvgl/src/misc/cache/lv_image_header_cache.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/src/misc/cache/%.o Core/Src/lvgl/src/misc/cache/%.su Core/Src/lvgl/src/misc/cache/%.cyclo: ../Core/Src/lvgl/src/misc/cache/%.c Core/Src/lvgl/src/misc/cache/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-src-2f-misc-2f-cache
 

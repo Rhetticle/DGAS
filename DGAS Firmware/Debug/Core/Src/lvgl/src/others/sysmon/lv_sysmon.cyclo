@@ -1,0 +1,8 @@
+lv_sysmon.c:185:13:perf_monitor_disp_event_cb	10
+lv_sysmon.c:236:13:perf_update_timer_cb	5
+lv_sysmon.c:282:13:perf_observer_cb	1
+lv_sysmon.c:63:6:lv_sysmon_builtin_init	1
+lv_sysmon.c:73:6:lv_sysmon_builtin_deinit	1
+lv_sysmon.c:80:12:lv_sysmon_create	3
+lv_sysmon.c:100:6:lv_sysmon_show_performance	5
+lv_sysmon.c:129:6:lv_sysmon_hide_performance	3

@@ -1,0 +1,10 @@
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:429:16:delete_cb	0	static
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:283:16:evaluate_cb	16	static
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:61:6:lv_draw_dma2d_init	16	static
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:93:6:lv_draw_dma2d_deinit	0	static,ignoring_inline_asm
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:125:27:lv_draw_dma2d_cf_to_dma2d_output_cf	0	static
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:143:10:lv_draw_dma2d_color_to_dma2d_color	16	static
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:157:6:lv_draw_dma2d_configure_and_start_transfer	4	static,ignoring_inline_asm
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:208:6:lv_draw_dma2d_invalidate_cache	16	static,ignoring_inline_asm
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:336:16:dispatch_cb	56	static
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.c:243:6:lv_draw_dma2d_clean_cache	16	static,ignoring_inline_asm

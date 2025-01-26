@@ -315,8 +315,6 @@ Core/Src/lvgl/demos/stress/lv_demo_stress.o: \
  ../Core/Src/lvgl/demos/stress/../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  ../Core/Src/lvgl/demos/stress/../../src/libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/demos/stress/../../src/libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/demos/stress/../../src/libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/demos/stress/../../src/libs/freetype/../../misc/lv_event.h \
  ../Core/Src/lvgl/demos/stress/../../src/libs/rlottie/lv_rlottie.h \
  ../Core/Src/lvgl/demos/stress/../../src/libs/rlottie/../../lv_conf_internal.h \
  ../Core/Src/lvgl/demos/stress/../../src/libs/ffmpeg/lv_ffmpeg.h \
@@ -405,9 +403,29 @@ Core/Src/lvgl/demos/stress/lv_demo_stress.o: \
  ../Core/Src/lvgl/demos/stress/../../src/drivers/wayland/../../display/lv_display.h \
  ../Core/Src/lvgl/demos/stress/../../src/drivers/wayland/../../indev/lv_indev.h \
  ../Core/Src/lvgl/demos/stress/../../src/drivers/wayland/../../indev/lv_indev_gesture.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/lv_uefi_context.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../lvgl.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../../lvgl.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/lv_uefi_indev.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../indev/lv_indev.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/lv_uefi_display.h \
+ ../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/demos/stress/../../src/lv_api_map_v8.h \
  ../Core/Src/lvgl/demos/stress/../../src/lv_api_map_v9_0.h \
- ../Core/Src/lvgl/demos/stress/../../src/lv_api_map_v9_1.h
+ ../Core/Src/lvgl/demos/stress/../../src/lv_api_map_v9_1.h \
+ ../Core/Src/lvgl/demos/stress/../benchmark/lv_demo_benchmark.h \
+ ../Core/Src/lvgl/demos/stress/../benchmark/../lv_demos.h \
+ ../Core/Src/lvgl/demos/stress/../stress/lv_demo_stress.h \
+ ../Core/Src/lvgl/demos/stress/../widgets/lv_demo_widgets.h \
+ ../Core/Src/lvgl/demos/stress/../widgets/../lv_demos.h \
+ ../Core/Src/lvgl/demos/stress/../widgets/../../src/draw/lv_draw.h \
+ ../Core/Src/lvgl/demos/stress/../widgets/../../src/draw/lv_draw_triangle.h \
+ ../Core/Src/lvgl/demos/stress/../widgets/../../src/draw/lv_draw_rect.h \
+ ../Core/Src/lvgl/demos/stress/../transform/lv_demo_transform.h \
+ ../Core/Src/lvgl/demos/stress/../transform/../lv_demos.h \
+ ../Core/Src/lvgl/demos/stress/../scroll/lv_demo_scroll.h \
+ ../Core/Src/lvgl/demos/stress/../scroll/../lv_demos.h
 ../Core/Src/lvgl/demos/stress/lv_demo_stress.h:
 ../Core/Src/lvgl/demos/stress/../lv_demos.h:
 ../Core/Src/lvgl/demos/stress/../../lvgl.h:
@@ -723,8 +741,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/stress/../../src/libs/libjpeg_turbo/../../lv_conf_internal.h:
 ../Core/Src/lvgl/demos/stress/../../src/libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/demos/stress/../../src/libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/demos/stress/../../src/libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/demos/stress/../../src/libs/freetype/../../misc/lv_event.h:
 ../Core/Src/lvgl/demos/stress/../../src/libs/rlottie/lv_rlottie.h:
 ../Core/Src/lvgl/demos/stress/../../src/libs/rlottie/../../lv_conf_internal.h:
 ../Core/Src/lvgl/demos/stress/../../src/libs/ffmpeg/lv_ffmpeg.h:
@@ -813,6 +829,26 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/stress/../../src/drivers/wayland/../../display/lv_display.h:
 ../Core/Src/lvgl/demos/stress/../../src/drivers/wayland/../../indev/lv_indev.h:
 ../Core/Src/lvgl/demos/stress/../../src/drivers/wayland/../../indev/lv_indev_gesture.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/lv_uefi_context.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../lvgl.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../../lvgl.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../lv_conf_internal.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/lv_uefi_indev.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../indev/lv_indev.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/lv_uefi_display.h:
+../Core/Src/lvgl/demos/stress/../../src/drivers/uefi/../../display/lv_display.h:
 ../Core/Src/lvgl/demos/stress/../../src/lv_api_map_v8.h:
 ../Core/Src/lvgl/demos/stress/../../src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/demos/stress/../../src/lv_api_map_v9_1.h:
+../Core/Src/lvgl/demos/stress/../benchmark/lv_demo_benchmark.h:
+../Core/Src/lvgl/demos/stress/../benchmark/../lv_demos.h:
+../Core/Src/lvgl/demos/stress/../stress/lv_demo_stress.h:
+../Core/Src/lvgl/demos/stress/../widgets/lv_demo_widgets.h:
+../Core/Src/lvgl/demos/stress/../widgets/../lv_demos.h:
+../Core/Src/lvgl/demos/stress/../widgets/../../src/draw/lv_draw.h:
+../Core/Src/lvgl/demos/stress/../widgets/../../src/draw/lv_draw_triangle.h:
+../Core/Src/lvgl/demos/stress/../widgets/../../src/draw/lv_draw_rect.h:
+../Core/Src/lvgl/demos/stress/../transform/lv_demo_transform.h:
+../Core/Src/lvgl/demos/stress/../transform/../lv_demos.h:
+../Core/Src/lvgl/demos/stress/../scroll/lv_demo_scroll.h:
+../Core/Src/lvgl/demos/stress/../scroll/../lv_demos.h:

@@ -1,0 +1,8 @@
+lv_example_observer_4.c:185:13:indicator_observer_cb	1
+lv_example_observer_4.c:72:13:anim_set_x_cb	1
+lv_example_observer_4.c:77:13:cont_observer_cb	11
+lv_example_observer_4.c:67:16:anim_get_x_cb	1
+lv_example_observer_4.c:152:13:btn_create	1
+lv_example_observer_4.c:166:13:btn_click_event_cb	1
+lv_example_observer_4.c:173:13:btn_observer_cb	3
+lv_example_observer_4.c:15:6:lv_example_observer_4	1

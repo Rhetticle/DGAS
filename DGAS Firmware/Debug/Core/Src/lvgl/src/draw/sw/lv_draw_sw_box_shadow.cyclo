@@ -1,5 +1,2 @@
-lv_area.h:107:20:lv_area_copy	1
-lv_string.h:73:20:lv_memzero	1
-lv_draw_sw_box_shadow.c:58:6:lv_draw_sw_box_shadow	98
-lv_draw_sw_box_shadow.c:573:35:shadow_draw_corner_buf	15
-lv_draw_sw_box_shadow.c:660:35:shadow_blur_corner	15
+lv_draw_sw_box_shadow.c:660:35:shadow_blur_corner	19
+lv_draw_sw_box_shadow.c:58:6:lv_draw_sw_box_shadow	109

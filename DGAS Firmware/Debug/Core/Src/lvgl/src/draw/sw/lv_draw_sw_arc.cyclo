@@ -1,5 +1,3 @@
-lv_area.h:107:20:lv_area_copy	1
-lv_string.h:73:20:lv_memzero	1
-lv_draw_sw_arc.c:53:6:lv_draw_sw_arc	37
-lv_draw_sw_arc.c:250:13:add_circle	3
+lv_draw_sw_arc.c:250:13:add_circle	4
 lv_draw_sw_arc.c:270:13:get_rounded_area	3
+lv_draw_sw_arc.c:53:6:lv_draw_sw_arc	41

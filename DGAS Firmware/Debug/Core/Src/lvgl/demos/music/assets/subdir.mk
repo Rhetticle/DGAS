@@ -50,52 +50,6 @@ C_SRCS += \
 ../Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top.c \
 ../Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top_large.c 
 
-OBJS += \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_corner_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_loop.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_loop_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_next.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_next_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_pause.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_pause_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_play.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_play_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_prev.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_prev_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_left.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_left_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_right.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_right_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_1.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_1_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_2.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_2_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_3.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_3_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_1.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_1_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_2.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_2_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_3.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_3_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_4.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_4_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_list_border.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_list_border_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_logo.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_slider_knob.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_slider_knob_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom_large.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top.o \
-./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top_large.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_corner_large.d \
 ./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause.d \
@@ -142,10 +96,56 @@ C_DEPS += \
 ./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top.d \
 ./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top_large.d 
 
+OBJS += \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_corner_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_loop.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_loop_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_next.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_next_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_pause.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_pause_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_play.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_play_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_prev.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_prev_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_left.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_left_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_right.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_corner_right_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_1.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_1_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_2.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_2_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_3.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_cover_3_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_1.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_1_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_2.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_2_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_3.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_3_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_4.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_icon_4_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_list_border.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_list_border_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_logo.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_slider_knob.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_slider_knob_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom_large.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top.o \
+./Core/Src/lvgl/demos/music/assets/img_lv_demo_music_wave_top_large.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/demos/music/assets/%.o Core/Src/lvgl/demos/music/assets/%.su Core/Src/lvgl/demos/music/assets/%.cyclo: ../Core/Src/lvgl/demos/music/assets/%.c Core/Src/lvgl/demos/music/assets/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-demos-2f-music-2f-assets
 

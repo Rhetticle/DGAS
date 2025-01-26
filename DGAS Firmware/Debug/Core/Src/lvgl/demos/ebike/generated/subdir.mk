@@ -33,35 +33,6 @@ C_SRCS += \
 ../Core/Src/lvgl/demos/ebike/generated/lottie_ebike_settings.c \
 ../Core/Src/lvgl/demos/ebike/generated/lottie_ebike_stats.c 
 
-OBJS += \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_130.o \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_56.o \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_inter_14.o \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_inter_20.o \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_24.o \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_40.o \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_48.o \
-./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_72.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_left.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_left_2.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_right.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_right_2.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_bg.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_bg_large.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_clock.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_dropdown_icon.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_home.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_lamp.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_scale.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_scale_large.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_settings.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_settings_large.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_stats.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_stats_large.o \
-./Core/Src/lvgl/demos/ebike/generated/img_ebike_whether.o \
-./Core/Src/lvgl/demos/ebike/generated/lottie_ebike_settings.o \
-./Core/Src/lvgl/demos/ebike/generated/lottie_ebike_stats.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/demos/ebike/generated/font_ebike_130.d \
 ./Core/Src/lvgl/demos/ebike/generated/font_ebike_56.d \
@@ -91,10 +62,39 @@ C_DEPS += \
 ./Core/Src/lvgl/demos/ebike/generated/lottie_ebike_settings.d \
 ./Core/Src/lvgl/demos/ebike/generated/lottie_ebike_stats.d 
 
+OBJS += \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_130.o \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_56.o \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_inter_14.o \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_inter_20.o \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_24.o \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_40.o \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_48.o \
+./Core/Src/lvgl/demos/ebike/generated/font_ebike_trump_72.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_left.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_left_2.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_right.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_arrow_right_2.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_bg.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_bg_large.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_clock.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_dropdown_icon.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_home.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_lamp.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_scale.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_scale_large.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_settings.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_settings_large.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_stats.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_stats_large.o \
+./Core/Src/lvgl/demos/ebike/generated/img_ebike_whether.o \
+./Core/Src/lvgl/demos/ebike/generated/lottie_ebike_settings.o \
+./Core/Src/lvgl/demos/ebike/generated/lottie_ebike_stats.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/demos/ebike/generated/%.o Core/Src/lvgl/demos/ebike/generated/%.su Core/Src/lvgl/demos/ebike/generated/%.cyclo: ../Core/Src/lvgl/demos/ebike/generated/%.c Core/Src/lvgl/demos/ebike/generated/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-demos-2f-ebike-2f-generated
 

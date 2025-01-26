@@ -1,3 +1,3 @@
-lv_string.h:73:20:lv_memzero	1
-lv_draw_sw_letter.c:54:6:lv_draw_sw_label	2
-lv_draw_sw_letter.c:67:35:draw_letter_cb	7
+lv_draw_sw_letter.c:93:35:draw_letter_cb	8
+lv_draw_sw_letter.c:54:6:lv_draw_sw_letter	3
+lv_draw_sw_letter.c:80:6:lv_draw_sw_label	2

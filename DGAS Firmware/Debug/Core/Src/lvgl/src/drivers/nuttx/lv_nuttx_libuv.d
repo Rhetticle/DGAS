@@ -317,8 +317,6 @@ Core/Src/lvgl/src/drivers/nuttx/lv_nuttx_libuv.o: \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/../../misc/lv_event.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/rlottie/lv_rlottie.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/rlottie/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/ffmpeg/lv_ffmpeg.h \
@@ -407,6 +405,12 @@ Core/Src/lvgl/src/drivers/nuttx/lv_nuttx_libuv.o: \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/wayland/../../display/lv_display.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/wayland/../../indev/lv_indev.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/wayland/../../indev/lv_indev_gesture.h \
+ ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/lv_uefi_context.h \
+ ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/../../lvgl.h \
+ ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/lv_uefi_indev.h \
+ ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/../../indev/lv_indev.h \
+ ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/lv_uefi_display.h \
+ ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/lv_api_map_v8.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/lv_api_map_v9_0.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/lv_api_map_v9_1.h \
@@ -486,6 +490,7 @@ Core/Src/lvgl/src/drivers/nuttx/lv_nuttx_libuv.o: \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/../core/lv_obj.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/../draw/lv_draw.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/lv_display.h \
+ ../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/../others/sysmon/lv_sysmon_private.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/indev/lv_indev_private.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/indev/lv_indev.h \
  ../Core/Src/lvgl/src/drivers/nuttx/../../../src/indev/../misc/lv_anim.h \
@@ -1000,8 +1005,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/freetype/../../misc/lv_event.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/rlottie/lv_rlottie.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/rlottie/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/libs/ffmpeg/lv_ffmpeg.h:
@@ -1090,6 +1093,12 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/wayland/../../display/lv_display.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/wayland/../../indev/lv_indev.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/wayland/../../indev/lv_indev_gesture.h:
+../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/lv_uefi_context.h:
+../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/../../lvgl.h:
+../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/lv_uefi_indev.h:
+../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/../../indev/lv_indev.h:
+../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/lv_uefi_display.h:
+../Core/Src/lvgl/src/drivers/nuttx/../../../src/drivers/uefi/../../display/lv_display.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/lv_api_map_v8.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/lv_api_map_v9_1.h:
@@ -1169,6 +1178,7 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/../core/lv_obj.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/../draw/lv_draw.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/lv_display.h:
+../Core/Src/lvgl/src/drivers/nuttx/../../../src/display/../others/sysmon/lv_sysmon_private.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/indev/lv_indev_private.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/indev/lv_indev.h:
 ../Core/Src/lvgl/src/drivers/nuttx/../../../src/indev/../misc/lv_anim.h:

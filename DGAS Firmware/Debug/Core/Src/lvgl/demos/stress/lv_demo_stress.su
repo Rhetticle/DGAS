@@ -1,0 +1,7 @@
+../Core/Src/lvgl/demos/stress/lv_demo_stress.c:439:13:msgbox_delete	8	static
+../Core/Src/lvgl/demos/stress/lv_demo_stress.c:454:13:arc_set_end_angle_anim	0	static
+../Core/Src/lvgl/demos/stress/lv_demo_stress.c:444:13:set_y_anim	0	static
+../Core/Src/lvgl/demos/stress/lv_demo_stress.c:449:13:set_width_anim	0	static
+../Core/Src/lvgl/demos/stress/lv_demo_stress.c:62:13:obj_test_task_cb	240	static
+../Core/Src/lvgl/demos/stress/lv_demo_stress.c:46:6:lv_demo_stress	8	static
+../Core/Src/lvgl/demos/stress/lv_demo_stress.c:53:6:lv_demo_stress_finished	0	static

@@ -1,4 +1,4 @@
-LIS3DH.c:17:19:accel_init	4
-LIS3DH.c:38:19:accel_read_reg	2
+LIS3DH.c:17:19:accel_init	3
+LIS3DH.c:38:19:accel_read_reg	1
 LIS3DH.c:45:19:accel_read_data	3
 LIS3DH.c:71:19:accel_get_update	3

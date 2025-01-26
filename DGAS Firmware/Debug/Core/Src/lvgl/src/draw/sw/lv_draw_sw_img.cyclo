@@ -1,10 +1,4 @@
-lv_area.h:107:20:lv_area_copy	1
-lv_string.h:73:20:lv_memzero	1
-lv_draw_sw_img.c:94:6:lv_draw_sw_layer	4
+lv_draw_sw_img.c:545:13:recolor	14
+lv_draw_sw_img.c:206:13:img_draw_core	38
+lv_draw_sw_img.c:94:6:lv_draw_sw_layer	12
 lv_draw_sw_img.c:191:6:lv_draw_sw_image	2
-lv_draw_sw_img.c:206:13:img_draw_core	25
-lv_draw_sw_img.c:296:13:radius_only	8
-lv_draw_sw_img.c:375:13:recolor_only	6
-lv_draw_sw_img.c:438:13:transform_and_recolor	17
-lv_draw_sw_img.c:545:13:recolor	12
-lv_draw_sw_img.c:606:13:apply_mask	8

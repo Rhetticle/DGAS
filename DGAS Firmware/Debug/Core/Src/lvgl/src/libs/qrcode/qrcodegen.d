@@ -314,8 +314,6 @@ Core/Src/lvgl/src/libs/qrcode/qrcodegen.o: \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../misc/lv_event.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/rlottie/lv_rlottie.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/rlottie/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/ffmpeg/lv_ffmpeg.h \
@@ -404,6 +402,14 @@ Core/Src/lvgl/src/libs/qrcode/qrcodegen.o: \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/wayland/../../display/lv_display.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/wayland/../../indev/lv_indev.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/wayland/../../indev/lv_indev_gesture.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/lv_uefi_context.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../lvgl.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../../lvgl.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/lv_uefi_indev.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../indev/lv_indev.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/lv_uefi_display.h \
+ ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/lv_api_map_v8.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/lv_api_map_v9_0.h \
  ../Core/Src/lvgl/src/libs/qrcode/../../../src/lv_api_map_v9_1.h \
@@ -722,8 +728,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/libjpeg_turbo/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/freetype/../../misc/lv_event.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/rlottie/lv_rlottie.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/rlottie/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/libs/ffmpeg/lv_ffmpeg.h:
@@ -812,6 +816,14 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/wayland/../../display/lv_display.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/wayland/../../indev/lv_indev.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/wayland/../../indev/lv_indev_gesture.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/lv_uefi_context.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../lvgl.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../../lvgl.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../lv_conf_internal.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/lv_uefi_indev.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../indev/lv_indev.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/lv_uefi_display.h:
+../Core/Src/lvgl/src/libs/qrcode/../../../src/drivers/uefi/../../display/lv_display.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/lv_api_map_v8.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/src/libs/qrcode/../../../src/lv_api_map_v9_1.h:

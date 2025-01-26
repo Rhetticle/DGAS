@@ -1,7 +1,4 @@
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:71:6:lv_draw_sw_init	16	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:97:6:lv_draw_sw_deinit	8	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:108:16:lv_draw_sw_delete	16	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:130:20:execute_drawing_unit	16	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:141:16:evaluate	24	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:179:16:dispatch	32	static
-../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:248:13:execute_drawing	24	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:142:16:evaluate	0	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:180:16:dispatch	16	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:71:6:lv_draw_sw_init	8	static
+../Core/Src/lvgl/src/draw/sw/lv_draw_sw.c:98:6:lv_draw_sw_deinit	0	static

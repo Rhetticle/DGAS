@@ -1,0 +1,4 @@
+../Core/Src/lvgl/demos/transform/lv_demo_transform.c:154:13:slider_event_cb	16	static
+../Core/Src/lvgl/demos/transform/lv_demo_transform.c:146:13:arc_event_cb	8	static
+../Core/Src/lvgl/demos/transform/lv_demo_transform.c:111:19:card_create	40	static
+../Core/Src/lvgl/demos/transform/lv_demo_transform.c:49:6:lv_demo_transform	32	static

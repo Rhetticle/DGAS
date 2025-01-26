@@ -8,18 +8,18 @@ C_SRCS += \
 ../Core/Src/lvgl/src/libs/qrcode/lv_qrcode.c \
 ../Core/Src/lvgl/src/libs/qrcode/qrcodegen.c 
 
-OBJS += \
-./Core/Src/lvgl/src/libs/qrcode/lv_qrcode.o \
-./Core/Src/lvgl/src/libs/qrcode/qrcodegen.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/src/libs/qrcode/lv_qrcode.d \
 ./Core/Src/lvgl/src/libs/qrcode/qrcodegen.d 
 
+OBJS += \
+./Core/Src/lvgl/src/libs/qrcode/lv_qrcode.o \
+./Core/Src/lvgl/src/libs/qrcode/qrcodegen.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/src/libs/qrcode/%.o Core/Src/lvgl/src/libs/qrcode/%.su Core/Src/lvgl/src/libs/qrcode/%.cyclo: ../Core/Src/lvgl/src/libs/qrcode/%.c Core/Src/lvgl/src/libs/qrcode/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-src-2f-libs-2f-qrcode
 

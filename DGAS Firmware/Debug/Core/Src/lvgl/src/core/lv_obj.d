@@ -129,6 +129,11 @@ Core/Src/lvgl/src/core/lv_obj.o: ../Core/Src/lvgl/src/core/lv_obj.c \
  ../Core/Src/lvgl/src/core/../display/../core/lv_obj.h \
  ../Core/Src/lvgl/src/core/../display/../draw/lv_draw.h \
  ../Core/Src/lvgl/src/core/../display/lv_display.h \
+ ../Core/Src/lvgl/src/core/../display/../others/sysmon/lv_sysmon_private.h \
+ ../Core/Src/lvgl/src/core/../display/../others/sysmon/lv_sysmon.h \
+ ../Core/Src/lvgl/src/core/../display/../others/sysmon/../../misc/lv_timer.h \
+ ../Core/Src/lvgl/src/core/../display/../others/sysmon/../../others/observer/lv_observer.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\core\lv_obj.h \
  ../Core/Src/lvgl/src/core/../themes/lv_theme.h \
  ../Core/Src/lvgl/src/core/../themes/../core/lv_obj.h \
  ../Core/Src/lvgl/src/core/../themes/default/lv_theme_default.h \
@@ -274,6 +279,11 @@ Core/Src/lvgl/src/core/lv_obj.o: ../Core/Src/lvgl/src/core/lv_obj.c \
 ../Core/Src/lvgl/src/core/../display/../core/lv_obj.h:
 ../Core/Src/lvgl/src/core/../display/../draw/lv_draw.h:
 ../Core/Src/lvgl/src/core/../display/lv_display.h:
+../Core/Src/lvgl/src/core/../display/../others/sysmon/lv_sysmon_private.h:
+../Core/Src/lvgl/src/core/../display/../others/sysmon/lv_sysmon.h:
+../Core/Src/lvgl/src/core/../display/../others/sysmon/../../misc/lv_timer.h:
+../Core/Src/lvgl/src/core/../display/../others/sysmon/../../others/observer/lv_observer.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\core\lv_obj.h:
 ../Core/Src/lvgl/src/core/../themes/lv_theme.h:
 ../Core/Src/lvgl/src/core/../themes/../core/lv_obj.h:
 ../Core/Src/lvgl/src/core/../themes/default/lv_theme_default.h:

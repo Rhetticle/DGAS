@@ -17,19 +17,6 @@ C_SRCS += \
 ../Core/Src/lvgl/src/draw/lv_draw_vector.c \
 ../Core/Src/lvgl/src/draw/lv_image_decoder.c 
 
-OBJS += \
-./Core/Src/lvgl/src/draw/lv_draw.o \
-./Core/Src/lvgl/src/draw/lv_draw_arc.o \
-./Core/Src/lvgl/src/draw/lv_draw_buf.o \
-./Core/Src/lvgl/src/draw/lv_draw_image.o \
-./Core/Src/lvgl/src/draw/lv_draw_label.o \
-./Core/Src/lvgl/src/draw/lv_draw_line.o \
-./Core/Src/lvgl/src/draw/lv_draw_mask.o \
-./Core/Src/lvgl/src/draw/lv_draw_rect.o \
-./Core/Src/lvgl/src/draw/lv_draw_triangle.o \
-./Core/Src/lvgl/src/draw/lv_draw_vector.o \
-./Core/Src/lvgl/src/draw/lv_image_decoder.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/src/draw/lv_draw.d \
 ./Core/Src/lvgl/src/draw/lv_draw_arc.d \
@@ -43,10 +30,23 @@ C_DEPS += \
 ./Core/Src/lvgl/src/draw/lv_draw_vector.d \
 ./Core/Src/lvgl/src/draw/lv_image_decoder.d 
 
+OBJS += \
+./Core/Src/lvgl/src/draw/lv_draw.o \
+./Core/Src/lvgl/src/draw/lv_draw_arc.o \
+./Core/Src/lvgl/src/draw/lv_draw_buf.o \
+./Core/Src/lvgl/src/draw/lv_draw_image.o \
+./Core/Src/lvgl/src/draw/lv_draw_label.o \
+./Core/Src/lvgl/src/draw/lv_draw_line.o \
+./Core/Src/lvgl/src/draw/lv_draw_mask.o \
+./Core/Src/lvgl/src/draw/lv_draw_rect.o \
+./Core/Src/lvgl/src/draw/lv_draw_triangle.o \
+./Core/Src/lvgl/src/draw/lv_draw_vector.o \
+./Core/Src/lvgl/src/draw/lv_image_decoder.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/src/draw/%.o Core/Src/lvgl/src/draw/%.su Core/Src/lvgl/src/draw/%.cyclo: ../Core/Src/lvgl/src/draw/%.c Core/Src/lvgl/src/draw/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-src-2f-draw
 

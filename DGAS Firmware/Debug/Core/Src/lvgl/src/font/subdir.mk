@@ -36,38 +36,6 @@ C_SRCS += \
 ../Core/Src/lvgl/src/font/lv_font_unscii_16.c \
 ../Core/Src/lvgl/src/font/lv_font_unscii_8.c 
 
-OBJS += \
-./Core/Src/lvgl/src/font/lv_binfont_loader.o \
-./Core/Src/lvgl/src/font/lv_font.o \
-./Core/Src/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.o \
-./Core/Src/lvgl/src/font/lv_font_fmt_txt.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_10.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_12.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_14.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_16.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_18.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_20.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_22.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_24.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_26.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_28.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_28_compressed.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_30.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_32.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_34.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_36.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_38.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_40.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_42.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_44.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_46.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_48.o \
-./Core/Src/lvgl/src/font/lv_font_montserrat_8.o \
-./Core/Src/lvgl/src/font/lv_font_simsun_14_cjk.o \
-./Core/Src/lvgl/src/font/lv_font_simsun_16_cjk.o \
-./Core/Src/lvgl/src/font/lv_font_unscii_16.o \
-./Core/Src/lvgl/src/font/lv_font_unscii_8.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/src/font/lv_binfont_loader.d \
 ./Core/Src/lvgl/src/font/lv_font.d \
@@ -100,10 +68,42 @@ C_DEPS += \
 ./Core/Src/lvgl/src/font/lv_font_unscii_16.d \
 ./Core/Src/lvgl/src/font/lv_font_unscii_8.d 
 
+OBJS += \
+./Core/Src/lvgl/src/font/lv_binfont_loader.o \
+./Core/Src/lvgl/src/font/lv_font.o \
+./Core/Src/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.o \
+./Core/Src/lvgl/src/font/lv_font_fmt_txt.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_10.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_12.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_14.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_16.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_18.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_20.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_22.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_24.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_26.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_28.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_28_compressed.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_30.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_32.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_34.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_36.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_38.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_40.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_42.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_44.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_46.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_48.o \
+./Core/Src/lvgl/src/font/lv_font_montserrat_8.o \
+./Core/Src/lvgl/src/font/lv_font_simsun_14_cjk.o \
+./Core/Src/lvgl/src/font/lv_font_simsun_16_cjk.o \
+./Core/Src/lvgl/src/font/lv_font_unscii_16.o \
+./Core/Src/lvgl/src/font/lv_font_unscii_8.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/src/font/%.o Core/Src/lvgl/src/font/%.su Core/Src/lvgl/src/font/%.cyclo: ../Core/Src/lvgl/src/font/%.c Core/Src/lvgl/src/font/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-src-2f-font
 

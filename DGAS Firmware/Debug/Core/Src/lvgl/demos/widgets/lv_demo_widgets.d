@@ -315,8 +315,6 @@ Core/Src/lvgl/demos/widgets/lv_demo_widgets.o: \
  ../Core/Src/lvgl/demos/widgets/../../src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  ../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/../../misc/lv_event.h \
  ../Core/Src/lvgl/demos/widgets/../../src/libs/rlottie/lv_rlottie.h \
  ../Core/Src/lvgl/demos/widgets/../../src/libs/rlottie/../../lv_conf_internal.h \
  ../Core/Src/lvgl/demos/widgets/../../src/libs/ffmpeg/lv_ffmpeg.h \
@@ -405,9 +403,29 @@ Core/Src/lvgl/demos/widgets/lv_demo_widgets.o: \
  ../Core/Src/lvgl/demos/widgets/../../src/drivers/wayland/../../display/lv_display.h \
  ../Core/Src/lvgl/demos/widgets/../../src/drivers/wayland/../../indev/lv_indev.h \
  ../Core/Src/lvgl/demos/widgets/../../src/drivers/wayland/../../indev/lv_indev_gesture.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/lv_uefi_context.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../lvgl.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../../lvgl.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/lv_uefi_indev.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../indev/lv_indev.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/lv_uefi_display.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/demos/widgets/../../src/lv_api_map_v8.h \
  ../Core/Src/lvgl/demos/widgets/../../src/lv_api_map_v9_0.h \
  ../Core/Src/lvgl/demos/widgets/../../src/lv_api_map_v9_1.h \
+ ../Core/Src/lvgl/demos/widgets/../benchmark/lv_demo_benchmark.h \
+ ../Core/Src/lvgl/demos/widgets/../benchmark/../lv_demos.h \
+ ../Core/Src/lvgl/demos/widgets/../stress/lv_demo_stress.h \
+ ../Core/Src/lvgl/demos/widgets/../stress/../lv_demos.h \
+ ../Core/Src/lvgl/demos/widgets/../widgets/lv_demo_widgets.h \
+ ../Core/Src/lvgl/demos/widgets/../transform/lv_demo_transform.h \
+ ../Core/Src/lvgl/demos/widgets/../transform/../lv_demos.h \
+ ../Core/Src/lvgl/demos/widgets/../scroll/lv_demo_scroll.h \
+ ../Core/Src/lvgl/demos/widgets/../scroll/../lv_demos.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h \
  ../Core/Src/lvgl/demos/widgets/../../lvgl_private.h \
  ../Core/Src/lvgl/demos/widgets/../../src/core/lv_global.h \
  ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/lv_draw.h \
@@ -421,7 +439,6 @@ Core/Src/lvgl/demos/widgets/lv_demo_widgets.o: \
  ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../../osal/lv_os_none.h \
  ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_vector.h \
  ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_triangle.h \
- ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_rect.h \
  ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_label.h \
  ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_image.h \
  ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_line.h \
@@ -482,6 +499,7 @@ Core/Src/lvgl/demos/widgets/lv_demo_widgets.o: \
  ../Core/Src/lvgl/demos/widgets/../../src/display/../core/lv_obj.h \
  ../Core/Src/lvgl/demos/widgets/../../src/display/../draw/lv_draw.h \
  ../Core/Src/lvgl/demos/widgets/../../src/display/lv_display.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/display/../others/sysmon/lv_sysmon_private.h \
  ../Core/Src/lvgl/demos/widgets/../../src/indev/lv_indev_private.h \
  ../Core/Src/lvgl/demos/widgets/../../src/indev/lv_indev.h \
  ../Core/Src/lvgl/demos/widgets/../../src/indev/../misc/lv_anim.h \
@@ -528,7 +546,6 @@ Core/Src/lvgl/demos/widgets/lv_demo_widgets.o: \
  ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h \
  ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_private.h \
  ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect_private.h \
- ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h \
  ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_image_private.h \
  ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_image_decoder_private.h \
  ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_image_decoder.h \
@@ -994,8 +1011,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/widgets/../../src/libs/libjpeg_turbo/../../lv_conf_internal.h:
 ../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/demos/widgets/../../src/libs/freetype/../../misc/lv_event.h:
 ../Core/Src/lvgl/demos/widgets/../../src/libs/rlottie/lv_rlottie.h:
 ../Core/Src/lvgl/demos/widgets/../../src/libs/rlottie/../../lv_conf_internal.h:
 ../Core/Src/lvgl/demos/widgets/../../src/libs/ffmpeg/lv_ffmpeg.h:
@@ -1084,9 +1099,29 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/widgets/../../src/drivers/wayland/../../display/lv_display.h:
 ../Core/Src/lvgl/demos/widgets/../../src/drivers/wayland/../../indev/lv_indev.h:
 ../Core/Src/lvgl/demos/widgets/../../src/drivers/wayland/../../indev/lv_indev_gesture.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/lv_uefi_context.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../lvgl.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../../lvgl.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../lv_conf_internal.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/lv_uefi_indev.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../indev/lv_indev.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/lv_uefi_display.h:
+../Core/Src/lvgl/demos/widgets/../../src/drivers/uefi/../../display/lv_display.h:
 ../Core/Src/lvgl/demos/widgets/../../src/lv_api_map_v8.h:
 ../Core/Src/lvgl/demos/widgets/../../src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/demos/widgets/../../src/lv_api_map_v9_1.h:
+../Core/Src/lvgl/demos/widgets/../benchmark/lv_demo_benchmark.h:
+../Core/Src/lvgl/demos/widgets/../benchmark/../lv_demos.h:
+../Core/Src/lvgl/demos/widgets/../stress/lv_demo_stress.h:
+../Core/Src/lvgl/demos/widgets/../stress/../lv_demos.h:
+../Core/Src/lvgl/demos/widgets/../widgets/lv_demo_widgets.h:
+../Core/Src/lvgl/demos/widgets/../transform/lv_demo_transform.h:
+../Core/Src/lvgl/demos/widgets/../transform/../lv_demos.h:
+../Core/Src/lvgl/demos/widgets/../scroll/lv_demo_scroll.h:
+../Core/Src/lvgl/demos/widgets/../scroll/../lv_demos.h:
+../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw.h:
+../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h:
+../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h:
 ../Core/Src/lvgl/demos/widgets/../../lvgl_private.h:
 ../Core/Src/lvgl/demos/widgets/../../src/core/lv_global.h:
 ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/lv_draw.h:
@@ -1100,7 +1135,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../../osal/lv_os_none.h:
 ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_vector.h:
 ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_triangle.h:
-../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_rect.h:
 ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_label.h:
 ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_image.h:
 ../Core/Src/lvgl/demos/widgets/../../src/core/../draw/sw/../lv_draw_line.h:
@@ -1161,6 +1195,7 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/widgets/../../src/display/../core/lv_obj.h:
 ../Core/Src/lvgl/demos/widgets/../../src/display/../draw/lv_draw.h:
 ../Core/Src/lvgl/demos/widgets/../../src/display/lv_display.h:
+../Core/Src/lvgl/demos/widgets/../../src/display/../others/sysmon/lv_sysmon_private.h:
 ../Core/Src/lvgl/demos/widgets/../../src/indev/lv_indev_private.h:
 ../Core/Src/lvgl/demos/widgets/../../src/indev/lv_indev.h:
 ../Core/Src/lvgl/demos/widgets/../../src/indev/../misc/lv_anim.h:
@@ -1207,7 +1242,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h:
 ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_private.h:
 ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect_private.h:
-../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h:
 ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_image_private.h:
 ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_image_decoder_private.h:
 ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_image_decoder.h:

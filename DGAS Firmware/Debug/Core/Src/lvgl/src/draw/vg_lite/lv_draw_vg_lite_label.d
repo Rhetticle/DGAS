@@ -10,48 +10,6 @@ Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o: \
  ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/lv_freetype_private.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_event.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/../lv_conf_internal.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_array.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache_entry.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../lv_types.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache_lru_rb.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache_private.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../../osal/lv_os.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../../osal/lv_os_none.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_image_cache.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../../lv_conf_internal.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_image_header_cache.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_ll.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/lv_font.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../lv_conf_internal.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../misc/lv_types.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/lv_symbol_def.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/lv_draw_buf.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_types.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_area.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_color.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_assert.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_log.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_types.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\stdlib\lv_mem.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\stdlib\lv_string.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_math.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_palette.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_color.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_color_op.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../stdlib/lv_string.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/lv_image_dsc.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../lv_conf_internal.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../misc/lv_area.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../lv_draw_label_private.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../lv_draw_label.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../lv_draw.h \
@@ -59,6 +17,29 @@ Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o: \
  ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_types.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_style.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/lv_font.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../lv_conf_internal.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../misc/lv_types.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/lv_symbol_def.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/lv_draw_buf.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_types.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_area.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_color.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/../lv_conf_internal.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_assert.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_log.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_types.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/../stdlib/lv_mem.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/../stdlib/lv_string.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_math.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_palette.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_color.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_color_op.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../stdlib/lv_string.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/lv_image_dsc.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../lv_conf_internal.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../misc/lv_area.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_color.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_anim.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_timer.h \
@@ -109,8 +90,8 @@ Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o: \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_timer.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_math.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_array.h \
- ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_async.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_types.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_async.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_anim_timeline.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_anim.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_profiler_builtin.h \
@@ -123,6 +104,8 @@ Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o: \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_circle_buf.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_tree.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/cache/lv_image_cache.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/cache/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/cache/../lv_types.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/tick/lv_tick.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/lv_obj.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../lv_conf_internal.h \
@@ -137,6 +120,9 @@ Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o: \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_types.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_timer.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_event.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_types.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/../lv_conf_internal.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_array.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_color.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_area.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/lv_obj_pos.h \
@@ -429,6 +415,12 @@ Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o: \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/wayland/../../display/lv_display.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/wayland/../../indev/lv_indev.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/wayland/../../indev/lv_indev_gesture.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/lv_uefi_context.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/../../lvgl.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/lv_uefi_indev.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/../../indev/lv_indev.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/lv_uefi_display.h \
+ ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/lv_api_map_v8.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/lv_api_map_v9_0.h \
  ../Core/Src/lvgl/src/draw/vg_lite/../../../src/lv_api_map_v9_1.h \
@@ -443,48 +435,6 @@ Core/Src/lvgl/src/draw/vg_lite/lv_draw_vg_lite_label.o: \
 ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/lv_freetype_private.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_event.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/../lv_conf_internal.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_array.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache_entry.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../lv_types.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache_lru_rb.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_cache_private.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../../osal/lv_os.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../../osal/lv_os_none.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_image_cache.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/../../lv_conf_internal.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/cache/lv_image_header_cache.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../misc/lv_ll.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/lv_font.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../lv_conf_internal.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../misc/lv_types.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/lv_symbol_def.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/lv_draw_buf.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_types.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_area.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_color.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_assert.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_log.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_types.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\stdlib\lv_mem.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\stdlib\lv_string.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_math.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_palette.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_color.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../misc/lv_color_op.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../stdlib/lv_string.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/lv_image_dsc.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../draw/../lv_conf_internal.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../libs/freetype/../../font/../misc/lv_area.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../lv_draw_label_private.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../lv_draw_label.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../lv_draw.h:
@@ -492,6 +442,29 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_types.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_style.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/lv_font.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../lv_conf_internal.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../misc/lv_types.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/lv_symbol_def.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/lv_draw_buf.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_types.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_area.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_color.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/../lv_conf_internal.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_assert.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_log.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_types.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/../stdlib/lv_mem.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/../stdlib/lv_string.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_math.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_palette.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_color.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../misc/lv_color_op.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../stdlib/lv_string.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/lv_image_dsc.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../draw/../lv_conf_internal.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../misc/../font/../misc/lv_area.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_color.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_anim.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../misc/lv_timer.h:
@@ -542,8 +515,8 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_timer.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_math.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_array.h:
-../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_async.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_types.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_async.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_anim_timeline.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_anim.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_profiler_builtin.h:
@@ -556,6 +529,8 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_circle_buf.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/lv_tree.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/cache/lv_image_cache.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/cache/../../lv_conf_internal.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/misc/cache/../lv_types.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/tick/lv_tick.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/lv_obj.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../lv_conf_internal.h:
@@ -570,6 +545,9 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_types.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_timer.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_event.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_types.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/../lv_conf_internal.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_array.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_color.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/../display/../misc/lv_area.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/core/lv_obj_pos.h:
@@ -862,6 +840,12 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/wayland/../../display/lv_display.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/wayland/../../indev/lv_indev.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/wayland/../../indev/lv_indev_gesture.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/lv_uefi_context.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/../../lvgl.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/lv_uefi_indev.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/../../indev/lv_indev.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/lv_uefi_display.h:
+../Core/Src/lvgl/src/draw/vg_lite/../../../src/drivers/uefi/../../display/lv_display.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/lv_api_map_v8.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/src/draw/vg_lite/../../../src/lv_api_map_v9_1.h:

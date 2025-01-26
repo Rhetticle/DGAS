@@ -207,6 +207,7 @@ Core/Src/lvgl/src/lv_init.o: ../Core/Src/lvgl/src/lv_init.c \
  ../Core/Src/lvgl/src/display/../core/lv_obj.h \
  ../Core/Src/lvgl/src/display/../draw/lv_draw.h \
  ../Core/Src/lvgl/src/display/lv_display.h \
+ ../Core/Src/lvgl/src/display/../others/sysmon/lv_sysmon_private.h \
  ../Core/Src/lvgl/src/indev/lv_indev_private.h \
  ../Core/Src/lvgl/src/indev/lv_indev.h \
  ../Core/Src/lvgl/src/indev/../misc/lv_anim.h \
@@ -221,8 +222,6 @@ Core/Src/lvgl/src/lv_init.o: ../Core/Src/lvgl/src/lv_init.c \
  ../Core/Src/lvgl/src/libs/ffmpeg/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/src/libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/src/libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/src/libs/freetype/../../misc/lv_event.h \
  ../Core/Src/lvgl/src/libs/fsdrv/lv_fsdrv.h \
  ../Core/Src/lvgl/src/libs/fsdrv/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/libs/gif/lv_gif.h \
@@ -263,7 +262,9 @@ Core/Src/lvgl/src/lv_init.o: ../Core/Src/lvgl/src/lv_init.c \
  ../Core/Src/lvgl/src/osal/lv_os_private.h \
  ../Core/Src/lvgl/src/others/sysmon/lv_sysmon_private.h \
  ../Core/Src/lvgl/src/others/xml/lv_xml.h \
- ../Core/Src/lvgl/src/others/xml/../../misc/lv_types.h
+ ../Core/Src/lvgl/src/others/xml/../../misc/lv_types.h \
+ ../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.h \
+ ../Core/Src/lvgl/src/draw/dma2d/../../lv_conf_internal.h
 ../Core/Src/lvgl/src/misc/lv_timer_private.h:
 ../Core/Src/lvgl/src/misc/lv_timer.h:
 ../Core/Src/lvgl/src/misc/../lv_conf_internal.h:
@@ -477,6 +478,7 @@ Core/Src/lvgl/src/lv_init.o: ../Core/Src/lvgl/src/lv_init.c \
 ../Core/Src/lvgl/src/display/../core/lv_obj.h:
 ../Core/Src/lvgl/src/display/../draw/lv_draw.h:
 ../Core/Src/lvgl/src/display/lv_display.h:
+../Core/Src/lvgl/src/display/../others/sysmon/lv_sysmon_private.h:
 ../Core/Src/lvgl/src/indev/lv_indev_private.h:
 ../Core/Src/lvgl/src/indev/lv_indev.h:
 ../Core/Src/lvgl/src/indev/../misc/lv_anim.h:
@@ -491,8 +493,6 @@ Core/Src/lvgl/src/lv_init.o: ../Core/Src/lvgl/src/lv_init.c \
 ../Core/Src/lvgl/src/libs/ffmpeg/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/src/libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/src/libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/src/libs/freetype/../../misc/lv_event.h:
 ../Core/Src/lvgl/src/libs/fsdrv/lv_fsdrv.h:
 ../Core/Src/lvgl/src/libs/fsdrv/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/libs/gif/lv_gif.h:
@@ -535,3 +535,5 @@ Core/Src/lvgl/src/lv_init.o: ../Core/Src/lvgl/src/lv_init.c \
 ../Core/Src/lvgl/src/others/sysmon/lv_sysmon_private.h:
 ../Core/Src/lvgl/src/others/xml/lv_xml.h:
 ../Core/Src/lvgl/src/others/xml/../../misc/lv_types.h:
+../Core/Src/lvgl/src/draw/dma2d/lv_draw_dma2d.h:
+../Core/Src/lvgl/src/draw/dma2d/../../lv_conf_internal.h:

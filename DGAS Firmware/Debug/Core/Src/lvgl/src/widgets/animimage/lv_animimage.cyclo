@@ -1,3 +1,5 @@
+lv_animimage.c:184:13:lv_animimg_constructor	1
+lv_animimage.c:203:13:index_change	3
 lv_animimage.c:98:12:lv_animimg_create	1
 lv_animimage.c:106:6:lv_animimg_set_src	2
 lv_animimage.c:115:6:lv_animimg_start	2
@@ -8,5 +10,3 @@ lv_animimage.c:152:9:lv_animimg_get_src_count	2
 lv_animimage.c:159:10:lv_animimg_get_duration	2
 lv_animimage.c:166:10:lv_animimg_get_repeat_count	2
 lv_animimage.c:173:13:lv_animimg_get_anim	2
-lv_animimage.c:184:13:lv_animimg_constructor	1
-lv_animimage.c:203:13:index_change	3

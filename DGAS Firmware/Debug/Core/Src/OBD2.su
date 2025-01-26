@@ -1,6 +1,2 @@
-../Core/Src/OBD2.c:14:19:iso9141_init	8	static
-../Core/Src/OBD2.c:39:19:iso9141_get_init_response	16	static
-../Core/Src/OBD2.c:52:19:iso9141_listen	16	static
-../Core/Src/OBD2.c:82:19:iso9141_send	56	dynamic
-../Core/Src/OBD2.c:91:9:iso9141_checksum	24	static
-../Core/Src/OBD2.c:100:19:obd2_get_parameter	32	static
+../Core/Src/OBD2.c:16:19:obd2_get_pid	8	static
+../Core/Src/OBD2.c:23:19:obd2_get_rpm	16	static

@@ -1,6 +1,6 @@
-lv_string.h:73:20:lv_memzero	1
-lv_color.c:43:9:lv_color_format_get_bpp	8
-lv_color.c:82:6:lv_color_format_has_alpha	3
+lv_color.c:404:19:lv_color_filter_shade_cb	3
+lv_color.c:43:9:lv_color_format_get_bpp	2
+lv_color.c:82:6:lv_color_format_has_alpha	2
 lv_color.c:106:14:lv_color_to_32	1
 lv_color.c:116:10:lv_color_to_u16	1
 lv_color.c:121:10:lv_color_to_u32	1
@@ -9,7 +9,7 @@ lv_color.c:132:12:lv_color_darken	1
 lv_color.c:137:12:lv_color_hsv_to_rgb	7
 lv_color.c:195:16:lv_color_rgb_to_hsv	10
 lv_color.c:246:16:lv_color_to_hsv	1
-lv_color.c:251:9:lv_color_format_get_size	1
+lv_color.c:251:9:lv_color_format_get_size	2
 lv_color.c:256:10:lv_color_to_int	1
 lv_color.c:262:6:lv_color_eq	1
 lv_color.c:267:6:lv_color32_eq	1
@@ -26,4 +26,3 @@ lv_color.c:368:9:lv_color_luminance	1
 lv_color.c:373:9:lv_color16_luminance	1
 lv_color.c:378:9:lv_color24_luminance	1
 lv_color.c:383:9:lv_color32_luminance	1
-lv_color.c:404:19:lv_color_filter_shade_cb	3

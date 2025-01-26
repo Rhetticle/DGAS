@@ -1,0 +1,3 @@
+../Core/Src/lvgl/demos/scroll/lv_demo_scroll.c:103:13:generic_switch_event_cb	16	static
+../Core/Src/lvgl/demos/scroll/lv_demo_scroll.c:77:19:switch_create.constprop.isra	16	static
+../Core/Src/lvgl/demos/scroll/lv_demo_scroll.c:38:6:lv_demo_scroll	24	static

@@ -22,6 +22,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h \
@@ -39,9 +40,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- ../Core/Inc/ST7701.h ../Core/Inc/LIS3DH.h ../Core/Inc/quadspi.h \
- ../Core/Src/lvgl/lvgl.h ../Core/Src/lvgl/lv_version.h \
- ../Core/Src/lvgl/src/lv_init.h ../Core/Src/lvgl/src/lv_conf_internal.h \
+ ../Core/Inc/ST7701.h ../Core/Inc/LIS3DH.h ../Core/Src/lvgl/lvgl.h \
+ ../Core/Src/lvgl/lv_version.h ../Core/Src/lvgl/src/lv_init.h \
+ ../Core/Src/lvgl/src/lv_conf_internal.h \
  ../Core/Src/lvgl/src/lv_conf_kconfig.h ../Core/Src/lvgl/lv_conf.h \
  ../Core/Src/lvgl/src/misc/lv_types.h \
  ../Core/Src/lvgl/src/misc/../lv_conf_internal.h \
@@ -344,8 +345,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Src/lvgl/src/libs/libjpeg_turbo/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/libs/freetype/lv_freetype.h \
  ../Core/Src/lvgl/src/libs/freetype/../../lv_conf_internal.h \
- ../Core/Src/lvgl/src/libs/freetype/../../misc/lv_types.h \
- ../Core/Src/lvgl/src/libs/freetype/../../misc/lv_event.h \
  ../Core/Src/lvgl/src/libs/rlottie/lv_rlottie.h \
  ../Core/Src/lvgl/src/libs/rlottie/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/libs/ffmpeg/lv_ffmpeg.h \
@@ -434,10 +433,33 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Src/lvgl/src/drivers/wayland/../../display/lv_display.h \
  ../Core/Src/lvgl/src/drivers/wayland/../../indev/lv_indev.h \
  ../Core/Src/lvgl/src/drivers/wayland/../../indev/lv_indev_gesture.h \
+ ../Core/Src/lvgl/src/drivers/uefi/lv_uefi_context.h \
+ ../Core/Src/lvgl/src/drivers/uefi/../../lvgl.h \
+ ../Core/Src/lvgl/src/drivers/uefi/../../../lvgl.h \
+ ../Core/Src/lvgl/src/drivers/uefi/../../lv_conf_internal.h \
+ ../Core/Src/lvgl/src/drivers/uefi/lv_uefi_indev.h \
+ ../Core/Src/lvgl/src/drivers/uefi/../../indev/lv_indev.h \
+ ../Core/Src/lvgl/src/drivers/uefi/lv_uefi_display.h \
+ ../Core/Src/lvgl/src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/src/lv_api_map_v8.h \
  ../Core/Src/lvgl/src/lv_api_map_v9_0.h \
  ../Core/Src/lvgl/src/lv_api_map_v9_1.h ../Core/Src/ui/ui.h \
- ../Core/Src/ui/screens.h ../Core/Inc/OBD2.h
+ ../Core/Src/ui/screens.h ../Core/Inc/OBD2.h ../Core/Inc/ISO9141_KWP.h \
+ ../Core/Inc/quadspi.h ../Core/Inc/main.h \
+ ../Core/Src/lvgl/demos/lv_demos.h ../Core/Src/lvgl/demos/../lvgl.h \
+ ../Core/Src/lvgl/demos/benchmark/lv_demo_benchmark.h \
+ ../Core/Src/lvgl/demos/benchmark/../lv_demos.h \
+ ../Core/Src/lvgl/demos/stress/lv_demo_stress.h \
+ ../Core/Src/lvgl/demos/stress/../lv_demos.h \
+ ../Core/Src/lvgl/demos/widgets/lv_demo_widgets.h \
+ ../Core/Src/lvgl/demos/widgets/../lv_demos.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h \
+ ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h \
+ ../Core/Src/lvgl/demos/transform/lv_demo_transform.h \
+ ../Core/Src/lvgl/demos/transform/../lv_demos.h \
+ ../Core/Src/lvgl/demos/scroll/lv_demo_scroll.h \
+ ../Core/Src/lvgl/demos/scroll/../lv_demos.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -462,6 +484,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h:
@@ -481,7 +504,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 ../Core/Inc/ST7701.h:
 ../Core/Inc/LIS3DH.h:
-../Core/Inc/quadspi.h:
 ../Core/Src/lvgl/lvgl.h:
 ../Core/Src/lvgl/lv_version.h:
 ../Core/Src/lvgl/src/lv_init.h:
@@ -795,8 +817,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Src/lvgl/src/libs/libjpeg_turbo/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/libs/freetype/lv_freetype.h:
 ../Core/Src/lvgl/src/libs/freetype/../../lv_conf_internal.h:
-../Core/Src/lvgl/src/libs/freetype/../../misc/lv_types.h:
-../Core/Src/lvgl/src/libs/freetype/../../misc/lv_event.h:
 ../Core/Src/lvgl/src/libs/rlottie/lv_rlottie.h:
 ../Core/Src/lvgl/src/libs/rlottie/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/libs/ffmpeg/lv_ffmpeg.h:
@@ -885,9 +905,35 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Src/lvgl/src/drivers/wayland/../../display/lv_display.h:
 ../Core/Src/lvgl/src/drivers/wayland/../../indev/lv_indev.h:
 ../Core/Src/lvgl/src/drivers/wayland/../../indev/lv_indev_gesture.h:
+../Core/Src/lvgl/src/drivers/uefi/lv_uefi_context.h:
+../Core/Src/lvgl/src/drivers/uefi/../../lvgl.h:
+../Core/Src/lvgl/src/drivers/uefi/../../../lvgl.h:
+../Core/Src/lvgl/src/drivers/uefi/../../lv_conf_internal.h:
+../Core/Src/lvgl/src/drivers/uefi/lv_uefi_indev.h:
+../Core/Src/lvgl/src/drivers/uefi/../../indev/lv_indev.h:
+../Core/Src/lvgl/src/drivers/uefi/lv_uefi_display.h:
+../Core/Src/lvgl/src/drivers/uefi/../../display/lv_display.h:
 ../Core/Src/lvgl/src/lv_api_map_v8.h:
 ../Core/Src/lvgl/src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/src/lv_api_map_v9_1.h:
 ../Core/Src/ui/ui.h:
 ../Core/Src/ui/screens.h:
 ../Core/Inc/OBD2.h:
+../Core/Inc/ISO9141_KWP.h:
+../Core/Inc/quadspi.h:
+../Core/Inc/main.h:
+../Core/Src/lvgl/demos/lv_demos.h:
+../Core/Src/lvgl/demos/../lvgl.h:
+../Core/Src/lvgl/demos/benchmark/lv_demo_benchmark.h:
+../Core/Src/lvgl/demos/benchmark/../lv_demos.h:
+../Core/Src/lvgl/demos/stress/lv_demo_stress.h:
+../Core/Src/lvgl/demos/stress/../lv_demos.h:
+../Core/Src/lvgl/demos/widgets/lv_demo_widgets.h:
+../Core/Src/lvgl/demos/widgets/../lv_demos.h:
+../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw.h:
+../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h:
+../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h:
+../Core/Src/lvgl/demos/transform/lv_demo_transform.h:
+../Core/Src/lvgl/demos/transform/../lv_demos.h:
+../Core/Src/lvgl/demos/scroll/lv_demo_scroll.h:
+../Core/Src/lvgl/demos/scroll/../lv_demos.h:

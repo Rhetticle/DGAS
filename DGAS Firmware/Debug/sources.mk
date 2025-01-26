@@ -4,21 +4,31 @@
 ################################################################################
 
 ELF_SRCS := 
+C_UPPER_SRCS := 
+CXX_SRCS := 
+C++_SRCS := 
 OBJ_SRCS := 
 S_SRCS := 
+CC_SRCS := 
 C_SRCS := 
+CPP_SRCS := 
 S_UPPER_SRCS := 
 O_SRCS := 
 CYCLO_FILES := 
-SIZE_OUTPUT := 
 OBJDUMP_LIST := 
+C_UPPER_DEPS := 
+S_DEPS := 
+C_DEPS := 
+CC_DEPS := 
+SIZE_OUTPUT := 
+C++_DEPS := 
 SU_FILES := 
 EXECUTABLES := 
 OBJS := 
+CXX_DEPS := 
 MAP_FILES := 
-S_DEPS := 
 S_UPPER_DEPS := 
-C_DEPS := 
+CPP_DEPS := 
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
@@ -145,12 +155,14 @@ Core/Src/lvgl/src/drivers/display/st7735 \
 Core/Src/lvgl/src/drivers/display/st7789 \
 Core/Src/lvgl/src/drivers/display/st7796 \
 Core/Src/lvgl/src/drivers/display/st_ltdc \
+Core/Src/lvgl/src/drivers/display/tft_espi \
 Core/Src/lvgl/src/drivers/evdev \
 Core/Src/lvgl/src/drivers/glfw \
 Core/Src/lvgl/src/drivers/libinput \
 Core/Src/lvgl/src/drivers/nuttx \
 Core/Src/lvgl/src/drivers/qnx \
 Core/Src/lvgl/src/drivers/sdl \
+Core/Src/lvgl/src/drivers/uefi \
 Core/Src/lvgl/src/drivers/wayland \
 Core/Src/lvgl/src/drivers/windows \
 Core/Src/lvgl/src/drivers/x11 \
@@ -175,6 +187,7 @@ Core/Src/lvgl/src/libs/qrcode \
 Core/Src/lvgl/src/libs/rle \
 Core/Src/lvgl/src/libs/rlottie \
 Core/Src/lvgl/src/libs/svg \
+Core/Src/lvgl/src/libs/thorvg \
 Core/Src/lvgl/src/libs/tiny_ttf \
 Core/Src/lvgl/src/libs/tjpgd \
 Core/Src/lvgl/src \
@@ -199,6 +212,7 @@ Core/Src/lvgl/src/stdlib/clib \
 Core/Src/lvgl/src/stdlib \
 Core/Src/lvgl/src/stdlib/micropython \
 Core/Src/lvgl/src/stdlib/rtthread \
+Core/Src/lvgl/src/stdlib/uefi \
 Core/Src/lvgl/src/themes/default \
 Core/Src/lvgl/src/themes \
 Core/Src/lvgl/src/themes/mono \

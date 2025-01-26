@@ -8,6 +8,8 @@
  *********************/
 
 #include "../../../lv_conf_internal.h"
+#include <stm32f7xx.h>
+#include "stm32f7xx_hal_ltdc.h"
 #if LV_USE_ST_LTDC
 
 #include "lv_st_ltdc.h"
@@ -120,7 +122,7 @@ static lv_display_t * create(void * buf1, void * buf2, uint32_t buf_size, uint32
         lv_display_set_buffers(disp, buf1, buf2, layer_width * layer_height * cf_size, LV_DISPLAY_RENDER_MODE_DIRECT);
 
         if(buf1 != NULL && buf2 != NULL) {
-            HAL_LTDC_RegisterCallback(&hltdc, HAL_LTDC_RELOAD_EVENT_CB_ID, reload_event_callback);
+            HAL_LTDC_RegisterCallback(&hltdc, 0x03, reload_event_callback);
             SYNC_INIT(layer_idx);
         }
     }

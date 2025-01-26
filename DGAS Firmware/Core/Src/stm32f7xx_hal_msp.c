@@ -261,6 +261,50 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan)
 }
 
 /**
+* @brief DMA2D MSP Initialization
+* This function configures the hardware resources used in this example
+* @param hdma2d: DMA2D handle pointer
+* @retval None
+*/
+void HAL_DMA2D_MspInit(DMA2D_HandleTypeDef* hdma2d)
+{
+  if(hdma2d->Instance==DMA2D)
+  {
+  /* USER CODE BEGIN DMA2D_MspInit 0 */
+
+  /* USER CODE END DMA2D_MspInit 0 */
+    /* Peripheral clock enable */
+    __HAL_RCC_DMA2D_CLK_ENABLE();
+  /* USER CODE BEGIN DMA2D_MspInit 1 */
+
+  /* USER CODE END DMA2D_MspInit 1 */
+  }
+
+}
+
+/**
+* @brief DMA2D MSP De-Initialization
+* This function freeze the hardware resources used in this example
+* @param hdma2d: DMA2D handle pointer
+* @retval None
+*/
+void HAL_DMA2D_MspDeInit(DMA2D_HandleTypeDef* hdma2d)
+{
+  if(hdma2d->Instance==DMA2D)
+  {
+  /* USER CODE BEGIN DMA2D_MspDeInit 0 */
+
+  /* USER CODE END DMA2D_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_DMA2D_CLK_DISABLE();
+  /* USER CODE BEGIN DMA2D_MspDeInit 1 */
+
+  /* USER CODE END DMA2D_MspDeInit 1 */
+  }
+
+}
+
+/**
 * @brief I2C MSP Initialization
 * This function configures the hardware resources used in this example
 * @param hi2c: I2C handle pointer
@@ -414,14 +458,8 @@ void HAL_LTDC_MspInit(LTDC_HandleTypeDef* hltdc)
     GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = GPIO_PIN_1;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-    GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6;
+    GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
+                          |GPIO_PIN_6;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;

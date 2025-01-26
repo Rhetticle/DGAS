@@ -313,8 +313,6 @@ Core/Src/lvgl/demos/multilang/assets/fonts/font_multilang_large.o: \
  c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
  ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/libs/freetype/lv_freetype.h \
  c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h \
- c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_event.h \
  ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/libs/rlottie/lv_rlottie.h \
  c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
  ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/libs/ffmpeg/lv_ffmpeg.h \
@@ -403,6 +401,14 @@ Core/Src/lvgl/demos/multilang/assets/fonts/font_multilang_large.o: \
  c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\display\lv_display.h \
  c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\indev\lv_indev.h \
  c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\indev\lv_indev_gesture.h \
+ ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/drivers/uefi/lv_uefi_context.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lvgl.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\lvgl.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h \
+ ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/drivers/uefi/lv_uefi_indev.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\indev\lv_indev.h \
+ ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/drivers/uefi/lv_uefi_display.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\display\lv_display.h \
  ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/lv_api_map_v8.h \
  ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/lv_api_map_v9_0.h \
  ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/lv_api_map_v9_1.h
@@ -719,8 +725,6 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
 ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/libs/freetype/lv_freetype.h:
 c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_types.h:
-c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\misc\lv_event.h:
 ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/libs/rlottie/lv_rlottie.h:
 c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
 ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/libs/ffmpeg/lv_ffmpeg.h:
@@ -809,6 +813,14 @@ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src
 c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\display\lv_display.h:
 c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\indev\lv_indev.h:
 c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\indev\lv_indev_gesture.h:
+../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/drivers/uefi/lv_uefi_context.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lvgl.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\lvgl.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\lv_conf_internal.h:
+../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/drivers/uefi/lv_uefi_indev.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\indev\lv_indev.h:
+../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/drivers/uefi/lv_uefi_display.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\display\lv_display.h:
 ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/lv_api_map_v8.h:
 ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/demos/multilang/assets/fonts/../../../../src/lv_api_map_v9_1.h:

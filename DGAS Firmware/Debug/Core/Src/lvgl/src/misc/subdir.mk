@@ -34,36 +34,6 @@ C_SRCS += \
 ../Core/Src/lvgl/src/misc/lv_tree.c \
 ../Core/Src/lvgl/src/misc/lv_utils.c 
 
-OBJS += \
-./Core/Src/lvgl/src/misc/lv_anim.o \
-./Core/Src/lvgl/src/misc/lv_anim_timeline.o \
-./Core/Src/lvgl/src/misc/lv_area.o \
-./Core/Src/lvgl/src/misc/lv_array.o \
-./Core/Src/lvgl/src/misc/lv_async.o \
-./Core/Src/lvgl/src/misc/lv_bidi.o \
-./Core/Src/lvgl/src/misc/lv_circle_buf.o \
-./Core/Src/lvgl/src/misc/lv_color.o \
-./Core/Src/lvgl/src/misc/lv_color_op.o \
-./Core/Src/lvgl/src/misc/lv_event.o \
-./Core/Src/lvgl/src/misc/lv_fs.o \
-./Core/Src/lvgl/src/misc/lv_iter.o \
-./Core/Src/lvgl/src/misc/lv_ll.o \
-./Core/Src/lvgl/src/misc/lv_log.o \
-./Core/Src/lvgl/src/misc/lv_lru.o \
-./Core/Src/lvgl/src/misc/lv_math.o \
-./Core/Src/lvgl/src/misc/lv_matrix.o \
-./Core/Src/lvgl/src/misc/lv_palette.o \
-./Core/Src/lvgl/src/misc/lv_profiler_builtin.o \
-./Core/Src/lvgl/src/misc/lv_rb.o \
-./Core/Src/lvgl/src/misc/lv_style.o \
-./Core/Src/lvgl/src/misc/lv_style_gen.o \
-./Core/Src/lvgl/src/misc/lv_templ.o \
-./Core/Src/lvgl/src/misc/lv_text.o \
-./Core/Src/lvgl/src/misc/lv_text_ap.o \
-./Core/Src/lvgl/src/misc/lv_timer.o \
-./Core/Src/lvgl/src/misc/lv_tree.o \
-./Core/Src/lvgl/src/misc/lv_utils.o 
-
 C_DEPS += \
 ./Core/Src/lvgl/src/misc/lv_anim.d \
 ./Core/Src/lvgl/src/misc/lv_anim_timeline.d \
@@ -94,10 +64,40 @@ C_DEPS += \
 ./Core/Src/lvgl/src/misc/lv_tree.d \
 ./Core/Src/lvgl/src/misc/lv_utils.d 
 
+OBJS += \
+./Core/Src/lvgl/src/misc/lv_anim.o \
+./Core/Src/lvgl/src/misc/lv_anim_timeline.o \
+./Core/Src/lvgl/src/misc/lv_area.o \
+./Core/Src/lvgl/src/misc/lv_array.o \
+./Core/Src/lvgl/src/misc/lv_async.o \
+./Core/Src/lvgl/src/misc/lv_bidi.o \
+./Core/Src/lvgl/src/misc/lv_circle_buf.o \
+./Core/Src/lvgl/src/misc/lv_color.o \
+./Core/Src/lvgl/src/misc/lv_color_op.o \
+./Core/Src/lvgl/src/misc/lv_event.o \
+./Core/Src/lvgl/src/misc/lv_fs.o \
+./Core/Src/lvgl/src/misc/lv_iter.o \
+./Core/Src/lvgl/src/misc/lv_ll.o \
+./Core/Src/lvgl/src/misc/lv_log.o \
+./Core/Src/lvgl/src/misc/lv_lru.o \
+./Core/Src/lvgl/src/misc/lv_math.o \
+./Core/Src/lvgl/src/misc/lv_matrix.o \
+./Core/Src/lvgl/src/misc/lv_palette.o \
+./Core/Src/lvgl/src/misc/lv_profiler_builtin.o \
+./Core/Src/lvgl/src/misc/lv_rb.o \
+./Core/Src/lvgl/src/misc/lv_style.o \
+./Core/Src/lvgl/src/misc/lv_style_gen.o \
+./Core/Src/lvgl/src/misc/lv_templ.o \
+./Core/Src/lvgl/src/misc/lv_text.o \
+./Core/Src/lvgl/src/misc/lv_text_ap.o \
+./Core/Src/lvgl/src/misc/lv_timer.o \
+./Core/Src/lvgl/src/misc/lv_tree.o \
+./Core/Src/lvgl/src/misc/lv_utils.o 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/lvgl/src/misc/%.o Core/Src/lvgl/src/misc/%.su Core/Src/lvgl/src/misc/%.cyclo: ../Core/Src/lvgl/src/misc/%.c Core/Src/lvgl/src/misc/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src-2f-lvgl-2f-src-2f-misc
 

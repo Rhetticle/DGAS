@@ -1,5 +1,1 @@
-lv_area.h:107:20:lv_area_copy	1
-lv_string.h:73:20:lv_memzero	1
-lv_draw_sw_border.c:54:6:lv_draw_sw_border	12
-lv_draw_sw_border.c:90:6:draw_border_complex	38
-lv_draw_sw_border.c:288:13:draw_border_simple	7
+lv_draw_sw_border.c:54:6:lv_draw_sw_border	53

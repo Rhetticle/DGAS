@@ -1,0 +1,5 @@
+lv_example_observer_3.c:69:13:set_btn_clicked_event_cb	1
+lv_example_observer_3.c:111:13:close_clicked_event_cb	1
+lv_example_observer_3.c:139:13:hour_roller_options_update	3
+lv_example_observer_3.c:121:13:time_observer_cb	2
+lv_example_observer_3.c:38:6:lv_example_observer_3	1

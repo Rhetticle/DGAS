@@ -1,0 +1,10 @@
+lv_draw_dma2d.c:429:16:delete_cb	1
+lv_draw_dma2d.c:283:16:evaluate_cb	21
+lv_draw_dma2d.c:61:6:lv_draw_dma2d_init	1
+lv_draw_dma2d.c:93:6:lv_draw_dma2d_deinit	1
+lv_draw_dma2d.c:125:27:lv_draw_dma2d_cf_to_dma2d_output_cf	5
+lv_draw_dma2d.c:143:10:lv_draw_dma2d_color_to_dma2d_color	3
+lv_draw_dma2d.c:157:6:lv_draw_dma2d_configure_and_start_transfer	1
+lv_draw_dma2d.c:208:6:lv_draw_dma2d_invalidate_cache	7
+lv_draw_dma2d.c:336:16:dispatch_cb	11
+lv_draw_dma2d.c:243:6:lv_draw_dma2d_clean_cache	7

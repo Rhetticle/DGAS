@@ -162,6 +162,11 @@ Core/Src/lvgl/src/draw/lv_draw.o: ../Core/Src/lvgl/src/draw/lv_draw.c \
  ../Core/Src/lvgl/src/draw/../display/../core/lv_group.h \
  ../Core/Src/lvgl/src/draw/../display/../draw/lv_draw.h \
  ../Core/Src/lvgl/src/draw/../display/lv_display.h \
+ ../Core/Src/lvgl/src/draw/../display/../others/sysmon/lv_sysmon_private.h \
+ ../Core/Src/lvgl/src/draw/../display/../others/sysmon/lv_sysmon.h \
+ ../Core/Src/lvgl/src/draw/../display/../others/sysmon/../../misc/lv_timer.h \
+ ../Core/Src/lvgl/src/draw/../display/../others/sysmon/../../others/observer/lv_observer.h \
+ c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\core\lv_obj.h \
  ../Core/Src/lvgl/src/draw/../core/lv_global.h \
  ../Core/Src/lvgl/src/draw/../core/../lv_conf_internal.h \
  ../Core/Src/lvgl/src/draw/../core/../misc/lv_types.h \
@@ -176,9 +181,6 @@ Core/Src/lvgl/src/draw/lv_draw.o: ../Core/Src/lvgl/src/draw/lv_draw.c \
  ../Core/Src/lvgl/src/draw/../core/../misc/lv_timer.h \
  ../Core/Src/lvgl/src/draw/../core/../osal/lv_os.h \
  ../Core/Src/lvgl/src/draw/../core/../others/sysmon/lv_sysmon.h \
- ../Core/Src/lvgl/src/draw/../core/../others/sysmon/../../misc/lv_timer.h \
- ../Core/Src/lvgl/src/draw/../core/../others/sysmon/../../others/observer/lv_observer.h \
- ../Core/Src/lvgl/src/draw/../core/../others/sysmon/../../others/observer/../../core/lv_obj.h \
  ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/lv_tlsf.h \
  ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/../../lv_conf_internal.h \
  ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/../../misc/lv_ll.h \
@@ -203,7 +205,6 @@ Core/Src/lvgl/src/draw/lv_draw.o: ../Core/Src/lvgl/src/draw/lv_draw.c \
  ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/lv_tlsf.h \
  ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/../../osal/lv_os.h \
  ../Core/Src/lvgl/src/draw/../core/../others/sysmon/lv_sysmon_private.h \
- ../Core/Src/lvgl/src/draw/../core/../others/sysmon/lv_sysmon.h \
  ../Core/Src/lvgl/src/draw/../core/../layouts/lv_layout_private.h \
  ../Core/Src/lvgl/src/draw/../core/../layouts/lv_layout.h \
  ../Core/Src/lvgl/src/draw/../core/lv_refr_private.h \
@@ -375,6 +376,11 @@ Core/Src/lvgl/src/draw/lv_draw.o: ../Core/Src/lvgl/src/draw/lv_draw.c \
 ../Core/Src/lvgl/src/draw/../display/../core/lv_group.h:
 ../Core/Src/lvgl/src/draw/../display/../draw/lv_draw.h:
 ../Core/Src/lvgl/src/draw/../display/lv_display.h:
+../Core/Src/lvgl/src/draw/../display/../others/sysmon/lv_sysmon_private.h:
+../Core/Src/lvgl/src/draw/../display/../others/sysmon/lv_sysmon.h:
+../Core/Src/lvgl/src/draw/../display/../others/sysmon/../../misc/lv_timer.h:
+../Core/Src/lvgl/src/draw/../display/../others/sysmon/../../others/observer/lv_observer.h:
+c:\users\rhett\onedrive\documents\projects\dgas\dgas\ firmware\core\src\lvgl\src\core\lv_obj.h:
 ../Core/Src/lvgl/src/draw/../core/lv_global.h:
 ../Core/Src/lvgl/src/draw/../core/../lv_conf_internal.h:
 ../Core/Src/lvgl/src/draw/../core/../misc/lv_types.h:
@@ -389,9 +395,6 @@ Core/Src/lvgl/src/draw/lv_draw.o: ../Core/Src/lvgl/src/draw/lv_draw.c \
 ../Core/Src/lvgl/src/draw/../core/../misc/lv_timer.h:
 ../Core/Src/lvgl/src/draw/../core/../osal/lv_os.h:
 ../Core/Src/lvgl/src/draw/../core/../others/sysmon/lv_sysmon.h:
-../Core/Src/lvgl/src/draw/../core/../others/sysmon/../../misc/lv_timer.h:
-../Core/Src/lvgl/src/draw/../core/../others/sysmon/../../others/observer/lv_observer.h:
-../Core/Src/lvgl/src/draw/../core/../others/sysmon/../../others/observer/../../core/lv_obj.h:
 ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/lv_tlsf.h:
 ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/../../lv_conf_internal.h:
 ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/../../misc/lv_ll.h:
@@ -416,7 +419,6 @@ Core/Src/lvgl/src/draw/lv_draw.o: ../Core/Src/lvgl/src/draw/lv_draw.c \
 ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/lv_tlsf.h:
 ../Core/Src/lvgl/src/draw/../core/../stdlib/builtin/../../osal/lv_os.h:
 ../Core/Src/lvgl/src/draw/../core/../others/sysmon/lv_sysmon_private.h:
-../Core/Src/lvgl/src/draw/../core/../others/sysmon/lv_sysmon.h:
 ../Core/Src/lvgl/src/draw/../core/../layouts/lv_layout_private.h:
 ../Core/Src/lvgl/src/draw/../core/../layouts/lv_layout.h:
 ../Core/Src/lvgl/src/draw/../core/lv_refr_private.h:

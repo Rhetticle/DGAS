@@ -1,4 +1,8 @@
-Core/Src/quadspi.o: ../Core/Src/quadspi.c \
+Core/Src/quadspi.o: ../Core/Src/quadspi.c ../Core/Inc/quadspi.h \
+ ../Core/Inc/main.h ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
+ ../Core/Inc/stm32f7xx_hal_conf.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h \
  ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h \
  ../Drivers/CMSIS/Include/core_cm7.h \
@@ -7,10 +11,6 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Include/mpu_armv7.h \
  ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h \
- ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
- ../Core/Inc/stm32f7xx_hal_conf.h \
- ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
- ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_exti.h \
@@ -22,6 +22,7 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h \
@@ -38,8 +39,13 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
- ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- ../Core/Inc/quadspi.h ../Core/Inc/main.h
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
+../Core/Inc/quadspi.h:
+../Core/Inc/main.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
+../Core/Inc/stm32f7xx_hal_conf.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h:
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h:
 ../Drivers/CMSIS/Include/core_cm7.h:
@@ -48,10 +54,6 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c \
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Include/mpu_armv7.h:
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h:
-../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
-../Core/Inc/stm32f7xx_hal_conf.h:
-../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h:
-../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_exti.h:
@@ -63,6 +65,7 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h:
@@ -80,5 +83,3 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
-../Core/Inc/quadspi.h:
-../Core/Inc/main.h:
