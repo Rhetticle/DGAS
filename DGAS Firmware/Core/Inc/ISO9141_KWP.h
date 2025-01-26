@@ -39,7 +39,7 @@ typedef struct {
 #define KWP_DATA_START_INDEX 5 // 5th byte (counting from zero) of response will be first data byte
 
 #define ISO9141_K GPIO_PIN_10 // port C. This is also UART4_TX
-#define ISO9141_L GPIO_PIN_1 // port G
+#define ISO9141_L GPIO_PIN_10 // port A
 
 // initialisation timing parameters (ms)
 #define W1_TIMEOUT_MAX 300

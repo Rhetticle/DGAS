@@ -8,6 +8,7 @@
 #ifndef INC_OBD2_H_
 #define INC_OBD2_H_
 
+#include <stm32f7xx.h>
 #include <stdbool.h>
 
 typedef enum {

@@ -98,6 +98,7 @@ void create_screen_gauge_main_ui() {
             lv_obj_set_style_text_color(obj, lv_color_hex(0xff00ff00), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_align(obj, LV_ALIGN_DEFAULT, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_label_set_recolor(obj, true);
         }
         {
             lv_obj_t *obj = lv_label_create(parent_obj);

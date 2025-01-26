@@ -31,25 +31,25 @@ extern UART_HandleTypeDef huart4;
  * */
 HAL_StatusTypeDef iso9141_kwp_init(void) {
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
-	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
+	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
 	HAL_Delay(4000); //must be no traffic on bus for 3 seconds after K goes high
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 0);
-	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
+	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 1);
 	HAL_Delay(205);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
-	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
+	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
 	HAL_Delay(405);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 0);
-	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
+	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 1);
 	HAL_Delay(405);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
-	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
+	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
 	HAL_Delay(405);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 0);
-	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 0);
+	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 1);
 	HAL_Delay(405);
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
-	HAL_GPIO_WritePin(GPIOG, ISO9141_L, 1);
+	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
 	HAL_Delay(205);
 	return HAL_OK;
 }

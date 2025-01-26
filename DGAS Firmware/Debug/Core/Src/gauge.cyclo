@@ -1,0 +1,3 @@
+gauge.c:18:6:HAL_ADC_ConvCpltCallback	1
+gauge.c:23:6:gauge_set_param	1
+gauge.c:27:6:gauge_update	2

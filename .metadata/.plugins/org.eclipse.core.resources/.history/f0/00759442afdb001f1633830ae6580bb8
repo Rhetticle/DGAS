@@ -1,0 +1,15 @@
+/*
+ * gauge.c
+ *
+ *  Created on: Jan 26, 2025
+ *      Author: rhett
+ */
+#include "gauge.h"
+
+void gauge_set_param(GaugeParam* param) {
+	return;
+}
+
+void gauge_update(GaugeParam* param) {
+
+}

@@ -1,37 +1,21 @@
-18:14:32 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+23:57:43 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:108:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  108 |    HAL_StatusTypeDef status;
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
       |                      ^~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:248:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  248 |    sprintf(num, "%d", scale);
-      |                  ~^   ~~~~~
-      |                   |   |
-      |                   int uint32_t {aka long unsigned int}
-      |                  %ld
-../Core/Src/main.c:229:10: warning: variable 'kwp' set but not used [-Wunused-but-set-variable]
-  229 |   OBDBus kwp;
-      |          ^~~
-../Core/Src/main.c:248:20: warning: 'sprintf' may write a terminating nul past the end of the destination [-Wformat-overflow=]
-  248 |    sprintf(num, "%d", scale);
-      |                    ^
-../Core/Src/main.c:248:4: note: 'sprintf' output between 2 and 5 bytes into a destination of size 4
-  248 |    sprintf(num, "%d", scale);
-      |    ^~~~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: DGAS Firmware.elf
  
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 796642	    568	 134328	 931538	  e36d2	DGAS Firmware.elf
+ 797698	    564	 134332	 932594	  e3af2	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
 
-18:15:18 Build Finished. 0 errors, 4 warnings. (took 46s.690ms)
+23:58:32 Build Finished. 0 errors, 1 warnings. (took 48s.602ms)
 

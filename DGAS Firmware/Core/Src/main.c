@@ -32,6 +32,7 @@
 #include "OBD2.h"
 #include "ISO9141_KWP.h"
 #include "quadspi.h"
+#include "gauge.h"
 #include "lvgl/demos/lv_demos.h"
 /* USER CODE END Includes */
 
@@ -147,8 +148,42 @@ void my_flush_cb(lv_display_t* disp, const lv_area_t* area, uint8_t* map) {
 	lv_display_flush_ready(disp);
 }
 
-void dgas_init(void) {
 
+void start_up_anim() {
+	int16_t scale = 0;
+
+	while(scale < 4200) {
+		lv_arc_set_value(objects.obj0, scale);
+		lv_timer_handler();
+		HAL_Delay(5);
+		scale += 150;
+	}
+	while (scale >= 0) {
+		lv_arc_set_value(objects.obj0, scale);
+		lv_timer_handler();
+		HAL_Delay(5);
+		scale -= 150;
+	}
+}
+
+void dgas_init(lv_display_t* display) {
+	accel_init();
+	start_up_anim();
+	lv_label_set_text(objects.obj3, "#00FFFF INIT#");
+	lv_refr_now(display);
+}
+
+lv_display_t* display_init(void) {
+	lcd_init();
+	fmc_init();
+	lv_init();
+	lv_tick_set_cb(HAL_GetTick);
+	lv_display_t* display = lv_display_create(480, 480);
+	lv_display_set_buffers(display, (void*) SDRAM_START_ADDR + SDRAM_SIZE - 480*480*2*2, (void*) SDRAM_START_ADDR, 480*480*2, LV_DISP_RENDER_MODE_DIRECT);
+	lv_display_set_flush_cb(display, my_flush_cb);
+	CSP_QSPI_EnableMemoryMappedMode();
+	ui_init();
+	return display;
 }
 
 uint16_t rpmlive = 0;
@@ -200,66 +235,39 @@ int main(void)
   MX_ADC1_Init();
   MX_DMA2D_Init();
   /* USER CODE BEGIN 2 */
+  lv_display_t* display = display_init();
+  dgas_init(display);
 
-  lcd_init();
-  fmc_init();
-  uint32_t fmctime = HAL_GetTick();
-  fill_mem(0x0000);
-  fmctime = HAL_GetTick() - fmctime;
-  HAL_Delay(10);
-
-  lv_init();
-  lv_tick_set_cb(HAL_GetTick);
-  lv_display_t* display = lv_display_create(480, 480);
-  lv_display_set_buffers(display, (void*) SDRAM_START_ADDR + SDRAM_SIZE - 480*480*2*2, (void*) SDRAM_START_ADDR, 480*480*2, LV_DISP_RENDER_MODE_DIRECT);
-  lv_display_set_flush_cb(display, my_flush_cb);
-  CSP_QSPI_EnableMemoryMappedMode();
-
-  ui_init();
-  accel_init();
-
-  uint32_t time = 0;
-  uint32_t scale = 0;
   uint32_t tick = 0;
-
   iso9141_kwp_init();
   HAL_GPIO_DeInit(GPIOC, GPIO_PIN_10);
   MX_UART4_Init();
   iso9141_kwp_listen(false);
   OBDBus kwp;
   kwp.get_pid = kwp_get_pid;
+  lv_label_set_text(objects.obj3, "#00FF00 LIVE#");
+  lv_refr_now(display);
   kwp.status = OBD_LIVE;
 
+  GaugeState state;
+  state.bus = &kwp;
+  state.max = 0;
+  state.vBat = 0;
+  state.param = &PARAM_RPM;
+  uint16_t measure = 0;
+  //HAL_ADC_Start_IT(&hadc1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
-
-	 if (HAL_GetTick() > tick + 10) {
-		 //obd2_get_rpm(&kwp, &rpmlive);
-		 if (scale > 4200) {
-			 scale = 0;
-		 }
-
-		 char num[4];
-		 sprintf(num, "%d", scale);
-		 lv_arc_set_value(objects.obj0, scale);
-		 lv_label_set_text(objects.obj2, num);
+	 if (HAL_GetTick() > tick) {
+		 state.param->measure(state.bus, &measure);
+		 gauge_update(&state, measure);
 		 tick = HAL_GetTick();
-		 scale += 200;
 	 }
-
-	 time = HAL_GetTick();
 	 lv_timer_handler();
-	 time = HAL_GetTick() - time;
-
-	 HAL_Delay(5);
-
-	  //fill_mem(color);
-	  //color += 0xFF;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -343,8 +351,8 @@ static void MX_ADC1_Init(void)
   hadc1.Instance = ADC1;
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -851,23 +859,23 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_1, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LCD_CS_Pin|LCD_NRST_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : PG1 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
   /*Configure GPIO pin : HOST_SENSE_Pin */
   GPIO_InitStruct.Pin = HOST_SENSE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(HOST_SENSE_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LCD_CS_Pin LCD_NRST_Pin */
   GPIO_InitStruct.Pin = LCD_CS_Pin|LCD_NRST_Pin;

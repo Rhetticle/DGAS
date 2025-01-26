@@ -3,7 +3,7 @@
 "./Core/Src/OBD2.o"
 "./Core/Src/OBD_Debug.o"
 "./Core/Src/ST7701.o"
-"./Core/Src/W25N512GVEIG.o"
+"./Core/Src/gauge.o"
 "./Core/Src/main.o"
 "./Core/Src/quadspi.o"
 "./Core/Src/stm32f7xx_hal_msp.o"
