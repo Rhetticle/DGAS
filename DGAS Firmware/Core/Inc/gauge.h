@@ -33,7 +33,7 @@ extern const GaugeParam PARAM_RPM;
 
 #define PARAM_MEAS_MAX_LEN 4 // maximum characters to be used to display a parameter measurement
 
-
+#define ADC_TO_VOLTAGE(x) ((float)x /4096) * 15
 
 void gauge_set_param(GaugeParam* param);
 void gauge_update(GaugeState* state, uint32_t measured);

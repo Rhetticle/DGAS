@@ -255,7 +255,7 @@ int main(void)
   state.vBat = 0;
   state.param = &PARAM_RPM;
   uint16_t measure = 0;
-  //HAL_ADC_Start_IT(&hadc1);
+  HAL_ADC_Start_IT(&hadc1);
   /* USER CODE END 2 */
 
   /* Infinite loop */

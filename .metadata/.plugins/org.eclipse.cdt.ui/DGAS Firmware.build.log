@@ -1,21 +1,10 @@
-23:57:43 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+12:37:57 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'fmc_init':
-../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-  109 |    HAL_StatusTypeDef status;
-      |                      ^~~~~~
-arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: DGAS Firmware.elf
- 
 arm-none-eabi-size   DGAS\ Firmware.elf 
-arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 797698	    564	 134332	 932594	  e3af2	DGAS Firmware.elf
+ 798042	    564	 134332	 932938	  e3c4a	DGAS Firmware.elf
 Finished building: default.size.stdout
  
-Finished building: DGAS Firmware.list
- 
 
-23:58:32 Build Finished. 0 errors, 1 warnings. (took 48s.602ms)
+12:38:33 Build Finished. 0 errors, 0 warnings. (took 36s.131ms)
 
