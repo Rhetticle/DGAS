@@ -31,8 +31,13 @@ typedef struct {
 
 #define OBD2_PID_SUPPORTED_PIDS 0x00
 #define OBD2_PID_RPM 0x0C
-#define OBD2_PID_SPEED 0x0D
+#define OBD2_PID_VEHICLE_SPEED 0x0D
 #define OBD2_PID_ENG_LOAD 0x04
+#define OBD2_PID_COOLANT_TEMP 0x05
+#define OBD2_PID_THROTTLE_POS 0x11
+#define OBD2_PID_INTAKE_TEMP 0x0F
+#define OBD2_PID_MAF_FLOW_RATE 0x10
+#define OBD2_PID_FUEL_PRESSURE 0x0A
 
 HAL_StatusTypeDef obd2_get_rpm(OBDBus* bus, uint16_t* rpm);
 HAL_StatusTypeDef obd2_get_engine_load(OBDBus* bus, uint16_t* load);

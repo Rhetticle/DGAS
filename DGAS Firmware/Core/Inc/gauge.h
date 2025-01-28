@@ -37,7 +37,7 @@ extern const GaugeParam PARAM_RPM, PARAM_SPEED, PARAM_LOAD, PARAM_COOLANT_TEMP, 
 
 #define ADC_TO_VOLTAGE(x) ((float)x /4096) * 15
 
-void gauge_load_param(GaugeState* state, GaugeParam* const param);
+void gauge_load_param(GaugeState* state, const GaugeParam* param);
 void gauge_update(GaugeState* state, uint32_t measured);
 
 #endif /* INC_GAUGE_H_ */

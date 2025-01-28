@@ -13,6 +13,7 @@ extern ADC_HandleTypeDef hadc1;
 
 static volatile uint32_t adcRaw;
 
+
 const GaugeParam PARAM_RPM = {.min = 0, .max = 4200, .units = "RPM", .name = "#FF0000 ENGINE SPEED", .measure = obd2_get_rpm};
 const GaugeParam PARAM_SPEED = {.min = 0, .max = 140, .units = "km/h", .name = "#00FFFF VEHICLE SPEED#", .measure = obd2_get_vehicle_speed};
 const GaugeParam PARAM_LOAD = {.min = 0, .max = 100, .units = "%", .name = "#04FF40 ENGINE LOAD", .measure = obd2_get_engine_load};
@@ -28,7 +29,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 	}
 }
 
-void gauge_load_param(GaugeState* state, GaugeParam* const param) {
+void gauge_load_param(GaugeState* state, const GaugeParam* param) {
 	state->param = param;
 	lv_arc_set_range(objects.obj0, param->min, param->max);
 	lv_scale_set_range(objects.obj1, param->min, param->max);

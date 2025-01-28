@@ -15,6 +15,7 @@ static volatile uint16_t navPressed = 0;
 static lv_group_t* menuGroup;
 static lv_group_t* measGroup;
 
+
 void HAL_GPIO_EXTI_Callback(uint16_t pin) {
 	if (pin == BTN_NAV) {
 		navPressed = 1;
@@ -45,10 +46,11 @@ void menu_event_handler(lv_event_t* e) {
 
 void meas_event_handler(lv_event_t* e) {
 	lv_event_code_t code = lv_event_get_code(e);
+	GaugeState* state = (GaugeState*) lv_event_get_user_data(e);
 
 	if (code == LV_EVENT_PRESSED || code == LV_EVENT_LONG_PRESSED) {
 		lv_screen_load(objects.gauge_main_ui);
-		gauge_load_param(lv_event_get_user_data(e), &PARAM_LOAD);
+		gauge_load_param(state, &PARAM_FUEL_PRESSURE);
 	}
 }
 
@@ -72,8 +74,6 @@ void init_groups(void) {
 }
 
 void init_events(GaugeState* state) {
-	EventData eData = {.state = state, .nextGroup = NULL, .nextScreen = objects.gauge_main_ui, .nextParam = NULL};
-	eData.nextParam = &PARAM_RPM;
 	lv_obj_add_event_cb(objects.obj37, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj16, menu_event_handler, LV_EVENT_ALL, objects.measure);
 }

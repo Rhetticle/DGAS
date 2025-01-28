@@ -18,7 +18,7 @@ typedef struct {
 	GaugeState* state;
 	lv_group_t* nextGroup;
 	lv_obj_t* nextScreen;
-	GaugeParam* nextParam;
+	const GaugeParam* nextParam;
 } EventData;
 
 void enc_read(lv_indev_t* indev, lv_indev_data_t* data);

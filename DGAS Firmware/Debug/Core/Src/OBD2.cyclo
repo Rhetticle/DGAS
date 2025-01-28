@@ -1,7 +1,7 @@
 OBD2.c:16:19:obd2_get_pid	1
 OBD2.c:23:19:obd2_get_rpm	2
-OBD2.c:33:19:obd2_get_engine_load	2
-OBD2.c:43:19:obd2_get_vehicle_speed	2
+OBD2.c:33:19:obd2_get_vehicle_speed	2
+OBD2.c:43:19:obd2_get_engine_load	2
 OBD2.c:53:19:obd2_get_coolant_temp	2
 OBD2.c:63:19:obd2_get_throttle_pos	2
 OBD2.c:73:19:obd2_get_intake_temp	2
