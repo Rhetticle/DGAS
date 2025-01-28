@@ -1,2 +1,9 @@
 ../Core/Src/OBD2.c:16:19:obd2_get_pid	8	static
 ../Core/Src/OBD2.c:23:19:obd2_get_rpm	16	static
+../Core/Src/OBD2.c:33:19:obd2_get_engine_load	24	static
+../Core/Src/OBD2.c:43:19:obd2_get_vehicle_speed	16	static
+../Core/Src/OBD2.c:53:19:obd2_get_coolant_temp	16	static
+../Core/Src/OBD2.c:63:19:obd2_get_throttle_pos	24	static
+../Core/Src/OBD2.c:73:19:obd2_get_intake_temp	16	static
+../Core/Src/OBD2.c:83:19:obd2_get_maf_flow_rate	16	static
+../Core/Src/OBD2.c:93:19:obd2_get_fuel_pressure	16	static

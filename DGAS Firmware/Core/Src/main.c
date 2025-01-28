@@ -260,15 +260,16 @@ int main(void)
   uint16_t measure = 0;
   HAL_ADC_Start_IT(&hadc1);
 
-  lv_indev_t * indev = lv_indev_create();        /* Create input device connected to Default Display. */
+  lv_indev_t * indev = lv_indev_create();
   init_buttons(indev);
+  init_events(&state);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	 if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14) == 0) {
+	 if ((HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14) == 0) && (lv_screen_active() == objects.gauge_main_ui)) {
 		 lv_screen_load(objects.menu);
 	 }
 	 if ((HAL_GetTick() > tick) && (lv_screen_active() == objects.gauge_main_ui)) {

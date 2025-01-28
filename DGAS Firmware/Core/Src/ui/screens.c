@@ -123,6 +123,7 @@ void create_screen_gauge_main_ui() {
             lv_obj_set_pos(obj, 112, 303);
             lv_obj_set_size(obj, 256, 30);
             lv_label_set_text(obj, "ENGINE SPEED");
+            lv_label_set_recolor(obj, true);
             lv_obj_set_style_text_color(obj, lv_color_hex(0xffff0000), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_28, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -326,6 +327,7 @@ void create_screen_menu() {
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xff00ff00), LV_PART_MAIN | LV_STATE_PRESSED);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xff2196f3), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_bg_grad_stop(obj, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_bg_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_FOCUSED);
             {
                 lv_obj_t *parent_obj = obj;
                 {

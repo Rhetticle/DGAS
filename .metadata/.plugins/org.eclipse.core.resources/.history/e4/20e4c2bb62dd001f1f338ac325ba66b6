@@ -1,0 +1,41 @@
+/*
+ * OBD2.c
+ *
+ *  Created on: Jan 11, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+#include "OBD2.h"
+#include "lvgl.h"
+#include "ui.h"
+
+HAL_StatusTypeDef obd2_get_pid(OBDBus* bus, uint8_t pid, uint8_t* response) {
+	if (bus->get_pid(pid, response) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef obd2_get_rpm(OBDBus* bus, uint16_t* rpm) {
+	uint8_t response[OBD2_DATA_MAX] = {0};
+
+	if (obd2_get_pid(bus, OBD2_PID_RPM, response) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	*rpm = (256*response[0] + response[1]) / 4;
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef obd2_get_engine_load(OBDBus* bus, uint16_t* load) {
+	uint8_t response[OBD2_DATA_MAX] = {0};
+
+	if (obd2_get_pid(bus, OBD2_PID_ENG_LOAD, response) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	*load = response[0]/2.55;
+	return HAL_OK;
+}

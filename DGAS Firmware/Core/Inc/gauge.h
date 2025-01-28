@@ -15,7 +15,6 @@
 typedef struct {
 	uint32_t min;
 	uint32_t max;
-	uint32_t step;
 	char* units;
 	char* name;
 	HAL_StatusTypeDef (*measure) (OBDBus*, uint16_t*);
@@ -28,14 +27,17 @@ typedef struct {
 	float vBat;
 } GaugeState;
 
-extern const GaugeParam PARAM_RPM;
+extern const GaugeParam PARAM_RPM, PARAM_SPEED, PARAM_LOAD, PARAM_COOLANT_TEMP, PARAM_THROTTLE_POS, PARAM_INTAKE_TEMP,
+						PARAM_MAF_FLOW_RATE, PARAM_FUEL_PRESSURE;
 
 
 #define PARAM_MEAS_MAX_LEN 4 // maximum characters to be used to display a parameter measurement
 
+#define GAUGE_TICK_COUNT 7 // 7 ticks along scaleo on gauge
+
 #define ADC_TO_VOLTAGE(x) ((float)x /4096) * 15
 
-void gauge_set_param(GaugeParam* param);
+void gauge_load_param(GaugeState* state, GaugeParam* const param);
 void gauge_update(GaugeState* state, uint32_t measured);
 
 #endif /* INC_GAUGE_H_ */

@@ -13,7 +13,14 @@ extern ADC_HandleTypeDef hadc1;
 
 static volatile uint32_t adcRaw;
 
-const GaugeParam PARAM_RPM = {.min = 0, .max = 4200, .step = 700, .units = "RPM", .name = "#FF0000 ENGINE SPEED", .measure = obd2_get_rpm};
+const GaugeParam PARAM_RPM = {.min = 0, .max = 4200, .units = "RPM", .name = "#FF0000 ENGINE SPEED", .measure = obd2_get_rpm};
+const GaugeParam PARAM_SPEED = {.min = 0, .max = 140, .units = "km/h", .name = "#00FFFF VEHICLE SPEED#", .measure = obd2_get_vehicle_speed};
+const GaugeParam PARAM_LOAD = {.min = 0, .max = 100, .units = "%", .name = "#04FF40 ENGINE LOAD", .measure = obd2_get_engine_load};
+const GaugeParam PARAM_COOLANT_TEMP = {.min = 0, .max = 100, .units = "\u00B0 C", .name = "#2196f3 COOLANT TEMP", .measure = obd2_get_coolant_temp};
+const GaugeParam PARAM_THROTTLE_POS = {.min = 0, .max = 100, .units = "%", .name = "#f600b0 THROTTLE POS", .measure = obd2_get_throttle_pos};
+const GaugeParam PARAM_INTAKE_TEMP = {.min = 0, .max = 100, .units = "\u00B0 C", .name = "#f6f200 INTAKE TEMP", .measure = obd2_get_intake_temp};
+const GaugeParam PARAM_MAF_FLOW_RATE = {.min = 0, .max = 400, .units = "gram/s", .name = "#6021f3 MAF FLOW RATE", .measure = obd2_get_maf_flow_rate};
+const GaugeParam PARAM_FUEL_PRESSURE = {.min = 0, .max = 500, .units = "kPa", .name = "#04FF40 ENGINE LOAD", .measure = obd2_get_fuel_pressure};
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 	if (hadc == &hadc1) {
@@ -21,8 +28,19 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 	}
 }
 
-void gauge_set_param(GaugeParam* param) {
-	return;
+void gauge_load_param(GaugeState* state, GaugeParam* const param) {
+	state->param = param;
+	lv_arc_set_range(objects.obj0, param->min, param->max);
+	lv_scale_set_range(objects.obj1, param->min, param->max);
+	lv_label_set_text(objects.obj5, param->name);
+	lv_label_set_text(objects.obj14, param->units);
+	/*
+	for (int i = 0; i <= param->max/param->step; i++) {
+		char label[4];
+		sprintf(label, "%d", i*param->step);
+		lv_label_set_text(objects., text)
+	}
+	*/
 }
 
 void gauge_update(GaugeState* state, uint32_t measured) {

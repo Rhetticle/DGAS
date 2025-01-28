@@ -1,10 +1,23 @@
-17:24:42 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+20:38:52 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/buttons.c:15:20: warning: 'btnGroup' defined but not used [-Wunused-variable]
-   15 | static lv_group_t* btnGroup;
-      |                    ^~~~~~~~
+../Core/Src/buttons.c: In function 'meas_event_handler':
+../Core/Src/buttons.c:51:47: warning: passing argument 2 of 'gauge_load_param' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   51 |   gauge_load_param(lv_event_get_user_data(e), &PARAM_LOAD);
+      |                                               ^~~~~~~~~~~
+In file included from ../Core/Inc/buttons.h:11,
+                 from ../Core/Src/buttons.c:10:
+../Core/Inc/gauge.h:40:60: note: expected 'GaugeParam * const' but argument is of type 'const GaugeParam *'
+   40 | void gauge_load_param(GaugeState* state, GaugeParam* const param);
+      |                                          ~~~~~~~~~~~~~~~~~~^~~~~
+../Core/Src/buttons.c: In function 'init_events':
+../Core/Src/buttons.c:76:18: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   76 |  eData.nextParam = &PARAM_RPM;
+      |                  ^
+../Core/Src/buttons.c:75:12: warning: variable 'eData' set but not used [-Wunused-but-set-variable]
+   75 |  EventData eData = {.state = state, .nextGroup = NULL, .nextScreen = objects.gauge_main_ui, .nextParam = NULL};
+      |            ^~~~~
 ../Core/Src/main.c: In function 'fmc_init':
 ../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
   109 |    HAL_StatusTypeDef status;
@@ -15,11 +28,11 @@ Finished building target: DGAS Firmware.elf
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 808362	    564	 134340	 943266	  e64a2	DGAS Firmware.elf
+ 808930	    564	 134348	 943842	  e66e2	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
 
-17:25:26 Build Finished. 0 errors, 2 warnings. (took 44s.5ms)
+20:39:40 Build Finished. 0 errors, 4 warnings. (took 47s.736ms)
 
