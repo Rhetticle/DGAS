@@ -59,6 +59,11 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define VBAT_Pin GPIO_PIN_2
 #define VBAT_GPIO_Port GPIOA
+#define BTN_NAV_Pin GPIO_PIN_14
+#define BTN_NAV_GPIO_Port GPIOB
+#define BTN_NAV_EXTI_IRQn EXTI15_10_IRQn
+#define BTN_SEL_Pin GPIO_PIN_15
+#define BTN_SEL_GPIO_Port GPIOB
 #define HOST_SENSE_Pin GPIO_PIN_11
 #define HOST_SENSE_GPIO_Port GPIOD
 #define LCD_CS_Pin GPIO_PIN_4

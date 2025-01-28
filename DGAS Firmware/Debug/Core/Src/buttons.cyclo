@@ -1,0 +1,4 @@
+buttons.c:24:6:enc_read	2
+buttons.c:37:6:event_handler	3
+buttons.c:18:6:HAL_GPIO_EXTI_Callback	2
+buttons.c:45:6:init_buttons	1

@@ -33,7 +33,7 @@
 #include "ISO9141_KWP.h"
 #include "quadspi.h"
 #include "gauge.h"
-#include "lvgl/demos/lv_demos.h"
+#include "buttons.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -235,6 +235,9 @@ int main(void)
   MX_ADC1_Init();
   MX_DMA2D_Init();
   /* USER CODE BEGIN 2 */
+  // We will immediately pull L and K lines high
+  HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
+  HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
   lv_display_t* display = display_init();
   dgas_init(display);
 
@@ -256,13 +259,19 @@ int main(void)
   state.param = &PARAM_RPM;
   uint16_t measure = 0;
   HAL_ADC_Start_IT(&hadc1);
+
+  lv_indev_t * indev = lv_indev_create();        /* Create input device connected to Default Display. */
+  init_buttons(indev);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	 if (HAL_GetTick() > tick) {
+	 if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14) == 0) {
+		 lv_screen_load(objects.menu);
+	 }
+	 if ((HAL_GetTick() > tick) && (lv_screen_active() == objects.gauge_main_ui)) {
 		 state.param->measure(state.bus, &measure);
 		 gauge_update(&state, measure);
 		 tick = HAL_GetTick();
@@ -864,6 +873,18 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LCD_CS_Pin|LCD_NRST_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin : BTN_NAV_Pin */
+  GPIO_InitStruct.Pin = BTN_NAV_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(BTN_NAV_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : BTN_SEL_Pin */
+  GPIO_InitStruct.Pin = BTN_SEL_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(BTN_SEL_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : HOST_SENSE_Pin */
   GPIO_InitStruct.Pin = HOST_SENSE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -883,6 +904,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
   GPIO_InitStruct.Pin = GPIO_PIN_10;

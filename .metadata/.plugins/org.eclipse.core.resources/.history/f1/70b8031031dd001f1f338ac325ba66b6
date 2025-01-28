@@ -1,0 +1,28 @@
+/*
+ * buttons.c
+ *
+ *  Created on: Jan 28, 2025
+ *      Author: rhett
+ */
+
+#include "ui.h"
+#include "lvgl.h"
+#include "buttons.h"
+#include <stm32f7xx.h>
+
+const lv_point_t btnPointsMenu [] = {{287, 151}, {287, 240}, {75, 240}, {174, 342}};
+
+void btn_read(lv_indev_t * indev, lv_indev_data_t * data)
+{
+    if(HAL_GPIO_ReadPin(GPIOB, BTN_NAV) == 0) {
+        data->state = LV_INDEV_STATE_PRESSED;
+    } else {
+        data->state = LV_INDEV_STATE_RELEASED;
+    }
+}
+
+void init_buttons(lv_indev_t* indev) {
+	lv_indev_set_type(indev, LV_INDEV_TYPE_BUTTON);   /* Touch pad is a pointer-like device. */
+	lv_indev_set_read_cb(indev, btn_read);
+	lv_indev_set_button_points(indev, btnPointsMenu);
+}

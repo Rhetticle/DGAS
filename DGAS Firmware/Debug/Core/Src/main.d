@@ -446,21 +446,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Src/lvgl/src/lv_api_map_v9_1.h ../Core/Src/ui/ui.h \
  ../Core/Src/ui/screens.h ../Core/Inc/OBD2.h ../Core/Inc/ISO9141_KWP.h \
  ../Core/Inc/quadspi.h ../Core/Inc/main.h ../Core/Inc/gauge.h \
- ../Core/Inc/OBD2.h ../Core/Src/lvgl/demos/lv_demos.h \
- ../Core/Src/lvgl/demos/../lvgl.h \
- ../Core/Src/lvgl/demos/benchmark/lv_demo_benchmark.h \
- ../Core/Src/lvgl/demos/benchmark/../lv_demos.h \
- ../Core/Src/lvgl/demos/stress/lv_demo_stress.h \
- ../Core/Src/lvgl/demos/stress/../lv_demos.h \
- ../Core/Src/lvgl/demos/widgets/lv_demo_widgets.h \
- ../Core/Src/lvgl/demos/widgets/../lv_demos.h \
- ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw.h \
- ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h \
- ../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h \
- ../Core/Src/lvgl/demos/transform/lv_demo_transform.h \
- ../Core/Src/lvgl/demos/transform/../lv_demos.h \
- ../Core/Src/lvgl/demos/scroll/lv_demo_scroll.h \
- ../Core/Src/lvgl/demos/scroll/../lv_demos.h
+ ../Core/Inc/OBD2.h ../Core/Inc/buttons.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -925,18 +911,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/main.h:
 ../Core/Inc/gauge.h:
 ../Core/Inc/OBD2.h:
-../Core/Src/lvgl/demos/lv_demos.h:
-../Core/Src/lvgl/demos/../lvgl.h:
-../Core/Src/lvgl/demos/benchmark/lv_demo_benchmark.h:
-../Core/Src/lvgl/demos/benchmark/../lv_demos.h:
-../Core/Src/lvgl/demos/stress/lv_demo_stress.h:
-../Core/Src/lvgl/demos/stress/../lv_demos.h:
-../Core/Src/lvgl/demos/widgets/lv_demo_widgets.h:
-../Core/Src/lvgl/demos/widgets/../lv_demos.h:
-../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw.h:
-../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_triangle.h:
-../Core/Src/lvgl/demos/widgets/../../src/draw/lv_draw_rect.h:
-../Core/Src/lvgl/demos/transform/lv_demo_transform.h:
-../Core/Src/lvgl/demos/transform/../lv_demos.h:
-../Core/Src/lvgl/demos/scroll/lv_demo_scroll.h:
-../Core/Src/lvgl/demos/scroll/../lv_demos.h:
+../Core/Inc/buttons.h:

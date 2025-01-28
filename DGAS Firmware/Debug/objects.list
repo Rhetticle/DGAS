@@ -3,6 +3,7 @@
 "./Core/Src/OBD2.o"
 "./Core/Src/OBD_Debug.o"
 "./Core/Src/ST7701.o"
+"./Core/Src/buttons.o"
 "./Core/Src/gauge.o"
 "./Core/Src/main.o"
 "./Core/Src/quadspi.o"
