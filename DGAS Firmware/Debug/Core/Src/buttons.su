@@ -1,7 +1,8 @@
-../Core/Src/buttons.c:25:6:enc_read	8	static
-../Core/Src/buttons.c:50:6:meas_event_handler	16	static
-../Core/Src/buttons.c:41:6:menu_event_handler	8	static
-../Core/Src/buttons.c:19:6:HAL_GPIO_EXTI_Callback	0	static
-../Core/Src/buttons.c:79:6:init_groups	16	static
-../Core/Src/buttons.c:98:6:init_events	16	static
-../Core/Src/buttons.c:110:6:init_buttons	8	static
+../Core/Src/buttons.c:63:6:meas_event_handler	16	static
+../Core/Src/buttons.c:54:6:menu_event_handler	8	static
+../Core/Src/buttons.c:36:6:enc_read	24	static
+../Core/Src/buttons.c:19:6:load_screen_and_group	16	static
+../Core/Src/buttons.c:29:6:HAL_GPIO_EXTI_Callback	8	static
+../Core/Src/buttons.c:92:6:init_groups	16	static
+../Core/Src/buttons.c:111:6:init_events	16	static
+../Core/Src/buttons.c:123:6:init_buttons	8	static

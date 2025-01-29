@@ -187,8 +187,6 @@ lv_display_t* display_init(void) {
 }
 
 uint16_t rpmlive = 0;
-
-extern lv_group_t* menuGroup;
 /* USER CODE END 0 */
 
 /**
@@ -271,11 +269,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	 if ((HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14) == 0) && (lv_screen_active() == objects.gauge_main_ui)) {
-		 lv_screen_load(objects.menu);
-		 lv_indev_set_group(indev, menuGroup);
-		 lv_group_focus_obj(objects.obj16);
-	 }
 	 if ((HAL_GetTick() > tick) && (lv_screen_active() == objects.gauge_main_ui)) {
 		 state.param->measure(state.bus, &measure);
 		 gauge_update(&state, measure);

@@ -1,4 +1,4 @@
 ../Core/Src/gauge.c:26:6:HAL_ADC_ConvCpltCallback	8	static
 ../Core/Src/gauge.c:32:6:adjust_scale_labels	40	static
-../Core/Src/gauge.c:42:6:gauge_load_param	56	static
-../Core/Src/gauge.c:58:6:gauge_update	32	static
+../Core/Src/gauge.c:42:6:gauge_load_param	64	static
+../Core/Src/gauge.c:59:6:gauge_update	32	static
