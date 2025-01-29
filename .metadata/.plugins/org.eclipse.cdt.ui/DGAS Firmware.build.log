@@ -1,10 +1,10 @@
-22:20:40 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+10:43:31 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-size   DGAS\ Firmware.elf 
    text	   data	    bss	    dec	    hex	filename
- 808842	    564	 134348	 943754	  e668a	DGAS Firmware.elf
+ 809082	    564	 134348	 943994	  e677a	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 
-22:21:23 Build Finished. 0 errors, 0 warnings. (took 43s.53ms)
+10:44:15 Build Finished. 0 errors, 0 warnings. (took 44s.80ms)
 

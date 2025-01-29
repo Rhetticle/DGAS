@@ -17,6 +17,7 @@ typedef struct {
 	uint32_t max;
 	char* units;
 	char* name;
+	uint32_t color;
 	HAL_StatusTypeDef (*measure) (OBDBus*, uint16_t*);
 } GaugeParam;
 

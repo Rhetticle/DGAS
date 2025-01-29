@@ -47,4 +47,5 @@ HAL_StatusTypeDef obd2_get_throttle_pos(OBDBus* bus, uint16_t* pos);
 HAL_StatusTypeDef obd2_get_intake_temp(OBDBus* bus, uint16_t* temp);
 HAL_StatusTypeDef obd2_get_maf_flow_rate(OBDBus* bus, uint16_t* flowRate);
 HAL_StatusTypeDef obd2_get_fuel_pressure(OBDBus* bus, uint16_t* pressure);
+HAL_StatusTypeDef obd2_dummy_request(OBDBus* bus);
 #endif /* INC_OBD2_H_ */

@@ -12,7 +12,7 @@
 #include <stm32f7xx.h>
 
 static volatile uint16_t navPressed = 0;
-static lv_group_t* menuGroup;
+lv_group_t* menuGroup;
 static lv_group_t* measGroup;
 
 
@@ -23,6 +23,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t pin) {
 }
 
 void enc_read(lv_indev_t* indev, lv_indev_data_t* data) {
+	if (lv_screen_active() == objects.gauge_main_ui) {
+		return;
+	}
 	if (navPressed) {
 		data->enc_diff += 1;
 		navPressed = 0;
@@ -50,7 +53,26 @@ void meas_event_handler(lv_event_t* e) {
 
 	if (code == LV_EVENT_PRESSED || code == LV_EVENT_LONG_PRESSED) {
 		lv_screen_load(objects.gauge_main_ui);
-		gauge_load_param(state, &PARAM_FUEL_PRESSURE);
+		lv_obj_t* chosen = lv_group_get_focused(measGroup);
+
+		if (chosen == objects.obj37) {
+			gauge_load_param(state, &PARAM_RPM);
+		} else if (chosen == objects.obj39) {
+			gauge_load_param(state, &PARAM_SPEED);
+		} else if (chosen == objects.obj40) {
+			gauge_load_param(state, &PARAM_LOAD);
+		} else if (chosen == objects.obj41) {
+			gauge_load_param(state, &PARAM_COOLANT_TEMP);
+		} else if (chosen == objects.obj42) {
+			gauge_load_param(state, &PARAM_THROTTLE_POS);
+		} else if (chosen == objects.obj43) {
+			gauge_load_param(state, &PARAM_INTAKE_TEMP);
+		} else if (chosen == objects.obj44) {
+			gauge_load_param(state, &PARAM_MAF_FLOW_RATE);
+		} else if (chosen == objects.obj45) {
+			gauge_load_param(state, &PARAM_FUEL_PRESSURE);
+		}
+
 	}
 }
 
@@ -75,6 +97,13 @@ void init_groups(void) {
 
 void init_events(GaugeState* state) {
 	lv_obj_add_event_cb(objects.obj37, meas_event_handler, LV_EVENT_ALL, state);
+	lv_obj_add_event_cb(objects.obj39, meas_event_handler, LV_EVENT_ALL, state);
+	lv_obj_add_event_cb(objects.obj40, meas_event_handler, LV_EVENT_ALL, state);
+	lv_obj_add_event_cb(objects.obj41, meas_event_handler, LV_EVENT_ALL, state);
+	lv_obj_add_event_cb(objects.obj42, meas_event_handler, LV_EVENT_ALL, state);
+	lv_obj_add_event_cb(objects.obj43, meas_event_handler, LV_EVENT_ALL, state);
+	lv_obj_add_event_cb(objects.obj44, meas_event_handler, LV_EVENT_ALL, state);
+	lv_obj_add_event_cb(objects.obj45, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj16, menu_event_handler, LV_EVENT_ALL, objects.measure);
 }
 

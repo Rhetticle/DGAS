@@ -122,7 +122,7 @@ void create_screen_gauge_main_ui() {
             objects.obj5 = obj;
             lv_obj_set_pos(obj, 112, 303);
             lv_obj_set_size(obj, 256, 30);
-            lv_label_set_text(obj, "ENGINE SPEED");
+            lv_label_set_text(obj, "PARAMETER");
             lv_label_set_recolor(obj, true);
             lv_obj_set_style_text_color(obj, lv_color_hex(0xffff0000), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_28, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -207,7 +207,7 @@ void create_screen_gauge_main_ui() {
             objects.obj14 = obj;
             lv_obj_set_pos(obj, 196, 255);
             lv_obj_set_size(obj, 88, 30);
-            lv_label_set_text(obj, "RPM");
+            lv_label_set_text(obj, "UNITS");
             lv_obj_set_style_text_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_28, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
