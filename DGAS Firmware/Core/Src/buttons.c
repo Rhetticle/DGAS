@@ -14,22 +14,30 @@
 static volatile uint16_t navPressed = 0;
 static lv_group_t* menuGroup;
 static lv_group_t* measGroup;
+static lv_group_t* debugGroup;
+static lv_group_t* aboutGroup;
+static lv_group_t* settingsGroup;
 static volatile uint32_t lastNavPress;
 
 void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
 	lv_screen_load(screen);
 
+	if (screen == objects.gauge_main_ui) {
+		return;
+	}
 	if (screen == objects.menu) {
 		lv_indev_set_group(indev, menuGroup);
 	} else if (screen == objects.measure) {
 		lv_indev_set_group(indev, measGroup);
 	}
 	lv_group_t* group = lv_indev_get_group(indev);
+	// add this to make sure focus is shown on screen switch
 	lv_group_focus_next(group);
 	lv_group_focus_prev(group);
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t pin) {
+	// use HAL_GetTick() to do software de-bouncing of physical button
 	if ((pin == BTN_NAV) && ((HAL_GetTick() - lastNavPress) > 200)) {
 		navPressed = 1;
 		lastNavPress = HAL_GetTick();
@@ -56,11 +64,22 @@ void enc_read(lv_indev_t* indev, lv_indev_data_t* data) {
 
 void menu_event_handler(lv_event_t* e) {
 	lv_event_code_t code = lv_event_get_code(e);
+	lv_indev_t* indev = lv_indev_active();
+	lv_group_t* group = lv_indev_get_group(indev);
+	lv_obj_t* focused = lv_group_get_focused(group);
 
 	if (code == LV_EVENT_PRESSED || code == LV_EVENT_LONG_PRESSED) {
-		lv_indev_t* indev = lv_indev_active();
-		lv_group_t* group = lv_indev_get_group(indev);
-		load_screen_and_group(lv_event_get_user_data(e), indev);
+		if (focused == objects.obj16) {
+			load_screen_and_group(objects.measure, indev);
+		} else if (focused == objects.obj18) {
+			load_screen_and_group(objects.obd2_debug, indev);
+		} else if (focused == objects.obj20) {
+			load_screen_and_group(objects.about, indev);
+		} else if (focused == objects.obj22) {
+			load_screen_and_group(objects.settings, indev);
+		} else if (focused == objects.obj24) {
+			load_screen_and_group(objects.gauge_main_ui, indev);
+		}
 	}
 }
 
@@ -121,7 +140,11 @@ void init_events(GaugeState* state) {
 	lv_obj_add_event_cb(objects.obj48, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj49, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj50, meas_event_handler, LV_EVENT_ALL, state);
-	lv_obj_add_event_cb(objects.obj16, menu_event_handler, LV_EVENT_ALL, objects.measure);
+	lv_obj_add_event_cb(objects.obj16, menu_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.obj18, menu_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.obj20, menu_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.obj22, menu_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.obj24, menu_event_handler, LV_EVENT_ALL, NULL);
 }
 
 void init_buttons(lv_indev_t* indev) {

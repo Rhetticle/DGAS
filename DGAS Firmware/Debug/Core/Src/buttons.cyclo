@@ -1,8 +1,8 @@
-buttons.c:67:6:meas_event_handler	11
-buttons.c:19:6:load_screen_and_group	3
-buttons.c:39:6:enc_read	5
-buttons.c:57:6:menu_event_handler	3
-buttons.c:32:6:HAL_GPIO_EXTI_Callback	3
-buttons.c:96:6:init_groups	1
-buttons.c:115:6:init_events	1
-buttons.c:127:6:init_buttons	1
+buttons.c:83:6:meas_event_handler	11
+buttons.c:19:6:load_screen_and_group	4
+buttons.c:44:6:enc_read	5
+buttons.c:62:6:menu_event_handler	8
+buttons.c:36:6:HAL_GPIO_EXTI_Callback	3
+buttons.c:112:6:init_groups	1
+buttons.c:131:6:init_events	1
+buttons.c:147:6:init_buttons	1
