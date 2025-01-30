@@ -628,3 +628,402 @@ Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
+10:59:01 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ui/screens.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/screens.d" -MT"Core/Src/ui/screens.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/screens.o"
+arm-none-eabi-gcc "../Core/Src/ISO9141_KWP.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ISO9141_KWP.d" -MT"Core/Src/ISO9141_KWP.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ISO9141_KWP.o"
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
+arm-none-eabi-gcc "../Core/Src/OBD_Debug.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD_Debug.d" -MT"Core/Src/OBD_Debug.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD_Debug.o"
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/OBD_Debug.c: In function 'debug_send_data':
+../Core/Src/OBD_Debug.c:19:18: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   19 |    sprintf(msg + strlen(msg), "0x0%X", data[i]);
+      |                  ^~~~~~
+../Core/Src/OBD_Debug.c:19:18: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/OBD_Debug.c:13:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   12 | #include "ui.h"
+  +++ |+#include <string.h>
+   13 | 
+../Core/Src/OBD_Debug.c:21:18: warning: incompatible implicit declaration of built-in function 'strlen'
+   21 |    sprintf(msg + strlen(msg), "0x%X", data[i]);
+      |                  ^~~~~~
+../Core/Src/OBD_Debug.c:21:18: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/OBD_Debug.c:24:4: warning: implicit declaration of function 'strcat' [-Wimplicit-function-declaration]
+   24 |    strcat(msg, "}\n");
+      |    ^~~~~~
+../Core/Src/OBD_Debug.c:24:4: warning: incompatible implicit declaration of built-in function 'strcat'
+../Core/Src/OBD_Debug.c:24:4: note: include '<string.h>' or provide a declaration of 'strcat'
+../Core/Src/OBD_Debug.c:26:4: warning: incompatible implicit declaration of built-in function 'strcat'
+   26 |    strcat(msg, ", ");
+      |    ^~~~~~
+../Core/Src/OBD_Debug.c:26:4: note: include '<string.h>' or provide a declaration of 'strcat'
+../Core/Src/OBD_Debug.c: In function 'send_debug_header':
+../Core/Src/OBD_Debug.c:41:20: warning: incompatible implicit declaration of built-in function 'strlen'
+   41 |   sprintf(header + strlen(header), "#00FFFF <Data># ");
+      |                    ^~~~~~
+../Core/Src/OBD_Debug.c:41:20: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/OBD_Debug.c:43:20: warning: incompatible implicit declaration of built-in function 'strlen'
+   43 |   sprintf(header + strlen(header), "#11FFAA <Init># ");
+      |                    ^~~~~~
+../Core/Src/OBD_Debug.c:43:20: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_load_param':
+../Core/Src/gauge.c:56:25: warning: passing argument 1 of 'adjust_scale_labels' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   56 |     adjust_scale_labels(param, scaleLabels);
+      |                         ^~~~~
+../Core/Src/gauge.c:32:38: note: expected 'GaugeParam *' but argument is of type 'const GaugeParam *'
+   32 | void adjust_scale_labels(GaugeParam* param, lv_obj_t** scaleLabels) {
+      |                          ~~~~~~~~~~~~^~~~~
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 809756	    564	 134372	 944692	  e6a34	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+11:03:43 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/gauge.c:7:
+../Core/Inc/gauge.h:41:51: error: unknown type name 'lv_obj_t'
+   41 | void adjust_scale_labels(const GaugeParam* param, lv_obj_t** scaleLabels)
+      |                                                   ^~~~~~~~
+In file included from ../Core/Src/main.c:36:
+../Core/Inc/buttons.h: In function 'adjust_scale_labels':
+../Core/Inc/buttons.h:22:3: error: storage class specified for parameter 'EventData'
+   22 | } EventData;
+      |   ^~~~~~~~~
+../Core/Src/main.c:82:13: error: storage class specified for parameter 'MPU_Config'
+   82 | static void MPU_Config(void);
+      |             ^~~~~~~~~~
+../Core/Src/main.c:83:13: error: storage class specified for parameter 'MX_GPIO_Init'
+   83 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:84:13: error: storage class specified for parameter 'MX_CAN1_Init'
+   84 | static void MX_CAN1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:85:13: error: storage class specified for parameter 'MX_CAN2_Init'
+   85 | static void MX_CAN2_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/main.c:86:13: error: storage class specified for parameter 'MX_FMC_Init'
+   86 | static void MX_FMC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:87:13: error: storage class specified for parameter 'MX_I2C4_Init'
+   87 | static void MX_I2C4_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:88:13: error: storage class specified for parameter 'MX_QUADSPI_Init'
+   88 | static void MX_QUADSPI_Init(void);
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/main.c:89:13: error: storage class specified for parameter 'MX_SPI1_Init'
+   89 | static void MX_SPI1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/main.c:90:13: error: storage class specified for parameter 'MX_UART4_Init'
+   90 | static void MX_UART4_Init(void);
+      |             ^~~~~~~~~~~~~
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/main.c:91:13: error: storage class specified for parameter 'MX_LTDC_Init'
+   91 | static void MX_LTDC_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:92:13: error: storage class specified for parameter 'MX_TIM1_Init'
+   92 | static void MX_TIM1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:93:13: error: storage class specified for parameter 'MX_ADC1_Init'
+   93 | static void MX_ADC1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:94:13: error: storage class specified for parameter 'MX_DMA2D_Init'
+   94 | static void MX_DMA2D_Init(void);
+      |             ^~~~~~~~~~~~~
+../Core/Src/main.c:105:1: error: parameter 'ltdc' is initialized
+  105 | uint8_t* ltdc = (uint8_t*) SDRAM_START_ADDR;
+      | ^~~~~~~
+../Core/Src/main.c:107:21: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  107 | void fmc_init(void) {
+      |                     ^
+../Core/Src/main.c:136:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  136 | void fill_mem(uint16_t value) {
+      |                               ^
+../Core/Src/main.c:142:75: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  142 | void my_flush_cb(lv_display_t* disp, const lv_area_t* area, uint8_t* map) {
+      |                                                                           ^
+../Core/Src/main.c:152:22: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  152 | void start_up_anim() {
+      |                      ^
+../Core/Src/main.c:169:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  169 | void dgas_init(lv_display_t* display) {
+      |                                       ^
+../Core/Src/main.c:176:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  176 | lv_display_t* display_init(void) {
+      |                                  ^
+../Core/Src/main.c:189:1: error: parameter 'rpmlive' is initialized
+  189 | uint16_t rpmlive = 0;
+      | ^~~~~~~~
+../Core/Src/main.c:197:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  197 | {
+      | ^
+../Core/Src/main.c:293:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  293 | {
+      | ^
+../Core/Src/main.c:347:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  347 | {
+      | ^
+../Core/Src/main.c:399:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  399 | {
+      | ^
+../Core/Src/main.c:436:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  436 | {
+      | ^
+../Core/Src/main.c:473:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  473 | {
+      | ^
+../Core/Src/main.c:510:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  510 | {
+      | ^
+../Core/Src/main.c:558:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  558 | {
+      | ^
+../Core/Src/main.c:620:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  620 | {
+      | ^
+../Core/Src/main.c:655:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  655 | {
+      | ^
+../Core/Src/main.c:695:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  695 | {
+      | ^
+../Core/Src/main.c:742:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  742 | {
+      | ^
+../Core/Src/main.c:773:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  773 | {
+      | ^
+../Core/Src/main.c:824:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  824 | {
+      | ^
+../Core/Src/main.c:894:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  894 | {
+      | ^
+../Core/Src/main.c:925:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  925 | {
+      | ^
+In file included from ../Core/Src/main.c:35:
+../Core/Inc/gauge.h:41:6: error: old-style parameter declarations in prototyped function definition
+   41 | void adjust_scale_labels(const GaugeParam* param, lv_obj_t** scaleLabels)
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:951: error: expected '{' at end of input
+make: *** [Core/Src/subdir.mk:58: Core/Src/gauge.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:58: Core/Src/main.o] Error 1
+In file included from ../Core/Src/buttons.c:10:
+../Core/Inc/buttons.h: In function 'adjust_scale_labels':
+../Core/Inc/buttons.h:22:3: error: storage class specified for parameter 'EventData'
+   22 | } EventData;
+      |   ^~~~~~~~~
+../Core/Src/buttons.c:14:26: error: storage class specified for parameter 'navPressed'
+   14 | static volatile uint16_t navPressed = 0;
+      |                          ^~~~~~~~~~
+../Core/Src/buttons.c:14:1: error: parameter 'navPressed' is initialized
+   14 | static volatile uint16_t navPressed = 0;
+      | ^~~~~~
+../Core/Src/buttons.c:15:20: error: storage class specified for parameter 'menuGroup'
+   15 | static lv_group_t* menuGroup;
+      |                    ^~~~~~~~~
+../Core/Src/buttons.c:16:20: error: storage class specified for parameter 'measGroup'
+   16 | static lv_group_t* measGroup;
+      |                    ^~~~~~~~~
+../Core/Src/buttons.c:17:26: error: storage class specified for parameter 'lastNavPress'
+   17 | static volatile uint32_t lastNavPress;
+      |                          ^~~~~~~~~~~~
+../Core/Src/buttons.c:19:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   19 | void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
+      |                                                                 ^
+../Core/Src/buttons.c:29:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   29 | void HAL_GPIO_EXTI_Callback(uint16_t pin) {
+      |                                           ^
+../Core/Src/buttons.c:36:57: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   36 | void enc_read(lv_indev_t* indev, lv_indev_data_t* data) {
+      |                                                         ^
+../Core/Src/buttons.c:54:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   54 | void menu_event_handler(lv_event_t* e) {
+      |                                        ^
+../Core/Src/buttons.c:63:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   63 | void meas_event_handler(lv_event_t* e) {
+      |                                        ^
+../Core/Src/buttons.c:92:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   92 | void init_groups(void) {
+      |                        ^
+../Core/Src/buttons.c:111:37: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  111 | void init_events(GaugeState* state) {
+      |                                     ^
+../Core/Src/buttons.c:123:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  123 | void init_buttons(lv_indev_t* indev) {
+      |                                      ^
+In file included from ../Core/Inc/buttons.h:11,
+                 from ../Core/Src/buttons.c:10:
+../Core/Inc/gauge.h:41:6: error: old-style parameter declarations in prototyped function definition
+   41 | void adjust_scale_labels(const GaugeParam* param, lv_obj_t** scaleLabels)
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Src/buttons.c:129: error: expected '{' at end of input
+make: *** [Core/Src/subdir.mk:58: Core/Src/buttons.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:05:28 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/gauge.c:7:
+../Core/Inc/gauge.h:41:51: error: unknown type name 'lv_obj_t'
+   41 | void adjust_scale_labels(const GaugeParam* param, lv_obj_t** scaleLabels);
+      |                                                   ^~~~~~~~
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+make: *** [Core/Src/subdir.mk:58: Core/Src/gauge.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:06:28 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 809748	    564	 134372	 944684	  e6a2c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+11:09:12 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ui/screens.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/screens.d" -MT"Core/Src/ui/screens.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/screens.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 809748	    564	 134372	 944684	  e6a2c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+11:13:35 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 809804	    564	 134372	 944740	  e6a64	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+11:15:30 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 809788	    564	 134372	 944724	  e6a54	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+11:19:05 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'menu_event_handler':
+../Core/Src/buttons.c:62:15: warning: unused variable 'group' [-Wunused-variable]
+   62 |   lv_group_t* group = lv_indev_get_group(indev);
+      |               ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 809796	    564	 134372	 944732	  e6a5c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 

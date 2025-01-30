@@ -175,7 +175,7 @@ void create_screen_gauge_main_ui() {
             lv_obj_t *obj = lv_label_create(parent_obj);
             objects.obj10 = obj;
             lv_obj_set_pos(obj, 299, 115);
-            lv_obj_set_size(obj, 72, 30);
+            lv_obj_set_size(obj, 80, 30);
             lv_label_set_text(obj, "2800");
             lv_obj_set_style_text_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_28, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -660,7 +660,7 @@ void create_screen_measure() {
                     lv_obj_t *obj = lv_label_create(parent_obj);
                     lv_obj_set_pos(obj, 0, 0);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
-                    lv_label_set_text(obj, "THROTTLE POS");
+                    lv_label_set_text(obj, "BOOST");
                     lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                 }
             }

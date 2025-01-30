@@ -24,6 +24,9 @@ void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
 	} else if (screen == objects.measure) {
 		lv_indev_set_group(indev, measGroup);
 	}
+	lv_group_t* group = lv_indev_get_group(indev);
+	lv_group_focus_next(group);
+	lv_group_focus_prev(group);
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t pin) {
@@ -55,8 +58,9 @@ void menu_event_handler(lv_event_t* e) {
 	lv_event_code_t code = lv_event_get_code(e);
 
 	if (code == LV_EVENT_PRESSED || code == LV_EVENT_LONG_PRESSED) {
-		lv_screen_load(lv_event_get_user_data(e));
-		lv_indev_set_group(lv_indev_active(), measGroup);
+		lv_indev_t* indev = lv_indev_active();
+		lv_group_t* group = lv_indev_get_group(indev);
+		load_screen_and_group(lv_event_get_user_data(e), indev);
 	}
 }
 
@@ -77,13 +81,13 @@ void meas_event_handler(lv_event_t* e) {
 		} else if (chosen == objects.obj46) {
 			gauge_load_param(state, &PARAM_COOLANT_TEMP);
 		} else if (chosen == objects.obj47) {
-			gauge_load_param(state, &PARAM_THROTTLE_POS);
+			gauge_load_param(state, &PARAM_BOOST);
 		} else if (chosen == objects.obj48) {
 			gauge_load_param(state, &PARAM_INTAKE_TEMP);
 		} else if (chosen == objects.obj49) {
 			gauge_load_param(state, &PARAM_MAF_FLOW_RATE);
 		} else if (chosen == objects.obj50) {
-			gauge_load_param(state, &PARAM_FUEL_PRESSURE);
+			gauge_load_param(state, &PARAM_FUEL_RAIL_PRESSURE);
 		}
 
 	}

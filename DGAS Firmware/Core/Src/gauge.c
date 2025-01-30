@@ -18,10 +18,10 @@ const GaugeParam PARAM_RPM = {.min = 0, .max = 4200, .units = "RPM", .name = "#F
 const GaugeParam PARAM_SPEED = {.min = 0, .max = 140, .units = "km/h", .name = "#00FFFF VEHICLE SPEED#", .color = 0xff00ffff, .measure = obd2_get_vehicle_speed};
 const GaugeParam PARAM_LOAD = {.min = 0, .max = 100, .units = "%", .name = "#04FF40 ENGINE LOAD#", .color = 0xff04ff40, .measure = obd2_get_engine_load};
 const GaugeParam PARAM_COOLANT_TEMP = {.min = 0, .max = 100, .units = "\u00B0 C", .name = "#2196f3 COOLANT TEMP#", .color = 0xff2196f3, .measure = obd2_get_coolant_temp};
-const GaugeParam PARAM_THROTTLE_POS = {.min = 0, .max = 100, .units = "%", .name = "#f600b0 THROTTLE POS#", .color = 0xfff600b0, .measure = obd2_get_throttle_pos};
+const GaugeParam PARAM_BOOST = {.min = 0, .max = 255, .units = "kPa", .name = "#f600b0 BOOST#", .color = 0xfff600b0, .measure = obd2_get_boost};
 const GaugeParam PARAM_INTAKE_TEMP = {.min = 0, .max = 100, .units = "\u00B0 C", .name = "#f6f200 INTAKE TEMP#", .color = 0xfff6f200, .measure = obd2_get_intake_temp};
 const GaugeParam PARAM_MAF_FLOW_RATE = {.min = 0, .max = 400, .units = "gram/s", .name = "#6021f3 MAF FLOW RATE#", .color = 0xff6021f3, .measure = obd2_get_maf_flow_rate};
-const GaugeParam PARAM_FUEL_PRESSURE = {.min = 0, .max = 500, .units = "kPa", .name = "#f3a521 FUEL PRESSURE#", .color = 0xfff3a521, .measure = obd2_get_fuel_pressure};
+const GaugeParam PARAM_FUEL_RAIL_PRESSURE = {.min = 0, .max = 5177, .units = "kPa", .name = "#f3a521 FUEL PRESSURE#", .color = 0xfff3a521, .measure = obd2_get_fuel_rail_pressure};
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 	if (hadc == &hadc1) {
@@ -29,7 +29,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 	}
 }
 
-void adjust_scale_labels(GaugeParam* param, lv_obj_t** scaleLabels) {
+void adjust_scale_labels(const GaugeParam* param, lv_obj_t** scaleLabels) {
 	uint16_t step = (param->max - param->min) / (GAUGE_TICK_COUNT - 1);
 
 	for (int i = 0; i < 7; i++) {
