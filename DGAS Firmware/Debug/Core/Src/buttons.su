@@ -4,5 +4,5 @@
 ../Core/Src/buttons.c:62:6:menu_event_handler	16	static
 ../Core/Src/buttons.c:36:6:HAL_GPIO_EXTI_Callback	8	static
 ../Core/Src/buttons.c:112:6:init_groups	16	static
-../Core/Src/buttons.c:131:6:init_events	16	static
-../Core/Src/buttons.c:147:6:init_buttons	8	static
+../Core/Src/buttons.c:132:6:init_events	16	static
+../Core/Src/buttons.c:151:6:init_buttons	8	static

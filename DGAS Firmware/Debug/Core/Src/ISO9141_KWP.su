@@ -3,5 +3,5 @@
 ../Core/Src/ISO9141_KWP.c:78:19:iso9141_kwp_listen	16	static
 ../Core/Src/ISO9141_KWP.c:112:19:iso9141_get_pid	48	static
 ../Core/Src/ISO9141_KWP.c:144:19:kwp_get_pid	48	dynamic
-../Core/Src/ISO9141_KWP.c:177:9:iso9141_kwp_checksum	0	static
-../Core/Src/ISO9141_KWP.c:188:19:iso9141_kwp_send_data	32	static
+../Core/Src/ISO9141_KWP.c:180:9:iso9141_kwp_checksum	0	static
+../Core/Src/ISO9141_KWP.c:189:19:iso9141_kwp_send_data	32	static

@@ -451,12 +451,12 @@ void create_screen_obd2_debug() {
             objects.obj32 = obj;
             lv_obj_set_pos(obj, 54, 123);
             lv_obj_set_size(obj, 372, 274);
-            lv_textarea_set_max_length(obj, 5000);
-            lv_textarea_set_text(obj, "\uf00c");
+            lv_textarea_set_max_length(obj, 600);
             lv_textarea_set_one_line(obj, false);
             lv_textarea_set_password_mode(obj, false);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_color(obj, lv_color_hex(0xffffffff), LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_opa(obj, 0, LV_PART_CURSOR);
             lv_obj_set_style_border_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_16, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_letter_space(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);

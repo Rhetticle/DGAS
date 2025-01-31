@@ -1,2 +1,6 @@
-../Core/Src/OBD_Debug.c:14:6:debug_send_data	296	static
-../Core/Src/OBD_Debug.c:32:6:send_debug_header	264	static
+../Core/Src/OBD_Debug.c:16:6:debug_send_data.part.0	296	static
+../Core/Src/OBD_Debug.c:37:6:debug_send_header.part.0	280	static
+../Core/Src/OBD_Debug.c:16:6:debug_send_data	16	static
+../Core/Src/OBD_Debug.c:37:6:debug_send_header	16	static
+../Core/Src/OBD_Debug.c:64:6:debug_send_message	24	static
+../Core/Src/OBD_Debug.c:69:6:debug_send_error	16	static

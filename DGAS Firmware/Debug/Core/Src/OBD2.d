@@ -40,8 +40,9 @@ Core/Src/OBD2.o: ../Core/Src/OBD2.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- ../Core/Inc/OBD2.h ../Core/Src/lvgl/lvgl.h ../Core/Src/lvgl/lv_version.h \
- ../Core/Src/lvgl/src/lv_init.h ../Core/Src/lvgl/src/lv_conf_internal.h \
+ ../Core/Inc/OBD2.h ../Core/Inc/OBD_Debug.h ../Core/Src/lvgl/lvgl.h \
+ ../Core/Src/lvgl/lv_version.h ../Core/Src/lvgl/src/lv_init.h \
+ ../Core/Src/lvgl/src/lv_conf_internal.h \
  ../Core/Src/lvgl/src/lv_conf_kconfig.h ../Core/Src/lvgl/lv_conf.h \
  ../Core/Src/lvgl/src/misc/lv_types.h \
  ../Core/Src/lvgl/src/misc/../lv_conf_internal.h \
@@ -486,6 +487,7 @@ Core/Src/OBD2.o: ../Core/Src/OBD2.c \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 ../Core/Inc/OBD2.h:
+../Core/Inc/OBD_Debug.h:
 ../Core/Src/lvgl/lvgl.h:
 ../Core/Src/lvgl/lv_version.h:
 ../Core/Src/lvgl/src/lv_init.h:

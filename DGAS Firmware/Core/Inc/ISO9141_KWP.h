@@ -59,7 +59,7 @@ typedef struct {
 HAL_StatusTypeDef iso9141_kwp_init(void);
 HAL_StatusTypeDef iso9141_kwp_get_init_response(InitResponse* response);
 HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words);
-HAL_StatusTypeDef iso9141_get_pid(uint8_t mode, uint8_t pid, uint8_t* response);
+HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response);
 HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response);
 uint8_t iso9141_kwp_checksum(uint8_t* data, uint32_t size);
 HAL_StatusTypeDef iso9141_kwp_send_data(uint8_t* data, uint32_t size);

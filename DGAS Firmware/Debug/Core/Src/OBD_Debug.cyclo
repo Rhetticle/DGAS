@@ -1,2 +1,6 @@
-OBD_Debug.c:14:6:debug_send_data	5
-OBD_Debug.c:32:6:send_debug_header	2
+OBD_Debug.c:16:6:debug_send_data.part.0	5
+OBD_Debug.c:37:6:debug_send_header.part.0	4
+OBD_Debug.c:16:6:debug_send_data	2
+OBD_Debug.c:37:6:debug_send_header	2
+OBD_Debug.c:64:6:debug_send_message	3
+OBD_Debug.c:69:6:debug_send_error	5

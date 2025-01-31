@@ -23,6 +23,8 @@ typedef struct {
 	HAL_StatusTypeDef (*get_pid)(uint8_t, uint8_t*);
 }OBDBus;
 
+#define CONV_KPA_TO_PSI(x) (x * 0.145)
+
 #define DBG_MSG_MAX_SIZE 256
 
 #define OBD2_DATA_MAX 4 // maximum of four bytes sent in OBD2 response

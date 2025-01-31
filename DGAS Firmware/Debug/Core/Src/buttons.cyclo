@@ -4,5 +4,5 @@ buttons.c:44:6:enc_read	5
 buttons.c:62:6:menu_event_handler	8
 buttons.c:36:6:HAL_GPIO_EXTI_Callback	3
 buttons.c:112:6:init_groups	1
-buttons.c:131:6:init_events	1
-buttons.c:147:6:init_buttons	1
+buttons.c:132:6:init_events	1
+buttons.c:151:6:init_buttons	1

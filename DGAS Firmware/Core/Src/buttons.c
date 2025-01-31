@@ -12,12 +12,9 @@
 #include <stm32f7xx.h>
 
 static volatile uint16_t navPressed = 0;
+static volatile uint32_t lastNavPress;
 static lv_group_t* menuGroup;
 static lv_group_t* measGroup;
-static lv_group_t* debugGroup;
-static lv_group_t* aboutGroup;
-static lv_group_t* settingsGroup;
-static volatile uint32_t lastNavPress;
 
 void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
 	lv_screen_load(screen);
@@ -129,9 +126,11 @@ void init_groups(void) {
 	lv_group_add_obj(measGroup, objects.obj48);
 	lv_group_add_obj(measGroup, objects.obj49);
 	lv_group_add_obj(measGroup, objects.obj50);
+
 }
 
 void init_events(GaugeState* state) {
+	// measure screen
 	lv_obj_add_event_cb(objects.obj42, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj44, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj45, meas_event_handler, LV_EVENT_ALL, state);
@@ -140,6 +139,8 @@ void init_events(GaugeState* state) {
 	lv_obj_add_event_cb(objects.obj48, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj49, meas_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.obj50, meas_event_handler, LV_EVENT_ALL, state);
+
+	//menu
 	lv_obj_add_event_cb(objects.obj16, menu_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(objects.obj18, menu_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(objects.obj20, menu_event_handler, LV_EVENT_ALL, NULL);

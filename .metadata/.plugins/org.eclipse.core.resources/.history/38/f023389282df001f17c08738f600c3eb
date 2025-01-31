@@ -1,0 +1,18 @@
+/*
+ * debug.h
+ *
+ *  Created on: Jan 21, 2025
+ *      Author: rhett
+ */
+
+#ifndef INC_OBD_DEBUG_H_
+#define INC_OBD_DEBUG_H_
+
+
+
+#define DBG_MSG_MAX_SIZE 256
+
+void debug_send_data(uint8_t* data, uint32_t size);
+void debug_send_header(bool receiving);
+
+#endif /* INC_OBD_DEBUG_H_ */

@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include "OBD2.h"
+#include "OBD_Debug.h"
 #include "lvgl.h"
 #include "ui.h"
 
@@ -106,14 +107,14 @@ HAL_StatusTypeDef obd2_get_boost(OBDBus* bus, uint16_t* boost) {
 	if (obd2_get_pid(bus, OBD2_PID_MANIFOLD_PRESSURE, response) != HAL_OK) {
 		return HAL_ERROR;
 	}
-	*boost = response[0];
+	*boost = CONV_KPA_TO_PSI(response[0]);
 	return HAL_OK;
 }
 
 HAL_StatusTypeDef obd2_get_fuel_rail_pressure(OBDBus* bus, uint16_t* pressure) {
 	uint8_t response[OBD2_DATA_MAX] = {0};
 
-	if (obd2_get_pid(bus, OBD2_PID_FUEL_PRESSURE, response) != HAL_OK) {
+	if (obd2_get_pid(bus, OBD2_PID_FUEL_RAIL_PRESSURE, response) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	*pressure = 0.079 * (256 * response[0] + response[1]);

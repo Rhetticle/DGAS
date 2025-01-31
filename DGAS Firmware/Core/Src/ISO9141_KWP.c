@@ -109,8 +109,8 @@ HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words) {
 	return HAL_OK;
 }
 
-HAL_StatusTypeDef iso9141_get_pid(uint8_t mode, uint8_t pid, uint8_t* response) {
-	uint8_t message [ISO9141_OBD_REQ_SIZE] = {ISO9141_HEADER_1, ISO9141_HEADER_2, ISO9141_HEADER_3, mode, pid};
+HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response) {
+	uint8_t message [ISO9141_OBD_REQ_SIZE] = {ISO9141_HEADER_1, ISO9141_HEADER_2, ISO9141_HEADER_3, OBD2_LIVE_MODE, pid};
 	HAL_StatusTypeDef status = HAL_OK;
 	uint8_t recTemp [ISO9141_OBD_MAX_REC_SIZE];
 	uint8_t bytesRec = 0;
@@ -147,6 +147,7 @@ HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
 	// add checksum to end of message array
 	message[KWP_OBD_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
 
+	debug_send_message(message, KWP_OBD_REQ_SIZE, false);
 	if (iso9141_kwp_send_data(message, sizeof(message)) != HAL_OK) {
 		return HAL_ERROR;
 	}
@@ -160,6 +161,7 @@ HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
 	// we will read the format bytes which can be used to determine the remaining bytes that the ECU is about to
 	// send
 	if (HAL_UART_Receive(&huart4, &formatByte, sizeof(uint8_t), GENERAL_DELAY) != HAL_OK) {
+		debug_send_error(true, ERROR_KWP_FORMAT);
 		return HAL_ERROR;
 	}
 	uint8_t dataSize = formatByte & KWP_DATA_SIZE_MASK;
@@ -171,6 +173,7 @@ HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
 	for (int i = 0; i < dataSize - 2; i++) { // -2 because two of the data bytes will be the mode and PID echoed back
 		response[i] = remain[i + 4];
 	}
+	debug_send_message(remain, dataSize, true);
 	return HAL_OK;
 }
 
@@ -182,8 +185,6 @@ uint8_t iso9141_kwp_checksum(uint8_t* data, uint32_t size) {
 	}
 	return sum;
 }
-
-
 
 HAL_StatusTypeDef iso9141_kwp_send_data(uint8_t* data, uint32_t size) {
 
@@ -201,27 +202,3 @@ HAL_StatusTypeDef iso9141_kwp_send_data(uint8_t* data, uint32_t size) {
 	return HAL_OK;
 }
 
-/*
-HAL_StatusTypeDef obd2_get_parameter(uint8_t parameter, uint32_t* a, uint32_t* b) {
-	uint8_t message [5] = {ISO9141_HEADER_1, ISO9141_HEADER_2, ISO9141_HEADER_3, 0x01, parameter};
-	uint8_t othermess[] = {0xC2, 0x33, 0xF1, 0x01, parameter};
-	uint8_t format;
-
-	if (iso9141_send(othermess, sizeof(othermess)) != HAL_OK) {
-		return HAL_ERROR;
-	}
-	if (HAL_UART_Receive(&huart4, &format, sizeof(uint8_t), 100) != HAL_OK) {
-		return HAL_ERROR;
-	}
-	uint8_t data_len = format & 0b111111;
-	uint8_t remain = data_len + 2 + 1;
-	uint8_t response[remain];
-
-	if (HAL_UART_Receive(&huart4, response, sizeof(response), 1000) != HAL_OK) {
-		return HAL_ERROR;
-	}
-	*a = response[remain - 3];
-	*b = response[remain - 2];
-	return HAL_OK;
-}
-*/
