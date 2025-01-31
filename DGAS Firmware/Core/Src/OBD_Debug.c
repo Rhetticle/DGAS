@@ -39,7 +39,7 @@ void debug_send_header(bool receiving, bool error) {
 		return;
 	}
 	lv_obj_t* label = lv_textarea_get_label(objects.obj32);
-	if (strlen(lv_label_get_text(label)) > 600) {
+	if (strlen(lv_label_get_text(label)) > DBG_WINDOW_MAX_TEXT) {
 		lv_label_cut_text(label, 0, 70);
 		lv_textarea_set_text(objects.obj32, lv_label_get_text(label));
 	}

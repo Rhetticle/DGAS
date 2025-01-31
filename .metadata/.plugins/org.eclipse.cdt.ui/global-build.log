@@ -207,3 +207,415 @@ Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
+15:34:45 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ISO9141_KWP.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ISO9141_KWP.d" -MT"Core/Src/ISO9141_KWP.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ISO9141_KWP.o"
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
+arm-none-eabi-gcc "../Core/Src/OBD_Debug.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD_Debug.d" -MT"Core/Src/OBD_Debug.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD_Debug.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+../Core/Src/ISO9141_KWP.c: In function 'kwp_get_pid':
+../Core/Src/ISO9141_KWP.c:164:3: warning: implicit declaration of function 'debug_send_error'; did you mean 'debug_send_header'? [-Wimplicit-function-declaration]
+  164 |   debug_send_error(true, ERROR_KWP_FORMAT);
+      |   ^~~~~~~~~~~~~~~~
+      |   debug_send_header
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810828	    564	 134372	 945764	  e6e64	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+15:40:12 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ISO9141_KWP.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ISO9141_KWP.d" -MT"Core/Src/ISO9141_KWP.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ISO9141_KWP.o"
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
+arm-none-eabi-gcc "../Core/Src/OBD_Debug.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD_Debug.d" -MT"Core/Src/OBD_Debug.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD_Debug.o"
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/ISO9141_KWP.c: In function 'kwp_get_pid':
+../Core/Src/ISO9141_KWP.c:164:3: warning: implicit declaration of function 'debug_send_error'; did you mean 'debug_send_header'? [-Wimplicit-function-declaration]
+  164 |   debug_send_error(true, ERROR_KWP_FORMAT);
+      |   ^~~~~~~~~~~~~~~~
+      |   debug_send_header
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810836	    564	 134372	 945772	  e6e6c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+15:42:43 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810836	    564	 134372	 945772	  e6e6c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+15:45:33 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+15:48:18 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ui/screens.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/screens.d" -MT"Core/Src/ui/screens.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/screens.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+15:52:39 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ui/screens.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/screens.d" -MT"Core/Src/ui/screens.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/screens.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+15:59:51 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ISO9141_KWP.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ISO9141_KWP.d" -MT"Core/Src/ISO9141_KWP.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ISO9141_KWP.o"
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
+arm-none-eabi-gcc "../Core/Src/OBD_Debug.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD_Debug.d" -MT"Core/Src/OBD_Debug.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD_Debug.o"
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/ISO9141_KWP.c:9:
+../Core/Inc/OBD2.h:45: warning: "OBD2_PID_FUEL_PRESSURE" redefined
+   45 | #define OBD2_PID_FUEL_PRESSURE 0x23
+      | 
+../Core/Inc/OBD2.h:42: note: this is the location of the previous definition
+   42 | #define OBD2_PID_FUEL_PRESSURE 0x0A
+      | 
+In file included from ../Core/Inc/gauge.h:13,
+                 from ../Core/Src/gauge.c:7:
+../Core/Inc/OBD2.h:45: warning: "OBD2_PID_FUEL_PRESSURE" redefined
+   45 | #define OBD2_PID_FUEL_PRESSURE 0x23
+      | 
+../Core/Inc/OBD2.h:42: note: this is the location of the previous definition
+   42 | #define OBD2_PID_FUEL_PRESSURE 0x0A
+      | 
+In file included from ../Core/Src/OBD2.c:12:
+../Core/Inc/OBD2.h:45: warning: "OBD2_PID_FUEL_PRESSURE" redefined
+   45 | #define OBD2_PID_FUEL_PRESSURE 0x23
+      | 
+../Core/Inc/OBD2.h:42: note: this is the location of the previous definition
+   42 | #define OBD2_PID_FUEL_PRESSURE 0x0A
+      | 
+In file included from ../Core/Src/OBD_Debug.c:12:
+../Core/Inc/OBD2.h:45: warning: "OBD2_PID_FUEL_PRESSURE" redefined
+   45 | #define OBD2_PID_FUEL_PRESSURE 0x23
+      | 
+../Core/Inc/OBD2.h:42: note: this is the location of the previous definition
+   42 | #define OBD2_PID_FUEL_PRESSURE 0x0A
+      | 
+../Core/Src/ISO9141_KWP.c: In function 'kwp_get_pid':
+../Core/Src/ISO9141_KWP.c:164:3: warning: implicit declaration of function 'debug_send_error'; did you mean 'debug_send_header'? [-Wimplicit-function-declaration]
+  164 |   debug_send_error(true, ERROR_KWP_FORMAT);
+      |   ^~~~~~~~~~~~~~~~
+      |   debug_send_header
+In file included from ../Core/Inc/gauge.h:13,
+                 from ../Core/Inc/buttons.h:11,
+                 from ../Core/Src/buttons.c:10:
+../Core/Inc/OBD2.h:45: warning: "OBD2_PID_FUEL_PRESSURE" redefined
+   45 | #define OBD2_PID_FUEL_PRESSURE 0x23
+      | 
+../Core/Inc/OBD2.h:42: note: this is the location of the previous definition
+   42 | #define OBD2_PID_FUEL_PRESSURE 0x0A
+      | 
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+In file included from ../Core/Src/main.c:32:
+../Core/Inc/OBD2.h:45: warning: "OBD2_PID_FUEL_PRESSURE" redefined
+   45 | #define OBD2_PID_FUEL_PRESSURE 0x23
+      | 
+../Core/Inc/OBD2.h:42: note: this is the location of the previous definition
+   42 | #define OBD2_PID_FUEL_PRESSURE 0x0A
+      | 
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+18:40:41 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ISO9141_KWP.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ISO9141_KWP.d" -MT"Core/Src/ISO9141_KWP.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ISO9141_KWP.o"
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
+arm-none-eabi-gcc "../Core/Src/OBD_Debug.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD_Debug.d" -MT"Core/Src/OBD_Debug.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD_Debug.o"
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+18:44:43 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+18:45:59 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+18:50:38 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 810852	    564	 134372	 945788	  e6e7c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+20:32:38 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/OBD2.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/OBD2.d" -MT"Core/Src/OBD2.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/OBD2.o"
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 810892	    564	 134372	 945828	  e6ea4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+20:38:58 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'load_screen_and_group':
+../Core/Src/buttons.c:30:30: error: 'objects_t' {aka 'struct _objects_t'} has no member named 'debug'
+   30 |  } else if (screen == objects.debug) {
+      |                              ^
+../Core/Src/buttons.c: At top level:
+../Core/Src/buttons.c:115:37: error: parameter 1 ('e') has incomplete type
+  115 | void debug_event_handler(lv_event_t e) {
+      |                          ~~~~~~~~~~~^
+make: *** [Core/Src/subdir.mk:58: Core/Src/buttons.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:39:57 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 811028	    564	 134372	 945964	  e6f2c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+21:03:03 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 811028	    564	 134372	 945964	  e6f2c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+21:28:40 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/gauge.c: In function 'adjust_scale_labels':
+../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   37 |   sprintf(label, "%d", param->min + i * step);
+      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
+      |                    |              |
+      |                    int            long unsigned int
+      |                   %ld
+../Core/Src/gauge.c: In function 'gauge_update':
+../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   62 |  sprintf(val, "%d", measured);
+      |                ~^   ~~~~~~~~
+      |                 |   |
+      |                 int uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:109:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  109 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 811036	    564	 134372	 945972	  e6f34	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 

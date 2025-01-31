@@ -39,9 +39,9 @@ typedef struct {
 #define OBD2_PID_THROTTLE_POS 0x11
 #define OBD2_PID_INTAKE_TEMP 0x0F
 #define OBD2_PID_MAF_FLOW_RATE 0x10
-#define OBD2_PID_FUEL_PRESSURE 0x0A
 #define OBD2_PID_MANIFOLD_PRESSURE 0x0B
-#define OBD2_PID_FUEL_RAIL_PRESSURE 0x22
+#define OBD2_PID_FUEL_PRESSURE_MANIFOLD_RELATIVE 0x22
+#define OBD2_PID_FUEL_PRESSURE 0x23
 
 HAL_StatusTypeDef obd2_get_rpm(OBDBus* bus, uint16_t* rpm);
 HAL_StatusTypeDef obd2_get_engine_load(OBDBus* bus, uint16_t* load);
@@ -50,8 +50,8 @@ HAL_StatusTypeDef obd2_get_coolant_temp(OBDBus* bus, uint16_t* temp);
 HAL_StatusTypeDef obd2_get_throttle_pos(OBDBus* bus, uint16_t* pos);
 HAL_StatusTypeDef obd2_get_intake_temp(OBDBus* bus, uint16_t* temp);
 HAL_StatusTypeDef obd2_get_maf_flow_rate(OBDBus* bus, uint16_t* flowRate);
-HAL_StatusTypeDef obd2_get_fuel_pressure(OBDBus* bus, uint16_t* pressure);
 HAL_StatusTypeDef obd2_get_boost(OBDBus* bus, uint16_t* boost);
-HAL_StatusTypeDef obd2_get_fuel_rail_pressure(OBDBus* bus, uint16_t* pressure);
+HAL_StatusTypeDef obd2_get_fuel_pressure(OBDBus* bus, uint16_t* pressure);
+HAL_StatusTypeDef obd2_get_fuel_pressure_manifold_relative(OBDBus* bus, uint16_t* pressure);
 HAL_StatusTypeDef obd2_dummy_request(OBDBus* bus);
 #endif /* INC_OBD2_H_ */

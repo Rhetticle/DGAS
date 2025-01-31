@@ -91,16 +91,6 @@ HAL_StatusTypeDef obd2_get_maf_flow_rate(OBDBus* bus, uint16_t* flowRate) {
 	return HAL_OK;
 }
 
-HAL_StatusTypeDef obd2_get_fuel_pressure(OBDBus* bus, uint16_t* pressure) {
-	uint8_t response[OBD2_DATA_MAX] = {0};
-
-	if (obd2_get_pid(bus, OBD2_PID_FUEL_PRESSURE, response) != HAL_OK) {
-		return HAL_ERROR;
-	}
-	*pressure = 3 * response[0];
-	return HAL_OK;
-}
-
 HAL_StatusTypeDef obd2_get_boost(OBDBus* bus, uint16_t* boost) {
 	uint8_t response[OBD2_DATA_MAX] = {0};
 
@@ -111,13 +101,23 @@ HAL_StatusTypeDef obd2_get_boost(OBDBus* bus, uint16_t* boost) {
 	return HAL_OK;
 }
 
-HAL_StatusTypeDef obd2_get_fuel_rail_pressure(OBDBus* bus, uint16_t* pressure) {
+HAL_StatusTypeDef obd2_get_fuel_pressure(OBDBus* bus, uint16_t* pressure) {
 	uint8_t response[OBD2_DATA_MAX] = {0};
 
-	if (obd2_get_pid(bus, OBD2_PID_FUEL_RAIL_PRESSURE, response) != HAL_OK) {
+	if (obd2_get_pid(bus, OBD2_PID_FUEL_PRESSURE, response) != HAL_OK) {
 		return HAL_ERROR;
 	}
-	*pressure = 0.079 * (256 * response[0] + response[1]);
+	*pressure = CONV_KPA_TO_PSI(10 * (256 * response[0] + response[1])) / 1000;
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef obd2_get_fuel_pressure_manifold_relative(OBDBus* bus, uint16_t* pressure) {
+	uint8_t response[OBD2_DATA_MAX] = {0};
+
+	if (obd2_get_pid(bus, OBD2_PID_FUEL_PRESSURE_MANIFOLD_RELATIVE, response) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	*pressure = CONV_KPA_TO_PSI(0.079 * (256 * response[0] + response[1]));
 	return HAL_OK;
 }
 

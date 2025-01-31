@@ -260,7 +260,7 @@ int main(void)
   uint16_t measure = 0;
   HAL_ADC_Start_IT(&hadc1);
 
-  lv_indev_t * indev = lv_indev_create();
+  lv_indev_t* indev = lv_indev_create();
   init_buttons(indev);
   init_events(&state);
   /* USER CODE END 2 */

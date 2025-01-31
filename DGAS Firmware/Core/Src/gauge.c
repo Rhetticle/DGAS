@@ -17,11 +17,11 @@ static volatile uint32_t adcRaw;
 const GaugeParam PARAM_RPM = {.min = 0, .max = 4200, .units = "RPM", .name = "#FF0000 ENGINE SPEED#", .color = 0xffff0000, .measure = obd2_get_rpm};
 const GaugeParam PARAM_SPEED = {.min = 0, .max = 140, .units = "km/h", .name = "#00FFFF VEHICLE SPEED#", .color = 0xff00ffff, .measure = obd2_get_vehicle_speed};
 const GaugeParam PARAM_LOAD = {.min = 0, .max = 100, .units = "%", .name = "#04FF40 ENGINE LOAD#", .color = 0xff04ff40, .measure = obd2_get_engine_load};
-const GaugeParam PARAM_COOLANT_TEMP = {.min = 0, .max = 100, .units = "\u00B0 C", .name = "#2196f3 COOLANT TEMP#", .color = 0xff2196f3, .measure = obd2_get_coolant_temp};
-const GaugeParam PARAM_BOOST = {.min = 0, .max = 255, .units = "PSI", .name = "#f600b0 BOOST#", .color = 0xfff600b0, .measure = obd2_get_boost};
-const GaugeParam PARAM_INTAKE_TEMP = {.min = 0, .max = 100, .units = "\u00B0 C", .name = "#f6f200 INTAKE TEMP#", .color = 0xfff6f200, .measure = obd2_get_intake_temp};
-const GaugeParam PARAM_MAF_FLOW_RATE = {.min = 0, .max = 400, .units = "gram/s", .name = "#6021f3 MAF FLOW RATE#", .color = 0xff6021f3, .measure = obd2_get_maf_flow_rate};
-const GaugeParam PARAM_FUEL_RAIL_PRESSURE = {.min = 0, .max = 5177, .units = "kPa", .name = "#f3a521 FUEL PRESSURE#", .color = 0xfff3a521, .measure = obd2_get_fuel_rail_pressure};
+const GaugeParam PARAM_COOLANT_TEMP = {.min = 0, .max = 120, .units = "\u00B0 C", .name = "#2196f3 COOLANT TEMP#", .color = 0xff2196f3, .measure = obd2_get_coolant_temp};
+const GaugeParam PARAM_BOOST = {.min = 0, .max = 60, .units = "PSI", .name = "#f600b0 BOOST#", .color = 0xfff600b0, .measure = obd2_get_boost};
+const GaugeParam PARAM_INTAKE_TEMP = {.min = 0, .max = 60, .units = "\u00B0 C", .name = "#f6f200 INTAKE TEMP#", .color = 0xfff6f200, .measure = obd2_get_intake_temp};
+const GaugeParam PARAM_MAF_FLOW_RATE = {.min = 0, .max = 120, .units = "gram/s", .name = "#6021f3 MAF FLOW RATE#", .color = 0xff6021f3, .measure = obd2_get_maf_flow_rate};
+const GaugeParam PARAM_FUEL_RAIL_PRESSURE = {.min = 0, .max = 60, .units = "kPSI", .name = "#f3a521 FUEL PRESSURE#", .color = 0xfff3a521, .measure = obd2_get_fuel_pressure};
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
 	if (hadc == &hadc1) {

@@ -6,7 +6,7 @@
 ../Core/Src/OBD2.c:64:19:obd2_get_throttle_pos	24	static
 ../Core/Src/OBD2.c:74:19:obd2_get_intake_temp	16	static
 ../Core/Src/OBD2.c:84:19:obd2_get_maf_flow_rate	16	static
-../Core/Src/OBD2.c:94:19:obd2_get_fuel_pressure	16	static
-../Core/Src/OBD2.c:104:19:obd2_get_boost	24	static
-../Core/Src/OBD2.c:114:19:obd2_get_fuel_rail_pressure	24	static
+../Core/Src/OBD2.c:94:19:obd2_get_boost	24	static
+../Core/Src/OBD2.c:104:19:obd2_get_fuel_pressure	24	static
+../Core/Src/OBD2.c:114:19:obd2_get_fuel_pressure_manifold_relative	24	static
 ../Core/Src/OBD2.c:124:19:obd2_dummy_request	16	static

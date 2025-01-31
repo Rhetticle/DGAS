@@ -168,12 +168,13 @@ HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
 	uint8_t remain[dataSize + 2 + 1];  // +2 for address bytes echoed back and +1 for checksum
 
 	if (HAL_UART_Receive(&huart4, remain, sizeof(remain), 1000) != HAL_OK) {
+		debug_send_error(true, ERROR_NO_RESPONSE);
 		return HAL_ERROR;
 	}
 	for (int i = 0; i < dataSize - 2; i++) { // -2 because two of the data bytes will be the mode and PID echoed back
 		response[i] = remain[i + 4];
 	}
-	debug_send_message(remain, dataSize, true);
+	debug_send_message(remain, sizeof(remain), true);
 	return HAL_OK;
 }
 

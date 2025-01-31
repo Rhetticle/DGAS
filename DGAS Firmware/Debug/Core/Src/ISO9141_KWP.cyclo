@@ -3,5 +3,5 @@ ISO9141_KWP.c:65:19:iso9141_kwp_get_init_response	3
 ISO9141_KWP.c:78:19:iso9141_kwp_listen	6
 ISO9141_KWP.c:112:19:iso9141_get_pid	8
 ISO9141_KWP.c:144:19:kwp_get_pid	8
-ISO9141_KWP.c:180:9:iso9141_kwp_checksum	3
-ISO9141_KWP.c:189:19:iso9141_kwp_send_data	5
+ISO9141_KWP.c:181:9:iso9141_kwp_checksum	3
+ISO9141_KWP.c:190:19:iso9141_kwp_send_data	5

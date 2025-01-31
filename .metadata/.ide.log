@@ -626,3 +626,11 @@
 2025-01-31 10:46:57,017 [INFO] CADModel:114 - Register for checkConnection events
 2025-01-31 10:46:57,113 [INFO] OpenFileManager:328 - Restore cursor
 2025-01-31 10:46:57,316 [WARN] IP:2113 - LayerIdx_L1 not found: check if there is a RefParameter without a condition.
+2025-01-31 18:50:14,083 [INFO] Activator:176 - 
+
+
+2025-01-31 18:50:14,086 [INFO] Activator:177 - !SESSION log4j initialized
+2025-01-31 18:50:24,085 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-01-31 18:50:49,904 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2025-01-31 18:50:49,905 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2025-01-31 18:50:49,910 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

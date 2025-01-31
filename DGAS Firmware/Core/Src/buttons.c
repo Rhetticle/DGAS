@@ -15,6 +15,7 @@ static volatile uint16_t navPressed = 0;
 static volatile uint32_t lastNavPress;
 static lv_group_t* menuGroup;
 static lv_group_t* measGroup;
+static lv_group_t* debugGroup;
 
 void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
 	lv_screen_load(screen);
@@ -26,6 +27,8 @@ void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
 		lv_indev_set_group(indev, menuGroup);
 	} else if (screen == objects.measure) {
 		lv_indev_set_group(indev, measGroup);
+	} else if (screen == objects.obd2_debug) {
+		lv_indev_set_group(indev, debugGroup);
 	}
 	lv_group_t* group = lv_indev_get_group(indev);
 	// add this to make sure focus is shown on screen switch
@@ -109,6 +112,19 @@ void meas_event_handler(lv_event_t* e) {
 	}
 }
 
+void debug_event_handler(lv_event_t* e) {
+	lv_event_code_t code = lv_event_get_code(e);
+	lv_indev_t* indev = lv_indev_active();
+
+	if (code == LV_EVENT_PRESSED || code == LV_EVENT_LONG_PRESSED) {
+		lv_obj_t* chosen = lv_group_get_focused(debugGroup);
+
+		if (chosen == objects.obj38) {
+			load_screen_and_group(objects.menu, indev);
+		}
+	}
+}
+
 void init_groups(void) {
 	menuGroup = lv_group_create();
 	lv_group_add_obj(menuGroup, objects.obj16);
@@ -127,6 +143,10 @@ void init_groups(void) {
 	lv_group_add_obj(measGroup, objects.obj49);
 	lv_group_add_obj(measGroup, objects.obj50);
 
+	debugGroup = lv_group_create();
+	lv_group_add_obj(debugGroup, objects.obj34);
+	lv_group_add_obj(debugGroup, objects.obj36);
+	lv_group_add_obj(debugGroup, objects.obj38);
 }
 
 void init_events(GaugeState* state) {
@@ -146,6 +166,11 @@ void init_events(GaugeState* state) {
 	lv_obj_add_event_cb(objects.obj20, menu_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(objects.obj22, menu_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(objects.obj24, menu_event_handler, LV_EVENT_ALL, NULL);
+
+	// debug
+	lv_obj_add_event_cb(objects.obj34, debug_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.obj36, debug_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.obj38, debug_event_handler, LV_EVENT_ALL, NULL);
 }
 
 void init_buttons(lv_indev_t* indev) {

@@ -37,7 +37,7 @@ extern const GaugeParam PARAM_RPM, PARAM_SPEED, PARAM_LOAD, PARAM_COOLANT_TEMP, 
 
 #define GAUGE_TICK_COUNT 7 // 7 ticks along scaleo on gauge
 
-#define ADC_TO_VOLTAGE(x) ((float)x /4096) * 15
+#define ADC_TO_VOLTAGE(x) (((float)x /4096) * 15) + 0.5
 
 void adjust_scale_labels(const GaugeParam* param, lv_obj_t** scaleLabels);
 void gauge_load_param(GaugeState* state, const GaugeParam* param);
