@@ -10,7 +10,8 @@ C_SRCS += \
 ../Core/Src/ui/styles.c \
 ../Core/Src/ui/ui.c \
 ../Core/Src/ui/ui_font_sdef.c \
-../Core/Src/ui/ui_font_symbols.c 
+../Core/Src/ui/ui_font_symbols.c \
+../Core/Src/ui/ui_image_qr_code.c 
 
 C_DEPS += \
 ./Core/Src/ui/images.d \
@@ -18,7 +19,8 @@ C_DEPS += \
 ./Core/Src/ui/styles.d \
 ./Core/Src/ui/ui.d \
 ./Core/Src/ui/ui_font_sdef.d \
-./Core/Src/ui/ui_font_symbols.d 
+./Core/Src/ui/ui_font_symbols.d \
+./Core/Src/ui/ui_image_qr_code.d 
 
 OBJS += \
 ./Core/Src/ui/images.o \
@@ -26,7 +28,8 @@ OBJS += \
 ./Core/Src/ui/styles.o \
 ./Core/Src/ui/ui.o \
 ./Core/Src/ui/ui_font_sdef.o \
-./Core/Src/ui/ui_font_symbols.o 
+./Core/Src/ui/ui_font_symbols.o \
+./Core/Src/ui/ui_image_qr_code.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -36,7 +39,7 @@ Core/Src/ui/%.o Core/Src/ui/%.su Core/Src/ui/%.cyclo: ../Core/Src/ui/%.c Core/Sr
 clean: clean-Core-2f-Src-2f-ui
 
 clean-Core-2f-Src-2f-ui:
-	-$(RM) ./Core/Src/ui/images.cyclo ./Core/Src/ui/images.d ./Core/Src/ui/images.o ./Core/Src/ui/images.su ./Core/Src/ui/screens.cyclo ./Core/Src/ui/screens.d ./Core/Src/ui/screens.o ./Core/Src/ui/screens.su ./Core/Src/ui/styles.cyclo ./Core/Src/ui/styles.d ./Core/Src/ui/styles.o ./Core/Src/ui/styles.su ./Core/Src/ui/ui.cyclo ./Core/Src/ui/ui.d ./Core/Src/ui/ui.o ./Core/Src/ui/ui.su ./Core/Src/ui/ui_font_sdef.cyclo ./Core/Src/ui/ui_font_sdef.d ./Core/Src/ui/ui_font_sdef.o ./Core/Src/ui/ui_font_sdef.su ./Core/Src/ui/ui_font_symbols.cyclo ./Core/Src/ui/ui_font_symbols.d ./Core/Src/ui/ui_font_symbols.o ./Core/Src/ui/ui_font_symbols.su
+	-$(RM) ./Core/Src/ui/images.cyclo ./Core/Src/ui/images.d ./Core/Src/ui/images.o ./Core/Src/ui/images.su ./Core/Src/ui/screens.cyclo ./Core/Src/ui/screens.d ./Core/Src/ui/screens.o ./Core/Src/ui/screens.su ./Core/Src/ui/styles.cyclo ./Core/Src/ui/styles.d ./Core/Src/ui/styles.o ./Core/Src/ui/styles.su ./Core/Src/ui/ui.cyclo ./Core/Src/ui/ui.d ./Core/Src/ui/ui.o ./Core/Src/ui/ui.su ./Core/Src/ui/ui_font_sdef.cyclo ./Core/Src/ui/ui_font_sdef.d ./Core/Src/ui/ui_font_sdef.o ./Core/Src/ui/ui_font_sdef.su ./Core/Src/ui/ui_font_symbols.cyclo ./Core/Src/ui/ui_font_symbols.d ./Core/Src/ui/ui_font_symbols.o ./Core/Src/ui/ui_font_symbols.su ./Core/Src/ui/ui_image_qr_code.cyclo ./Core/Src/ui/ui_image_qr_code.d ./Core/Src/ui/ui_image_qr_code.o ./Core/Src/ui/ui_image_qr_code.su
 
 .PHONY: clean-Core-2f-Src-2f-ui
 

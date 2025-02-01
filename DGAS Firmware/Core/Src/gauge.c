@@ -15,7 +15,7 @@ static volatile uint32_t adcRaw;
 
 
 const GaugeParam PARAM_RPM = {.min = 0, .max = 4200, .units = "RPM", .name = "#FF0000 ENGINE SPEED#", .color = 0xffff0000, .measure = obd2_get_rpm};
-const GaugeParam PARAM_SPEED = {.min = 0, .max = 140, .units = "km/h", .name = "#00FFFF VEHICLE SPEED#", .color = 0xff00ffff, .measure = obd2_get_vehicle_speed};
+const GaugeParam PARAM_SPEED = {.min = 0, .max = 120, .units = "km/h", .name = "#00FFFF VEHICLE SPEED#", .color = 0xff00ffff, .measure = obd2_get_vehicle_speed};
 const GaugeParam PARAM_LOAD = {.min = 0, .max = 100, .units = "%", .name = "#04FF40 ENGINE LOAD#", .color = 0xff04ff40, .measure = obd2_get_engine_load};
 const GaugeParam PARAM_COOLANT_TEMP = {.min = 0, .max = 120, .units = "\u00B0 C", .name = "#2196f3 COOLANT TEMP#", .color = 0xff2196f3, .measure = obd2_get_coolant_temp};
 const GaugeParam PARAM_BOOST = {.min = 0, .max = 60, .units = "PSI", .name = "#f600b0 BOOST#", .color = 0xfff600b0, .measure = obd2_get_boost};

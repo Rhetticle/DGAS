@@ -861,6 +861,7 @@
 "./Core/Src/ui/ui.o"
 "./Core/Src/ui/ui_font_sdef.o"
 "./Core/Src/ui/ui_font_symbols.o"
+"./Core/Src/ui/ui_image_qr_code.o"
 "./Core/Startup/startup_stm32f746zgtx.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o"
