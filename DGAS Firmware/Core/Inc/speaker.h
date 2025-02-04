@@ -1,0 +1,22 @@
+/*
+ * speaker.h
+ *
+ *  Created on: Feb 2, 2025
+ *      Author: rhett
+ */
+
+#ifndef INC_SPEAKER_H_
+#define INC_SPEAKER_H_
+
+#define DIG_POT_I2C_ADDR 0b0101111
+#define DAC_I2C_ADDR 0b0111110
+
+#define DIG_POT_TAP_COUNT 128
+#define DIG_POT_WIPER_RESISTANCE 100
+#define DIG_POT_RESISTANCE_MAX 50000 // 50k digital potentionmeter
+
+uint8_t calc_tap_from_resistance(uint16_t resistance);
+void set_pot_resistance(uint16_t resistance);
+void speaker_init(void);
+
+#endif /* INC_SPEAKER_H_ */

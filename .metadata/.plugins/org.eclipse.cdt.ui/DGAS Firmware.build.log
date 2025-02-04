@@ -1,21 +1,6 @@
-11:04:42 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+11:16:36 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/ui/screens.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ui/screens.d" -MT"Core/Src/ui/screens.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ui/screens.o"
-arm-none-eabi-gcc "../Core/Src/gauge.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gauge.d" -MT"Core/Src/gauge.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gauge.o"
-../Core/Src/gauge.c: In function 'adjust_scale_labels':
-../Core/Src/gauge.c:37:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
-   37 |   sprintf(label, "%d", param->min + i * step);
-      |                   ~^   ~~~~~~~~~~~~~~~~~~~~~
-      |                    |              |
-      |                    int            long unsigned int
-      |                   %ld
-../Core/Src/gauge.c: In function 'gauge_update':
-../Core/Src/gauge.c:62:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-   62 |  sprintf(val, "%d", measured);
-      |                ~^   ~~~~~~~~
-      |                 |   |
-      |                 int uint32_t {aka long unsigned int}
-      |                %ld
+arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
 arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: DGAS Firmware.elf
  
@@ -28,5 +13,5 @@ Finished building: default.size.stdout
 Finished building: DGAS Firmware.list
  
 
-11:05:25 Build Finished. 0 errors, 2 warnings. (took 43s.804ms)
+11:17:30 Build Finished. 0 errors, 0 warnings. (took 53s.811ms)
 

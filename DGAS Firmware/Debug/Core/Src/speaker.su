@@ -1,0 +1,4 @@
+../Core/Src/speaker.c:13:9:calc_tap_from_resistance	0	static
+../Core/Src/speaker.c:18:6:set_pot_resistance	24	static
+../Core/Src/speaker.c:23:6:dac_set_voltage	0	static
+../Core/Src/speaker.c:27:6:speaker_init	24	static

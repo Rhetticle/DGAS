@@ -1,0 +1,15 @@
+/*
+ * speaker.c
+ *
+ *  Created on: Feb 2, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include "speaker.h"
+
+
+
+void speaker_init(void) {
+
+}
