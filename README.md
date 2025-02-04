@@ -17,10 +17,12 @@ The DGAS UI allows the user to configure and interact with multiple features of 
 ### Main Gauge UI
 The gauge UI display the current parameter being measured as well as OBD2 status, maximum parameter value reached so far and battery voltage. Each parameter is color coded.
 
-![engine spped](https://github.com/user-attachments/assets/84c1c996-d487-4344-8f31-6e3db4293b99)
-![fuel pressure](https://github.com/user-attachments/assets/9a40f290-b8d7-44fc-ba0f-9639eacd7970)
-![coolant](https://github.com/user-attachments/assets/c2b032ee-7bcb-4c30-869d-11a77f008d2c)
-![Boost](https://github.com/user-attachments/assets/ac6e1ff6-1651-4a64-93a1-6f7c5c58ebfa)
+  <img src="https://github.com/user-attachments/assets/84c1c996-d487-4344-8f31-6e3db4293b99" width=350>
+
+  <img src="https://github.com/user-attachments/assets/9a40f290-b8d7-44fc-ba0f-9639eacd7970" width=350>
+  <img src="https://github.com/user-attachments/assets/c2b032ee-7bcb-4c30-869d-11a77f008d2c" width=350>
+
+  <img src="https://github.com/user-attachments/assets/ac6e1ff6-1651-4a64-93a1-6f7c5c58ebfa" width=350>
 
 ### Menu
 ![menu](https://github.com/user-attachments/assets/574ff377-b4c9-4d3e-a682-dd45c8ef6f99)
