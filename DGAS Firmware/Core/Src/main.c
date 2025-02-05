@@ -34,6 +34,7 @@
 #include "quadspi.h"
 #include "gauge.h"
 #include "buttons.h"
+#include "speaker.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

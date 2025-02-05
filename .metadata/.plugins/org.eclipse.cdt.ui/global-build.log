@@ -1,22 +1,37 @@
-22:05:37 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+21:36:08 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
-arm-none-eabi-gcc "../Core/Src/stm32f7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_it.d" -MT"Core/Src/stm32f7xx_it.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_it.o"
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32f7xx.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f7xx.d" -MT"Core/Src/system_stm32f7xx.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f7xx.o"
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:110:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  110 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
 arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: DGAS Firmware.elf
  
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 855076	    564	 134372	 990012	  f1b3c	DGAS Firmware.elf
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
-11:16:36 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+21:37:40 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+21:39:24 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+21:41:10 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
 arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
@@ -25,7 +40,162 @@ Finished building target: DGAS Firmware.elf
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 855076	    564	 134372	 990012	  f1b3c	DGAS Firmware.elf
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+21:44:26 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:110:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  110 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+21:46:35 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
+../Core/Src/speaker.c: In function 'set_pot_resistance':
+../Core/Src/speaker.c:20:20: warning: unused variable 'status' [-Wunused-variable]
+   20 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DIG_POT_I2C_ADDR << 1, &tap, sizeof(uint8_t), 100);
+      |                    ^~~~~~
+../Core/Src/speaker.c: In function 'dac_set_voltage':
+../Core/Src/speaker.c:30:20: warning: unused variable 'status' [-Wunused-variable]
+   30 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DAC_I2C_ADDR << 1, &dacValue, sizeof(transaction), 100);
+      |                    ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+21:48:45 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+21:52:01 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
+../Core/Src/speaker.c: In function 'set_pot_resistance':
+../Core/Src/speaker.c:20:20: warning: unused variable 'status' [-Wunused-variable]
+   20 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DIG_POT_I2C_ADDR << 1, &tap, sizeof(uint8_t), 100);
+      |                    ^~~~~~
+../Core/Src/speaker.c: In function 'dac_set_voltage':
+../Core/Src/speaker.c:30:20: warning: unused variable 'status' [-Wunused-variable]
+   30 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DAC_I2C_ADDR << 1, &dacValue, sizeof(transaction), 100);
+      |                    ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+22:01:21 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
+../Core/Src/speaker.c: In function 'set_pot_resistance':
+../Core/Src/speaker.c:20:20: warning: unused variable 'status' [-Wunused-variable]
+   20 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DIG_POT_I2C_ADDR << 1, &tap, sizeof(uint8_t), 100);
+      |                    ^~~~~~
+../Core/Src/speaker.c: In function 'dac_set_voltage':
+../Core/Src/speaker.c:30:20: warning: unused variable 'status' [-Wunused-variable]
+   30 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DAC_I2C_ADDR << 1, &dacValue, sizeof(transaction), 100);
+      |                    ^~~~~~
+../Core/Src/main.c: In function 'fmc_init':
+../Core/Src/main.c:110:22: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+  110 |    HAL_StatusTypeDef status;
+      |                      ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+22:06:20 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+22:07:54 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+22:17:33 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
+../Core/Src/speaker.c: In function 'set_pot_resistance':
+../Core/Src/speaker.c:20:20: warning: unused variable 'status' [-Wunused-variable]
+   20 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DIG_POT_I2C_ADDR << 1, &tap, sizeof(uint8_t), 100);
+      |                    ^~~~~~
+../Core/Src/speaker.c: In function 'dac_set_voltage':
+../Core/Src/speaker.c:30:20: warning: unused variable 'status' [-Wunused-variable]
+   30 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DAC_I2C_ADDR << 1, &dacValue, sizeof(transaction), 100);
+      |                    ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 855668	    564	 134372	 990604	  f1d8c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+22:19:43 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/speaker.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/speaker.d" -MT"Core/Src/speaker.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/speaker.o"
+../Core/Src/speaker.c: In function 'set_pot_resistance':
+../Core/Src/speaker.c:20:20: warning: unused variable 'status' [-Wunused-variable]
+   20 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DIG_POT_I2C_ADDR << 1, &tap, sizeof(uint8_t), 100);
+      |                    ^~~~~~
+../Core/Src/speaker.c: In function 'dac_set_voltage':
+../Core/Src/speaker.c:30:20: warning: unused variable 'status' [-Wunused-variable]
+   30 |  HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DAC_I2C_ADDR << 1, transaction, sizeof(transaction), 100);
+      |                    ^~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 855676	    564	 134372	 990612	  f1d94	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list

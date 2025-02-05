@@ -446,7 +446,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Src/lvgl/src/lv_api_map_v9_1.h ../Core/Src/ui/ui.h \
  ../Core/Src/ui/screens.h ../Core/Inc/OBD2.h ../Core/Inc/ISO9141_KWP.h \
  ../Core/Inc/quadspi.h ../Core/Inc/main.h ../Core/Inc/gauge.h \
- ../Core/Inc/OBD2.h ../Core/Inc/buttons.h ../Core/Inc/gauge.h
+ ../Core/Inc/OBD2.h ../Core/Inc/buttons.h ../Core/Inc/gauge.h \
+ ../Core/Inc/speaker.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -913,3 +914,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/OBD2.h:
 ../Core/Inc/buttons.h:
 ../Core/Inc/gauge.h:
+../Core/Inc/speaker.h:

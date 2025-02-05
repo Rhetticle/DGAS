@@ -1,0 +1,44 @@
+/*
+ * speaker.c
+ *
+ *  Created on: Feb 2, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include "speaker.h"
+
+extern I2C_HandleTypeDef hi2c4;
+
+uint8_t calc_tap_from_resistance(uint16_t resistance) {
+	uint8_t tap = ((resistance - DIG_POT_WIPER_RESISTANCE) * (DIG_POT_TAP_COUNT - 1)) / DIG_POT_RESISTANCE_MAX;
+	return tap;
+}
+
+void set_pot_resistance(uint16_t resistance) {
+	uint8_t tap = calc_tap_from_resistance(resistance);
+	HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DIG_POT_I2C_ADDR << 1, &tap, sizeof(uint8_t), 100);
+	return;
+}
+
+void dac_set_voltage(float voltage) {
+	if ((voltage >= DAC_VREF) || (voltage < 0)) {
+		return;
+	}
+	uint8_t dacValue = (voltage/DAC_VREF) * DAC_RESOLUTION;
+	uint8_t transaction[] = {DAC_COMMAND_CODE, dacValue};
+	HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(&hi2c4, DAC_I2C_ADDR << 1, &dacValue, sizeof(transaction), 100);
+	return;
+}
+
+void speaker_init(void) {
+	set_pot_resistance(0);
+	dac_set_voltage(0);
+
+	for (int i = 0; i < 1000; i++) {
+		dac_set_voltage(3.3);
+		HAL_Delay(1);
+		dac_set_voltage(0);
+		HAL_Delay(1);
+	}
+}
