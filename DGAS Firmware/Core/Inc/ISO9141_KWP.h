@@ -52,7 +52,6 @@ typedef struct {
 #define GENERAL_DELAY 100 //(ms)
 
 /////////////////////////// OBD2 Related constants //////////////////////////////////////////////
-#define OBD2_LIVE_MODE 0x01
 #define OBD2_RESPONSE_WAIT_MAX 1000 // (ms)
 
 

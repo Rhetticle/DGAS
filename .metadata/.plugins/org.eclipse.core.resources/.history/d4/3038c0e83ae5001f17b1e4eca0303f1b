@@ -1,0 +1,86 @@
+/*
+ * iso15765.c
+ *
+ *  Created on: Feb 5, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include <stdbool.h>
+#include "iso15765.h"
+#include "OBD2.h"
+
+extern CAN_HandleTypeDef hcan1;
+
+static uint32_t txMailBox;
+static volatile CANResponse canResponse;
+static volatile bool responseReady;
+
+bool response_is_ready(void) {
+	return responseReady;
+}
+
+void response_ready_set(void) {
+	responseReady = true;
+}
+
+void response_ready_clear(void) {
+	responseReady = false;
+}
+
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan) {
+	HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, canResponse.rxHeader, canResponse.buffer);
+	response_ready_set();
+}
+
+HAL_StatusTypeDef can_get_pid(uint8_t pid, uint8_t* response) {
+	CAN_TxHeaderTypeDef txHeader;
+	uint8_t timeout;
+	uint8_t txData[OBD2_CAN_REQ_SIZE] = {OBD2_CAN_DUMMY_BYTE};
+	txData[0] = OBD2_LIVE_MODE;
+	txData[1] = pid;
+
+	txHeader.DLC = OBD2_CAN_REQ_SIZE;
+	txHeader.StdId = OBD2_CAN_ID;
+	txHeader.IDE = CAN_ID_STD;
+	txHeader.RTR = CAN_RTR_DATA;
+
+	if (HAL_CAN_AddTxMessage(&hcan1, &txHeader, txData, &txMailBox) != HAL_OK) {
+		// add: debug message
+		return HAL_ERROR;
+	}
+
+	while ((!response_is_ready()) && (timeout <= CAN_RESPONSE_TIMEOUT)) {
+		timeout++;
+		HAL_Delay(1);
+	}
+	if (timeout == CAN_RESPONSE_TIMEOUT) {
+		// add: debug timeout message
+		return HAL_ERROR;
+	}
+	// didn't timeout so we got a response
+	// clear flag
+	response_ready_clear();
+	uint8_t* message = canResponse.buffer;
+	uint8_t obdDataSize = message[0]; // first byte in message is number of data bytes (including mode and PID)
+
+	for (int i = 0; i < obdDataSize - 2; i++) { // -2 since two bytes of the "data" will be the OBD mode and PID
+		response[i] = message[OBD2_CAN_DATA_START + i];
+	}
+}
+
+void can_obd2_init(void) {
+	CAN_FilterTypeDef filterConfig;
+
+	// configure filter to only listen for responses from 0x7E8 to 0x7EF (this is the ID range
+	// the ECU should use when responding)
+	filterConfig.FilterActivation = CAN_FILTER_ENABLE;
+	filterConfig.FilterFIFOAssignment = CAN_FILTER_FIFO0;
+	filterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+	filterConfig.FilterIdHigh = OBD2_CAN_ECU_ID_MAX << 5;
+
+	HAL_CAN_ConfigFilter(&hcan1, filterConfig);
+	HAL_CAN_Start(&hcan1);
+	// configure interrupt when there is a message pending in FIFO0
+	HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
+}

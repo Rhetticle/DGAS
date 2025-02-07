@@ -23,6 +23,12 @@ typedef struct {
 	HAL_StatusTypeDef (*get_pid)(uint8_t, uint8_t*);
 }OBDBus;
 
+typedef enum {
+	BUS_KWP_ID,
+	BUS_9141_ID,
+	BUS_CAN_ID,
+} BusID;
+
 #define CONV_KPA_TO_PSI(x) (x * 0.145)
 
 #define DBG_MSG_MAX_SIZE 256

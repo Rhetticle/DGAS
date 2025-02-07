@@ -1,0 +1,6 @@
+../Core/Src/iso15765.c:19:6:response_is_ready	0	static
+../Core/Src/iso15765.c:23:6:response_ready_set	0	static
+../Core/Src/iso15765.c:27:6:response_ready_clear	0	static
+../Core/Src/iso15765.c:31:6:HAL_CAN_RxFifo0MsgPendingCallback	8	static
+../Core/Src/iso15765.c:36:19:can_get_pid	48	static
+../Core/Src/iso15765.c:72:6:can_obd2_init	48	static

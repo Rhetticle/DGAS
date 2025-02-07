@@ -110,7 +110,7 @@ HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words) {
 }
 
 HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response) {
-	uint8_t message [ISO9141_OBD_REQ_SIZE] = {ISO9141_HEADER_1, ISO9141_HEADER_2, ISO9141_HEADER_3, OBD2_LIVE_MODE, pid};
+	uint8_t message [ISO9141_OBD_REQ_SIZE] = {ISO9141_HEADER_1, ISO9141_HEADER_2, ISO9141_HEADER_3, OBD2_MODE_LIVE, pid};
 	HAL_StatusTypeDef status = HAL_OK;
 	uint8_t recTemp [ISO9141_OBD_MAX_REC_SIZE];
 	uint8_t bytesRec = 0;
@@ -142,7 +142,7 @@ HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response) {
 }
 
 HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
-	uint8_t message[KWP_OBD_REQ_SIZE] = {KWP_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_LIVE_MODE, pid};
+	uint8_t message[KWP_OBD_REQ_SIZE] = {KWP_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_MODE_LIVE, pid};
 	uint8_t formatByte;
 	// add checksum to end of message array
 	message[KWP_OBD_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
