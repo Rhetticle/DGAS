@@ -33,33 +33,6 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Core/Src \
-Core/Src/lvgl/demos/benchmark/assets \
-Core/Src/lvgl/demos/benchmark \
-Core/Src/lvgl/demos/ebike/generated \
-Core/Src/lvgl/demos/ebike \
-Core/Src/lvgl/demos/ebike/translations \
-Core/Src/lvgl/demos/flex_layout \
-Core/Src/lvgl/demos/high_res/fonts \
-Core/Src/lvgl/demos/high_res \
-Core/Src/lvgl/demos/keypad_encoder \
-Core/Src/lvgl/demos \
-Core/Src/lvgl/demos/multilang/assets/avatars \
-Core/Src/lvgl/demos/multilang/assets/emojis \
-Core/Src/lvgl/demos/multilang/assets/fonts \
-Core/Src/lvgl/demos/multilang/assets \
-Core/Src/lvgl/demos/multilang \
-Core/Src/lvgl/demos/music/assets \
-Core/Src/lvgl/demos/music \
-Core/Src/lvgl/demos/render/assets \
-Core/Src/lvgl/demos/render \
-Core/Src/lvgl/demos/scroll \
-Core/Src/lvgl/demos/stress \
-Core/Src/lvgl/demos/transform/assets \
-Core/Src/lvgl/demos/transform \
-Core/Src/lvgl/demos/vector_graphic/assets \
-Core/Src/lvgl/demos/vector_graphic \
-Core/Src/lvgl/demos/widgets/assets \
-Core/Src/lvgl/demos/widgets \
 Core/Src/lvgl/env_support/pikascript \
 Core/Src/lvgl/env_support/rt-thread \
 Core/Src/lvgl/env_support/rt-thread/squareline \

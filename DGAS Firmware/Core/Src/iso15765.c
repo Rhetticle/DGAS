@@ -7,13 +7,14 @@
 
 #include <stm32f7xx.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include "iso15765.h"
 #include "OBD2.h"
 
 extern CAN_HandleTypeDef hcan1;
 
 static uint32_t txMailBox;
-static volatile CANResponse canResponse;
+static CANResponse canResponse;
 static volatile bool responseReady;
 
 bool response_is_ready(void) {
@@ -68,10 +69,13 @@ HAL_StatusTypeDef can_get_pid(uint8_t pid, uint8_t* response) {
 	for (int i = 0; i < obdDataSize - 2; i++) { // -2 since two bytes of the "data" will be the OBD mode and PID
 		response[i] = message[OBD2_CAN_DATA_START_INDEX + i];
 	}
+
+	return HAL_OK;
 }
 
-void can_obd2_init(void) {
+HAL_StatusTypeDef can_obd2_init(void) {
 	CAN_FilterTypeDef filterConfig;
+	uint8_t test[OBD2_DATA_MAX];
 	memset(&filterConfig, 0, sizeof(CAN_FilterTypeDef));
 	// configure filter to only listen for responses from 0x7E8 to 0x7EF (this is the ID range
 	// the ECU should use when responding)
@@ -87,4 +91,9 @@ void can_obd2_init(void) {
 	HAL_CAN_Start(&hcan1);
 	// configure interrupt when there is a message pending in FIFO0
 	HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
+
+	if (can_get_pid(OBD2_PID_SUPPORTED_PIDS, test) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
 }

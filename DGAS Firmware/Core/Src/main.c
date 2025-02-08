@@ -242,15 +242,10 @@ int main(void)
   dgas_init(display);
 
   uint32_t tick = 0;
-  iso9141_kwp_init();
-  HAL_GPIO_DeInit(GPIOC, GPIO_PIN_10);
-  MX_UART4_Init();
-  iso9141_kwp_listen(false);
   OBDBus kwp;
-  kwp.get_pid = kwp_get_pid;
+  obd2_bus_auto_detect(&kwp);
   lv_label_set_text(objects.obj3, "#00FF00 LIVE#");
   lv_refr_now(display);
-  kwp.status = OBD_LIVE;
 
   GaugeState state;
   state.bus = &kwp;

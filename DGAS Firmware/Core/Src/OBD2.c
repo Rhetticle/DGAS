@@ -11,6 +11,8 @@
 #include <string.h>
 #include "OBD2.h"
 #include "OBD_Debug.h"
+#include "ISO9141_KWP.h"
+#include "iso15765.h"
 #include "lvgl.h"
 #include "ui.h"
 
@@ -128,4 +130,32 @@ HAL_StatusTypeDef obd2_dummy_request(OBDBus* bus) {
 		return HAL_ERROR;
 	}
 	return HAL_OK;
+}
+
+HAL_StatusTypeDef obd2_bus_auto_detect(OBDBus* bus) {
+	bool foundBus = false;
+
+	// go through and try to each bus to see which, if any, succeed
+	if (kwp_init() == HAL_OK) {
+		bus->init_bus = kwp_init;
+		bus->get_pid = kwp_get_pid;
+		bus->id = BUS_ID_KWP;
+		foundBus = true;
+	} else if (iso9141_init() == HAL_OK) {
+		bus->init_bus = iso9141_init;
+		bus->get_pid = iso9141_get_pid;
+		bus->id = BUS_ID_9141;
+		foundBus = true;
+	} else if (can_obd2_init() == HAL_OK) {
+		bus->init_bus = can_obd2_init;
+		bus->get_pid = can_get_pid;
+		bus->id = BUS_ID_CAN;
+		foundBus = true;
+	}
+
+	if (foundBus) {
+		bus->status = OBD_LIVE;
+		return HAL_OK;
+	}
+	return HAL_ERROR;
 }

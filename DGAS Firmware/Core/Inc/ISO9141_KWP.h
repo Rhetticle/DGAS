@@ -55,7 +55,11 @@ typedef struct {
 #define OBD2_RESPONSE_WAIT_MAX 1000 // (ms)
 
 
-HAL_StatusTypeDef iso9141_kwp_init(void);
+HAL_StatusTypeDef iso9141_kwp_five_baud(void);
+void init_tx_gpio(void);
+void iso9141_kwp_uart_init(void);
+HAL_StatusTypeDef iso9141_init(void);
+HAL_StatusTypeDef kwp_init(void);
 HAL_StatusTypeDef iso9141_kwp_get_init_response(InitResponse* response);
 HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words);
 HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response);

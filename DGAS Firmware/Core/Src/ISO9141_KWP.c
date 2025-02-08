@@ -29,7 +29,7 @@ extern UART_HandleTypeDef huart4;
  *
  * Return: HAL_OK
  * */
-HAL_StatusTypeDef iso9141_kwp_init(void) {
+HAL_StatusTypeDef iso9141_kwp_five_baud(void) {
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
 	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
 	//HAL_Delay(1000); //must be no traffic on bus for 3 seconds after K goes high
@@ -51,6 +51,56 @@ HAL_StatusTypeDef iso9141_kwp_init(void) {
 	HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
 	HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
 	HAL_Delay(205);
+	return HAL_OK;
+}
+
+void init_tx_gpio(void) {
+	GPIO_InitTypeDef gpioInit = {0};
+
+	gpioInit.Pin = GPIO_PIN_10;
+	gpioInit.Mode = GPIO_MODE_OUTPUT_PP;
+	gpioInit.Speed = GPIO_SPEED_FREQ_LOW;
+	gpioInit.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOC, &gpioInit);
+}
+
+void iso9141_kwp_uart_init(void) {
+	huart4.Instance = UART4;
+	huart4.Init.BaudRate = 10400;
+	huart4.Init.WordLength = UART_WORDLENGTH_8B;
+	huart4.Init.StopBits = UART_STOPBITS_1;
+	huart4.Init.Parity = UART_PARITY_NONE;
+	huart4.Init.Mode = UART_MODE_TX_RX;
+	huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	huart4.Init.OverSampling = UART_OVERSAMPLING_16;
+	huart4.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+	huart4.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+	HAL_UART_Init(&huart4);
+}
+
+HAL_StatusTypeDef iso9141_init(void) {
+	HAL_UART_DeInit(&huart4);
+	init_tx_gpio();
+	iso9141_kwp_five_baud();
+	HAL_GPIO_DeInit(GPIOC, GPIO_PIN_10);
+	iso9141_kwp_uart_init();
+
+	if (iso9141_kwp_listen(true) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef kwp_init(void) {
+	HAL_UART_DeInit(&huart4);
+	init_tx_gpio();
+	iso9141_kwp_five_baud();
+	HAL_GPIO_DeInit(GPIOC, GPIO_PIN_10);
+	iso9141_kwp_uart_init();
+
+	if (iso9141_kwp_listen(false) != HAL_OK) {
+		return HAL_ERROR;
+	}
 	return HAL_OK;
 }
 
@@ -85,7 +135,7 @@ HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words) {
 
 	if (check_key_words) {
 		// this is only for ISO9141
-		if (response.keyWord1 != response.keyWord2) {
+		if ((response.keyWord1 != ISO9141_KW1) || (response.keyWord1 != response.keyWord2)) {
 			return HAL_ERROR;
 		}
 	}

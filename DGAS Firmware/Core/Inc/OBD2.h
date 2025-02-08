@@ -17,17 +17,19 @@ typedef enum {
 	OBD_TIMEOUT,
 } OBDBus_StatusTypeDef;
 
+typedef enum {
+	BUS_ID_KWP,
+	BUS_ID_9141,
+	BUS_ID_CAN,
+} BusID;
+
 typedef struct {
 	OBDBus_StatusTypeDef status;
 	HAL_StatusTypeDef (*init_bus)(void);
 	HAL_StatusTypeDef (*get_pid)(uint8_t, uint8_t*);
+	BusID id;
 }OBDBus;
 
-typedef enum {
-	BUS_KWP_ID,
-	BUS_9141_ID,
-	BUS_CAN_ID,
-} BusID;
 
 #define CONV_KPA_TO_PSI(x) (x * 0.145)
 
@@ -60,4 +62,5 @@ HAL_StatusTypeDef obd2_get_boost(OBDBus* bus, uint16_t* boost);
 HAL_StatusTypeDef obd2_get_fuel_pressure(OBDBus* bus, uint16_t* pressure);
 HAL_StatusTypeDef obd2_get_fuel_pressure_manifold_relative(OBDBus* bus, uint16_t* pressure);
 HAL_StatusTypeDef obd2_dummy_request(OBDBus* bus);
+HAL_StatusTypeDef obd2_bus_auto_detect(OBDBus* bus);
 #endif /* INC_OBD2_H_ */
