@@ -14,12 +14,14 @@
 #define DBG_WINDOW_MAX_TEXT 600
 
 typedef enum {
-	ERROR_NO_RESPONSE,
-	ERROR_KWP_FORMAT
-} bus_error_t;
+	ERROR_TIMEOUT,
+	ERROR_KWP_FORMAT,
+} BusError;
 
+void debug_add_text(char* text);
 void debug_send_data(uint8_t* data, uint32_t size);
+void add_bus_name_to_header(char* header);
 void debug_send_header(bool receiving, bool error);
 void debug_send_message(uint8_t* data, uint32_t size, bool receiving);
-void debug_send_error(bool receiving, bus_error_t error);
+void debug_send_error(bool receiving, BusError error);
 #endif /* INC_OBD_DEBUG_H_ */

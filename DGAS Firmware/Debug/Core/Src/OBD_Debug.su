@@ -1,6 +1,8 @@
-../Core/Src/OBD_Debug.c:16:6:debug_send_data.part.0	296	static
-../Core/Src/OBD_Debug.c:37:6:debug_send_header.part.0	280	static
-../Core/Src/OBD_Debug.c:16:6:debug_send_data	16	static
-../Core/Src/OBD_Debug.c:37:6:debug_send_header	16	static
-../Core/Src/OBD_Debug.c:64:6:debug_send_message	24	static
-../Core/Src/OBD_Debug.c:69:6:debug_send_error	16	static
+../Core/Src/OBD_Debug.c:29:6:debug_send_data.part.0	296	static
+../Core/Src/OBD_Debug.c:18:6:debug_init	0	static
+../Core/Src/OBD_Debug.c:22:6:debug_add_text	8	static
+../Core/Src/OBD_Debug.c:29:6:debug_send_data	16	static
+../Core/Src/OBD_Debug.c:50:6:add_bus_name_to_header	16	static
+../Core/Src/OBD_Debug.c:67:6:debug_send_header	288	static
+../Core/Src/OBD_Debug.c:89:6:debug_send_message	16	static
+../Core/Src/OBD_Debug.c:94:6:debug_send_error	8	static

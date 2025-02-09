@@ -13,6 +13,19 @@
 #include "ui.h"
 #include "lvgl.h"
 
+static BusID busActive;
+
+void debug_init(BusID id) {
+	busActive = id;
+}
+
+void debug_add_text(char* text) {
+	if (lv_screen_active() != objects.obd2_debug) {
+		return;
+	}
+	lv_textarea_add_text(objects.obd2_debug_textarea, text);
+}
+
 void debug_send_data(uint8_t* data, uint32_t size) {
 	if (lv_screen_active() != objects.obd2_debug) {
 		return;
@@ -31,19 +44,32 @@ void debug_send_data(uint8_t* data, uint32_t size) {
 			strcat(msg, ", ");
 		}
 	}
-	lv_textarea_add_text(objects.obj32, msg);
+	debug_add_text(msg);
+}
+
+void add_bus_name_to_header(char* header) {
+	char* name = "";
+
+	switch (busActive) {
+		case BUS_ID_KWP:
+			name = "#00FFFF <KWP>#";
+			break;
+		case BUS_ID_9141:
+			name = "#00FFFF <9141>";
+			break;
+		case BUS_ID_CAN:
+			name = "#00FFFF <CAN>";
+			break;
+	}
+	sprintf(header + strlen(header), "%s", name);
 }
 
 void debug_send_header(bool receiving, bool error) {
-	if (lv_screen_active() != objects.obd2_debug) {
-		return;
-	}
-	lv_obj_t* label = lv_textarea_get_label(objects.obj32);
-	if (strlen(lv_label_get_text(label)) > DBG_WINDOW_MAX_TEXT) {
+	lv_obj_t* label = lv_textarea_get_label(objects.obd2_debug_textarea);
+	if ((strlen(lv_label_get_text(label)) > DBG_WINDOW_MAX_TEXT) && (lv_screen_active() == objects.obd2_debug)) {
 		lv_label_cut_text(label, 0, 70);
-		lv_textarea_set_text(objects.obj32, lv_label_get_text(label));
+		lv_textarea_set_text(objects.obd2_debug_textarea, lv_label_get_text(label));
 	}
-
 	char header[DBG_MSG_MAX_SIZE];
 
 	if (!receiving) {
@@ -55,10 +81,9 @@ void debug_send_header(bool receiving, bool error) {
 			sprintf(header, "#00FF00 \uf00c# #AA11F0 [ECU]# ");
 		}
 	}
-	sprintf(header + strlen(header), "#00FFFF <KWP># ");
-
-	lv_textarea_add_text(objects.obj32, header);
-	lv_label_set_recolor(lv_textarea_get_label(objects.obj32), true);
+	add_bus_name_to_header(header);
+	debug_add_text(header);
+	lv_label_set_recolor(lv_textarea_get_label(objects.obd2_debug_textarea), true);
 }
 
 void debug_send_message(uint8_t* data, uint32_t size, bool receiving) {
@@ -66,18 +91,15 @@ void debug_send_message(uint8_t* data, uint32_t size, bool receiving) {
 	debug_send_data(data, size);
 }
 
-void debug_send_error(bool receiving, bus_error_t error) {
-	if (lv_screen_active() != objects.obd2_debug) {
-		return;
-	}
+void debug_send_error(bool receiving, BusError error) {
 	debug_send_header(receiving, true);
 
 	switch(error) {
-		case ERROR_NO_RESPONSE:
-			lv_textarea_add_text(objects.obj32, "#FF0000 ERROR: NO RESPONSE#\n");
+		case ERROR_TIMEOUT:
+			debug_add_text("#FF0000 ERROR: NO RESPONSE#\n");
 			break;
 		case ERROR_KWP_FORMAT:
-			lv_textarea_add_text(objects.obj32, "#FF0000 ERROR: FORMAT BYTE#\n");
+			debug_add_text("#FF0000 ERROR: FORMAT BYTE#\n");
 			break;
 	}
 }

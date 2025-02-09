@@ -23,7 +23,7 @@
 #define LV_ATTRIBUTE_IMG_QR_CODE
 #endif
 
-static const __attribute__((section(".extFlash")))
+static const
 LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_QR_CODE
 uint8_t img_qr_code_map[] = {
 

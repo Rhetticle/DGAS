@@ -14,6 +14,9 @@
 #define BTN_NAV GPIO_PIN_14 // port B active low
 #define BTN_SEL GPIO_PIN_15 // port B active low
 
+#define SETTINGS_PARAM_OPTION_COUNT 8
+#define SETTINGS_BUS_OPTION_COUNT 4
+
 typedef struct {
 	GaugeState* state;
 	lv_group_t* nextGroup;

@@ -159,3 +159,4 @@ HAL_StatusTypeDef obd2_bus_auto_detect(OBDBus* bus) {
 	}
 	return HAL_ERROR;
 }
+

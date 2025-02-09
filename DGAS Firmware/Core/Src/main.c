@@ -106,14 +106,13 @@ uint8_t* ltdc = (uint8_t*) SDRAM_START_ADDR;
 
 void fmc_init(void) {
 	  FMC_SDRAM_CommandTypeDef Command;
-	  HAL_StatusTypeDef status;
 	  /* Step 1 and Step 2 already done in HAL_SDRAM_Init() */
 	  /* Step 3: Configure a clock configuration enable command */
 	   Command.CommandMode            = FMC_SDRAM_CMD_CLK_ENABLE; /* Set MODE bits to "001" */
 	   Command.CommandTarget          = FMC_SDRAM_CMD_TARGET_BANK1; /* configure the Target Bank bits */
 	   Command.AutoRefreshNumber      = 1;
 	   Command.ModeRegisterDefinition = 0;
-	   status = HAL_SDRAM_SendCommand(&hsdram1, &Command, 0xfff);
+	   HAL_SDRAM_SendCommand(&hsdram1, &Command, 0xfff);
 	   HAL_Delay(1); /* Step 4: Insert 100 us minimum delay - Min HAL Delay is 1ms */
 	   /* Step 5: Configure a PALL (precharge all) command */
 	   Command.CommandMode            = FMC_SDRAM_CMD_PALL; /* Set MODE bits to "010" */
@@ -153,13 +152,13 @@ void start_up_anim() {
 	int16_t scale = 0;
 
 	while(scale < 4200) {
-		lv_arc_set_value(objects.obj0, scale);
+		lv_arc_set_value(objects.gauge_arc, scale);
 		lv_timer_handler();
 		HAL_Delay(5);
 		scale += 150;
 	}
 	while (scale >= 0) {
-		lv_arc_set_value(objects.obj0, scale);
+		lv_arc_set_value(objects.gauge_arc, scale);
 		lv_timer_handler();
 		HAL_Delay(5);
 		scale -= 150;
@@ -169,7 +168,7 @@ void start_up_anim() {
 void dgas_init(lv_display_t* display) {
 	accel_init();
 	start_up_anim();
-	lv_label_set_text(objects.obj3, "#00FFFF INIT#");
+	lv_label_set_text(objects.obd_status_label, "#00FFFF INIT#");
 	lv_refr_now(display);
 }
 
@@ -244,7 +243,8 @@ int main(void)
   uint32_t tick = 0;
   OBDBus kwp;
   obd2_bus_auto_detect(&kwp);
-  lv_label_set_text(objects.obj3, "#00FF00 LIVE#");
+  debug_init(kwp.id);
+  lv_label_set_text(objects.obd_status_label, "#00FF00 LIVE#");
   lv_refr_now(display);
 
   GaugeState state;
@@ -269,7 +269,7 @@ int main(void)
  		 gauge_update(&state, measure);
 		 tick = HAL_GetTick();
 	 } else if ((HAL_GetTick() > tick + 500) && (lv_screen_active() != objects.gauge_main_ui)) {
-		 obd2_dummy_request(&kwp);
+		 //obd2_dummy_request(&kwp);
 		 tick = HAL_GetTick();
 	 }
 	 lv_timer_handler();

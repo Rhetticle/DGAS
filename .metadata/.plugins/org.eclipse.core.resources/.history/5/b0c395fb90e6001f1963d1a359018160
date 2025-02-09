@@ -70,6 +70,7 @@ void create_screen_gauge_main_ui() {
             lv_obj_set_pos(obj, 178, 199);
             lv_obj_set_size(obj, 125, 52);
             lv_label_set_text(obj, "XXXX");
+            lv_label_set_recolor(obj, true);
             lv_obj_set_style_text_color(obj, lv_color_hex(0xff00ff00), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_48, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -94,6 +95,7 @@ void create_screen_gauge_main_ui() {
             lv_obj_set_pos(obj, 94, 410);
             lv_obj_set_size(obj, 84, 21);
             lv_label_set_text(obj, "LIVE");
+            lv_label_set_recolor(obj, true);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_22, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_color(obj, lv_color_hex(0xff00ff00), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -122,6 +124,7 @@ void create_screen_gauge_main_ui() {
             lv_obj_set_pos(obj, 112, 303);
             lv_obj_set_size(obj, 256, 30);
             lv_label_set_text(obj, "PARAMETER");
+            lv_label_set_recolor(obj, true);
             lv_obj_set_style_text_color(obj, lv_color_hex(0xffff0000), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_28, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -205,6 +208,7 @@ void create_screen_gauge_main_ui() {
             lv_obj_set_size(obj, 108, 24);
             lv_label_set_long_mode(obj, LV_LABEL_LONG_SCROLL);
             lv_label_set_text(obj, "XXXX");
+            lv_label_set_recolor(obj, true);
             lv_obj_set_style_text_font(obj, &lv_font_montserrat_22, LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_color(obj, lv_color_hex(0xff00ff00), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -660,7 +664,7 @@ void create_screen_measure() {
                     lv_obj_t *obj = lv_label_create(parent_obj);
                     lv_obj_set_pos(obj, 0, 0);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
-                    lv_label_set_text(obj, "THROTTLE POS");
+                    lv_label_set_text(obj, "BOOST");
                     lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                 }
             }

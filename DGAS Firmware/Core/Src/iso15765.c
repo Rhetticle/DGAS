@@ -7,7 +7,7 @@
 
 #include <stm32f7xx.h>
 #include <stdbool.h>
-#include <stdlib.h>
+#include <string.h>
 #include "iso15765.h"
 #include "OBD2.h"
 
@@ -36,7 +36,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan) {
 
 HAL_StatusTypeDef can_get_pid(uint8_t pid, uint8_t* response) {
 	CAN_TxHeaderTypeDef txHeader;
-	uint8_t timeout;
+	uint8_t timeout = 0;
 	uint8_t txData[OBD2_CAN_REQ_SIZE];
 	memset(txData, OBD2_CAN_DUMMY_BYTE, sizeof(txData));
 	txData[0] = OBD2_MODE_LIVE;
@@ -84,7 +84,7 @@ HAL_StatusTypeDef can_obd2_init(void) {
 	filterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
 	filterConfig.FilterIdHigh = OBD2_CAN_ECU_ID_MAX << 5;
 	filterConfig.FilterIdLow = 0x0000; // not using extended ID's so FilterIdLow and FilterIdLow mask don't matter
-	filterConfig.FilterMaskIdHigh = OBD2_CAN_ID_MASK;
+	filterConfig.FilterMaskIdHigh = OBD2_CAN_ID_MASK << 5;
 	filterConfig.FilterMaskIdLow = 0x0000;
 
 	HAL_CAN_ConfigFilter(&hcan1, &filterConfig);

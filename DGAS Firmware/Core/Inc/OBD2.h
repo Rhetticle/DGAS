@@ -12,10 +12,11 @@
 #include <stdbool.h>
 
 typedef enum {
+	OBD_ERROR,
 	OBD_INIT,
 	OBD_LIVE,
 	OBD_TIMEOUT,
-} OBDBus_StatusTypeDef;
+} OBDBusStatus;
 
 typedef enum {
 	BUS_ID_KWP,
@@ -24,7 +25,7 @@ typedef enum {
 } BusID;
 
 typedef struct {
-	OBDBus_StatusTypeDef status;
+	OBDBusStatus status;
 	HAL_StatusTypeDef (*init_bus)(void);
 	HAL_StatusTypeDef (*get_pid)(uint8_t, uint8_t*);
 	BusID id;
