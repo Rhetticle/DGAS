@@ -1,9 +1,9 @@
-18:18:16 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+20:19:20 **** Incremental Build of configuration Debug for project DGAS Firmware ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
 ../Core/Src/buttons.c: In function 'dtc_event_handler':
-../Core/Src/buttons.c:149:14: warning: unused variable 'indev' [-Wunused-variable]
-  149 |  lv_indev_t* indev = lv_indev_active();
+../Core/Src/buttons.c:151:14: warning: unused variable 'indev' [-Wunused-variable]
+  151 |  lv_indev_t* indev = lv_indev_active();
       |              ^~~~~
 arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: DGAS Firmware.elf
@@ -11,11 +11,11 @@ Finished building target: DGAS Firmware.elf
 arm-none-eabi-size   DGAS\ Firmware.elf 
 arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
    text	   data	    bss	    dec	    hex	filename
- 859284	    564	 134652	 994500	  f2cc4	DGAS Firmware.elf
+ 859308	    564	 134652	 994524	  f2cdc	DGAS Firmware.elf
 Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
 
-18:18:55 Build Finished. 0 errors, 1 warnings. (took 39s.191ms)
+20:19:59 Build Finished. 0 errors, 1 warnings. (took 38s.794ms)
 

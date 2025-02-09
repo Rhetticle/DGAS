@@ -8,6 +8,7 @@
 "./Core/Src/iso15765.o"
 "./Core/Src/main.o"
 "./Core/Src/quadspi.o"
+"./Core/Src/selftest.o"
 "./Core/Src/stm32f7xx_hal_msp.o"
 "./Core/Src/stm32f7xx_it.o"
 "./Core/Src/syscalls.o"

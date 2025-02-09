@@ -1,0 +1,33 @@
+/*
+ * selftest.h
+ *
+ *  Created on: Feb 9, 2025
+ *      Author: rhett
+ */
+
+#ifndef INC_SELFTEST_H_
+#define INC_SELFTEST_H_
+
+#include <stm32f7xx.h>
+#include "LIS3DH.h"
+
+#define SDRAM_START_ADDR 0xC0000000
+#define SDRAM_TEST_ADDR 0xC0070800 // SDRAM_START_ADDR + size of frame buffer
+#define SDRAM_WRITE_TEST_WORD 0xBEEF
+
+typedef struct {
+	uint32_t readFailAddr;
+	uint32_t writeFailAddr;
+	uint16_t readBack;
+}DRAMTestDesc;
+
+typedef struct {
+	uint8_t whoAmI;
+	float acceleration[ACC_AXIS_COUNT];
+} AccTestDesc;
+
+HAL_StatusTypeDef dram_test(DRAMTestDesc* desc);
+HAL_StatusTypeDef accelerometer_test(AccTestDesc* desc);
+void dgas_self_test(void);
+
+#endif /* INC_SELFTEST_H_ */

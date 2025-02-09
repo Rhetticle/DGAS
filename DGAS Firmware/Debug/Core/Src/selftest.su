@@ -1,0 +1,5 @@
+../Core/Src/selftest.c:16:19:dram_test	24	static
+../Core/Src/selftest.c:46:19:accelerometer_test	8	static
+../Core/Src/selftest.c:56:19:flash_test	24	static
+../Core/Src/selftest.c:68:6:display_test_report	0	static
+../Core/Src/selftest.c:73:6:dgas_self_test	40	static

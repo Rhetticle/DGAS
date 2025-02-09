@@ -97,6 +97,8 @@ void menu_event_handler(lv_event_t* e) {
 			load_screen_and_group(objects.diagnose, indev);
 		} else if (focused == objects.self_test_btn) {
 			load_screen_and_group(objects.self_test, indev);
+			lv_obj_add_flag(objects.diagnose_spinner_1, LV_OBJ_FLAG_HIDDEN);
+			lv_obj_remove_flag(objects.self_test_run_btn, LV_OBJ_FLAG_HIDDEN);
 		} else if (focused == objects.about_btn) {
 			load_screen_and_group(objects.about, indev);
 		}
@@ -157,7 +159,8 @@ void self_test_event_handler(lv_event_t* e) {
 	lv_event_code_t code = lv_event_get_code(e);
 
 	if (code == LV_EVENT_CLICKED) {
-		return;
+		lv_obj_remove_flag(objects.diagnose_spinner_1, LV_OBJ_FLAG_HIDDEN);
+		lv_obj_add_flag(objects.self_test_run_btn, LV_OBJ_FLAG_HIDDEN);
 	}
 }
 

@@ -1248,6 +1248,7 @@ void create_screen_self_test() {
             lv_obj_set_pos(obj, 186, 184);
             lv_obj_set_size(obj, 122, 112);
             lv_obj_set_style_arc_color(obj, lv_color_hex(0xffa000bf), LV_PART_INDICATOR | LV_STATE_DEFAULT);
+            lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
         }
     }
 }

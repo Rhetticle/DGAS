@@ -1,5 +1,5 @@
 ../Core/Src/ui/screens.c:244:6:tick_screen_gauge_main_ui	0	static
-../Core/Src/ui/screens.c:1255:6:tick_screen_self_test	0	static
+../Core/Src/ui/screens.c:1256:6:tick_screen_self_test	0	static
 ../Core/Src/ui/screens.c:514:6:tick_screen_menu	0	static
 ../Core/Src/ui/screens.c:642:6:tick_screen_obd2_debug	0	static
 ../Core/Src/ui/screens.c:840:6:tick_screen_measure	0	static
@@ -14,5 +14,5 @@
 ../Core/Src/ui/screens.c:960:6:create_screen_about	56	static
 ../Core/Src/ui/screens.c:1041:6:create_screen_diagnose	72	static
 ../Core/Src/ui/screens.c:1158:6:create_screen_self_test	64	static
-../Core/Src/ui/screens.c:1259:6:create_screens	24	static
-../Core/Src/ui/screens.c:1287:6:tick_screen	0	static
+../Core/Src/ui/screens.c:1260:6:create_screens	24	static
+../Core/Src/ui/screens.c:1288:6:tick_screen	0	static

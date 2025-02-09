@@ -1,0 +1,5 @@
+selftest.c:16:19:dram_test	6
+selftest.c:46:19:accelerometer_test	3
+selftest.c:56:19:flash_test	3
+selftest.c:68:6:display_test_report	1
+selftest.c:73:6:dgas_self_test	3
