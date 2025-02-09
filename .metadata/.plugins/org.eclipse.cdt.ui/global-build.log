@@ -210,3 +210,543 @@ Finished building: default.size.stdout
  
 Finished building: DGAS Firmware.list
  
+15:56:13 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'single_exit_event_handler':
+../Core/Src/buttons.c:139:39: error: 'indev' undeclared (first use in this function)
+  139 |   load_screen_and_group(objects.menu, indev);
+      |                                       ^~~~~
+../Core/Src/buttons.c:139:39: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:61: Core/Src/buttons.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:57:10 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 858868	    564	 134636	 994068	  f2b14	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+15:59:57 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 858940	    564	 134636	 994140	  f2b5c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+16:06:57 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/quadspi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/quadspi.d" -MT"Core/Src/quadspi.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/quadspi.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_hal_msp.d" -MT"Core/Src/stm32f7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_it.d" -MT"Core/Src/stm32f7xx_it.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:247:3: warning: implicit declaration of function 'debug_init' [-Wimplicit-function-declaration]
+  247 |   debug_init(kwp.id);
+      |   ^~~~~~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 858996	    564	 134644	 994204	  f2b9c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+16:09:54 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859004	    564	 134644	 994212	  f2ba4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+16:12:51 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'load_screen_and_group':
+../Core/Src/buttons.c:50:14: warning: unused variable 'group' [-Wunused-variable]
+   50 |  lv_group_t* group = lv_indev_get_group(indev);
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859004	    564	 134644	 994212	  f2ba4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+16:42:22 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'load_screen_and_group':
+../Core/Src/buttons.c:50:22: warning: passing argument 1 of 'lv_indev_set_group' from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |   lv_indev_set_group(DTCGroup);
+      |                      ^~~~~~~~
+      |                      |
+      |                      lv_group_t * {aka struct _lv_group_t *}
+In file included from ../Core/Src/lvgl/src/core/lv_obj_event.h:18,
+                 from ../Core/Src/lvgl/src/core/lv_obj.h:30,
+                 from ../Core/Src/lvgl/lvgl.h:43,
+                 from ../Core/Src/ui/ui.h:4,
+                 from ../Core/Src/buttons.c:8:
+../Core/Src/lvgl/src/core/../indev/lv_indev.h:279:38: note: expected 'lv_indev_t *' {aka 'struct _lv_indev_t *'} but argument is of type 'lv_group_t *' {aka 'struct _lv_group_t *'}
+  279 | void lv_indev_set_group(lv_indev_t * indev, lv_group_t * group);
+      |                         ~~~~~~~~~~~~~^~~~~
+../Core/Src/buttons.c:50:3: error: too few arguments to function 'lv_indev_set_group'
+   50 |   lv_indev_set_group(DTCGroup);
+      |   ^~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/lvgl/src/core/lv_obj_event.h:18,
+                 from ../Core/Src/lvgl/src/core/lv_obj.h:30,
+                 from ../Core/Src/lvgl/lvgl.h:43,
+                 from ../Core/Src/ui/ui.h:4,
+                 from ../Core/Src/buttons.c:8:
+../Core/Src/lvgl/src/core/../indev/lv_indev.h:279:6: note: declared here
+  279 | void lv_indev_set_group(lv_indev_t * indev, lv_group_t * group);
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:152:14: warning: unused variable 'indev' [-Wunused-variable]
+  152 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+make: *** [Core/Src/subdir.mk:61: Core/Src/buttons.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:43:19 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:152:14: warning: unused variable 'indev' [-Wunused-variable]
+  152 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859236	    564	 134652	 994452	  f2c94	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:13:06 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'menu_event_handler':
+../Core/Src/buttons.c:106:41: warning: passing argument 2 of 'load_screen_and_group' from incompatible pointer type [-Wincompatible-pointer-types]
+  106 |    load_screen_and_group(objects.about, aboutGroup);
+      |                                         ^~~~~~~~~~
+      |                                         |
+      |                                         lv_group_t * {aka struct _lv_group_t *}
+../Core/Src/buttons.c:56:58: note: expected 'lv_indev_t *' {aka 'struct _lv_indev_t *'} but argument is of type 'lv_group_t *' {aka 'struct _lv_group_t *'}
+   56 | void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
+      |                                              ~~~~~~~~~~~~^~~~~
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:154:14: warning: unused variable 'indev' [-Wunused-variable]
+  154 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859236	    564	 134652	 994452	  f2c94	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:15:53 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:155:14: warning: unused variable 'indev' [-Wunused-variable]
+  155 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859284	    564	 134652	 994500	  f2cc4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:18:03 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:155:14: warning: unused variable 'indev' [-Wunused-variable]
+  155 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859284	    564	 134652	 994500	  f2cc4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:20:12 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:153:14: warning: unused variable 'indev' [-Wunused-variable]
+  153 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859236	    564	 134652	 994452	  f2c94	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:26:05 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:154:14: warning: unused variable 'indev' [-Wunused-variable]
+  154 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859292	    564	 134652	 994508	  f2ccc	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:27:53 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'load_screen_and_group':
+../Core/Src/buttons.c:78:14: warning: unused variable 'group' [-Wunused-variable]
+   78 |  lv_group_t* group = lv_indev_get_group(indev);
+      |              ^~~~~
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:154:14: warning: unused variable 'indev' [-Wunused-variable]
+  154 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859276	    564	 134652	 994492	  f2cbc	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:35:59 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:155:14: warning: unused variable 'indev' [-Wunused-variable]
+  155 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859252	    564	 134652	 994468	  f2ca4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:38:12 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:154:14: warning: unused variable 'indev' [-Wunused-variable]
+  154 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:247:3: warning: implicit declaration of function 'debug_init' [-Wimplicit-function-declaration]
+  247 |   debug_init(kwp.id);
+      |   ^~~~~~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859284	    564	 134652	 994500	  f2cc4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:41:20 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:155:14: warning: unused variable 'indev' [-Wunused-variable]
+  155 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:247:3: warning: implicit declaration of function 'debug_init' [-Wimplicit-function-declaration]
+  247 |   debug_init(kwp.id);
+      |   ^~~~~~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859244	    564	 134652	 994460	  f2c9c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:43:40 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:156:14: warning: unused variable 'indev' [-Wunused-variable]
+  156 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859252	    564	 134652	 994468	  f2ca4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:45:26 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:157:14: warning: unused variable 'indev' [-Wunused-variable]
+  157 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859260	    564	 134652	 994476	  f2cac	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:47:34 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:157:14: warning: unused variable 'indev' [-Wunused-variable]
+  157 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859260	    564	 134652	 994476	  f2cac	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:49:55 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:155:14: warning: unused variable 'indev' [-Wunused-variable]
+  155 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859244	    564	 134652	 994460	  f2c9c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:52:32 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:157:14: warning: unused variable 'indev' [-Wunused-variable]
+  157 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859300	    564	 134652	 994516	  f2cd4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+17:59:47 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:154:14: warning: unused variable 'indev' [-Wunused-variable]
+  154 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:247:3: warning: implicit declaration of function 'debug_init' [-Wimplicit-function-declaration]
+  247 |   debug_init(kwp.id);
+      |   ^~~~~~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859244	    564	 134652	 994460	  f2c9c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+18:01:36 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:247:3: warning: implicit declaration of function 'debug_init' [-Wimplicit-function-declaration]
+  247 |   debug_init(kwp.id);
+      |   ^~~~~~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859244	    564	 134652	 994460	  f2c9c	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+18:07:33 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/quadspi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/quadspi.d" -MT"Core/Src/quadspi.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/quadspi.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_hal_msp.d" -MT"Core/Src/stm32f7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f7xx_it.d" -MT"Core/Src/stm32f7xx_it.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f7xx_it.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:150:14: warning: unused variable 'indev' [-Wunused-variable]
+  150 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:247:3: warning: implicit declaration of function 'debug_init' [-Wimplicit-function-declaration]
+  247 |   debug_init(kwp.id);
+      |   ^~~~~~~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859252	    564	 134652	 994468	  f2ca4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+18:11:06 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:150:14: warning: unused variable 'indev' [-Wunused-variable]
+  150 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859252	    564	 134652	 994468	  f2ca4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+18:13:45 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:150:14: warning: unused variable 'indev' [-Wunused-variable]
+  150 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859236	    564	 134652	 994452	  f2c94	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 
+18:18:16 **** Incremental Build of configuration Debug for project DGAS Firmware ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/buttons.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DLV_CONF_INCLUDE_SIMPLE -DDEBUG -DLV_LVGL_H_INCLUDE_SIMPLE -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Core/Src/ui/ -I../Core/Src/lvgl/ -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/buttons.d" -MT"Core/Src/buttons.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/buttons.o"
+../Core/Src/buttons.c: In function 'dtc_event_handler':
+../Core/Src/buttons.c:149:14: warning: unused variable 'indev' [-Wunused-variable]
+  149 |  lv_indev_t* indev = lv_indev_active();
+      |              ^~~~~
+arm-none-eabi-g++ -o "DGAS Firmware.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\rhett\OneDrive\Documents\Projects\DGAS\DGAS Firmware\STM32F746ZGTX_FLASH.ld" -Wl,-Map="DGAS Firmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: DGAS Firmware.elf
+ 
+arm-none-eabi-size   DGAS\ Firmware.elf 
+arm-none-eabi-objdump -h -S  DGAS\ Firmware.elf  > "DGAS Firmware.list"
+   text	   data	    bss	    dec	    hex	filename
+ 859284	    564	 134652	 994500	  f2cc4	DGAS Firmware.elf
+Finished building: default.size.stdout
+ 
+Finished building: DGAS Firmware.list
+ 

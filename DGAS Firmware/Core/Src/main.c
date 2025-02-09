@@ -229,6 +229,7 @@ int main(void)
   MX_I2C4_Init();
   MX_QUADSPI_Init();
   MX_SPI1_Init();
+  MX_UART4_Init();
   MX_LTDC_Init();
   MX_TIM1_Init();
   MX_ADC1_Init();
