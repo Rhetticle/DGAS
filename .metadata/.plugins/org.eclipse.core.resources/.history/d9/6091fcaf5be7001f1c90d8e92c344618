@@ -1,0 +1,135 @@
+/*
+ * selftest.c
+ *
+ *  Created on: Feb 9, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include <string.h>
+#include "selftest.h"
+#include "LIS3DH.h"
+#include "quadspi.h"
+#include "ui.h"
+#include "lvgl.h"
+#include <stdio.h>
+
+extern SDRAM_HandleTypeDef hsdram1;
+
+HAL_StatusTypeDef dram_test(MemoryTestDesc* desc) {
+	// we should not use pointers here as if DRAM is not ok we will segfault (go to hard fault handler)
+	uint16_t readTest;
+
+	// test we can read entire memory array
+	for (uint32_t i = 0; i < SDRAM_SIZE; i++) {
+		if (HAL_SDRAM_Read_16b(&hsdram1, &i, &readTest, sizeof(uint16_t)) != HAL_OK) {
+			desc->readFailAddr = i + SDRAM_START_ADDR;
+			return HAL_OK;
+		}
+	}
+	uint16_t writeTest = SDRAM_WRITE_TEST_WORD;
+	uint32_t testAddr = SDRAM_TEST_ADDR - SDRAM_START_ADDR;
+	// test we can write and then read what was written (
+	if (HAL_SDRAM_Write_16b(&hsdram1, &testAddr, &writeTest, sizeof(uint16_t)) != HAL_OK) {
+		desc->writeFailAddr = SDRAM_TEST_ADDR;
+		return HAL_ERROR;
+	}
+	uint16_t readBack = 0;
+
+	if (HAL_SDRAM_Read_16b(&hsdram1, &testAddr, &readBack, sizeof(uint16_t)) != HAL_OK) {
+		desc->readFailAddr = SDRAM_TEST_ADDR;
+		return HAL_ERROR;
+	}
+	desc->readBack = readBack;
+	desc->readBackExpect = SDRAM_WRITE_TEST_WORD;
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef accelerometer_test(AccTestDesc* desc) {
+	if ((accel_read_reg(&desc->whoAmI, WHO_AM_I_REG) != HAL_OK) || (desc->whoAmI != WHO_AM_I)) {
+		return HAL_ERROR;
+	}
+	if (accel_read_data(desc->acceleration) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
+// need to remove optimisation for this function, for some reason gcc optimises out the return value of
+// CSP_QSPI_Read()...
+HAL_StatusTypeDef __attribute__((optimize(0))) flash_test(MemoryTestDesc* desc) {
+	uint8_t readTest[MEMORY_SECTOR_SIZE];
+	CSP_QSPI_DisableMemoryMappedMode();
+
+	for (int i = 0; i < MEMORY_FLASH_SIZE / MEMORY_SECTOR_SIZE; i++) {
+		if (CSP_QSPI_Read(readTest, i * MEMORY_SECTOR_SIZE, MEMORY_SECTOR_SIZE) != HAL_OK) {
+			desc->readFailAddr = i;
+			return HAL_ERROR;
+		}
+	}
+
+	uint8_t testByte = FLASH_WRITE_TEST_BYTE;
+	uint8_t readBack = 0;
+
+	if (CSP_QSPI_WriteMemory(&testByte, FLASH_WRITE_TEST_ADDR, sizeof(uint8_t)) != HAL_OK) {
+		desc->writeFailAddr = FLASH_WRITE_TEST_ADDR;
+		return HAL_ERROR;
+	}
+	if (CSP_QSPI_Read(&readBack, FLASH_WRITE_TEST_ADDR, sizeof(uint8_t)) != HAL_OK) {
+		desc->readFailAddr = FLASH_WRITE_TEST_ADDR;
+		return HAL_ERROR;
+	}
+	desc->readBack = readBack;
+	desc->readBackExpect = FLASH_WRITE_TEST_BYTE;
+	return HAL_OK;
+}
+
+void display_memory_device_test_report(MemoryTestDesc* desc) {
+	if ((desc->readFailAddr == 0) && (desc->writeFailAddr == 0) && (desc->readBack == desc->readBackExpect)) {
+		lv_textarea_add_text(objects.self_test_textarea, "#00FF00 \uf00c - PASS#\n");
+		return;
+	}
+	char errorMsg[DEVICE_REPORT_MSG_MAX];
+
+	if (desc->readFailAddr != NULL) {
+		sprintf(errorMsg, "#FF0000 ERROR: Read failure at 0x%lX#\n", desc->readFailAddr);
+		lv_textarea_add_text(objects.self_test_textarea, errorMsg);
+	}
+	if (desc->writeFailAddr != NULL) {
+		sprintf(errorMsg, "#FF0000 ERROR: Write failure at 0x%lX#\n", desc->writeFailAddr);
+		lv_textarea_add_text(objects.self_test_textarea, errorMsg);
+	}
+	if (desc->readBack != desc->readBackExpect) {
+		sprintf(errorMsg, "#FF0000 \uf00d# - Read back failure, got #FF0000 0x%X# expected #00FF00 0x%X#\n",
+				desc->readBack, desc->readBackExpect);
+		lv_textarea_add_text(objects.self_test_textarea, errorMsg);
+	}
+}
+
+void display_test_report(SelfTestReport* report) {
+	lv_textarea_add_text(objects.self_test_textarea, "DRAM ");
+	display_memory_device_test_report(report->dramTest);
+	lv_textarea_add_text(objects.self_test_textarea, "FLASH ");
+	display_memory_device_test_report(report->flashTest);
+	return;
+}
+
+// run a self test on peripherals (DRAM, flash, accelerometer)
+void dgas_self_test(void) {
+	SelfTestReport report;
+	MemoryTestDesc dramTest, flashTest;
+	AccTestDesc accTest;
+	memset(&dramTest, 0, sizeof(MemoryTestDesc));
+	memset(&flashTest, 0, sizeof(MemoryTestDesc));
+
+	report.dramTest = &dramTest;
+	report.flashTest = &flashTest;
+	report.accTest = &accTest;
+
+	dram_test(&dramTest);
+	flash_test(&flashTest);
+	accelerometer_test(&accTest);
+	lv_obj_add_flag(objects.self_test_progress_bar, LV_OBJ_FLAG_HIDDEN);
+	display_test_report(&report);
+	lv_label_set_recolor(lv_textarea_get_label(objects.self_test_textarea), true);
+}

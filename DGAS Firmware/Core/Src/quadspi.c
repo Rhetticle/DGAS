@@ -507,6 +507,15 @@ uint8_t CSP_QSPI_EnableMemoryMappedMode(void) {
 	return HAL_OK;
 }
 
+uint8_t CSP_QSPI_EnableMemoryMappedModeDynamic(void) {
+	CSP_QUADSPI_Init();
+	return CSP_QSPI_EnableMemoryMappedMode();
+}
+
+uint8_t CSP_QSPI_DisableMemoryMappedMode(void) {
+	return CSP_QUADSPI_Init();
+}
+
 uint8_t QSPI_ResetChip() {
 	QSPI_CommandTypeDef sCommand = { 0 };
 	uint32_t temp = 0;

@@ -6,4 +6,6 @@
 ../Core/Src/quadspi.c:322:9:CSP_QSPI_EraseSector	72	static
 ../Core/Src/quadspi.c:364:9:CSP_QSPI_WriteMemory	80	static
 ../Core/Src/quadspi.c:478:9:CSP_QSPI_EnableMemoryMappedMode	80	static
-../Core/Src/quadspi.c:554:9:CSP_QSPI_Read	72	static
+../Core/Src/quadspi.c:510:9:CSP_QSPI_EnableMemoryMappedModeDynamic	8	static
+../Core/Src/quadspi.c:515:9:CSP_QSPI_DisableMemoryMappedMode	0	static
+../Core/Src/quadspi.c:563:9:CSP_QSPI_Read	72	static

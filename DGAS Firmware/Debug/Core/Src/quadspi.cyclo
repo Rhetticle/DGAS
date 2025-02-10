@@ -6,4 +6,6 @@ quadspi.c:292:9:CSP_QSPI_EraseBlock	2
 quadspi.c:322:9:CSP_QSPI_EraseSector	5
 quadspi.c:364:9:CSP_QSPI_WriteMemory	10
 quadspi.c:478:9:CSP_QSPI_EnableMemoryMappedMode	2
-quadspi.c:554:9:CSP_QSPI_Read	3
+quadspi.c:510:9:CSP_QSPI_EnableMemoryMappedModeDynamic	1
+quadspi.c:515:9:CSP_QSPI_DisableMemoryMappedMode	1
+quadspi.c:563:9:CSP_QSPI_Read	3

@@ -17,17 +17,21 @@
 #define SDRAM_TEST_ADDR 0xC0070800 // SDRAM_START_ADDR + size of frame buffer
 #define SDRAM_WRITE_TEST_WORD 0xBEEF
 
-#define FLASH_SIZE
+#define FLASH_WRITE_TEST_BYTE 0xEE
+#define FLASH_WRITE_TEST_ADDR 0x3FFFFF // last byte in flash memory
+
+#define DEVICE_REPORT_MSG_MAX 100
 
 typedef struct {
 	uint32_t readFailAddr;
 	uint32_t writeFailAddr;
+	uint16_t readBackExpect;
 	uint16_t readBack;
 }MemoryTestDesc;
 
 typedef struct {
 	uint8_t whoAmI;
-	float acceleration[ACC_AXIS_COUNT];
+	bool accMeasureOk;
 } AccTestDesc;
 
 typedef struct {
@@ -41,6 +45,8 @@ typedef struct {
 HAL_StatusTypeDef dram_test(MemoryTestDesc* desc);
 HAL_StatusTypeDef accelerometer_test(AccTestDesc* desc);
 HAL_StatusTypeDef flash_test(MemoryTestDesc* desc);
+void display_memory_device_test_report(MemoryTestDesc* desc);
+void display_accelerometer_test_report(AccTestDesc* desc);
 void display_test_report(SelfTestReport* report);
 void dgas_self_test(void);
 

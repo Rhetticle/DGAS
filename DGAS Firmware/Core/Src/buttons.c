@@ -9,6 +9,7 @@
 #include "lvgl.h"
 #include "buttons.h"
 #include "gauge.h"
+#include "selftest.h"
 #include <stm32f7xx.h>
 
 static volatile uint8_t navPressed = 0;
@@ -97,7 +98,8 @@ void menu_event_handler(lv_event_t* e) {
 			load_screen_and_group(objects.diagnose, indev);
 		} else if (focused == objects.self_test_btn) {
 			load_screen_and_group(objects.self_test, indev);
-			lv_obj_add_flag(objects.diagnose_spinner_1, LV_OBJ_FLAG_HIDDEN);
+			lv_label_set_text(lv_textarea_get_label(objects.self_test_textarea), "");
+			lv_obj_add_flag(objects.self_test_progress_bar, LV_OBJ_FLAG_HIDDEN);
 			lv_obj_remove_flag(objects.self_test_run_btn, LV_OBJ_FLAG_HIDDEN);
 		} else if (focused == objects.about_btn) {
 			load_screen_and_group(objects.about, indev);
@@ -159,8 +161,9 @@ void self_test_event_handler(lv_event_t* e) {
 	lv_event_code_t code = lv_event_get_code(e);
 
 	if (code == LV_EVENT_CLICKED) {
-		lv_obj_remove_flag(objects.diagnose_spinner_1, LV_OBJ_FLAG_HIDDEN);
+		lv_obj_remove_flag(objects.self_test_progress_bar, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_add_flag(objects.self_test_run_btn, LV_OBJ_FLAG_HIDDEN);
+		dgas_self_test();
 	}
 }
 

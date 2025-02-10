@@ -1,5 +1,7 @@
-../Core/Src/selftest.c:16:19:dram_test	24	static
-../Core/Src/selftest.c:46:19:accelerometer_test	8	static
-../Core/Src/selftest.c:56:19:flash_test	24	static
-../Core/Src/selftest.c:68:6:display_test_report	0	static
-../Core/Src/selftest.c:73:6:dgas_self_test	40	static
+../Core/Src/selftest.c:64:48:flash_test	4120	static
+../Core/Src/selftest.c:19:19:dram_test	32	static
+../Core/Src/selftest.c:48:19:accelerometer_test	32	static
+../Core/Src/selftest.c:91:6:display_memory_device_test_report	120	static
+../Core/Src/selftest.c:113:6:display_accelerometer_test_report	120	static
+../Core/Src/selftest.c:130:6:display_test_report	16	static
+../Core/Src/selftest.c:141:6:dgas_self_test	80	static
