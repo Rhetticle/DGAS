@@ -172,6 +172,9 @@ void single_exit_event_handler(lv_event_t* e) {
 	lv_indev_t* indev = lv_indev_active();
 
 	if (code == LV_EVENT_CLICKED) {
+		if (lv_screen_active() == objects.settings) {
+			save_gauge_config();
+		}
 		load_screen_and_group(objects.menu, indev);
 	}
 }

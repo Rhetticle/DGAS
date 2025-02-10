@@ -6,7 +6,7 @@
 ../Core/Src/buttons.c:34:6:enc_read	16	static
 ../Core/Src/buttons.c:80:6:menu_event_handler	16	static
 ../Core/Src/buttons.c:138:6:debug_event_handler	16	static
-../Core/Src/buttons.c:170:6:single_exit_event_handler	8	static
-../Core/Src/buttons.c:179:6:init_groups	16	static
-../Core/Src/buttons.c:226:6:init_events	16	static
-../Core/Src/buttons.c:266:6:init_buttons	8	static
+../Core/Src/buttons.c:170:6:single_exit_event_handler	16	static
+../Core/Src/buttons.c:182:6:init_groups	16	static
+../Core/Src/buttons.c:229:6:init_events	16	static
+../Core/Src/buttons.c:269:6:init_buttons	8	static

@@ -31,6 +31,7 @@
 #include "ui.h"
 #include "OBD2.h"
 #include "ISO9141_KWP.h"
+#include "OBD_Debug.h"
 #include "quadspi.h"
 #include "gauge.h"
 #include "buttons.h"
@@ -243,16 +244,16 @@ int main(void)
 
   uint32_t tick = 0;
   OBDBus kwp;
-  obd2_bus_auto_detect(&kwp);
-  debug_init(kwp.id);
-  lv_label_set_text(objects.obd_status_label, "#00FF00 LIVE#");
-  lv_refr_now(display);
 
   GaugeState state;
   state.bus = &kwp;
   state.max = 0;
   state.vBat = 0;
-  gauge_load_param(&state, &PARAM_RPM);
+  read_gauge_config(&state);
+  state.bus->init_bus();
+  debug_init(kwp.id);
+  lv_label_set_text(objects.obd_status_label, "#00FF00 LIVE#");
+  lv_refr_now(display);
   uint16_t measure = 0;
   HAL_ADC_Start_IT(&hadc1);
 

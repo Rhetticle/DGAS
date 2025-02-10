@@ -1,4 +1,8 @@
-../Core/Src/gauge.c:26:6:HAL_ADC_ConvCpltCallback	8	static
-../Core/Src/gauge.c:32:6:adjust_scale_labels	40	static
-../Core/Src/gauge.c:42:6:gauge_load_param	64	static
-../Core/Src/gauge.c:60:6:gauge_update	32	static
+../Core/Src/gauge.c:27:6:HAL_ADC_ConvCpltCallback	8	static
+../Core/Src/gauge.c:33:6:adjust_scale_labels	40	static
+../Core/Src/gauge.c:43:6:gauge_load_param	72	static
+../Core/Src/gauge.c:62:6:gauge_update	32	static
+../Core/Src/gauge.c:78:19:get_param_from_id	0	static
+../Core/Src/gauge.c:99:6:save_gauge_config	24	static
+../Core/Src/gauge.c:114:6:update_dropdown_selection	16	static
+../Core/Src/gauge.c:119:19:read_gauge_config	24	static

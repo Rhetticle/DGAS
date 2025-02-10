@@ -6,7 +6,7 @@ buttons.c:53:6:load_screen_and_group	9
 buttons.c:34:6:enc_read	6
 buttons.c:80:6:menu_event_handler	9
 buttons.c:138:6:debug_event_handler	3
-buttons.c:170:6:single_exit_event_handler	2
-buttons.c:179:6:init_groups	1
-buttons.c:226:6:init_events	1
-buttons.c:266:6:init_buttons	1
+buttons.c:170:6:single_exit_event_handler	3
+buttons.c:182:6:init_groups	1
+buttons.c:229:6:init_events	1
+buttons.c:269:6:init_buttons	1

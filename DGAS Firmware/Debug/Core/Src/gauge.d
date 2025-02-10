@@ -443,7 +443,7 @@ Core/Src/gauge.o: ../Core/Src/gauge.c ../Core/Inc/gauge.h \
  ../Core/Src/lvgl/src/lv_api_map_v8.h \
  ../Core/Src/lvgl/src/lv_api_map_v9_0.h \
  ../Core/Src/lvgl/src/lv_api_map_v9_1.h ../Core/Src/ui/ui.h \
- ../Core/Src/ui/screens.h
+ ../Core/Src/ui/screens.h ../Core/Inc/quadspi.h ../Core/Inc/main.h
 ../Core/Inc/gauge.h:
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h:
@@ -901,3 +901,5 @@ Core/Src/gauge.o: ../Core/Src/gauge.c ../Core/Inc/gauge.h \
 ../Core/Src/lvgl/src/lv_api_map_v9_1.h:
 ../Core/Src/ui/ui.h:
 ../Core/Src/ui/screens.h:
+../Core/Inc/quadspi.h:
+../Core/Inc/main.h:

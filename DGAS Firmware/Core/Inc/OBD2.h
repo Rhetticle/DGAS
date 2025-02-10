@@ -22,6 +22,7 @@ typedef enum {
 	BUS_ID_KWP,
 	BUS_ID_9141,
 	BUS_ID_CAN,
+	BUS_ID_AUTO,
 } BusID;
 
 typedef struct {
@@ -63,5 +64,6 @@ HAL_StatusTypeDef obd2_get_boost(OBDBus* bus, uint16_t* boost);
 HAL_StatusTypeDef obd2_get_fuel_pressure(OBDBus* bus, uint16_t* pressure);
 HAL_StatusTypeDef obd2_get_fuel_pressure_manifold_relative(OBDBus* bus, uint16_t* pressure);
 HAL_StatusTypeDef obd2_dummy_request(OBDBus* bus);
+void init_bus_struct_from_id(OBDBus* bus, BusID id);
 HAL_StatusTypeDef obd2_bus_auto_detect(OBDBus* bus);
 #endif /* INC_OBD2_H_ */

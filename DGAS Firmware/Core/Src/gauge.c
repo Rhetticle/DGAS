@@ -7,6 +7,7 @@
 #include "gauge.h"
 #include "ui.h"
 #include "lvgl.h"
+#include "quadspi.h"
 #include <stdio.h>
 
 extern ADC_HandleTypeDef hadc1;
@@ -53,6 +54,7 @@ void gauge_load_param(GaugeState* state, const GaugeParam* param) {
     lv_obj_set_style_arc_color(objects.gauge_arc, lv_color_hex(param->color), LV_PART_INDICATOR | LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(objects.param_val, lv_color_hex(param->color), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(objects.parameter_label, lv_color_hex(param->color), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(objects.param_max_label, lv_color_hex(param->color), LV_PART_MAIN | LV_STATE_DEFAULT);
 
     adjust_scale_labels(param, scaleLabels);
 }
@@ -71,4 +73,73 @@ void gauge_update(GaugeState* state, uint32_t measured) {
 	sprintf(volt, "%.1fV", ADC_TO_VOLTAGE(adcRaw));
 	lv_label_set_text(objects.vbat_label, volt);
 	HAL_ADC_Start_IT(&hadc1);
+}
+
+const GaugeParam* get_param_from_id(ParamID id) {
+	switch(id) {
+		case PARAM_ID_RPM:
+			return &PARAM_RPM;
+		case PARAM_ID_SPEED:
+			return &PARAM_SPEED;
+		case PARAM_ID_LOAD:
+			return &PARAM_LOAD;
+		case PARAM_ID_COOLANT_TEMP:
+			return &PARAM_COOLANT_TEMP;
+		case PARAM_ID_BOOST:
+			return &PARAM_BOOST;
+		case PARAM_ID_INTAKE_TEMP:
+			return &PARAM_INTAKE_TEMP;
+		case PARAM_ID_MAF:
+			return &PARAM_MAF_FLOW_RATE;
+		case PARAM_ID_FUEL_PRESSURE:
+			return &PARAM_FUEL_RAIL_PRESSURE;
+	}
+}
+
+void save_gauge_config(void) {
+	GaugeConfig config;
+
+	ParamID paramSelected = (ParamID) lv_dropdown_get_selected(objects.settings_param_dropdown);
+	BusID busSelected = (BusID) lv_dropdown_get_selected(objects.settings_bus_dropdown);
+
+	config.paramId = paramSelected;
+	config.busId = busSelected;
+
+	CSP_QSPI_DisableMemoryMappedMode();
+	CSP_QSPI_EraseSector(GAUGE_CONFIG_FLASH_ADDR, GAUGE_CONFIG_FLASH_ADDR + 3);
+	CSP_QSPI_WriteMemory((uint8_t*) &config, GAUGE_CONFIG_FLASH_ADDR, sizeof(GaugeConfig));
+	CSP_QSPI_EnableMemoryMappedModeDynamic();
+}
+
+void update_dropdown_selection(GaugeConfig* config) {
+	lv_dropdown_set_selected(objects.settings_param_dropdown, config->paramId, 0);
+	lv_dropdown_set_selected(objects.settings_bus_dropdown, config->busId, 0);
+}
+
+HAL_StatusTypeDef read_gauge_config(GaugeState* state) {
+	GaugeConfig config;
+
+	// we could use pointers here to read config since flash is memory mapped but if flash is faulty
+	// we will segfault so use CSP functions instead
+	CSP_QSPI_DisableMemoryMappedMode();
+	if (CSP_QSPI_Read((uint8_t*) &config, GAUGE_CONFIG_FLASH_ADDR, sizeof(GaugeConfig)) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	CSP_QSPI_EnableMemoryMappedModeDynamic();
+
+	if ((uint8_t) config.paramId == 0xFF) {
+		// no saved configuration so default to rpm
+		gauge_load_param(state, &PARAM_RPM);
+	} else {
+		const GaugeParam* param = get_param_from_id(config.paramId);
+		gauge_load_param(state, param);
+	}
+	if (((uint8_t) config.busId == 0xFF) || (config.busId == BUS_ID_AUTO)) {
+		obd2_bus_auto_detect(state->bus);
+	} else {
+		init_bus_struct_from_id(state->bus, config.busId);
+	}
+	update_dropdown_selection(&config);
+	return HAL_ERROR;
+
 }
