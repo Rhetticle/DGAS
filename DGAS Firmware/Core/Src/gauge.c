@@ -118,28 +118,52 @@ void update_dropdown_selection(GaugeConfig* config) {
 
 HAL_StatusTypeDef read_gauge_config(GaugeState* state) {
 	GaugeConfig config;
-
+	HAL_StatusTypeDef configStatus;
 	// we could use pointers here to read config since flash is memory mapped but if flash is faulty
 	// we will segfault so use CSP functions instead
 	CSP_QSPI_DisableMemoryMappedMode();
-	if (CSP_QSPI_Read((uint8_t*) &config, GAUGE_CONFIG_FLASH_ADDR, sizeof(GaugeConfig)) != HAL_OK) {
-		return HAL_ERROR;
-	}
+	configStatus = CSP_QSPI_Read((uint8_t*) &config, GAUGE_CONFIG_FLASH_ADDR, sizeof(GaugeConfig));
 	CSP_QSPI_EnableMemoryMappedModeDynamic();
 
-	if ((uint8_t) config.paramId == 0xFF) {
+	if (((uint8_t) config.paramId == 0xFF) || (configStatus != HAL_OK)) {
 		// no saved configuration so default to rpm
 		gauge_load_param(state, &PARAM_RPM);
 	} else {
 		const GaugeParam* param = get_param_from_id(config.paramId);
 		gauge_load_param(state, param);
 	}
-	if (((uint8_t) config.busId == 0xFF) || (config.busId == BUS_ID_AUTO)) {
-		obd2_bus_auto_detect(state->bus);
+
+	if (((uint8_t) config.busId == 0xFF) || (config.busId == BUS_ID_AUTO) || (configStatus != HAL_OK)) {
+		if (obd2_bus_auto_detect(state->bus) != HAL_OK) {
+			// couldn't connect with any supported bus
+			return HAL_ERROR;
+		}
 	} else {
 		init_bus_struct_from_id(state->bus, config.busId);
 	}
 	update_dropdown_selection(&config);
-	return HAL_ERROR;
+	return HAL_OK;
 
+}
+
+HAL_StatusTypeDef gauge_init(GaugeState* state, OBDBus* bus) {
+	state->bus = bus;
+	state->max = 0;
+	state->vBat = 0;
+
+	if (read_gauge_config(state) != HAL_OK) {
+		// only get here if we couldn't connect to an OBD bus
+		return HAL_ERROR;
+
+	}
+	if (state->bus->id != BUS_ID_AUTO) {
+		// need to check that bus wasn't auto-detected because if it was then it has already
+		// been initialised
+		if (state->bus->init_bus() != HAL_OK) {
+			// bus init failed
+			return HAL_ERROR;
+		}
+	}
+	state->bus->status = OBD_LIVE;
+	return HAL_OK;
 }

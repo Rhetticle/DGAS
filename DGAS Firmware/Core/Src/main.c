@@ -244,13 +244,8 @@ int main(void)
 
   uint32_t tick = 0;
   OBDBus kwp;
-
   GaugeState state;
-  state.bus = &kwp;
-  state.max = 0;
-  state.vBat = 0;
-  read_gauge_config(&state);
-  state.bus->init_bus();
+  gauge_init(&state, &kwp);
   debug_init(kwp.id);
   lv_label_set_text(objects.obd_status_label, "#00FF00 LIVE#");
   lv_refr_now(display);
@@ -271,7 +266,7 @@ int main(void)
  		 gauge_update(&state, measure);
 		 tick = HAL_GetTick();
 	 } else if ((HAL_GetTick() > tick + 500) && (lv_screen_active() != objects.gauge_main_ui)) {
-		 //obd2_dummy_request(&kwp);
+		 obd2_dummy_request(&kwp);
 		 tick = HAL_GetTick();
 	 }
 	 lv_timer_handler();

@@ -143,6 +143,7 @@ void init_bus_struct_from_id(OBDBus* bus, BusID id) {
 		bus->init_bus = can_obd2_init;
 		bus->get_pid = can_get_pid;
 	}
+	bus->id = id;
 }
 
 HAL_StatusTypeDef obd2_bus_auto_detect(OBDBus* bus) {

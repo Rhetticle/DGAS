@@ -5,4 +5,5 @@ gauge.c:62:6:gauge_update	2
 gauge.c:78:19:get_param_from_id	2
 gauge.c:99:6:save_gauge_config	1
 gauge.c:114:6:update_dropdown_selection	1
-gauge.c:119:19:read_gauge_config	6
+gauge.c:119:19:read_gauge_config	9
+gauge.c:149:19:gauge_init	4

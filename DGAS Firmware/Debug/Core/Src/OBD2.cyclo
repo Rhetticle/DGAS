@@ -11,4 +11,4 @@ OBD2.c:106:19:obd2_get_fuel_pressure	2
 OBD2.c:116:19:obd2_get_fuel_pressure_manifold_relative	2
 OBD2.c:126:19:obd2_dummy_request	1
 OBD2.c:135:6:init_bus_struct_from_id	4
-OBD2.c:148:19:obd2_bus_auto_detect	4
+OBD2.c:149:19:obd2_bus_auto_detect	4

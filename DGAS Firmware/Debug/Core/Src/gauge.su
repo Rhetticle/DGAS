@@ -6,3 +6,4 @@
 ../Core/Src/gauge.c:99:6:save_gauge_config	24	static
 ../Core/Src/gauge.c:114:6:update_dropdown_selection	16	static
 ../Core/Src/gauge.c:119:19:read_gauge_config	24	static
+../Core/Src/gauge.c:149:19:gauge_init	16	static

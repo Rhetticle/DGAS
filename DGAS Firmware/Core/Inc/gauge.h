@@ -62,5 +62,6 @@ const GaugeParam* get_param_from_id(ParamID id);
 void save_gauge_config(void);
 void update_dropdown_selection(GaugeConfig* config);
 HAL_StatusTypeDef read_gauge_config(GaugeState* state);
+HAL_StatusTypeDef gauge_init(GaugeState* state, OBDBus* bus);
 
 #endif /* INC_GAUGE_H_ */
