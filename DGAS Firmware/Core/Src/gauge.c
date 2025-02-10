@@ -94,6 +94,8 @@ const GaugeParam* get_param_from_id(ParamID id) {
 		case PARAM_ID_FUEL_PRESSURE:
 			return &PARAM_FUEL_RAIL_PRESSURE;
 	}
+	// shouldn't get here
+	return NULL;
 }
 
 void save_gauge_config(void) {

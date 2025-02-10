@@ -8,5 +8,5 @@
 ../Core/Src/buttons.c:138:6:debug_event_handler	16	static
 ../Core/Src/buttons.c:170:6:single_exit_event_handler	16	static
 ../Core/Src/buttons.c:182:6:init_groups	16	static
-../Core/Src/buttons.c:229:6:init_events	16	static
-../Core/Src/buttons.c:269:6:init_buttons	8	static
+../Core/Src/buttons.c:228:6:init_events	16	static
+../Core/Src/buttons.c:268:6:init_buttons	8	static

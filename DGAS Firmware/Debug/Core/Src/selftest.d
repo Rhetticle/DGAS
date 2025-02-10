@@ -40,10 +40,9 @@ Core/Src/selftest.o: ../Core/Src/selftest.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- ../Core/Inc/selftest.h ../Core/Inc/LIS3DH.h ../Core/Inc/LIS3DH.h \
- ../Core/Inc/quadspi.h ../Core/Inc/main.h ../Core/Src/ui/ui.h \
- ../Core/Src/lvgl/lvgl.h ../Core/Src/lvgl/lv_version.h \
- ../Core/Src/lvgl/src/lv_init.h ../Core/Src/lvgl/src/lv_conf_internal.h \
+ ../Core/Inc/selftest.h ../Core/Inc/LIS3DH.h ../Core/Src/lvgl/lvgl.h \
+ ../Core/Src/lvgl/lv_version.h ../Core/Src/lvgl/src/lv_init.h \
+ ../Core/Src/lvgl/src/lv_conf_internal.h \
  ../Core/Src/lvgl/src/lv_conf_kconfig.h ../Core/Src/lvgl/lv_conf.h \
  ../Core/Src/lvgl/src/misc/lv_types.h \
  ../Core/Src/lvgl/src/misc/../lv_conf_internal.h \
@@ -444,7 +443,9 @@ Core/Src/selftest.o: ../Core/Src/selftest.c \
  ../Core/Src/lvgl/src/drivers/uefi/../../display/lv_display.h \
  ../Core/Src/lvgl/src/lv_api_map_v8.h \
  ../Core/Src/lvgl/src/lv_api_map_v9_0.h \
- ../Core/Src/lvgl/src/lv_api_map_v9_1.h ../Core/Src/ui/screens.h
+ ../Core/Src/lvgl/src/lv_api_map_v9_1.h ../Core/Inc/LIS3DH.h \
+ ../Core/Inc/quadspi.h ../Core/Inc/main.h ../Core/Src/ui/ui.h \
+ ../Core/Src/ui/screens.h
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h:
 ../Drivers/CMSIS/Include/core_cm7.h:
@@ -488,10 +489,6 @@ Core/Src/selftest.o: ../Core/Src/selftest.c \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h:
 ../Core/Inc/selftest.h:
 ../Core/Inc/LIS3DH.h:
-../Core/Inc/LIS3DH.h:
-../Core/Inc/quadspi.h:
-../Core/Inc/main.h:
-../Core/Src/ui/ui.h:
 ../Core/Src/lvgl/lvgl.h:
 ../Core/Src/lvgl/lv_version.h:
 ../Core/Src/lvgl/src/lv_init.h:
@@ -904,4 +901,8 @@ Core/Src/selftest.o: ../Core/Src/selftest.c \
 ../Core/Src/lvgl/src/lv_api_map_v8.h:
 ../Core/Src/lvgl/src/lv_api_map_v9_0.h:
 ../Core/Src/lvgl/src/lv_api_map_v9_1.h:
+../Core/Inc/LIS3DH.h:
+../Core/Inc/quadspi.h:
+../Core/Inc/main.h:
+../Core/Src/ui/ui.h:
 ../Core/Src/ui/screens.h:

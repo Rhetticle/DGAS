@@ -3,7 +3,7 @@ gauge.c:33:6:adjust_scale_labels	2
 gauge.c:43:6:gauge_load_param	1
 gauge.c:62:6:gauge_update	2
 gauge.c:78:19:get_param_from_id	2
-gauge.c:99:6:save_gauge_config	1
-gauge.c:114:6:update_dropdown_selection	1
-gauge.c:119:19:read_gauge_config	9
-gauge.c:149:19:gauge_init	4
+gauge.c:101:6:save_gauge_config	1
+gauge.c:116:6:update_dropdown_selection	1
+gauge.c:121:19:read_gauge_config	9
+gauge.c:151:19:gauge_init	4

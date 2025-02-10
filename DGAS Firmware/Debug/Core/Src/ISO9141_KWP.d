@@ -40,7 +40,8 @@ Core/Src/ISO9141_KWP.o: ../Core/Src/ISO9141_KWP.c \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
- ../Core/Inc/ISO9141_KWP.h ../Core/Inc/OBD2.h ../Core/Inc/OBD_Debug.h
+ ../Core/Inc/ISO9141_KWP.h ../Core/Inc/OBD2.h ../Core/Inc/OBD_Debug.h \
+ ../Core/Inc/OBD2.h
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h:
 ../Drivers/CMSIS/Include/core_cm7.h:
@@ -85,3 +86,4 @@ Core/Src/ISO9141_KWP.o: ../Core/Src/ISO9141_KWP.c \
 ../Core/Inc/ISO9141_KWP.h:
 ../Core/Inc/OBD2.h:
 ../Core/Inc/OBD_Debug.h:
+../Core/Inc/OBD2.h:

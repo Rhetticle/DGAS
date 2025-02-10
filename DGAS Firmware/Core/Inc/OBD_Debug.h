@@ -9,6 +9,7 @@
 #define INC_OBD_DEBUG_H_
 
 #include <stdbool.h>
+#include "OBD2.h"
 
 #define DBG_MSG_MAX_SIZE 256
 #define DBG_WINDOW_MAX_TEXT 600
@@ -18,6 +19,7 @@ typedef enum {
 	ERROR_KWP_FORMAT,
 } BusError;
 
+void debug_init(BusID id);
 void debug_add_text(char* text);
 void debug_send_data(uint8_t* data, uint32_t size);
 void add_bus_name_to_header(char* header);

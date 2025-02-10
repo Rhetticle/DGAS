@@ -97,7 +97,6 @@ typedef struct _objects_t {
     lv_obj_t *obj37;
     lv_obj_t *diagnose_exit_btn;
     lv_obj_t *obj38;
-    lv_obj_t *self_test_textarea;
     lv_obj_t *obj39;
     lv_obj_t *obj40;
     lv_obj_t *self_test_run_btn;
@@ -106,6 +105,15 @@ typedef struct _objects_t {
     lv_obj_t *obj42;
     lv_obj_t *self_test_description_label;
     lv_obj_t *self_test_progress_bar;
+    lv_obj_t *self_test_dram_icon;
+    lv_obj_t *self_test_flash_icon;
+    lv_obj_t *self_test_accel_icon;
+    lv_obj_t *self_test_dram_label;
+    lv_obj_t *self_test_flash_label;
+    lv_obj_t *self_test_accel_label;
+    lv_obj_t *self_test_dram_textarea;
+    lv_obj_t *self_test_flash_textarea;
+    lv_obj_t *self_test_accel_textarea;
 } objects_t;
 
 extern objects_t objects;

@@ -98,9 +98,9 @@ void menu_event_handler(lv_event_t* e) {
 			load_screen_and_group(objects.diagnose, indev);
 		} else if (focused == objects.self_test_btn) {
 			load_screen_and_group(objects.self_test, indev);
-			lv_label_set_text(lv_textarea_get_label(objects.self_test_textarea), "");
 			lv_obj_add_flag(objects.self_test_progress_bar, LV_OBJ_FLAG_HIDDEN);
 			lv_obj_remove_flag(objects.self_test_run_btn, LV_OBJ_FLAG_HIDDEN);
+			hide_report_objects();
 		} else if (focused == objects.about_btn) {
 			load_screen_and_group(objects.about, indev);
 		}
@@ -213,7 +213,6 @@ void init_groups(void) {
 	selfTestGroup = lv_group_create();
 	lv_group_add_obj(selfTestGroup, objects.self_test_run_btn);
 	lv_group_add_obj(selfTestGroup, objects.self_test_exit_btn);
-
 	// settings
 	settingsGroup = lv_group_create();
 	lv_group_add_obj(settingsGroup, objects.settings_param_dropdown);

@@ -1,0 +1,8 @@
+#include "images.h"
+
+const ext_img_desc_t images[4] = {
+    { "QR Code", &img_qr_code },
+    { "ST", &img_st },
+    { "HVE", &img_hve },
+    { "ISSI", &img_issi },
+};

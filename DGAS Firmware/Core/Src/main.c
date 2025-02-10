@@ -248,6 +248,7 @@ int main(void)
   gauge_init(&state, &kwp);
   debug_init(kwp.id);
   lv_label_set_text(objects.obd_status_label, "#00FF00 LIVE#");
+  lv_screen_load(objects.gauge_main_ui);
   lv_refr_now(display);
   uint16_t measure = 0;
   HAL_ADC_Start_IT(&hadc1);
