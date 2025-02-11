@@ -1063,6 +1063,7 @@ void create_screen_diagnose() {
             lv_textarea_set_max_length(obj, 256);
             lv_textarea_set_one_line(obj, false);
             lv_textarea_set_password_mode(obj, false);
+            lv_label_set_recolor(lv_textarea_get_label(obj), true);
             lv_obj_set_style_bg_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
             lv_obj_set_style_border_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
         }

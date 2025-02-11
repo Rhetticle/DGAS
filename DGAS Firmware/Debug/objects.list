@@ -4,6 +4,7 @@
 "./Core/Src/OBD_Debug.o"
 "./Core/Src/ST7701.o"
 "./Core/Src/buttons.o"
+"./Core/Src/diagnose.o"
 "./Core/Src/gauge.o"
 "./Core/Src/iso15765.o"
 "./Core/Src/main.o"

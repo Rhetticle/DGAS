@@ -23,6 +23,20 @@ HAL_StatusTypeDef obd2_get_pid(OBDBus* bus, uint8_t pid, uint8_t* response) {
 	return HAL_OK;
 }
 
+HAL_StatusTypeDef obd2_get_dtcs(OBDBus* bus, uint8_t* response) {
+	if (bus->get_dtcs(response) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef obd2_clear_dtcs(OBDBus* bus) {
+	if (bus->clear_dtcs() != HAL_OK) {
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
 HAL_StatusTypeDef obd2_get_rpm(OBDBus* bus, uint16_t* rpm) {
 	uint8_t response[OBD2_DATA_MAX] = {0};
 
@@ -136,9 +150,13 @@ void init_bus_struct_from_id(OBDBus* bus, BusID id) {
 	if (id == BUS_ID_KWP) {
 		bus->init_bus = kwp_init;
 		bus->get_pid = kwp_get_pid;
+		bus->get_dtcs = kwp_get_dtcs;
+		bus->clear_dtcs = kwp_clear_dtcs;
 	} else if (id == BUS_ID_9141) {
 		bus->init_bus = iso9141_init;
 		bus->get_pid = iso9141_get_pid;
+		bus->get_dtcs = iso9141_get_dtcs;
+		bus->clear_dtcs = iso9141_clear_dtcs;
 	} else if (id == BUS_ID_CAN) {
 		bus->init_bus = can_obd2_init;
 		bus->get_pid = can_get_pid;

@@ -60,6 +60,7 @@ void display_test_report(SelfTestReport* report);
 void hide_report_objects(void);
 void show_report_objects(void);
 void clear_report_textareas(void);
+void update_progress_bar(uint32_t value);
 void dgas_self_test(void);
 
 #endif /* INC_SELFTEST_H_ */

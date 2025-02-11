@@ -6,6 +6,10 @@
 ../Core/Src/ISO9141_KWP.c:80:19:iso9141_init	48	static
 ../Core/Src/ISO9141_KWP.c:93:19:kwp_init	48	static
 ../Core/Src/ISO9141_KWP.c:161:19:iso9141_get_pid	48	static
-../Core/Src/ISO9141_KWP.c:193:19:kwp_get_pid	56	dynamic
-../Core/Src/ISO9141_KWP.c:230:9:iso9141_kwp_checksum	0	static
-../Core/Src/ISO9141_KWP.c:239:19:iso9141_kwp_send_data	32	static
+../Core/Src/ISO9141_KWP.c:193:19:iso9141_get_dtcs	48	static
+../Core/Src/ISO9141_KWP.c:226:19:iso9141_clear_dtcs	40	static
+../Core/Src/ISO9141_KWP.c:236:19:kwp_get_pid	56	dynamic
+../Core/Src/ISO9141_KWP.c:273:19:kwp_get_dtcs	56	dynamic
+../Core/Src/ISO9141_KWP.c:310:19:kwp_clear_dtcs	40	static
+../Core/Src/ISO9141_KWP.c:320:9:iso9141_kwp_checksum	0	static
+../Core/Src/ISO9141_KWP.c:329:19:iso9141_kwp_send_data	32	static

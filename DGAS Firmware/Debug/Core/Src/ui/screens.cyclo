@@ -1,11 +1,11 @@
 screens.c:244:6:tick_screen_gauge_main_ui	1
-screens.c:1354:6:tick_screen_self_test	1
+screens.c:1355:6:tick_screen_self_test	1
 screens.c:513:6:tick_screen_menu	1
 screens.c:641:6:tick_screen_obd2_debug	1
 screens.c:839:6:tick_screen_measure	1
 screens.c:965:6:tick_screen_settings	1
 screens.c:1046:6:tick_screen_about	1
-screens.c:1154:6:tick_screen_diagnose	1
+screens.c:1155:6:tick_screen_diagnose	1
 screens.c:16:6:create_screen_gauge_main_ui	1
 screens.c:247:6:create_screen_menu	1
 screens.c:516:6:create_screen_obd2_debug	1
@@ -13,6 +13,6 @@ screens.c:644:6:create_screen_measure	1
 screens.c:842:6:create_screen_settings	1
 screens.c:968:6:create_screen_about	1
 screens.c:1049:6:create_screen_diagnose	1
-screens.c:1157:6:create_screen_self_test	1
-screens.c:1358:6:create_screens	1
-screens.c:1386:6:tick_screen	1
+screens.c:1158:6:create_screen_self_test	1
+screens.c:1359:6:create_screens	1
+screens.c:1387:6:tick_screen	1

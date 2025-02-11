@@ -10,6 +10,7 @@
 #include "buttons.h"
 #include "gauge.h"
 #include "selftest.h"
+#include "diagnose.h"
 #include <stm32f7xx.h>
 
 static volatile uint8_t navPressed = 0;
@@ -51,6 +52,7 @@ void enc_read(lv_indev_t* indev, lv_indev_data_t* data) {
 }
 
 void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
+	lv_obj_t* prevActive = lv_screen_active();
 	lv_screen_load(screen);
 
 	if (screen == objects.gauge_main_ui) {
@@ -73,8 +75,13 @@ void load_screen_and_group(lv_obj_t* screen, lv_indev_t* indev) {
 	}
 
 	lv_group_t* group = lv_indev_get_group(indev);
-	// add this to make sure focus is shown on screen switch
-	lv_group_focus_obj(lv_group_get_obj_by_index(group, 0));
+	if ((group == menuGroup) && (prevActive != objects.gauge_main_ui)) {
+		lv_group_focus_next(group);
+		lv_group_focus_prev(group);
+	} else {
+		// add this to make sure focus is shown on screen switch
+		lv_group_focus_obj(lv_group_get_obj_by_index(group, 0));
+	}
 }
 
 void menu_event_handler(lv_event_t* e) {
@@ -95,7 +102,9 @@ void menu_event_handler(lv_event_t* e) {
 		} else if (focused == objects.menu_exit_btn) {
 			load_screen_and_group(objects.gauge_main_ui, indev);
 		} else if (focused == objects.diagnose_btn) {
+			GaugeState* state = (GaugeState*) lv_event_get_user_data(e);
 			load_screen_and_group(objects.diagnose, indev);
+			display_dtcs(state->bus);
 		} else if (focused == objects.self_test_btn) {
 			load_screen_and_group(objects.self_test, indev);
 			lv_obj_add_flag(objects.self_test_progress_bar, LV_OBJ_FLAG_HIDDEN);
@@ -150,10 +159,11 @@ void debug_event_handler(lv_event_t* e) {
 
 void dtc_event_handler(lv_event_t* e) {
 	lv_event_code_t code = lv_event_get_code(e);
-	lv_indev_t* indev = lv_indev_active();
+	GaugeState* state = (GaugeState*) lv_event_get_user_data(e);
 
 	if (code == LV_EVENT_CLICKED) {
-		return;
+		obd2_clear_dtcs(state->bus);
+		display_dtcs(state->bus);
 	}
 }
 
@@ -173,6 +183,8 @@ void single_exit_event_handler(lv_event_t* e) {
 
 	if (code == LV_EVENT_CLICKED) {
 		if (lv_screen_active() == objects.settings) {
+			// special casing for when going from settings back to menu we need to save the gauge configuration
+			// to flash
 			save_gauge_config();
 		}
 		load_screen_and_group(objects.menu, indev);
@@ -239,7 +251,7 @@ void init_events(GaugeState* state) {
 	//menu
 	lv_obj_add_event_cb(objects.measure_btn, menu_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(objects.obd2_debug_btn, menu_event_handler, LV_EVENT_ALL, NULL);
-	lv_obj_add_event_cb(objects.diagnose_btn, menu_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.diagnose_btn, menu_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.self_test_btn, menu_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(objects.settings_btn, menu_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(objects.about_btn, menu_event_handler, LV_EVENT_ALL, NULL);
@@ -251,7 +263,7 @@ void init_events(GaugeState* state) {
 	lv_obj_add_event_cb(objects.obd2_exit_btn, debug_event_handler, LV_EVENT_ALL, NULL);
 
 	//DTC
-	lv_obj_add_event_cb(objects.diagnose_clear_btn, dtc_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_event_cb(objects.diagnose_clear_btn, dtc_event_handler, LV_EVENT_ALL, state);
 	lv_obj_add_event_cb(objects.diagnose_exit_btn, single_exit_event_handler, LV_EVENT_ALL, NULL);
 
 	//self test

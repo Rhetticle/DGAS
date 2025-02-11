@@ -445,7 +445,7 @@ Core/Src/buttons.o: ../Core/Src/buttons.c ../Core/Src/ui/ui.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  ../Core/Inc/OBD2.h ../Core/Inc/gauge.h ../Core/Inc/selftest.h \
- ../Core/Inc/LIS3DH.h
+ ../Core/Inc/LIS3DH.h ../Core/Inc/diagnose.h
 ../Core/Src/ui/ui.h:
 ../Core/Src/lvgl/lvgl.h:
 ../Core/Src/lvgl/lv_version.h:
@@ -907,3 +907,4 @@ Core/Src/buttons.o: ../Core/Src/buttons.c ../Core/Src/ui/ui.h \
 ../Core/Inc/gauge.h:
 ../Core/Inc/selftest.h:
 ../Core/Inc/LIS3DH.h:
+../Core/Inc/diagnose.h:

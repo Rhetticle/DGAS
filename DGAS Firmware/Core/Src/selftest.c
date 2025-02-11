@@ -16,6 +16,7 @@
 #include <math.h>
 
 extern SDRAM_HandleTypeDef hsdram1;
+extern lv_display_t* display;
 
 HAL_StatusTypeDef dram_test(MemoryTestDesc* desc) {
 	// we should not use pointers here as if DRAM is not ok we will segfault (go to hard fault handler)
@@ -215,6 +216,11 @@ void clear_report_textareas(void) {
 	lv_textarea_set_text(objects.self_test_accel_textarea, "");
 }
 
+void update_progress_bar(uint32_t value) {
+	lv_bar_set_value(objects.self_test_progress_bar, value, 0);
+	lv_refr_now(display);
+}
+
 // run a self test on peripherals (DRAM, flash, accelerometer)
 void dgas_self_test(void) {
 	SelfTestReport report;
@@ -227,9 +233,13 @@ void dgas_self_test(void) {
 	report.flashTest = &flashTest;
 	report.accTest = &accTest;
 
+	update_progress_bar(0);
 	dram_test(&dramTest);
+	update_progress_bar(33);
 	flash_test(&flashTest);
+	update_progress_bar(80);
 	accelerometer_test(&accTest);
+	update_progress_bar(100);
 	lv_obj_add_flag(objects.self_test_progress_bar, LV_OBJ_FLAG_HIDDEN);
 	show_report_objects();
 	clear_report_textareas();

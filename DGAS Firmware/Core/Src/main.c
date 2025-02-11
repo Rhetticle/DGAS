@@ -187,7 +187,7 @@ lv_display_t* display_init(void) {
 	return display;
 }
 
-uint16_t rpmlive = 0;
+lv_display_t* display;
 /* USER CODE END 0 */
 
 /**
@@ -239,7 +239,7 @@ int main(void)
   // We will immediately pull L and K lines high
   HAL_GPIO_WritePin(GPIOC, ISO9141_K, 1);
   HAL_GPIO_WritePin(GPIOA, ISO9141_L, 0);
-  lv_display_t* display = display_init();
+  display = display_init();
   dgas_init(display);
 
   uint32_t tick = 0;
@@ -248,7 +248,6 @@ int main(void)
   gauge_init(&state, &kwp);
   debug_init(kwp.id);
   lv_label_set_text(objects.obd_status_label, "#00FF00 LIVE#");
-  lv_screen_load(objects.gauge_main_ui);
   lv_refr_now(display);
   uint16_t measure = 0;
   HAL_ADC_Start_IT(&hadc1);

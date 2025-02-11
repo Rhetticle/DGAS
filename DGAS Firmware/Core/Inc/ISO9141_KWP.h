@@ -24,7 +24,8 @@ typedef struct {
 #define ISO9141_HEADER_1 0x68
 #define ISO9141_HEADER_2 0x6A
 #define ISO9141_HEADER_3 0xF1
-#define ISO9141_OBD_REQ_SIZE 6 // 3 header bytes, 1 byte for mode, 1 byte for PID, 1 byte for checksum
+#define ISO9141_OBD_PID_REQ_SIZE 6 // 3 header bytes, 1 byte for mode, 1 byte for PID, 1 byte for checksum
+#define ISO9141_OBD_DTC_REQ_SIZE 5 // 3 header bytes, 1 mode byte, 1 byte for checksum
 #define ISO9141_OBD_MAX_REC_SIZE 10 // 3 preamble bytes, 1 byte for mode, 1 byte for PID, 4 data bytes, 1 checksum byte
 
 // KWP2000 initialisation values and header values
@@ -34,7 +35,8 @@ typedef struct {
 #define KWP_HEADER_1 0xC2
 #define KWP_HEADER_2 0x33
 #define KWP_HEADER_3 0xF1
-#define KWP_OBD_REQ_SIZE 6 // same format as ISO9141
+#define KWP_OBD_PID_REQ_SIZE 6 // same format as ISO9141
+#define KWP_OBD_DTC_REQ_SIZE 5 // same format as ISO9141
 #define KWP_DATA_SIZE_MASK 0b111111 // mask to apply to format byte to extract data size of message
 #define KWP_DATA_START_INDEX 5 // 5th byte (counting from zero) of response will be first data byte
 
@@ -63,7 +65,11 @@ HAL_StatusTypeDef kwp_init(void);
 HAL_StatusTypeDef iso9141_kwp_get_init_response(InitResponse* response);
 HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words);
 HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response);
+HAL_StatusTypeDef iso9141_get_dtcs(uint8_t* response);
+HAL_StatusTypeDef iso9141_clear_dtcs(void);
 HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response);
+HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response);
+HAL_StatusTypeDef kwp_clear_dtcs(void);
 uint8_t iso9141_kwp_checksum(uint8_t* data, uint32_t size);
 HAL_StatusTypeDef iso9141_kwp_send_data(uint8_t* data, uint32_t size);
 #endif /* INC_ISO9141_KWP_H_ */
