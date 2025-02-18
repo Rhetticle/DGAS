@@ -240,6 +240,7 @@ void dgas_self_test(void) {
 	update_progress_bar(80);
 	accelerometer_test(&accTest);
 	update_progress_bar(100);
+
 	lv_obj_add_flag(objects.self_test_progress_bar, LV_OBJ_FLAG_HIDDEN);
 	show_report_objects();
 	clear_report_textareas();

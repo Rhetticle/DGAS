@@ -10,20 +10,32 @@
 
 #include <stdbool.h>
 #include "OBD2.h"
+#include "lvgl.h"
 
 #define DBG_MSG_MAX_SIZE 256
-#define DBG_WINDOW_MAX_TEXT 600
+#define DBG_WINDOW_MAX_TEXT 550
+#define DBG_WINDOW_CUT_AMOUNT 70
+
+#define CHECK_OBD_MODE(x, mode) ((x  == mode) || (x == mode + OBD_RESPONSE_MODE_OFFSET))
 
 typedef enum {
+	ERROR_TRANSMIT,
+	ERROR_RECEIVE,
 	ERROR_TIMEOUT,
-	ERROR_KWP_FORMAT,
+	ERROR_KWP_9141_ECHO,
+	ERROR_KWP_9141_FORMAT,
 } BusError;
 
 void debug_init(BusID id);
-void debug_add_text(char* text);
-void debug_send_data(uint8_t* data, uint32_t size);
+char* get_debug_log(void);
+void pause_debugger(void);
+void resume_debugger(void);
+void debug_send_text(char* text);
+void debug_add_data(char* message, uint8_t* data, uint32_t size);
 void add_bus_name_to_header(char* header);
-void debug_send_header(bool receiving, bool error);
+void debug_add_header(char* message, bool receiving, bool error);
+uint8_t get_obd_mode(uint8_t* data, uint32_t size);
+void add_request_type_to_header(char* header, uint8_t obdMode);
 void debug_send_message(uint8_t* data, uint32_t size, bool receiving);
 void debug_send_error(bool receiving, BusError error);
 #endif /* INC_OBD_DEBUG_H_ */

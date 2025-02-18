@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "diagnose.h"
+#include "OBD_Debug.h"
 #include "OBD2.h"
 #include "ui.h"
 #include "lvgl.h"
@@ -30,27 +31,29 @@ void display_dtcs(OBDBus* bus) {
 	// clear the textarea from previous use
 	lv_textarea_set_text(objects.diagnose_textarea, "");
 	lv_refr_now(display);
-	uint8_t response[4] = {0};
+	uint8_t response[OBD_DTC_MAX_COUNT] = {0};
 
 	if (obd2_get_dtcs(bus, response) != HAL_OK) {
-		lv_textarea_add_text(objects.diagnose_textarea, "#FF0000 ERROR#: DTC request failed");
+		char* log = get_debug_log();
+		lv_textarea_add_text(objects.diagnose_textarea, "#FF0000 ERROR#: DTC request failed\n \n#E6AF00 DEBUG LOG:#\n");
+		lv_textarea_add_text(objects.diagnose_textarea, log);
 		return;
 	}
 
 	if ((response[0] == 0) && (response[1] == 0)) {
-		lv_textarea_add_text(objects.diagnose_textarea, "#00FF00 NO DTCs FOUND#");
+		lv_textarea_add_text(objects.diagnose_textarea, "#00FF00 NO DTCs FOUND#\n");
 	}
 
-	for (int i = 0; i < sizeof(response) / sizeof(uint16_t); i++) {
-		char dtcStr[DTC_CODE_STRING_LEN];
+	for (int i = 0; i < sizeof(response) / sizeof(uint16_t); i += sizeof(uint16_t)) {
 		if ((response[i] == 0) && (response[i + 1] == 0)) {
 			break;
 		} else {
+			char dtcStr[DTC_CODE_STRING_LEN] = {0};
+			char message[DTC_CODE_FOUND_MSG_MAX_LEN] = {0};
 			uint16_t dtc = ((uint16_t) response[i] << 8) | response[i + 1];
-			char message[DTC_CODE_FOUND_MSG_MAX_LEN];
 			decode_dtc(dtc, dtcStr);
 			sprintf(message, "#FF0000 CODE FOUND# - %s\n", dtcStr);
-			lv_textarea_add_text(objects.diagnose, message);
+			lv_textarea_add_text(objects.diagnose_textarea, message);
 		}
 	}
 }

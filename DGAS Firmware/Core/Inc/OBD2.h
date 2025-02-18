@@ -42,8 +42,10 @@ typedef struct {
 #define OBD2_DATA_MAX 4 // maximum of four bytes sent in OBD2 response
 
 #define OBD2_MODE_LIVE 0x01
-#define OBD2_MODE_DTC 0x03
+#define OBD2_MODE_DTC 0x03 // might be 0x03 or 0x07 differences unclear
 #define OBD2_MODE_CLEAR_DTC 0x04
+#define OBD_RESPONSE_MODE_OFFSET 0x40
+#define OBD_DTC_MAX_COUNT 255
 
 #define OBD2_PID_SUPPORTED_PIDS 0x00
 #define OBD2_PID_RPM 0x0C

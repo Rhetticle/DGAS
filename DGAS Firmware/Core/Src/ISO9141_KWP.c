@@ -77,6 +77,78 @@ void iso9141_kwp_uart_init(void) {
 	HAL_UART_Init(&huart4);
 }
 
+HAL_StatusTypeDef iso9141_kwp_send_data(uint8_t* data, uint32_t size) {
+	uint8_t echo;
+	HAL_StatusTypeDef status;
+
+	for (int i = 0; i < size; i++) {
+		if ((status = HAL_UART_Transmit(&huart4, &data[i], sizeof(uint8_t), GENERAL_DELAY)) != HAL_OK) {
+			if (status == HAL_TIMEOUT) {
+				// let debugger know of the error
+				debug_send_error(false, ERROR_TIMEOUT);
+			} else {
+				debug_send_error(false, ERROR_TRANSMIT);
+			}
+			return status;
+		}
+		// the byte we just sent will be echoed back since it's all on the K-Line so we will read it back
+		if ((status = HAL_UART_Receive(&huart4, &echo, sizeof(uint8_t), GENERAL_DELAY)) != HAL_OK) {
+			// echo error
+			debug_send_error(false, ERROR_KWP_9141_ECHO);
+			return status;
+		}
+		HAL_Delay(INTERBYTE_DELAY); // must wait 5ms between bytes according to spec
+	}
+	// everything successfull, let debug know
+	debug_send_message(data, size, false);
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef kwp_get_response(uint8_t* data, uint32_t size, uint32_t timeout) {
+	HAL_StatusTypeDef status = HAL_UART_Receive(&huart4, data, size, timeout);
+
+	if (status != HAL_OK) {
+		// let debugger know of the error
+		if (status == HAL_TIMEOUT) {
+			debug_send_error(true, ERROR_TIMEOUT);
+		} else {
+			debug_send_error(true, ERROR_RECEIVE);
+		}
+		return status;
+	}
+	// everything received, let debugger know
+	debug_send_message(data, size, true);
+	return HAL_OK;
+}
+
+uint8_t iso9141_get_response(uint8_t* data) {
+	uint8_t bytesRec = 0;
+	HAL_StatusTypeDef status = HAL_OK;
+
+	while(status == HAL_OK) {
+		status = HAL_UART_Receive(&huart4, &data[bytesRec], sizeof(uint8_t), GENERAL_DELAY);
+		bytesRec++;
+	}
+	bytesRec--;
+	if (bytesRec == 0) {
+		debug_send_error(true, ERROR_RECEIVE);
+	} else {
+		debug_send_message(data, bytesRec, true);
+	}
+	return bytesRec;
+}
+
+HAL_StatusTypeDef kwp_get_format_byte(uint8_t* fByte) {
+	HAL_StatusTypeDef status = HAL_UART_Receive(&huart4, fByte, sizeof(uint8_t), GENERAL_DELAY);
+
+	if (status != HAL_OK) {
+		// couldn't get format byte so let debugger know
+		debug_send_error(true, ERROR_KWP_9141_FORMAT);
+		return HAL_ERROR;
+	}
+	return HAL_OK;
+}
+
 HAL_StatusTypeDef iso9141_init(void) {
 	HAL_UART_DeInit(&huart4);
 	init_tx_gpio();
@@ -147,7 +219,7 @@ HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words) {
 	}
 	// We expect the inversion of the initial 5 baud address bytes (0x33) which would be
 	// 0xCC
-	if (HAL_UART_Receive(&huart4, &nAddress, sizeof(uint8_t), 1000) != HAL_OK) {
+	if (HAL_UART_Receive(&huart4, &nAddress, sizeof(uint8_t), OBD2_RESPONSE_WAIT_MAX) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	if (nAddress != ~ISO9141_ADDRESS) {
@@ -160,26 +232,16 @@ HAL_StatusTypeDef iso9141_kwp_listen(bool check_key_words) {
 
 HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response) {
 	uint8_t message [ISO9141_OBD_PID_REQ_SIZE] = {ISO9141_HEADER_1, ISO9141_HEADER_2, ISO9141_HEADER_3, OBD2_MODE_LIVE, pid};
-	HAL_StatusTypeDef status = HAL_OK;
 	uint8_t recTemp [ISO9141_OBD_MAX_REC_SIZE];
-	uint8_t bytesRec = 0;
 	// add check sum to end of message array
 	message[ISO9141_OBD_PID_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
 
 	if (iso9141_kwp_send_data(message, sizeof(message)) != HAL_OK) {
 		return HAL_ERROR;
 	}
-
-	// won't know the response length so we will loop until UART receives fails
-	while(status == HAL_OK) {
-		status = HAL_UART_Receive(&huart4, &recTemp[bytesRec], sizeof(uint8_t), OBD2_RESPONSE_WAIT_MAX);
-		bytesRec++;
-	}
-
-	bytesRec--;
+	uint8_t bytesRec = iso9141_get_response(recTemp);
 
 	if (bytesRec == 0) {
-		// status became HAL_ERROR on first HAL_UART_Receive() call
 		return HAL_ERROR;
 	}
 	uint8_t dataSize = bytesRec - ISO9141_OBD_PID_REQ_SIZE;
@@ -193,9 +255,7 @@ HAL_StatusTypeDef iso9141_get_pid(uint8_t pid, uint8_t* response) {
 HAL_StatusTypeDef iso9141_get_dtcs(uint8_t* response) {
 	uint8_t message [ISO9141_OBD_DTC_REQ_SIZE] = {ISO9141_HEADER_1, ISO9141_HEADER_2,
 													ISO9141_HEADER_3, OBD2_MODE_DTC};
-	HAL_StatusTypeDef status = HAL_OK;
 	uint8_t recTemp [ISO9141_OBD_MAX_REC_SIZE];
-	uint8_t bytesRec = 0;
 	// add check sum to end of message array
 	message[ISO9141_OBD_DTC_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
 
@@ -204,15 +264,9 @@ HAL_StatusTypeDef iso9141_get_dtcs(uint8_t* response) {
 	}
 
 	// won't know the response length so we will loop until UART receives fails
-	while(status == HAL_OK) {
-		status = HAL_UART_Receive(&huart4, &recTemp[bytesRec], sizeof(uint8_t), OBD2_RESPONSE_WAIT_MAX);
-		bytesRec++;
-	}
-
-	bytesRec--;
+	uint8_t bytesRec = iso9141_get_response(recTemp);
 
 	if (bytesRec == 0) {
-		// status became HAL_ERROR on first HAL_UART_Receive() call
 		return HAL_ERROR;
 	}
 	uint8_t dataSize = bytesRec - ISO9141_OBD_DTC_REQ_SIZE;
@@ -239,7 +293,6 @@ HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
 	// add checksum to end of message array
 	message[KWP_OBD_PID_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
 
-	debug_send_message(message, KWP_OBD_PID_REQ_SIZE, false);
 	if (iso9141_kwp_send_data(message, sizeof(message)) != HAL_OK) {
 		return HAL_ERROR;
 	}
@@ -252,63 +305,60 @@ HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
 
 	// we will read the format bytes which can be used to determine the remaining bytes that the ECU is about to
 	// send
-	if (HAL_UART_Receive(&huart4, &formatByte, sizeof(uint8_t), GENERAL_DELAY) != HAL_OK) {
-		debug_send_error(true, ERROR_KWP_FORMAT);
+	if (kwp_get_format_byte(&formatByte) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	uint8_t dataSize = formatByte & KWP_DATA_SIZE_MASK;
 	uint8_t remain[dataSize + 2 + 1];  // +2 for address bytes echoed back and +1 for checksum
 
-	if (HAL_UART_Receive(&huart4, remain, sizeof(remain), 1000) != HAL_OK) {
-		debug_send_error(true, ERROR_TIMEOUT);
+	if (kwp_get_response(remain, sizeof(remain), 1000) != HAL_OK) {
 		return HAL_ERROR;
 	}
+
 	for (int i = 0; i < dataSize - 2; i++) { // -2 because two of the data bytes will be the mode and PID echoed back
 		response[i] = remain[i + 4];
 	}
-	debug_send_message(remain, sizeof(remain), true);
 	return HAL_OK;
 }
 
 HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response) {
-	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {KWP_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_MODE_DTC};
+	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {0xC1, KWP_HEADER_2, KWP_HEADER_3, 0x13};
 	uint8_t formatByte;
+	uint8_t dtcCount;
 	// add checksum to end of message array
 	message[KWP_OBD_DTC_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
 
-	debug_send_message(message, KWP_OBD_DTC_REQ_SIZE, false);
 	if (iso9141_kwp_send_data(message, sizeof(message)) != HAL_OK) {
 		return HAL_ERROR;
 	}
-	/* Example response for vehicle speed (0x0D):
-	 *
-	 * 0x83 0xF1 0x11 0x41 0x0D 0x0 0xD3
-	 *
-	 * We see 0x83 & 0b111111 = 3, so 0x41 0x0D 0x00 is our "data" although only 0x00 is useful data here
-	 */
 
-	// we will read the format bytes which can be used to determine the remaining bytes that the ECU is about to
-	// send
-	if (HAL_UART_Receive(&huart4, &formatByte, sizeof(uint8_t), GENERAL_DELAY) != HAL_OK) {
-		debug_send_error(true, ERROR_KWP_FORMAT);
+	if (kwp_get_format_byte(&formatByte) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	uint8_t dataSize = formatByte & KWP_DATA_SIZE_MASK;
-	uint8_t remain[dataSize + 2 + 1];  // +2 for address bytes echoed back and +1 for checksum
+	uint8_t remain[4];  // +2 for address bytes echoed back and +1 for checksum
 
 	if (HAL_UART_Receive(&huart4, remain, sizeof(remain), 1000) != HAL_OK) {
-		debug_send_error(true, ERROR_TIMEOUT);
 		return HAL_ERROR;
 	}
-	for (int i = 0; i < dataSize - 1; i++) { // -2 because two of the data bytes will be the mode echoed
-		response[i] = remain[i + 4];
+	dtcCount = remain[3];
+
+	if (dtcCount == 0) {
+		return HAL_OK;
 	}
-	debug_send_message(remain, sizeof(remain), true);
+	uint8_t dtc[(dtcCount * 2) + 1];
+
+	if (HAL_UART_Receive(&huart4, dtc, (dtcCount * 2) + 1, GENERAL_DELAY) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	for (int i = 0; i < dtcCount * 2; i++) {
+		response[i] = dtc[i];
+	}
 	return HAL_OK;
 }
 
 HAL_StatusTypeDef kwp_clear_dtcs(void) {
-	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {KWP_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_MODE_CLEAR_DTC};
+	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {0xC1, KWP_HEADER_2, KWP_HEADER_3, 0x04};
 	message[KWP_OBD_DTC_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
 
 	if (iso9141_kwp_send_data(message, sizeof(message)) != HAL_OK) {
@@ -325,20 +375,3 @@ uint8_t iso9141_kwp_checksum(uint8_t* data, uint32_t size) {
 	}
 	return sum;
 }
-
-HAL_StatusTypeDef iso9141_kwp_send_data(uint8_t* data, uint32_t size) {
-
-	for (int i = 0; i < size; i++) {
-		uint8_t echo;
-		if (HAL_UART_Transmit(&huart4, &data[i], sizeof(uint8_t), 100) != HAL_OK) {
-			return HAL_ERROR;
-		}
-		// the byte we just sent will be echoed back since it's all on the K-Line so we will read it back
-		if (HAL_UART_Receive(&huart4, &echo, sizeof(uint8_t), 100) != HAL_OK) {
-			return HAL_ERROR;
-		}
-		HAL_Delay(INTERBYTE_DELAY); // must wait 5ms between bytes according to spec
-	}
-	return HAL_OK;
-}
-
