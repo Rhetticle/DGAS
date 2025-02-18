@@ -288,7 +288,7 @@ HAL_StatusTypeDef iso9141_clear_dtcs(void) {
 }
 
 HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
-	uint8_t message[KWP_OBD_PID_REQ_SIZE] = {KWP_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_MODE_LIVE, pid};
+	uint8_t message[KWP_OBD_PID_REQ_SIZE] = {KWP_PID_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_MODE_LIVE, pid};
 	uint8_t formatByte;
 	// add checksum to end of message array
 	message[KWP_OBD_PID_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
@@ -322,7 +322,7 @@ HAL_StatusTypeDef kwp_get_pid(uint8_t pid, uint8_t* response) {
 }
 
 HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response) {
-	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {0xC1, KWP_HEADER_2, KWP_HEADER_3, 0x13};
+	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {KWP_DTC_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_MODE_KWP_DTC};
 	uint8_t formatByte;
 	uint8_t dtcCount;
 	// add checksum to end of message array
@@ -335,8 +335,7 @@ HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response) {
 	if (kwp_get_format_byte(&formatByte) != HAL_OK) {
 		return HAL_ERROR;
 	}
-	uint8_t dataSize = formatByte & KWP_DATA_SIZE_MASK;
-	uint8_t remain[4];  // +2 for address bytes echoed back and +1 for checksum
+	uint8_t remain[4];  // +2 for address bytes
 
 	if (HAL_UART_Receive(&huart4, remain, sizeof(remain), 1000) != HAL_OK) {
 		return HAL_ERROR;
@@ -344,11 +343,12 @@ HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response) {
 	dtcCount = remain[3];
 
 	if (dtcCount == 0) {
+		// no trouble codes so return here
 		return HAL_OK;
 	}
-	uint8_t dtc[(dtcCount * 2) + 1];
+	uint8_t dtc[(dtcCount * sizeof(uint16_t)) + 1]; // each dtc is 2 bytes, +1 for checksum
 
-	if (HAL_UART_Receive(&huart4, dtc, (dtcCount * 2) + 1, GENERAL_DELAY) != HAL_OK) {
+	if (HAL_UART_Receive(&huart4, dtc, (dtcCount * sizeof(uint16_t)) + 1, GENERAL_DELAY) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	for (int i = 0; i < dtcCount * 2; i++) {
@@ -358,7 +358,7 @@ HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response) {
 }
 
 HAL_StatusTypeDef kwp_clear_dtcs(void) {
-	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {0xC1, KWP_HEADER_2, KWP_HEADER_3, 0x04};
+	uint8_t message[KWP_OBD_DTC_REQ_SIZE] = {KWP_DTC_HEADER_1, KWP_HEADER_2, KWP_HEADER_3, OBD2_MODE_CLEAR_DTC};
 	message[KWP_OBD_DTC_REQ_SIZE - 1] = iso9141_kwp_checksum(message, sizeof(message) - 1);
 
 	if (iso9141_kwp_send_data(message, sizeof(message)) != HAL_OK) {

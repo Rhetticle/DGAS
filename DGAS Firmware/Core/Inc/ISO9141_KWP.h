@@ -33,7 +33,8 @@ typedef struct {
 
 #define KWP_ADDRESS 0x33
 #define KWP_HEADER_SIZE 3 // 3 header bytes
-#define KWP_HEADER_1 0xC2
+#define KWP_PID_HEADER_1 0xC2
+#define KWP_DTC_HEADER_1 0xC1
 #define KWP_HEADER_2 0x33
 #define KWP_HEADER_3 0xF1
 #define KWP_OBD_PID_REQ_SIZE 6 // same format as ISO9141
