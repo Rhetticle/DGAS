@@ -263,7 +263,11 @@ int main(void)
   {
 	 if ((HAL_GetTick() > tick) && ((lv_screen_active() == objects.gauge_main_ui) || (lv_screen_active() == objects.obd2_debug))) {
 		 state.param->measure(state.bus, &measure);
- 		 gauge_update(&state, measure);
+		 if (lv_screen_active() == objects.obd2_debug) {
+			 debug_flush();
+		 } else {
+			 gauge_update(&state, measure);
+		 }
 		 tick = HAL_GetTick();
 	 } else if ((HAL_GetTick() > tick + 500) && (lv_screen_active() != objects.gauge_main_ui)) {
 		 obd2_dummy_request(&kwp);

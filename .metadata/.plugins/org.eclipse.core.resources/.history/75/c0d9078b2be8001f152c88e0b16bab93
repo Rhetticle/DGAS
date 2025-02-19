@@ -1,9 +1,0 @@
-/*
- * diagnose.c
- *
- *  Created on: Feb 11, 2025
- *      Author: rhett
- */
-
-#include <stm32f7xx.h>
-#include "diagnose.h"

@@ -30,6 +30,8 @@ void debug_init(BusID id);
 char* get_debug_log(void);
 void pause_debugger(void);
 void resume_debugger(void);
+void debug_flush(void);
+void debug_add_to_buffer(char* buff, char* text, uint32_t buffSize);
 void debug_send_text(char* text);
 void debug_add_data(char* message, uint8_t* data, uint32_t size);
 void add_bus_name_to_header(char* header);

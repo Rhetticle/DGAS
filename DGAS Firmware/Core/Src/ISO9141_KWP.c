@@ -139,13 +139,11 @@ uint8_t iso9141_get_response(uint8_t* data) {
 }
 
 HAL_StatusTypeDef kwp_get_format_byte(uint8_t* fByte) {
-	HAL_StatusTypeDef status = HAL_UART_Receive(&huart4, fByte, sizeof(uint8_t), GENERAL_DELAY);
-
-	if (status != HAL_OK) {
-		// couldn't get format byte so let debugger know
+	if (HAL_UART_Receive(&huart4, fByte, sizeof(uint8_t), GENERAL_DELAY) != HAL_OK) {
 		debug_send_error(true, ERROR_KWP_9141_FORMAT);
 		return HAL_ERROR;
 	}
+	debug_send_message(fByte, sizeof(uint8_t), true);
 	return HAL_OK;
 }
 
@@ -337,7 +335,7 @@ HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response) {
 	}
 	uint8_t remain[4];  // +2 for address bytes
 
-	if (HAL_UART_Receive(&huart4, remain, sizeof(remain), 1000) != HAL_OK) {
+	if (kwp_get_response(remain, sizeof(remain), 1000) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	dtcCount = remain[3];
@@ -348,7 +346,7 @@ HAL_StatusTypeDef kwp_get_dtcs(uint8_t* response) {
 	}
 	uint8_t dtc[(dtcCount * sizeof(uint16_t)) + 1]; // each dtc is 2 bytes, +1 for checksum
 
-	if (HAL_UART_Receive(&huart4, dtc, (dtcCount * sizeof(uint16_t)) + 1, GENERAL_DELAY) != HAL_OK) {
+	if (kwp_get_response(dtc, sizeof(dtc), 1000) != HAL_OK) {
 		return HAL_ERROR;
 	}
 	for (int i = 0; i < dtcCount * 2; i++) {

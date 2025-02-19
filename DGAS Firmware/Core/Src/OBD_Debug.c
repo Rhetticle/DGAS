@@ -16,7 +16,8 @@
 #include "lvgl.h"
 
 static BusID busActive;
-static char debugLog [512];
+static char debugLog[512];
+static char debugBuffer[512];
 static bool paused;
 
 void debug_init(BusID id) {
@@ -35,17 +36,34 @@ void resume_debugger(void) {
 	paused = false;
 }
 
-void debug_send_text(char* text) {
-	if (sizeof(debugLog) - strlen(debugLog) > strlen(text)) {
-		sprintf(debugLog + strlen(debugLog), "%s", text);
-	} else {
-		memset(debugLog, 0, sizeof(debugLog));
-		sprintf(debugLog, "%s", text);
+void debug_flush(void) {
+	if (paused) {
+		return;
 	}
+	lv_obj_t* label = lv_textarea_get_label(objects.obd2_debug_textarea);
+	if (strlen(lv_label_get_text(label)) > DBG_WINDOW_MAX_TEXT) {
+		// clear textarea to stop text from overflowing
+		lv_textarea_set_text(objects.obd2_debug_textarea, "");
+	}
+	lv_textarea_add_text(objects.obd2_debug_textarea, debugBuffer);
+	memset(debugBuffer, 0, sizeof(debugBuffer));
+}
 
-	if ((lv_screen_active() == objects.obd2_debug) && !paused) {
-		lv_textarea_add_text(objects.obd2_debug_textarea, text);
+void debug_add_to_buffer(char* buff, char* text, uint32_t buffSize) {
+	if (buffSize - strlen(buff) > strlen(text)) {
+		sprintf(buff + strlen(buff), "%s", text);
+	} else {
+		memset(buff, 0, sizeof(buffSize));
+		sprintf(buff, "%s", text);
 	}
+}
+
+void debug_send_text(char* text) {
+	// debug messages are buffered since writing to textarea is slow and can affect OBD related functionality
+	// The buffer will be flushed to the debug window only if the debug screen is active. All messages will still be
+	// logged to debugLog
+	debug_add_to_buffer(debugLog, text, sizeof(debugLog));
+	debug_add_to_buffer(debugBuffer, text, sizeof(debugBuffer));
 }
 
 void debug_add_data(char* message, uint8_t* data, uint32_t size) {
@@ -83,12 +101,6 @@ void add_bus_name_to_header(char* header) {
 }
 
 void debug_add_header(char* message, bool receiving, bool error) {
-	lv_obj_t* label = lv_textarea_get_label(objects.obd2_debug_textarea);
-	if ((strlen(lv_label_get_text(label)) > DBG_WINDOW_MAX_TEXT) && (lv_screen_active() == objects.obd2_debug)) {
-		// clear textarea to stop text from overflowing
-		lv_textarea_set_text(objects.obd2_debug_textarea, "");
-	}
-
 	if (!receiving) {
 		sprintf(message, "#00FF00 \uf00c [DGAS]# ");
 	} else {
@@ -113,7 +125,8 @@ uint8_t get_obd_mode(uint8_t* data, uint32_t size) {
 void add_request_type_to_header(char* header, uint8_t obdMode) {
 	if (CHECK_OBD_MODE(obdMode, OBD2_MODE_LIVE)) {
 		sprintf(header + strlen(header), "#FF7200 (PID) #");
-	} else if ((CHECK_OBD_MODE(obdMode, OBD2_MODE_DTC)) || (CHECK_OBD_MODE(obdMode, OBD2_MODE_CLEAR_DTC))) {
+	} else if ((CHECK_OBD_MODE(obdMode, OBD2_MODE_DTC)) || (CHECK_OBD_MODE(obdMode, OBD2_MODE_CLEAR_DTC) ||
+			CHECK_OBD_MODE(obdMode, OBD2_MODE_KWP_DTC))) {
 		sprintf(header + strlen(header), "#FFFF00 (DTC) #");
 	} else {
 		sprintf(header + strlen(header), "#FF0000 (???) #");
@@ -135,15 +148,30 @@ void debug_send_message(uint8_t* data, uint32_t size, bool receiving) {
 
 void debug_send_error(bool receiving, BusError error) {
 	char errorMsg[DBG_MSG_MAX_SIZE];
+	char* errorReason = NULL;
 	debug_add_header(errorMsg, receiving, true);
 
 	switch(error) {
 		case ERROR_TIMEOUT:
-			sprintf(errorMsg + strlen(errorMsg), "#FF0000 ERROR: TIMEOUT#\n");
+			errorReason = "#FF0000 ERROR: TIMEOUT#\n";
 			break;
 		case ERROR_KWP_9141_FORMAT:
-			sprintf(errorMsg + strlen(errorMsg), "#FF0000 ERROR: FORMAT BYTE#\n");
+			errorReason = "#FF0000 ERROR: FORMAT BYTE#\n";
 			break;
+		case ERROR_RECEIVE:
+			errorReason = "#FF0000 ERROR: RECEIVE#\n";
+			break;
+		case ERROR_KWP_9141_ECHO:
+			errorReason = "#FF0000 ERROR: NO ECHO#\n";
+			break;
+		case ERROR_TRANSMIT:
+			errorReason = "#FF0000 ERROR: TRANSMIT#\n";
+			break;
+	}
+	if (errorReason == NULL) {
+		sprintf(errorMsg + strlen(errorMsg), "#FF0000 ERROR IS UNKNOWN#");
+	} else {
+		sprintf(errorMsg + strlen(errorMsg), "%s", errorReason);
 	}
 	debug_send_text(errorMsg);
 }
