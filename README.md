@@ -9,6 +9,8 @@ Digital Gauge Awareness System to be used with any car with an OBD-2 port.
 ## Overview
 DGAS is a multi-function digital gauge that can measure any data available on a car's OBD-2 diagnostic port such as engine speed, vehicle speed, coolant temperature, manifold pressure etc. DGAS supports 3 out of the 4 OBD-2 buses namely ISO-9141, ISO-14320 (also known as KWP2000) and ISO-15765 (CAN, most common for newer cars) (SAE J-1850 is not supported). All data measured from the car's ECU is displayed on a 2.1 inch circular TFT-LCD display with a 16-bit color depth.  
 
+DGAS is also capable of performing vehicle and engine diagnostics by reading and displaying current and pending diagnostic trouble codes (DTCs).
+
 ## UI
 
 The DGAS UI allows the user to configure and interact with multiple features of the gauge such as measurement parameter as well as watch live OBD2 messages sent from DGAS to the ECU and the response from the ECU which is useful for debugging purposes.
