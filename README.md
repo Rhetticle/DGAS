@@ -47,6 +47,17 @@ This UI allows the driver to perform diagnostics on their engine by reading the 
 As above two codes were found namely P0102 and P0133. We can use SAE-J2012 to find the meaning of each which correspond to MAF and intake air temperature errors as expected.
 ![dtcMeaning](https://github.com/user-attachments/assets/2cca8a41-9c6c-481c-a099-2eb998f26065)
 
+### Self-Test
+This screen allows the user to get DGAS to run a test on its external hardware. DGAS will test for read access to the entire DRAM memory array and entire flash array as well as test that the accelerometer is also functioning correctly. DGAS will report some statistics on each test such as the time taken to run each test, access speed and acceleration values for the accelerometer.
+
+<img src=https://github.com/user-attachments/assets/a63565c8-605d-4ab9-9485-56f126af32a6 width=350>
+<img src=https://github.com/user-attachments/assets/8ca54875-368f-4bf2-b741-230c77d4b6b4 width=350>
+
+### Settings
+The settings allow the user to configure the default parameter to measure on start-up as well as which OBD2 bus to us on start-up. The configuration is saved to external flash and read on each start-up.
+
+<img src=https://github.com/user-attachments/assets/8b59aa4e-114c-4164-8da9-9a43a22e74c5 width=350>
+<img src=https://github.com/user-attachments/assets/8e9f2b45-498a-4d57-9c3c-d2555ab0251d width=350>
 
 ### About
 This screen explains what DGAS is and has a QR code which directs users to this GitHub repository
