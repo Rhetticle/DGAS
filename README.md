@@ -34,8 +34,8 @@ The measure UI let's the user chose between 1 of 8 different parameters assuming
 ### OBD2 Debug
 The OBD2 Debug shows the live data being sent from DGAS and received from the ECU. Each message consists of a header with a status (green tick for ok or red cross for error), a device (either DGAS or ECU) and the bus being used as well as the raw data itself, or an error message if an error occurred on the bus.
 
-![obd2 debug](https://github.com/user-attachments/assets/396a608b-9122-4c48-911e-2ac7b1759064)
-![debugError](https://github.com/user-attachments/assets/fba99f13-5f58-4320-87cc-3c4c0fb265b8)
+<img src="https://github.com/user-attachments/assets/396a608b-9122-4c48-911e-2ac7b1759064" width=350>
+<img src="https://github.com/user-attachments/assets/fba99f13-5f58-4320-87cc-3c4c0fb265b8" wdith=350>
 
 
 ### About
