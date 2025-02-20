@@ -42,7 +42,7 @@ The OBD2 Debug shows the live data being sent from DGAS and received from the EC
 <img src="https://github.com/user-attachments/assets/fba99f13-5f58-4320-87cc-3c4c0fb265b8" width=350>
 
 ### DTC
-This UI allows the driver to perform diagnostics on their engine by reading the current/pending diagnostic trouble codes (DTCs). DGAS will send the OBD2 DTC request message and list the codes found if any. For example, by unplugging the cable which connects above the air filter containing the MAF sensor and intake air temperature sensor DGAS reports the following:
+This UI allows the driver to perform diagnostics on their engine by reading the current/pending diagnostic trouble codes (DTCs). DGAS will send the OBD2 DTC request message and list the codes found if any. For example, if we unplug the cable which connects above the air filter containing the MAF sensor and intake air temperature sensor DGAS reports the following:
 
 <img src="https://github.com/user-attachments/assets/62ccf4a2-9492-4fbe-8f07-27479fcc8c42" width=350>
 <img src="https://github.com/user-attachments/assets/90c6c323-4d27-4adb-9b7e-dacd4224019a" width=350>
