@@ -51,7 +51,7 @@ As above two codes were found namely P0102 and P0133. We can use SAE-J2012 to fi
 ![dtcMeaning](https://github.com/user-attachments/assets/2cca8a41-9c6c-481c-a099-2eb998f26065)
 
 ### Self-Test
-This screen allows the user to get DGAS to run a test on its external hardware. DGAS will test for read access to the entire DRAM memory array and entire flash array as well as test that the accelerometer is also functioning correctly. DGAS will report some statistics on each test such as the time taken to run each test, access speed and acceleration values for the accelerometer.
+This screen allows the user to get DGAS to run a test on its hardware. DGAS will test for read access to the entire DRAM memory array and entire flash array as well as test that the accelerometer is also functioning correctly. DGAS will report some statistics on each test such as the time taken to run each test, access speed and acceleration values for the accelerometer.
 
 <img src=https://github.com/user-attachments/assets/a63565c8-605d-4ab9-9485-56f126af32a6 width=350>
 <img src=https://github.com/user-attachments/assets/8ca54875-368f-4bf2-b741-230c77d4b6b4 width=350>
