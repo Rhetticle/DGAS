@@ -35,7 +35,17 @@ The measure UI let's the user chose between 1 of 8 different parameters assuming
 The OBD2 Debug shows the live data being sent from DGAS and received from the ECU. Each message consists of a header with a status (green tick for ok or red cross for error), a device (either DGAS or ECU) and the bus being used as well as the raw data itself, or an error message if an error occurred on the bus.
 
 <img src="https://github.com/user-attachments/assets/396a608b-9122-4c48-911e-2ac7b1759064" width=350>
-<img src="https://github.com/user-attachments/assets/fba99f13-5f58-4320-87cc-3c4c0fb265b8" wdith=350>
+
+<img src="https://github.com/user-attachments/assets/fba99f13-5f58-4320-87cc-3c4c0fb265b8" width=350>
+
+### DTC
+This UI allows the driver to perform diagnostics on their engine by reading the current/pending diagnostic trouble codes (DTCs). DGAS will send the OBD2 DTC request message and list the codes found if any. For example, by unplugging the cable which connects above the air filter containing the MAF sensor and intake air temperature sensor DGAS reports the following:
+
+<img src="https://github.com/user-attachments/assets/62ccf4a2-9492-4fbe-8f07-27479fcc8c42" width=350>
+<img src="https://github.com/user-attachments/assets/90c6c323-4d27-4adb-9b7e-dacd4224019a" width=350>
+
+As above two codes were found namely P0102 and P0133. We can use SAE-J2012 to find the meaning of each which correspond to MAF and intake air temperature errors as expected.
+![dtcMeaning](https://github.com/user-attachments/assets/2cca8a41-9c6c-481c-a099-2eb998f26065)
 
 
 ### About
