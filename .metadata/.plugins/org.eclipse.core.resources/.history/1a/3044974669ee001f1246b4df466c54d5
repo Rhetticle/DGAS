@@ -1,0 +1,14 @@
+/*
+ * DTCMeaning.h
+ *
+ *  Created on: Feb 19, 2025
+ *      Author: rhett
+ */
+
+#ifndef INC_DTCMEANING_H_
+#define INC_DTCMEANING_H_
+
+extern const char* DTC_P0_LUT[], DTC_P1_LUT[], DTC_B1_LUT[], DTC_B2_LUT[],
+				   DTC_C1_LUT[], DTC_U0_LUT[], DTC_U1_LUT[];
+
+#endif /* INC_DTCMEANING_H_ */

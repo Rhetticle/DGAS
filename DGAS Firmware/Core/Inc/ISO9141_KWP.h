@@ -40,8 +40,9 @@ typedef struct {
 #define KWP_OBD_PID_REQ_SIZE 6 // same format as ISO9141
 #define KWP_OBD_DTC_REQ_SIZE 5 // same format as ISO9141
 #define KWP_DATA_SIZE_MASK 0b111111 // mask to apply to format byte to extract data size of message
-#define KWP_DATA_START_INDEX 5 // 5th byte (counting from zero) of response will be first data byte
+#define KWP_DATA_START_INDEX 4 // 5th byte (counting from zero) of response will be first data byte
 #define KWP_PID_INDEX 3
+#define KWP_DTC_HEADER_SIZE 2 // one byte is the mode and the other is the number of DTCs to follow
 
 #define ISO9141_K GPIO_PIN_10 // port C. This is also UART4_TX
 #define ISO9141_L GPIO_PIN_10 // port A

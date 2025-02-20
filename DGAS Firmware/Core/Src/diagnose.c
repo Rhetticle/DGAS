@@ -19,12 +19,14 @@ extern lv_display_t* display;
 void decode_dtc(uint16_t dtc, char* result) {
 	char classLookUp[] = {'P', 'C', 'B', 'U'};
 	char digLookUp[] = {'0', '1', '2', '3'};
+	char dtcNoColor[DTC_MEANING_MAX_LEN] = {0};
 
 	uint8_t upperTwoBits = DTC_GET_UPPER_TWO_BITS(dtc);
 	uint16_t A5A4 = DTC_GET_A5_A4_BITS(dtc);
-	result[0] = classLookUp[upperTwoBits];
-	result[1] = digLookUp[A5A4];
-	sprintf(result + strlen(result), "%X", DTC_GET_CODE_NUM(dtc));
+	dtcNoColor[0] = classLookUp[upperTwoBits];
+	dtcNoColor[1] = digLookUp[A5A4];
+	sprintf(dtcNoColor + strlen(dtcNoColor), "%X", DTC_GET_CODE_NUM(dtc));
+	sprintf(result, "#FFFF00 %s#", dtcNoColor);
 }
 
 void display_dtcs(OBDBus* bus) {
@@ -42,6 +44,7 @@ void display_dtcs(OBDBus* bus) {
 
 	if ((response[0] == 0) && (response[1] == 0)) {
 		lv_textarea_add_text(objects.diagnose_textarea, "#00FF00 NO DTCs FOUND#\n");
+		return;
 	}
 
 	for (int i = 0; i < sizeof(response) / sizeof(uint16_t); i += sizeof(uint16_t)) {

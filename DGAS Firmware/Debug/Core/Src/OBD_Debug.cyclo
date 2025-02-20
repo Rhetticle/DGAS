@@ -7,8 +7,8 @@ OBD_Debug.c:52:6:debug_add_to_buffer	2
 OBD_Debug.c:61:6:debug_send_text	1
 OBD_Debug.c:69:6:debug_add_data	5
 OBD_Debug.c:86:6:add_bus_name_to_header	2
-OBD_Debug.c:103:6:debug_add_header	4
-OBD_Debug.c:116:9:get_obd_mode	2
-OBD_Debug.c:125:6:add_request_type_to_header	4
-OBD_Debug.c:136:6:debug_send_message	5
-OBD_Debug.c:149:6:debug_send_error	4
+OBD_Debug.c:106:6:debug_add_header	4
+OBD_Debug.c:119:9:get_obd_mode	2
+OBD_Debug.c:128:6:add_request_type_to_header	4
+OBD_Debug.c:139:6:debug_send_message	5
+OBD_Debug.c:152:6:debug_send_error	4

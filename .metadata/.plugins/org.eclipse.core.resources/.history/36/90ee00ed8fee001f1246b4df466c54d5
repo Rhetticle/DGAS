@@ -1,0 +1,74 @@
+/*
+ * diagnose.c
+ *
+ *  Created on: Feb 11, 2025
+ *      Author: rhett
+ */
+
+#include <stm32f7xx.h>
+#include <string.h>
+#include <stdio.h>
+#include "diagnose.h"
+#include "OBD_Debug.h"
+#include "DTCMeaning.h"
+#include "OBD2.h"
+#include "ui.h"
+#include "lvgl.h"
+
+extern lv_display_t* display;
+
+void get_dtc_meaning(uint16_t dtc, char* meaning) {
+	uint8_t upperTwoBits = DTC_GET_UPPER_TWO_BITS(dtc);
+	uint16_t dtcNum = DTC_GET_CODE_NUM(dtc);
+
+	if ((upperTwoBits != 0) || (dtcNum >= P0_COUNT)) {
+		sprintf(meaning, "<No description>");
+	} else if (dtcNum < P0_COUNT){
+		sprintf(meaning, "%s", DTC_P0_LUT[dtcNum]);
+	}
+}
+
+void decode_dtc(uint16_t dtc, char* result) {
+	char classLookUp[] = {'P', 'C', 'B', 'U'};
+	char digLookUp[] = {'0', '1', '2', '3'};
+	char dtcMeaning[DTC_MEANING_MAX_LEN] = "Hello";
+
+	uint8_t upperTwoBits = DTC_GET_UPPER_TWO_BITS(dtc);
+	uint16_t A5A4 = DTC_GET_A5_A4_BITS(dtc);
+	result[0] = classLookUp[upperTwoBits];
+	result[1] = digLookUp[A5A4];
+	//get_dtc_meaning(dtc, dtcMeaning);
+	sprintf(result + strlen(result), "%X", DTC_GET_CODE_NUM(dtc));
+}
+
+void display_dtcs(OBDBus* bus) {
+	// clear the textarea from previous use
+	lv_textarea_set_text(objects.diagnose_textarea, "");
+	lv_refr_now(display);
+	uint8_t response[OBD_DTC_MAX_COUNT] = {0};
+
+	if (obd2_get_dtcs(bus, response) != HAL_OK) {
+		char* log = get_debug_log();
+		lv_textarea_add_text(objects.diagnose_textarea, "#FF0000 ERROR#: DTC request failed\n \n#E6AF00 DEBUG LOG:#\n");
+		lv_textarea_add_text(objects.diagnose_textarea, log);
+		return;
+	}
+
+	if ((response[0] == 0) && (response[1] == 0)) {
+		lv_textarea_add_text(objects.diagnose_textarea, "#00FF00 NO DTCs FOUND#\n");
+		return;
+	}
+
+	for (int i = 0; i < sizeof(response) / sizeof(uint16_t); i += sizeof(uint16_t)) {
+		if ((response[i] == 0) && (response[i + 1] == 0)) {
+			break;
+		} else {
+			char dtcStr[DTC_CODE_STRING_LEN] = {0};
+			char message[DTC_CODE_FOUND_MSG_MAX_LEN] = {0};
+			uint16_t dtc = ((uint16_t) response[i] << 8) | response[i + 1];
+			decode_dtc(dtc, dtcStr);
+			sprintf(message, "#FF0000 CODE FOUND# - %s\n", dtcStr);
+			lv_textarea_add_text(objects.diagnose_textarea, message);
+		}
+	}
+}

@@ -1,0 +1,16 @@
+/*
+ * DTCMeaning.h
+ *
+ *  Created on: Feb 19, 2025
+ *      Author: rhett
+ */
+
+#ifndef INC_DTCMEANING_H_
+#define INC_DTCMEANING_H_
+
+#define P0_COUNT 400
+
+extern const char* DTC_P0_LUT[P0_COUNT];
+
+
+#endif /* INC_DTCMEANING_H_ */

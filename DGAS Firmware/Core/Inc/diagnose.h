@@ -17,8 +17,9 @@
 #define DTC_GET_A5_A4_BITS(x) ((x & A5_A4_MASK) >> 12)
 #define DTC_GET_CODE_NUM(x) (x & DTC_CODE_NUM_MASK)
 
-#define DTC_CODE_STRING_LEN 5
+#define DTC_CODE_STRING_LEN 32
 #define DTC_CODE_FOUND_MSG_MAX_LEN 256
+#define DTC_MEANING_MAX_LEN 128
 
 void decode_dtc(uint16_t dtc, char* result);
 void display_dtcs(OBDBus* bus);
