@@ -24,12 +24,13 @@ The gauge UI display the current parameter being measured as well as OBD2 status
   <img src="https://github.com/user-attachments/assets/ac6e1ff6-1651-4a64-93a1-6f7c5c58ebfa" width=350>
 
 ### Menu
-![menu](https://github.com/user-attachments/assets/574ff377-b4c9-4d3e-a682-dd45c8ef6f99)
+
+<img src=https://github.com/user-attachments/assets/574ff377-b4c9-4d3e-a682-dd45c8ef6f99 width=350>
 
 ### Measure
 The measure UI let's the user chose between 1 of 8 different parameters assuming the vehicle DGAS is connected to supports these parameters.
 
-![measure](https://github.com/user-attachments/assets/69bf3344-7432-4310-8c5a-d72bc6c16d19)
+<img src=https://github.com/user-attachments/assets/69bf3344-7432-4310-8c5a-d72bc6c16d19 width=350>
 
 ### OBD2 Debug
 The OBD2 Debug shows the live data being sent from DGAS and received from the ECU. Each message consists of a header with a status (green tick for ok or red cross for error), a device (either DGAS or ECU) and the bus being used as well as the raw data itself, or an error message if an error occurred on the bus.
