@@ -27,7 +27,7 @@ The gauge UI display the current parameter being measured as well as OBD2 status
 
 ### Menu
 
-<img src=https://github.com/user-attachments/assets/574ff377-b4c9-4d3e-a682-dd45c8ef6f99 width=350>
+<img src=https://github.com/user-attachments/assets/42677149-adaf-4c3e-a9b4-3c949dcbc2ee width=350>
 
 ### Measure
 The measure UI let's the user chose between 1 of 8 different parameters assuming the vehicle DGAS is connected to supports these parameters.
@@ -65,7 +65,7 @@ The settings allow the user to configure the default parameter to measure on sta
 ### About
 This screen explains what DGAS is and has a QR code which directs users to this GitHub repository
 
-![about](https://github.com/user-attachments/assets/83db0be0-a343-4c5a-9e98-5e121123ab50)
+<img src=https://github.com/user-attachments/assets/83db0be0-a343-4c5a-9e98-5e121123ab50 width=350>
 
 
 ## Hardware Details
@@ -77,7 +77,7 @@ This screen explains what DGAS is and has a QR code which directs users to this 
 * ISO-9141 Transceiver - L9613B013TR (8-SOIC)
 * Accelerometer - LIS3DHTR (16-LGA)
 
-The STM32F746ZGT7 was chosen for it's large 1MB of internal flash (needed to store LVGL code) as well as it's LTDC and FMC peripherals needed to drive the TFT-LCD display and interface with external DRAM respectively. External DRAM was needed to store the frame buffers for the display. As the display was 480x480 with a 16-bit color depth, one frame buffer occupies 460800 bytes. Since DGAS uses double buffering an the TFT-LCD display being used has no internal memory, both buffers must be stored in the DRAM which takes up around half of the 2 MBit available. External flash is being used to store large GUI objects such as images and fonts.
+The STM32F746ZGT7 was chosen for it's large 1MB of internal flash (needed to store LVGL code) as well as it's LTDC and FMC peripherals needed to drive the TFT-LCD display and interface with external DRAM respectively. External DRAM was needed to store the frame buffers for the display. As the display was 480x480 with a 16-bit color depth, one frame buffer occupies 460800 bytes. Since DGAS uses double buffering and the TFT-LCD display being used has no internal memory, both buffers must be stored in the DRAM which takes up around half of the 2 MiB available. External flash is being used to store large GUI objects such as images and fonts.
 
 DGAS connects to the car's OBD-2 port via the main DB-15 connector using a DB-15 to OBD-2 cable. The main power connection should be connected to any wire within the car which carries the ignition signal so that DGAS is only powered when the vehicle is on.
 
