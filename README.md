@@ -2,8 +2,8 @@
 Digital Gauge Awareness System to be used with any car with an OBD-2 port. 
 
 ![dgas front](https://github.com/user-attachments/assets/4102765d-777d-4289-b9a9-83bf9e47d28d)
-![dgas back internal](https://github.com/user-attachments/assets/09ee38b3-d3df-434a-9011-0c4df18be34a)
-![dgas bottom](https://github.com/user-attachments/assets/d280e5c2-f795-45fa-a756-9daf1feb0dcf)
+<img src="https://github.com/user-attachments/assets/7e364183-2aba-4682-a1f6-b618b063e2a6" width=640>
+<img src="https://github.com/user-attachments/assets/079d4670-b70b-414b-83ba-dc47e88236d2" width=640>
 ![dgas](https://github.com/user-attachments/assets/3c29ce40-b167-4b92-bdc7-825e18cb249c)
 
 ## Update
